@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /errordocs
+Disallow: /cgi-bin
+Disallow: /phpinfo.php
+Disallow: /temp
