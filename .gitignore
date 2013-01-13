@@ -1,5 +1,5 @@
-index.html		# deprecated static HTML file for testing
-_archived/		# very old versions of this website
-_dev/			# photoshop images, etc.
+index.html
+_archived/
+_dev/
 phpinfo.php
 _todo.txt
