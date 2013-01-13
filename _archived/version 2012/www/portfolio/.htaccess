@@ -1,9 +1,0 @@
-# disable directory browsing
-Options All -Indexes
-
-# prevent viewing of a specific file
-<files portfolio.html>
- order deny,allow
- allow from louhuang.com
- allow from corvalis.net
-</files>
