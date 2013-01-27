@@ -118,12 +118,15 @@ function loadProject(projectID) {
 		$('#port-projectdata').fadeOut(200);
 	}		
 	// load and display project
+	$.getJSON("portfolio/portfolio.json?callback=?", function(project) {
+		console.log(project);
+	});
 	$('#port-projectdata').delay(100).queue(function(){
 		$(this).load('portfolio/portfolio.html #' + projectID + ' > *', function() {
-			Cufon.refresh();
+			// Cufon.refresh();
 			if ($(this).html() != ''){
 				document.title = $(this).find('h4').text() + ' - ' + site_title;
-				$('#port-projectdata').fadeIn(200, function(){ 
+				$('#port-projectdata').fadeIn(200, function() { 
 					$('#port-loader').hide();
 					portArrows();
 				});
@@ -159,12 +162,14 @@ function debug(text) {
 $(document).ready(function() {
 
 	// CUFON
+	/*
 	Cufon.replace('h1', { fontFamily: 'Montserrat' });
 	Cufon.replace('h2', { fontFamily: 'Montserrat' });
 	Cufon.replace('h3', { fontFamily: 'Montserrat' });
 	Cufon.replace('h4', { fontFamily: 'Montserrat' });
 	Cufon.replace('h5', { fontFamily: 'Montserrat' });
 	Cufon.replace('#navbox li', { fontFamily: 'Montserrat' });
+	*/
 	// Cufon.replace('#port-info', { fontFamily: 'Avenir' });
 	// Cufon.replace('.text', { fontFamily: 'Avenir' });
 	// Cufon.replace('.caption', { fontFamily: 'Avenir' });
