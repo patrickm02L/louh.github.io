@@ -1,18 +1,5 @@
-
-/* KONAMI CODE */
-konami = new Konami()
-konami.code = function() {
-	var s = document.createElement('script');
-	s.type='text/javascript';
-	document.body.appendChild(s);
-	s.src='http://erkie.github.com/asteroids.min.js';
-	void(0);
-	}
-konami.load()
-
-
-
-
+var projectJSON = 'portfolio/portfolio.json';
+var projects = {};
 
 
 /* INTERFACE */
@@ -118,10 +105,10 @@ function loadProject(projectID) {
 		$('#port-projectdata').fadeOut(200);
 	}		
 	// load and display project
-	$.getJSON("portfolio/portfolio.json?callback=?", function(project) {
-		console.log(project);
-	});
 	$('#port-projectdata').delay(100).queue(function(){
+		$.getJSON(projectJSON, function(project) {
+			console.log(project);
+		});
 		$(this).load('portfolio/portfolio.html #' + projectID + ' > *', function() {
 			// Cufon.refresh();
 			if ($(this).html() != ''){
@@ -175,6 +162,16 @@ $(document).ready(function() {
 	// Cufon.replace('.caption', { fontFamily: 'Avenir' });
 	// Cufon.replace('#port-dropbutton', { fontFamily: 'Avenir' });
 	// Cufon.replace('#port-dropdown', { fontFamily: 'Avenir' });
+
+	// LOAD PROJECTS JSON
+    $.ajax({
+    	url: projectJSON,
+    	async: false,
+    	dataType: 'json',
+    	success: function(data) {
+    		projects = data;
+    	}
+    });
 
 	// Portfolio
 	$('#n-portfolio').click(
