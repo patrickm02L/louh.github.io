@@ -3,7 +3,7 @@
 	"items": [
 		{
 			"id": "2175market",
-			"name": "2175 Market Mixed-Use",
+			"name": "2175 Market",
 			"type": "architecture",
 			"status": "portfolio",
 			"images": [
@@ -19,43 +19,37 @@
 			"year": "2012",
 			"location": "San Francisco, CA",
 			"client": "Forest City",
-			"role": "Drafting",
+			"role": "Designer",
 			"team": "Van Meter Williams Pollack",
-			"description": "Whatever"
+			"ext_url": "http://www.2175market.com/",
+			"description": "A 80+ unit mixed use development in the Upper Market/Lower Octavia area in San Francisco."
 		},
 		{
-			"id": "scotchhollow",
-			"name": "Scotchhollow Apartments",
+			"id": "sunnydale",
+			"name": "Sunnydale HOPE SF",
 			"type": "urbandesign",
 			"status": "portfolio",
 			"images": [
 				{
-					"filename": "scotchhollow_01.jpg",
-					"caption": "Bird's Eye Site View"
+					"filename": "sunnydale_01.jpg",
+					"caption": "Test"
 				},
 				{
-					"filename": "scotchhollow_02.jpg",
-					"caption": "Residential Entry Courtyard"
+					"filename": "sunnydale_02.jpg",
+					"caption": "Test"
 				},
 				{
-					"filename": "scotchhollow_03.jpg",
-					"caption": "Community Center Option 1"
-				},
-				{
-					"filename": "scotchhollow_04.jpg",
-					"caption": "Community Center Option 2"
-				},
-				{
-					"filename": "scotchhollow_05.jpg",
-					"caption": "Residential Common Area"
+					"filename": "sunnydale_03.jpg",
+					"caption": "Test"
 				}
 			],
-			"year": "2011",
-			"location": "San Mateo, CA",
-			"client": "AIMCO",
-			"role": "Community master planning and 3D modelling",
+			"year": "2012",
+			"location": "San Francisco, CA",
+			"client": "Bridge Housing",
+			"role": "Community master planning",
 			"team": "Van Meter Williams Pollack",
-			"description": "Scotchhollow is an existing 418-unit family apartment community built in the early 1970s, where the owner is seeking to upgrade the development to more modern standards of living to attract a changing demographic on the San Francisco peninsula. Our proposed improvements looked at replacing the existing community center with a larger one that accomodates more amenities, creating more direct paths through the landscape, adding programmatic elements to unactivated lawn areas, orienting the front door of ground floor units towards common areas rather than interior corridors, improving lighting throughout the site, upgrading the look of carports, and adding access points between the community and the park next door."
+			"ext_url": "http://www.vmwp.com/projects/sunnydale-hope-sf-master-plan.php",
+			"description": "A 50-acre master plan development for San Francisco's largest public housing neighborhood. The plan has achieved LEED-ND Stage 1 Gold certification."
 		},
 		{
 			"id": "saccatalyst",
@@ -108,6 +102,7 @@
 		{
 			"id": "centralflorida",
 			"name": "Central Florida: Connecting for Global Competitiveness",
+			"menu_name": "Connecting for Global Competitiveness",
 			"type": "urbandesign",
 			"status": "portfolio",
 			"images": [
@@ -134,6 +129,7 @@
 			],
 			"year": "2010",
 			"location": "Tampa-Orlando Super Region",
+			"menu_location": "Central Florida",
 			"client": "myregion.org",
 			"role": "Transportation planning, urban design, GIS mapping and analysis, publication production",
 			"team": "University of Pennsylvania urban design studio",
@@ -195,6 +191,7 @@
 			],
 			"year": "2010",
 			"location": "East Village District, San Diego, California",
+			"menu_location": "San Diego, CA",
 			"client": "ULI/Gerald D. Hines Student Urban Design Competition (finalist entry)",
 			"role": "Team leader",
 			"team": "Allen Penniman, Marie Park, Keyleigh Kern, Brian Lee",
@@ -263,46 +260,38 @@
 			"description": "Redevelopment along Philadelphia’s “hidden river” is focused on retaining Philadelphia’s brain capital: graduates of its stellar educational institutions, who have been leaving the city for work elsewhere. At the Grays Ferry site, which has been so cut off from the rest of the city by poor infrastructure decisions that it has been nicknamed the Forgotten Bottom, renewal is catalyzed by university expansion, highway removal, freight line reconfiguration, and the development of a technology campus."
 		},
 		{
-			"id": "eastorange",
-			"name": "East Orange Gateways",
+			"id": "scotchhollow",
+			"name": "Scotchhollow Apartments",
 			"type": "urbandesign",
 			"status": "portfolio",
 			"images": [
 				{
-					"filename": "eastorange_01.jpg",
-					"caption": "Main Street Before & After View"
+					"filename": "scotchhollow_01.jpg",
+					"caption": "Bird's Eye Site View"
 				},
 				{
-					"filename": "eastorange_02.jpg",
-					"caption": "Gateway District Map"
+					"filename": "scotchhollow_02.jpg",
+					"caption": "Residential Entry Courtyard"
 				},
 				{
-					"filename": "eastorange_03.jpg",
-					"caption": "Central Ave Before & After View"
+					"filename": "scotchhollow_03.jpg",
+					"caption": "Community Center Option 1"
 				},
 				{
-					"filename": "eastorange_04.jpg",
-					"caption": "Main Street (Brick Church Area) Before & After"
+					"filename": "scotchhollow_04.jpg",
+					"caption": "Community Center Option 2"
 				},
 				{
-					"filename": "eastorange_05.jpg",
-					"caption": "Central Ave Before & After View"
-				},
-				{
-					"filename": "eastorange_06.jpg",
-					"caption": ""
-				},
-				{
-					"filename": "eastorange_07.jpg",
-					"caption": "Signage Guidelines Document"
+					"filename": "scotchhollow_05.jpg",
+					"caption": "Residential Common Area"
 				}
 			],
-			"year": "2009-2010",
-			"location": "East Orange, NJ",
-			"client": "City of East Orange, NJ",
-			"role": "Policy and memo writing, mapping and visualizations",
-			"team": "Brown & Keener Urban Design",
-			"description": ""
+			"year": "2011",
+			"location": "San Mateo, CA",
+			"client": "AIMCO",
+			"role": "Community master planning and 3D modelling",
+			"team": "Van Meter Williams Pollack",
+			"description": "Scotchhollow is an existing 418-unit family apartment community built in the early 1970s, where the owner is seeking to upgrade the development to more modern standards of living to attract a changing demographic on the San Francisco peninsula. Our proposed improvements looked at replacing the existing community center with a larger one that accomodates more amenities, creating more direct paths through the landscape, adding programmatic elements to unactivated lawn areas, orienting the front door of ground floor units towards common areas rather than interior corridors, improving lighting throughout the site, upgrading the look of carports, and adding access points between the community and the park next door."
 		},
 		{
 			"id": "northarlington",
@@ -328,7 +317,7 @@
 				}
 			],
 			"year": "2009-2010",
-			"location": "North Arlington, NJ",
+			"menu_location": "North Arlington, NJ",
 			"client": "City of North Arlington, NJ",
 			"role": "Document writing, mapping and visualizations, community meetings",
 			"team": "Brown & Keener Urban Design",
@@ -373,6 +362,48 @@
 			"location": "Kingston, Jamaica",
 			"client": "University of Pennyslvania class project",
 			"description": "Cacique Gardens is a new, hypothetical 200-acre mixed-use development. Working with a partner, we developed a pattern book for housing, retail and street typologies that would fit into its regional context."
+		},
+		{
+			"id": "eastorange",
+			"name": "East Orange Gateways",
+			"type": "urbandesign",
+			"status": "portfolio",
+			"images": [
+				{
+					"filename": "eastorange_01.jpg",
+					"caption": "Main Street Before & After View"
+				},
+				{
+					"filename": "eastorange_02.jpg",
+					"caption": "Gateway District Map"
+				},
+				{
+					"filename": "eastorange_03.jpg",
+					"caption": "Central Ave Before & After View"
+				},
+				{
+					"filename": "eastorange_04.jpg",
+					"caption": "Main Street (Brick Church Area) Before & After"
+				},
+				{
+					"filename": "eastorange_05.jpg",
+					"caption": "Central Ave Before & After View"
+				},
+				{
+					"filename": "eastorange_06.jpg",
+					"caption": ""
+				},
+				{
+					"filename": "eastorange_07.jpg",
+					"caption": "Signage Guidelines Document"
+				}
+			],
+			"year": "2009-2010",
+			"menu_location": "East Orange, NJ",
+			"client": "City of East Orange, NJ",
+			"role": "Policy and memo writing, mapping and visualizations",
+			"team": "Brown & Keener Urban Design",
+			"description": ""
 		},
 		{
 			"id": "portrichmond",
@@ -452,6 +483,7 @@
 			],
 			"year": "2004-2008",
 			"location": "Various locations, California",
+			"menu_location": "Various Locations",
 			"role": "schematic design, construction documents, project management",
 			"team": "Crome Architecture",
 			"description": "As the primary architect for Peet's Coffee & Tea, Crome Architecture designed and produced construction documents for many stores throughout the United States.  In addition, we helped design new store types such as a new \"prototype\" store in Emeryville, CA and \"kiosks\" for supermarkets, airports and subway stations."
@@ -610,119 +642,6 @@
 			"description": "An older ranch-style single family house in Marin County, whose owners sought to remodel and expand to maximize the amount of allowed square footage on their property. The plan was designed based on several interviews with the family to determine their needs, with careful attention paid to efficient circulation."
 		},
 		{
-			"id": "fabboard",
-			"name": "Fabboard",
-			"type": "other",
-			"status": "portfolio",
-			"images": [
-				{
-					"filename": "fabboard_01.jpg",
-					"caption": ""
-				}
-			],
-			"year": "2012",
-			"role": "Graphic and UI design",
-			"ext_url": "http://fabboard.com/",
-			"ext_link": "View site",
-			"description": "Fashion pinboard site. UX design with freelance programmer."
-		},
-		{
-			"id": "nomelette",
-			"name": "Nomelette",
-			"type": "other",
-			"status": "portfolio",
-			"images": [
-				{
-					"filename": "nomelette_01.jpg",
-					"caption": ""
-				}
-			],
-			"year": "2010",
-			"role": "Graphic and UI design",
-			"description": "A startup idea, similar to restaurant review sites, but rating individual food products and dishes rather than establishments."
-		},
-		{
-			"id": "chocolatemango",
-			"name": "Better Together: Andrew and Kelly",
-			"type": "other",
-			"status": "portfolio",
-			"images": [
-				{
-					"filename": "chocolatemango_01.jpg",
-					"caption": ""
-				}
-			],
-			"year": "2007",
-			"role": "Graphics and UI design, programming",
-			"ext_url": "http://chocolatemango.com/",
-			"ext_link": "View site",
-			"description": "Wedding site for a friend. Given a general color scheme and reference images of the desired style, we came up with this modern take on a traditional idea. The bride loved the design so much, it was adopted for the invitations, programs, and even the slideshow during the ceremony."
-		},
-		{
-			"id": "sfbaymosaic",
-			"name": "SF Bay Mosaic",
-			"type": "other",
-			"status": "portfolio",
-			"images": [
-				{
-					"filename": "sfbaymosaic_01.jpg",
-					"caption": ""
-				}
-			],
-			"year": "2007-2008",
-			"role": "Graphic and UI design",
-			"description": "Church website, designed to reflect the creative nature of its community and developed by its own members. I was responsible for designing graphics and user interface, working with a programmer and church staff."
-		},
-		{
-			"id": "digitalshoebox",
-			"name": "The Digital Shoebox",
-			"type": "other",
-			"status": "hidden",
-			"images": [
-				{
-					"filename": "digitalshoebox_01.jpg",
-					"caption": ""
-				}
-			],
-			"year": "2006-2008",
-			"role": "Graphic design, programming",
-			"description": "Photography portfolio website, designed to pull images from my account on Flickr, using its developer API. Superceded by new professional site entitled Lou Huang Photography."
-		},
-		{
-			"id": "tab",
-			"name": "The Address Book",
-			"type": "other",
-			"status": "portfolio",
-			"images": [
-				{
-					"filename": "tab_01.png",
-					"caption": ""
-				},
-				{
-					"filename": "tab_02.png",
-					"caption": ""
-				}
-			],
-			"year": "2002-2007",
-			"role": "Design, programming",
-			"description": "A web-based personal address book application written in PHP and MySQL, designed with a flexible data model in mind, which other alternatives were lacking.  After several years of private development, it was released as open source."
-		},
-		{
-			"id": "lifeshelf",
-			"name": "Lifeshelf",
-			"type": "other",
-			"status": "hidden",
-			"images": [
-				{
-					"filename": "lifeshelf_01.jpg",
-					"caption": ""
-				}
-			],
-			"year": "2007",
-			"role": "Graphic design",
-			"description": ""
-		},
-		{
 			"id": "calitransit",
 			"name": "California Transit Diagram",
 			"type": "other",
@@ -782,6 +701,38 @@
 			"year": "2008-2010",
 			"role": "Associate design editor (2008), Lead design editor (2009-2010)",
 			"description": "Panorama is the journal for the University of Pennsylvania’s Department of City and Regional Planning, published once a year to showcase the best in student research and studio work. For the first time in Panorama’s history, in 2009 the department increased the journal’s staff from two to six editors, dramatically increasing the quality of the publication. In 2010, I led the design team and helped establish the journal's editorial voice, raising the bar once again for excellence in both writing and design."
+		},
+		{
+			"id": "fabboard",
+			"name": "Fabboard",
+			"type": "other",
+			"status": "portfolio",
+			"images": [
+				{
+					"filename": "fabboard_01.jpg",
+					"caption": ""
+				}
+			],
+			"year": "2012",
+			"role": "Graphic and UI design",
+			"ext_url": "http://fabboard.com/",
+			"ext_link": "View site",
+			"description": "Fashion pinboard site. UX design with freelance programmer."
+		},
+		{
+			"id": "nomelette",
+			"name": "Nomelette",
+			"type": "other",
+			"status": "portfolio",
+			"images": [
+				{
+					"filename": "nomelette_01.jpg",
+					"caption": ""
+				}
+			],
+			"year": "2010",
+			"role": "Graphic and UI design",
+			"description": "A startup idea, similar to restaurant review sites, but rating individual food products and dishes rather than establishments."
 		},
 		{
 			"id": "crome",
@@ -919,6 +870,126 @@
 			"year": "2000-2004",
 			"role": "designer (2000-2002), design editor (2003), managing editor (2004)",
 			"description": ""
-		}
+		},
+		{
+			"id": "chocolatemango",
+			"name": "Better Together: Andrew and Kelly",
+			"type": "other",
+			"status": "portfolio",
+			"images": [
+				{
+					"filename": "chocolatemango_01.jpg",
+					"caption": ""
+				}
+			],
+			"year": "2007",
+			"role": "Graphics and UI design, programming",
+			"ext_url": "http://chocolatemango.com/",
+			"ext_link": "View site",
+			"description": "Wedding site for a friend. Given a general color scheme and reference images of the desired style, we came up with this modern take on a traditional idea. The bride loved the design so much, it was adopted for the invitations, programs, and even the slideshow during the ceremony."
+		},
+		{
+			"id": "sfbaymosaic",
+			"name": "SF Bay Mosaic",
+			"type": "other",
+			"status": "portfolio",
+			"images": [
+				{
+					"filename": "sfbaymosaic_01.jpg",
+					"caption": ""
+				}
+			],
+			"year": "2007-2008",
+			"role": "Graphic and UI design",
+			"description": "Church website, designed to reflect the creative nature of its community and developed by its own members. I was responsible for designing graphics and user interface, working with a programmer and church staff."
+		},
+		{
+			"id": "digitalshoebox",
+			"name": "The Digital Shoebox",
+			"type": "other",
+			"status": "hidden",
+			"images": [
+				{
+					"filename": "digitalshoebox_01.jpg",
+					"caption": ""
+				}
+			],
+			"year": "2006-2008",
+			"role": "Graphic design, programming",
+			"description": "Photography portfolio website, designed to pull images from my account on Flickr, using its developer API. Superceded by new professional site entitled Lou Huang Photography."
+		},
+		{
+			"id": "tab",
+			"name": "The Address Book",
+			"type": "other",
+			"status": "portfolio",
+			"images": [
+				{
+					"filename": "tab_01.png",
+					"caption": ""
+				},
+				{
+					"filename": "tab_02.png",
+					"caption": ""
+				}
+			],
+			"year": "2002-2007",
+			"role": "Design, programming",
+			"description": "A web-based personal address book application written in PHP and MySQL, designed with a flexible data model in mind, which other alternatives were lacking.  After several years of private development, it was released as open source."
+		},
+		{
+			"id": "lifeshelf",
+			"name": "Lifeshelf",
+			"type": "other",
+			"status": "hidden",
+			"images": [
+				{
+					"filename": "lifeshelf_01.jpg",
+					"caption": ""
+				}
+			],
+			"year": "2007",
+			"role": "Graphic design",
+			"description": ""
+		},
+		{
+			"id": "streetmix",
+			"name": "Streetmix",
+			"type": "other",
+			"status": "current",
+			"year": "2013",
+			"ext_url": "http://streetmix.net/",
+			"description": "Interactive drag and drop street section creator."
+		},
+		{
+			"id": "umloud",
+			"name": "Ümloud!",
+			"type": "other",
+			"status": "current",
+			"year": "2012-current",
+			"role": "Art direction and design",
+			"ext_url": "http://www.umloud.org/",
+			"description": "Annual Rock Band night at DNA Lounge in San Francisco to raise money for Child's Play charity."
+		},
+		{
+			"id": "nerdnite",
+			"name": "An Open World (at Nerd Nite SF)",
+			"type": "other",
+			"status": "current",
+			"year": "2012",
+			"ext_url": "http://sf.nerdnite.com/2012/06/12/nerd-nite-sf-25-video-games-urban-design-death-proof-cities-and-the-science-of-futurama/",
+			"description": "Urban design and open-world video games have in common environments designed for activities and exploration.  To create these spaces, video games have reimagined existing cities, inspired new ones, or copied them entirely, and many have even improved on certain experiences.  What can the real world learn from these virtual environments? How can we engage gamers in the development of the physical built environment? (Video of talk coming soon!)"
+		},
+		{
+			"id": "sfpopos",
+			"name": "SFPOPOS",
+			"type": "other",
+			"status": "hidden",
+			"year": "2012",
+			"role": "Web design and development",
+			"ext_url": "http://sfpopos.com/",
+			"description": "An online guide to San Francisco's Privately Owned Publicly Open Spaces (POPOS)."
+		},
+		{}
 	]
 }

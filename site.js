@@ -196,6 +196,15 @@ $(document).ready(function() {
         }
     }
 
+    // POPULATE CURRENT PROJECTS
+    var m_current_project = $('#m_current_project').html();
+    for (var i = 0; i < projects.items.length; i++) {
+        item = projects.items[i];
+        if (item.status == 'current') {
+            $('#d-projects').append(Mustache.render(m_current_project, item));
+        }
+    }
+
     // Portfolio
     $('#n-portfolio').click(
         function() {
