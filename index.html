@@ -61,10 +61,6 @@
                 </ul>
             </div>
             
-            <div id="console">
-                <div id="debugtext" class="text" style="overflow: auto;">Debug</div>
-            </div>
-            
         </div>
         
         <div id="col2">
@@ -164,6 +160,49 @@
                     
                     <div id="port-projectdata">
                         <!-- PLACEHOLDER -->
+
+                        <script id="m_project" type="text/template">
+                            <div id="{{id}}">
+                                <div id="port-images">
+                                    <div class="port-leftarrow"><img src="images/port_leftarrow.png" alt="&laquo;" title="scroll images [left arrow]" /></div>
+                                    <div class="port-rightarrow"><img src="images/port_rightarrow.png" alt="&raquo;" title="scroll images [right arrow]" /></div>
+                                    <div class="scroller">
+                                        {{#images}}
+                                        <div class="loader"><img src="portfolio/{{filename}}" alt="" /><div class="caption">{{caption}}</div></div>
+                                        {{/images}}
+                                    </div>
+                                </div>
+                                
+                                <h4>{{name}}</h4>
+                                
+                                <div id="port-info">
+                                    <b>year</b> {{year}}
+                                    {{#location}}
+                                    <br><b>location</b> {{location}}
+                                    {{/location}}
+                                    {{#client}}
+                                    <br><b>client</b> {{client}}
+                                    {{/client}}
+                                    {{#role}}
+                                    <br><b>role</b> {{role}}
+                                    {{/role}}
+                                    {{#team}}
+                                    <br><b>team</b> {{team}}
+                                    {{/team}}
+                                    
+                                    <p>{{description}}</p>
+                                    
+                                    {{#pdf_url}}
+                                    <p><a href="{{pdf_url}}" class="noborder" target="_blank"><img src="images/pdf.png" width=16 height=16alt="download PDF" title="download PDF"> <span class="note">{{pdf_link}}{{^pdf_link}}Download PDF{{/pdf_link}} [pdf]</span></a></p>
+                                    {{/pdf_url}}
+                                    
+                                    {{#ext_url}}
+                                    <p><a href="{{ext_url}}" target="_blank">{{ext_link}}{{^ext_link}}View site{{/ext_link}}</a> <img src="images/extlink.gif" width=9 height=9 alt=""></p>
+                                    {{/ext_url}}
+                                </div>
+                            </div>
+                        </script>
+
                     </div>
                 </div>
             

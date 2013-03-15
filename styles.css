@@ -25,14 +25,6 @@ footer, header, nav, section, audio, video {
 
 a img {border: 0;}
 
-#console {
-	display: none;
-	height: 200px;
-	position: relative;
-	margin: 12px;
-	overflow: auto;
-}
-
 
 /*	Typography presets
 	------------------	*/

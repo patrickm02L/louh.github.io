@@ -103,11 +103,26 @@ function loadProject(projectID) {
     else {
         $('#port-projectdata').fadeOut(200);
     }       
+    // create the project html
+    var item = null;
+    var m_project = $('#m_project').html();
+    for (var i = 0; i < projects.items.length; i++) {
+        item = projects.items[i];
+        if (item.id == projectID) {
+            $('#port-projectdata').html(Mustache.render(m_project, item)).fadeIn(200, function() { 
+                $('#port-loader').hide();
+                console.log('project loaded');
+                portArrows();
+            });
+           document.title = $(this).find('h4').text() + ' - ' + site_title;
+        }
+    }
+
     // load and display project
+    /*
     $('#port-projectdata').delay(100).queue(function(){
-        $.getJSON(projectJSON, function(project) {
-            console.log(project);
-        });
+
+
         $(this).load('portfolio/portfolio.html #' + projectID + ' > *', function() {
             // Cufon.refresh();
             if ($(this).html() != ''){
@@ -124,6 +139,7 @@ function loadProject(projectID) {
         });
         $(this).dequeue();
     });
+*/
 }
 
 function backToMenu() {
@@ -139,8 +155,7 @@ function backToMenu() {
 }
 
 function debug(text) {
-    $('#debugtext').append('<br />' + text);
-    $('#debugtext').attr({ scrollTop: $("#debugtext").attr("scrollHeight") });
+    console.log(text);
 }
 
 /* INITIALIZE */
@@ -196,7 +211,7 @@ $(document).ready(function() {
         }
     }
 
-    // POPULATE CURRENT PROJECTS
+    // POPULATE 'CURRENT PROJECTS' PAGE
     var m_current_project = $('#m_current_project').html();
     for (var i = 0; i < projects.items.length; i++) {
         item = projects.items[i];
