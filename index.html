@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="description" content="Lou Huang is a LEED-accredited urban designer and architect based in San Francisco, specializing in graphic presentation, environmental sustainability and transit-oriented planning for progressive, human-centric communities." /> 
+        <meta name="keywords" content="urban, city, planner, designer, design, web, technology, information, maps, mapping, architect, architecture, developer, San Francisco, Bay Area, California" />
+
+        <title>Lou Huang</title>
+
+        <!--[if lt IE 9]>
+            <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <link rel="stylesheet" href="styles.css" type="text/css" media="all" />
+        <!-- <script src='js/less-1.3.0.min.js'></script> -->
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <!-- Adding "maximum-scale=1" fixes the Mobile Safari auto-zoom bug: http://filamentgroup.com/examples/iosScaleBug/ -->
+        
+        <link rel="icon" type="image/png" href="favicon.png" />
+    
+        <script src="js/jquery-1.8.3.min.js" type="text/javascript"></script>
+        <script src="js/jquery.mousewheel.js" type="text/javascript"></script>
+        <script src="js/jquery.ba-hashchange.min.js" type="text/javascript"></script>
+        <script src="js/mustache.js" type="text/javascript"></script>
+        <script src="js/mayor.js" type="text/javascript"></script>
+        <script src="site.js" type="text/javascript"></script>
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-84293-2']);
+          _gaq.push(['_trackPageview']);
+
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+
+        </script>
+    </head>
+    
+    <body lang="en">
+        
+        <div id="col1">
+            <div id="title">
+                <h1><a href="http://louhuang.com/"><img src="images/title.png" height="150" alt=""><span>Lou Huang</span></a></h1>
+            </div>
+                        
+            <div id="about">
+                <div class="text">
+                    <p>Hi! I'm Lou Huang, a LEED-ND accredited urban designer based in San Francisco and a 2013 Fellow at Code for America. I specialize in <strong>graphic presentation</strong>, planning for <strong>human-centric communities</strong>, and <strong>open data + virtual environments</strong>.</p>
+                </div>
+            </div>
+            
+            <div id="navbox">
+                <ul id="nav">
+                    <li id="n-portfolio"><span>Portfolio</span></li>
+                    <li id="n-resume"><span>Resume</span></li>
+                    <li id="n-projects"><span>Current Projects</span></li>
+                    <li id="n-contact"><span>Contact</span></li>
+                </ul>
+            </div>
+            
+            <div id="console">
+                <div id="debugtext" class="text" style="overflow: auto;">Debug</div>
+            </div>
+            
+        </div>
+        
+        <div id="col2">
+            <div id="d-portfolio" style="display:none;">
+            <div id="port-content">
+                
+                <h2>Portfolio</h2>
+            
+                <div id="port-menu">
+                    
+                    <div class="menu-section">          
+                        <h3>Urban Design & Planning</h3>
+            
+                        <div class="menu-leftarrow"><img src="images/menu_left.png" alt=""></div>
+                        <div class="menu-rightarrow"><img src="images/menu_right.png" alt=""></div>
+                        <div id="menu-cpln" class="menu-row">
+                            <div class="scroller">
+                                <script id="m_menu_item" type="text/template">
+                                    <a href="portfolio/portfolio.html#{{id}}"><div class="menu-item">
+                                        <img src="portfolio/thumb_{{id}}.jpg" width=280 height=180 alt="">
+                                        {{#menu_name}}
+                                            <div class="caption menu-title">{{menu_name}}<br />
+                                        {{/menu_name}}
+                                        {{^menu_name}}
+                                            <div class="caption menu-title">{{name}}<br />
+                                        {{/menu_name}}
+                                        {{#menu_location}}
+                                            <span class="subtitle">{{menu_location}}</span>
+                                        {{/menu_location}}
+                                        {{^menu_location}}
+                                            <span class="subtitle">{{location}}</span>
+                                        {{/menu_location}}
+                                        </div>
+                                    </div></a>
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="menu-section">          
+                        <h3>Architecture</h3>
+            
+                        <div class="menu-leftarrow"><img src="images/menu_left.png" alt=""></div>
+                        <div class="menu-rightarrow"><img src="images/menu_right.png" alt=""></div>
+                        <div id="menu-arch" class="menu-row">
+                            <div class="scroller">
+                                <!-- TO BE REPLACED WITH MENU ITEM TEMPLATE -->
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="menu-section">          
+                        <h3>Web & Print</h3>
+            
+                        <div class="menu-leftarrow"><img src="images/menu_left.png" alt=""></div>
+                        <div class="menu-rightarrow"><img src="images/menu_right.png" alt=""></div>
+                        <div id="menu-misc" class="menu-row">
+                            <div class="scroller">
+                                <!-- TO BE REPLACED WITH MENU ITEM TEMPLATE -->            
+                            </div>
+                        </div>
+                    </div>
+            
+                </div>
+            
+                <div id="port-loader"></div>
+            
+                <div id="port-project" style="display:none;">
+                    
+                    <div id="port-backbutton" title="return to main menu [up arrow]"></div>
+                    <div id="port-dropbutton">More projects</div>
+                    <div id="port-dropdown">
+                        <ul>
+                            <li>Urban Design & Planning</li>
+                            <li>
+                                <ul id="drop-cpln">
+                                    <script id="m_dropdown_item" type="text/template">
+                                        <li><a href="portfolio/portfolio.html#{{id}}">{{name}}</a></li>
+                                    </script>
+                                </ul>
+                            </li>
+                            <li>Architecture</li>
+                            <li>
+                                <ul id="drop-arch">
+                                <!-- TO BE REPLACED WITH DROPDOWN ITEM TEMPLATE -->            
+                                </ul>
+                            </li>
+                            <li>Web & Print</li>
+                            <li>
+                                <ul id="drop-misc">
+                                <!-- TO BE REPLACED WITH DROPDOWN ITEM TEMPLATE -->            
+                                </ul>
+                            </li>
+                            <li id="port-dropback"><a href="#portfolio">&laquo; Return to main menu</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div id="port-projectdata">
+                        <!-- PLACEHOLDER -->
+                    </div>
+                </div>
+            
+            
+            </div>
+            </div>
+            
+            
+            <div id="d-resume" style="display:none;">
+                <h2>Resume</h2>
+                
+                <div class="resume-left">
+                    <h3>Education</h3>
+                    
+                    <div class="text">
+                        <p><strong><a href="http://www.design.upenn.edu/" target="_blank">University of Pennsylvania School of Design</a></strong> <img src="images/extlink.gif" width=9 height=9 alt="">
+                        <br />Master of City Planning, Class of 2010
+                        <br />Concentration in Urban Design</p>
+                        
+                        <p><strong><a href="http://arch.ced.berkeley.edu/" target="_blank">University of California, Berkeley</a></strong> <img src="images/extlink.gif" width=9 height=9 alt="">
+                        <br />Bachelor of Arts in Architecture, Class of 2004
+                        <br />Minor in Social and Cultural Factors in Environmental Design</p>
+                    </div>
+                        
+                    <h3>Experience</h3>
+                    
+                    <div class="text">
+                        <p><strong><a href="http://www.codeforamerica.org/" target="_blank">Code for America</a></strong> <img src="images/extlink.gif" width=9 height=9 alt="">  San Francisco, CA
+                        <br />Fellow (2013)</p>
+                        
+                        <p><strong><a href="http://www.umloud.org/" target="_blank">Ümloud!</a></strong> <img src="images/extlink.gif" width=9 height=9 alt="">  San Francisco, CA
+                        <br />Art Director (2012)</p>
+                        
+                        <p><strong><a href="http://www.vmwp.com/" target="_blank">Van Meter Williams Pollack</a></strong> <img src="images/extlink.gif" width=9 height=9 alt="">  San Francisco, CA
+                        <br />Urban Designer (2011-2012)</p>
+                        
+                        <p><strong><a href="http://www.bkurbandesign.com/" target="_blank">Brown & Keener Urban Design</a></strong> <img src="images/extlink.gif" width=9 height=9 alt="">  Philadelphia, PA
+                        <br />Intern/Designer (2009-2010)</p>
+                        
+                        <p><strong><a href="http://www.issuu.com/pennpanorama/docs/2010_panorama/1" target="_blank">Panorama</a></strong> <img src="images/extlink.gif" width=9 height=9 alt="">  University of Pennsylvania, Philadelphia, PA
+                        <br />Design Editor (2008-2010)</p>
+                        
+                        <p><strong><a href="http://www.cromearchitecture.com/" target="_blank">Crome Architecture</a></strong> <img src="images/extlink.gif" width=9 height=9 alt="">  San Rafael, CA
+                        <br />Designer, Project Manager (2004-2008)</p>
+                    </div>
+                    
+                    <h3>Awards</h3>
+                    
+                    <div class="text">
+                        <p><strong><a href="http://www.saccatalyst.com/" target="_blank">Sacramento Catalyst Competition</a></strong> <img src="images/extlink.gif" width=9 height=9 alt="">  Sacramento, CA 
+                        –  2011 Second Place Winner</p>
+                        
+                        <p><strong><a href="https://sites.google.com/site/hinesdesign2010/" target="_blank">ULI / Gerald D. Hines Student Urban Design Competition</a></strong> <img src="images/extlink.gif" width=9 height=9 alt="">  San Diego, CA 
+                        –  2010 Finalist, Team Leader</p>
+                        
+                        <p><strong>Department of City and Regional Planning Special Award for Excellence in 
+                        Student Publications</strong> – 2010</p>
+                    </div>
+                </div>
+                
+                <div class="resume-right">
+                    <h5>Skills</h5>
+
+                    <div class="text">
+                    <p>
+                    <strong>Software</strong>
+                    <br />ArchiCAD
+                    <br />AutoCAD / Revit
+                    <br />ArcGIS
+                    <br />SketchUp
+                    <br />Photoshop
+                    <br />InDesign
+                    <br />Illustrator
+                    <br />OpenStreetMaps
+                    <br />Operating system proficiency in Windows XP/
+                    Vista, Macintosh OS X, and Linux platforms
+                    </p>
+                    
+                    <p>
+                    <strong>Web Design</strong>
+                    <br />Standards-compliant HTML, JavaScript, 
+                    Cascading Style Sheets, PHP, MySQL.  
+                    </p>
+                    <!--
+                    <p>
+                    <strong>Photography</strong>
+                    <br />Portraits, weddings, events and architecture
+                    </p>
+                    // -->
+                    </div>
+                    
+                    <h5>Professional Affiliations</h5>
+                    
+                    <div class="text">
+                    <p>
+                    <strong>LEED AP</strong>  Neighborhood Development<br />
+                    <strong>APA</strong>  Member<br />
+                    <strong><a href="http://spur.org/" target="_blank">SPUR</a></strong> <img src="images/extlink.gif" width=9 height=9 alt="">  Member
+                    </p>
+                    </div>
+
+                </div>
+<!--
+                <div style="clear: both; padding-top: 10px;" class="text">
+                    <a href="portfolio/downloads/louhuang_resume.pdf" class="noborder" target="_blank"><img src="images/pdf.png" width=16 height=16 alt="download PDF" title="download PDF"> <span class="note">download resume [pdf]</span></a>
+                </div>
+// -->              
+            </div>
+
+            <div id="d-projects" style="display:none;">
+                <h2>Current Projects</h2>
+
+                <script id="m_current_project" type="text/template">
+                    <div class="current">
+                        <img src="portfolio/thumb_{{id}}.png" width=280 height=180 alt="" />
+                        <h3>{{name}}</h3>
+                        <p class="text"> {{description}}
+                        {{#ext_url}}
+                            <a href="{{ext_url}}" target="_blank">{{ext_link}}{{^ext_link}}View site{{/ext_link}}</a> <img src="images/extlink.gif" width=9 height=9 alt="">
+                        {{/ext_url}}
+                        </p>
+                    </div>
+                </script>
+
+            </div>
+
+            <div id="d-contact" style="display:none;">
+                <h2>Contact</h2>
+                
+                <p class="text">
+                <h3>E-mail</h3>
+                <a href="mailto:lou@louhuang.com">lou@louhuang.com</a>
+
+                <h3>Phone</h3>
+                510.364.0641
+
+                <h3>Social</h3>
+                
+                <a href="http://www.linkedin.com/in/louhuang" class="noborder" target="_blank"><img src="images/social/linkedin.png" width=32 height=32 alt="LinkedIn"></a>
+                <a href="https://twitter.com/#!/saikofish" class="noborder" target="_blank"><img src="images/social/twitter.png" width=32 height=32 alt="Twitter"></a>
+                <a href="http://archinect.com/people/cover/25942652/lou-huang" class="noborder" target="_blank"><img src="images/social/archinect.png" width=32 height=32 alt="Archinect"></a>
+
+                <!-- Instagram Code block -->
+                <style>.ig-b- { display: inline-block; }
+                .ig-b- img { visibility: hidden; }
+                .ig-b-:hover { background-position: 0 -60px; } .ig-b-:active { background-position: 0 -120px; }
+                .ig-b-32 { width: 32px; height: 32px; background: url(//badges.instagram.com/static/images/ig-badge-sprite-32.png) no-repeat 0 0; }
+                @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+                .ig-b-32 { background-image: url(//badges.instagram.com/static/images/ig-badge-sprite-32@2x.png); background-size: 60px 178px; } }</style>
+                <a href="http://instagram.com/saikofish?ref=badge" class="ig-b- ig-b-32 noborder" target="_blank"><img src="//badges.instagram.com/static/images/ig-badge-32.png" alt="Instagram" /></a>
+
+
+                </p>
+                
+            </div>
+
+            
+        </div>
+
+    </body>
+    
+</html>
