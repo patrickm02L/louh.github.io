@@ -125,12 +125,6 @@ body {
 	
 }
 
-/* NOT SURE IF WE NEED THIS? - or if we do, keep it in specific location
-img {
-	display: block;
-}
-*/
-
 h1 {
 	margin: 0 0 10px 0;
 }
@@ -372,7 +366,7 @@ a.noborder {
 	max-height: 400px;
 	margin-top: 5px;
 	padding-right: 10px;
-	font-family: 'Asap', Helvetica, Arial, sans-serif;
+	font-family: Helvetica, Arial, sans-serif;
 	font-size: 11px;
 	line-height: 160%;
 }
