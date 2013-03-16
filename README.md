@@ -3,4 +3,6 @@ website
 
 the stuff that goes on louhuang.com
 
-test heroku deployment here: http://secure-badlands-6674.herokuapp.com/
+currently staging here: http://louh.github.com/website/
+
+(old) test heroku deployment here: http://secure-badlands-6674.herokuapp.com/
