@@ -103,7 +103,7 @@ function loadProject(projectID) {
     else {
         $('#port-projectdata').fadeOut(200);
     }       
-    // create the project html
+    // create the project html snippet
     var item = null;
     var m_project = $('#m_project').html();
     for (var i = 0; i < projects.items.length; i++) {
@@ -111,10 +111,9 @@ function loadProject(projectID) {
         if (item.id == projectID) {
             $('#port-projectdata').html(Mustache.render(m_project, item)).fadeIn(200, function() { 
                 $('#port-loader').hide();
-                console.log('project loaded');
                 portArrows();
             });
-           document.title = $(this).find('h4').text() + ' - ' + site_title;
+           document.title = item.name + ' - ' + site_title;
         }
     }
 

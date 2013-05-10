@@ -19,24 +19,6 @@
         
         <link rel="icon" type="image/png" href="favicon.png" />
     
-        <script src="js/jquery-1.8.3.min.js" type="text/javascript"></script>
-        <script src="js/jquery.mousewheel.js" type="text/javascript"></script>
-        <script src="js/jquery.ba-hashchange.min.js" type="text/javascript"></script>
-        <script src="js/mustache.js" type="text/javascript"></script>
-        <script src="js/mayor.js" type="text/javascript"></script>
-        <script src="site.js" type="text/javascript"></script>
-        <script type="text/javascript">
-          var _gaq = _gaq || [];
-          _gaq.push(['_setAccount', 'UA-84293-2']);
-          _gaq.push(['_trackPageview']);
-
-          (function() {
-            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-          })();
-
-        </script>
     </head>
     
     <body lang="en">
@@ -193,11 +175,11 @@
                                     <p>{{description}}</p>
                                     
                                     {{#pdf_url}}
-                                    <p><a href="{{pdf_url}}" class="noborder" target="_blank"><img src="images/pdf.png" width=16 height=16alt="download PDF" title="download PDF"> <span class="note">{{pdf_link}}{{^pdf_link}}Download PDF{{/pdf_link}} [pdf]</span></a></p>
+                                    <p><a href="{{pdf_url}}" class="noborder" target="_blank" title="download PDF">{{pdf_link}}{{^pdf_link}}Download PDF{{/pdf_link}} [pdf]</a></p>
                                     {{/pdf_url}}
                                     
                                     {{#ext_url}}
-                                    <p><a href="{{ext_url}}" target="_blank">{{ext_link}}{{^ext_link}}View site{{/ext_link}}</a> <img src="images/extlink.gif" width=9 height=9 alt=""></p>
+                                    <p><a href="{{ext_url}}" class="noborder" target="_blank" title="view external link">{{ext_link}}{{^ext_link}}View site{{/ext_link}}</a></p>
                                     {{/ext_url}}
                                 </div>
                             </div>
@@ -307,7 +289,7 @@
                 </div>
 <!--
                 <div style="clear: both; padding-top: 10px;" class="text">
-                    <a href="portfolio/downloads/louhuang_resume.pdf" class="noborder" target="_blank"><img src="images/pdf.png" width=16 height=16 alt="download PDF" title="download PDF"> <span class="note">download resume [pdf]</span></a>
+                    <a href="portfolio/downloads/louhuang_resume.pdf" class="noborder" target="_blank" alt="download resume [pdf]" title="download resume [pdf]">download resume [pdf]</a>
                 </div>
 // -->              
             </div>
@@ -361,6 +343,28 @@
 
             
         </div>
+
+
+        <script src='//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'></script>
+        <script>window.jQuery || document.write('<script src='js/jquery-1.9.1.min.js'><\/script>')</script>
+
+        <script src="js/jquery.mousewheel.js" type="text/javascript"></script>
+        <script src="js/jquery.ba-hashchange.min.js" type="text/javascript"></script>
+        <script src="js/mustache.js" type="text/javascript"></script>
+        <script src="js/mayor.js" type="text/javascript"></script>
+        <script src="site.js" type="text/javascript"></script>
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-84293-2']);
+          _gaq.push(['_trackPageview']);
+
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+
+        </script>
 
     </body>
     

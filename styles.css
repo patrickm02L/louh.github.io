@@ -485,18 +485,15 @@ a.noborder {
 	float: left;
 }
 
-
-img[src="images/extlink.gif"] {
-/*	bottom: -1px;
-	position: relative;
-*/
+a[href^="http://"] {
+	background: url('images/extlink.gif') no-repeat right 1px;  
+	padding-right: 14px;
 }
 
-.note {
-	color: #999;
-	font-size: 10px;
-	position: relative;
-	bottom: 5px;
+a[href$=".pdf"] {
+	background: url('images/pdf.png') no-repeat;
+	display: block;
+	padding-left: 24px;
 }
 
 .current{
@@ -504,7 +501,7 @@ img[src="images/extlink.gif"] {
 	margin: 10px 0 0 0;
 }
 
-.current  img:first-child {
+.current img:first-child {
 	float: left;
 	margin: 0 10px 10px 0;
 }
