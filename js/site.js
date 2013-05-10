@@ -1,4 +1,4 @@
-var projectJSON = 'portfolio/portfolio.json';
+var projectJSON = 'portfolio.json';
 var projects = {};
 
 /* INTERFACE */
@@ -10,34 +10,30 @@ var scroller, scrollItemsLeftPos, scrollBoxLeftPos, scrollItemsRightPos, scrollB
 function loadHash() {
     var hash = window.location.hash;
     switch(hash) {
-        case '#resume':
+        case '#/resume':
             $('#n-resume').click();
             break;
-        case '#projects':
+        case '#/projects':
             $('#n-projects').click();
             break;
-        case '#contact':
+        case '#/contact':
             $('#n-contact').click();
             break;
-        case '#portfolio':
+        case '#/portfolio':
             $('#n-portfolio').click();
             break;
         case '':
             $('#n-portfolio').click();
             break;
     }
-    if (hash.match(/\//)) {
-        var splitHash = hash.split(/\//);
-        var section = splitHash[0];
+    if (hash.match(/\/portfolio\//)) {
+        var splitHash = hash.split(/\/portfolio\//);
         var projectID = splitHash[1];
-        // Open portfolio item
-        if(section == '#portfolio'){
+        if (projectID) {
             $('#d-portfolio').show();
             $('#port-menu').hide();
             $('#port-project').show();
-            if(projectID){
-                loadProject(projectID);
-            }
+            loadProject(projectID);
         }
     }
 }
@@ -92,7 +88,7 @@ function portArrows() {
 
 function loadProject(projectID) {
     // don't manually set hash here, it will trigger hashchange a second time
-    // window.location.hash = 'portfolio/'+projectID;
+    // window.location.hash = '/portfolio/'+projectID;
     // clear screen
     $('#port-loader:hidden').show();
     if ($('#port-menu').is(':visible')) {
@@ -149,7 +145,7 @@ function backToMenu() {
             menuArrows();
         });
         document.title = 'Portfolio - ' + site_title;
-        window.location.hash = 'portfolio';
+        window.location.hash = '/portfolio';
     }
 }
 
@@ -160,16 +156,6 @@ function debug(text) {
 /* INITIALIZE */
 
 $(document).ready(function() {
-
-    // CUFON
-    /*
-    Cufon.replace('h1', { fontFamily: 'Montserrat' });
-    Cufon.replace('h2', { fontFamily: 'Montserrat' });
-    Cufon.replace('h3', { fontFamily: 'Montserrat' });
-    Cufon.replace('h4', { fontFamily: 'Montserrat' });
-    Cufon.replace('h5', { fontFamily: 'Montserrat' });
-    Cufon.replace('#navbox li', { fontFamily: 'Montserrat' });
-    */
 
     // LOAD PROJECTS JSON
     $.ajax({
@@ -239,7 +225,7 @@ $(document).ready(function() {
             });
             menuArrows();
             document.title = 'Portfolio - ' + site_title;
-            window.location.hash = 'portfolio';
+            window.location.hash = '/portfolio';
         }
     );
 
@@ -256,7 +242,7 @@ $(document).ready(function() {
             // Open Resume
             $('#d-resume:hidden').fadeIn(300, function(){
                 document.title = 'Resume - ' + site_title;
-                window.location.hash = 'resume';
+                window.location.hash = '/resume';
             });
             $('#n-resume span').addClass('active');
         }
@@ -275,7 +261,7 @@ $(document).ready(function() {
             // Open Projects
             $('#d-projects:hidden').fadeIn(300, function(){
                 document.title = 'Current Projects - ' + site_title;
-                window.location.hash = 'projects';
+                window.location.hash = '/projects';
             });
             $('#n-projects span').addClass('active');
         }
@@ -294,7 +280,7 @@ $(document).ready(function() {
             // Open Contact
             $('#d-contact:hidden').fadeIn(300, function(){
                 document.title = 'Contact - ' + site_title;
-                window.location.hash = 'contact';
+                window.location.hash = '/contact';
             });
             $('#n-contact span').addClass('active');
         }
@@ -325,13 +311,13 @@ $(document).ready(function() {
     });
     
     // Portfolio - Menu - Open project
-    $('div.menu-row a').click(function(event){
-        event.preventDefault();
-        // change location
-        var path = $(this).attr('href');
-        var projectID = path.replace(/portfolio\/portfolio.html#/,'');
-        window.location.hash = 'portfolio/'+projectID;
-        // loadProject(projectID);
+    $('div.menu-row a').click( function (e) {
+        //e.preventDefault();
+
+        // Currently this is not needed. The link on the page directly loads the project.
+
+        //window.location.hash = '/portfolio/' + projectID;
+        //loadProject(projectID);
     });
 
     // Portfolio - Dropdown menu
@@ -345,28 +331,16 @@ $(document).ready(function() {
             }
         }
     );
-    $('#port-dropbutton').click(function(){
+    $('#port-dropbutton').click( function () {
         $('#port-dropdown:hidden').slideDown(300);
     });
+
     // Portfolio - Dropdown - View project
-    $('#port-dropdown ul ul li').click(function(event){
-        // stop link from firing
-        event.preventDefault();
-        // reset dropdown menu
+    $('#port-dropdown a').click( function () {
         $('#port-dropdown:visible').fadeOut(200);
         $('#port-dropbutton').animate({opacity: 0.5}, 200);
-        // load project
-        var path = $(this).find('a').attr('href');
-        var projectID = path.replace(/portfolio\/portfolio.html#/,'');
-        window.location.hash = 'portfolio/'+projectID;
-        // loadProject(projectID);
     });
-    // Portfolio - Dropdown - Return to menu
-    $('#port-dropback').click(function(event){
-        event.preventDefault();
-        $('#port-dropdown').hide();
-        backToMenu();
-    });
+
     // Portfolio - Dropdown - Close if clicked outside
     $('#port-dropdown').hover(function(){ 
         mouse_is_inside=true; 
