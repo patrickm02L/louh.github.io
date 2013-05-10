@@ -87,54 +87,38 @@ function portArrows() {
 }
 
 function loadProject(projectID) {
-    // don't manually set hash here, it will trigger hashchange a second time
-    // window.location.hash = '/portfolio/'+projectID;
-    // clear screen
+
+    // Clear screen
     $('#port-loader:hidden').show();
     if ($('#port-menu').is(':visible')) {
         $('#port-menu').fadeOut(200, function(){
             $('#port-project').fadeIn(200);
         });
     }
-    else {
-        $('#port-projectdata').fadeOut(200);
-    }       
-    // create the project html snippet
-    var item = null;
-    var m_project = $('#m_project').html();
-    for (var i = 0; i < projects.items.length; i++) {
-        item = projects.items[i];
-        if (item.id == projectID) {
-            $('#port-projectdata').html(Mustache.render(m_project, item)).fadeIn(200, function() { 
-                $('#port-loader').hide();
-                portArrows();
-            });
-           document.title = item.name + ' - ' + site_title;
-        }
-    }
 
-    // load and display project
-    /*
-    $('#port-projectdata').delay(100).queue(function(){
-
-
-        $(this).load('portfolio/portfolio.html #' + projectID + ' > *', function() {
-            // Cufon.refresh();
-            if ($(this).html() != ''){
-                document.title = $(this).find('h4').text() + ' - ' + site_title;
-                $('#port-projectdata').fadeIn(200, function() { 
+    // Display the project, clear the old project first, if it is there
+    $('#port-projectdata').fadeOut(200, function () {
+        // Create the project html snippet
+        var item = null;
+        var m_project = $('#m_project').html();
+        for (var i = 0; i < projects.items.length; i++) {
+            item = projects.items[i];
+            if (item.id == projectID) {
+                $('#port-projectdata').html(Mustache.render(m_project, item)).fadeIn(200, function() { 
                     $('#port-loader').hide();
                     portArrows();
                 });
+               document.title = item.name + ' - ' + site_title;
+               return true;
             }
-            else {
-                // Show menu if project is not found
-                backToMenu();
-            }
-        });
-        $(this).dequeue();
+        }
     });
-*/
+    /*
+        else {
+            // Show menu if project is not found
+            backToMenu();
+        }
+    */
 }
 
 function backToMenu() {
@@ -311,14 +295,14 @@ $(document).ready(function() {
     });
     
     // Portfolio - Menu - Open project
+    // Currently this is not needed. The link on the page directly loads the project.
+    /*
     $('div.menu-row a').click( function (e) {
-        //e.preventDefault();
-
-        // Currently this is not needed. The link on the page directly loads the project.
-
-        //window.location.hash = '/portfolio/' + projectID;
-        //loadProject(projectID);
+        e.preventDefault();
+        window.location.hash = '/portfolio/' + projectID;
+        loadProject(projectID);
     });
+    */
 
     // Portfolio - Dropdown menu
     $('#port-dropbutton').hover(
