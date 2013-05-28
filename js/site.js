@@ -106,6 +106,7 @@ function loadProject(projectID) {
             if (item.id == projectID) {
                 $('#port-projectdata').html(Mustache.render(m_project, item)).fadeIn(200, function() { 
                     $('#port-loader').hide();
+                    initProjectNav();
                     portArrows();
                 });
                document.title = item.name + ' - ' + site_title;
@@ -131,6 +132,56 @@ function backToMenu() {
         document.title = 'Portfolio - ' + site_title;
         window.location.hash = '/portfolio';
     }
+}
+
+function initProjectNav () {
+    // Portfolio - Project navigation
+    // var projectWidth = 650;
+    var projectWidth;
+
+    $('.port-leftarrow img').on('click', function(){
+        var projectWidth = $('#port-images').width();
+        // Overscroll stopper - like the menu one, not that elegant but it works
+        scroller = $('#port-images .scroller')
+        scrollItemsLeftPos = $(scroller).offset().left + projectWidth;
+        scrollBoxLeftPos = $('#port-images').offset().left;
+        if (scrollItemsLeftPos <= scrollBoxLeftPos) {
+            $('#port-images .scroller').filter(':not(:animated)').animate({'marginLeft': '+='
+            +projectWidth}, 300, function(){
+                portArrows();
+            });
+        }
+    });
+    $('.port-rightarrow img').on('click', function(){
+        var projectWidth = $('#port-images').width();
+        scroller = $('#port-images .scroller')
+        scrollItemsRightPos = $(scroller).find('img:last').offset().left + $(scroller).find('img:last').width() - 15;
+        scrollBoxRightPos = $('#port-images').offset().left + $('#port-images').width();
+        if (scrollItemsRightPos > scrollBoxRightPos) {
+            $('#port-images .scroller').filter(':not(:animated)').animate({'marginLeft': '-='+projectWidth}, 300, function(){
+                portArrows();
+            });
+        }
+    });
+    
+    // Portfolio - Project - Fade out arrows when not hovering over images
+    $('#port-images').on('mouseover', function() {
+        $('.port-leftarrow img').stop(true, true).fadeIn(200);  
+        $('.port-rightarrow img').stop(true, true).fadeIn(200);
+    });
+    $('#port-images').on('mouseout', function() {
+        $('.port-leftarrow img').delay(150).fadeOut(200);
+        $('.port-rightarrow img').delay(150).fadeOut(200);
+    });
+
+    // Portfolio - Project - Image captions
+    $('#port-images .scroller img').on('mouseenter', function (){
+        $(this).next('div').stop(true, true).fadeIn(200);
+    });
+    $('#port-images .scroller img').on('mouseleave', function (){
+        $(this).next('div').delay(150).fadeOut(200);
+    });
+    
 }
 
 function debug(text) {
@@ -293,16 +344,6 @@ $(document).ready(function() {
             });
         }
     });
-    
-    // Portfolio - Menu - Open project
-    // Currently this is not needed. The link on the page directly loads the project.
-    /*
-    $('div.menu-row a').click( function (e) {
-        e.preventDefault();
-        window.location.hash = '/portfolio/' + projectID;
-        loadProject(projectID);
-    });
-    */
 
     // Portfolio - Dropdown menu
     $('#port-dropbutton').hover(
@@ -351,51 +392,6 @@ $(document).ready(function() {
         }
     );
 
-    // Portfolio - Project navigation
-    // var projectWidth = 650;
-    var projectWidth;
-    $('.port-leftarrow img').live('click', function(){
-        var projectWidth = $('#port-images').width();
-        // Overscroll stopper - like the menu one, not that elegant but it works
-        scroller = $('#port-images .scroller')
-        scrollItemsLeftPos = $(scroller).offset().left + projectWidth;
-        scrollBoxLeftPos = $('#port-images').offset().left;
-        if (scrollItemsLeftPos <= scrollBoxLeftPos) {
-            $('#port-images .scroller').filter(':not(:animated)').animate({'marginLeft': '+='
-            +projectWidth}, 300, function(){
-                portArrows();
-            });
-        }
-    });
-    $('.port-rightarrow img').live('click', function(){
-        var projectWidth = $('#port-images').width();
-        scroller = $('#port-images .scroller')
-        scrollItemsRightPos = $(scroller).find('img:last').offset().left + $(scroller).find('img:last').width() - 15;
-        scrollBoxRightPos = $('#port-images').offset().left + $('#port-images').width();
-        if (scrollItemsRightPos > scrollBoxRightPos) {
-            $('#port-images .scroller').filter(':not(:animated)').animate({'marginLeft': '-='+projectWidth}, 300, function(){
-                portArrows();
-            });
-        }
-    });
-    // Portfolio - Project - Fade out arrows when not hovering over images
-    $('#port-images').live('mouseover', function() {
-        $('.port-leftarrow img').stop(true, true).fadeIn(200);  
-        $('.port-rightarrow img').stop(true, true).fadeIn(200);
-    });
-    $('#port-images').live('mouseout', function() {
-        $('.port-leftarrow img').delay(150).fadeOut(200);
-        $('.port-rightarrow img').delay(150).fadeOut(200);
-    });
-
-    // Portfolio - Project - Image captions
-    $('#port-images .scroller img').live('mouseenter', function (){
-        $(this).next('div').stop(true, true).fadeIn(200);
-    });
-    $('#port-images .scroller img').live('mouseleave', function (){
-        $(this).next('div').delay(150).fadeOut(200);
-    });
-    
     // Keybindings
     $(document).keydown(function (e) {
         if (e.which == 80 && e.ctrlKey == false && e.metaKey == false) {    // key 'p'      opens "portfolio" window
