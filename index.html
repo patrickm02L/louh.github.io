@@ -3,12 +3,13 @@
   <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+
     <title>Lou Huang</title>
+
     <meta name='description' content='Lou Huang is a LEED-accredited urban designer and architect based in San Francisco, specializing in graphic presentation, environmental sustainability and transit-oriented planning for progressive, human-centric communities.'> 
     <meta name='keywords' content='urban, city, planner, designer, design, web, technology, information, maps, mapping, architect, architecture, developer, San Francisco, Bay Area, California'>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
 
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <link rel='icon' type='image/png' href='favicon.png'>  
 
     <link rel='stylesheet' href='css/styles.css'>
@@ -341,16 +342,53 @@
       
     </div>
 
+    <!-- JQUERY AND PLUGINS -->
     <script src='//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js'></script>
     <script>window.jQuery || document.write('<script src=\'js/vendor/jquery-1.10.2.min.js\'><\/script>')</script>
     <script src='js/vendor/jquery.mousewheel.js' type='text/javascript'></script>
     <script src='js/vendor/jquery.ba-hashchange.min.js' type='text/javascript'></script>
+    <!-- / JQUERY AND PLUGINS -->
+
+    <!-- ADDITIONAL LIBRARIES -->
     <script src='js/vendor/mustache.js' type='text/javascript'></script>
     <script src='js/mayor.js' type='text/javascript'></script>
+    <!-- / ADDITIONAL LIBRARIES -->
 
-    <script src='js/plugins.js'></script>
+    <!-- SITE JAVASCRIPT -->
+    <script src='js/plugins.js'></script> <!-- from HTML5 Boilerplate -->
     <script src='js/main.js'></script>
+    <!-- / SITE JAVASCRIPT -->
 
+    <!-- FOUNDATION -->
+    <script>
+      document.write('<script src=' +
+      ('__proto__' in {} ? 'js/vendor/zepto' : 'js/vendor/jquery') +
+      '.js><\/script>')
+    </script>
+    <script src='js/foundation/foundation.js'></script>
+    <!--
+    // Foundation plugins. Uncomment as necessary
+    <script src='js/foundation/foundation.alerts.js'></script>
+    <script src='js/foundation/foundation.clearing.js'></script>
+    <script src='js/foundation/foundation.cookie.js'></script>
+    <script src='js/foundation/foundation.dropdown.js'></script>
+    <script src='js/foundation/foundation.forms.js'></script>
+    <script src='js/foundation/foundation.joyride.js'></script>
+    <script src='js/foundation/foundation.magellan.js'></script>
+    <script src='js/foundation/foundation.orbit.js'></script>
+    <script src='js/foundation/foundation.placeholder.js'></script>
+    <script src='js/foundation/foundation.reveal.js'></script>
+    <script src='js/foundation/foundation.section.js'></script>
+    <script src='js/foundation/foundation.tooltips.js'></script>
+    <script src='js/foundation/foundation.topbar.js'></script>
+    <script src='js/foundation/foundation.interchange.js'></script>
+    // -->
+    <script>
+      $(document).foundation();
+    </script>
+    <!-- / END FOUNDATION -->
+
+    <!-- GOOGLE ANALYTICS -->
     <script type='text/javascript'>
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-84293-2']);
@@ -361,8 +399,8 @@
       ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
       })();
-
     </script>
+    <!-- / GOOGLE ANALYTICS -->
 
   </body>
   
