@@ -2826,7 +2826,7 @@ meta.foundation-mq-topbar {
 /* Wrapped around .top-bar to contain to grid width */
 .contain-to-grid {
   width: 100%;
-  background: #dbdbdb; }
+  background: #e1e1e1; }
   .contain-to-grid .top-bar {
     margin-bottom: 0; }
 
@@ -2847,14 +2847,14 @@ meta.foundation-mq-topbar {
       z-index: 99; }
     .fixed.expanded:not(.top-bar) .top-bar-section {
       z-index: 98;
-      margin-top: 45px; }
+      margin-top: 60px; }
 
 .top-bar {
   overflow: hidden;
-  height: 45px;
-  line-height: 45px;
+  height: 60px;
+  line-height: 60px;
   position: relative;
-  background: #dbdbdb;
+  background: #e1e1e1;
   margin-bottom: 0; }
   .top-bar ul {
     margin-bottom: 0;
@@ -2874,35 +2874,35 @@ meta.foundation-mq-topbar {
     position: relative;
     margin: 0; }
   .top-bar .name {
-    height: 45px;
+    height: 60px;
     margin: 0;
     font-size: 16px; }
     .top-bar .name h1 {
-      line-height: 45px;
-      font-size: 1.0625em;
+      line-height: 60px;
+      font-size: 20px;
       margin: 0; }
       .top-bar .name h1 a {
-        font-weight: bold;
-        color: white;
+        font-weight: normal;
+        color: #5d6262;
         width: 50%;
         display: block;
-        padding: 0 15px; }
+        padding: 0 20px; }
   .top-bar .toggle-topbar {
     position: absolute;
     right: 0;
     top: 0; }
     .top-bar .toggle-topbar a {
-      color: white;
+      color: #5d6262;
       text-transform: uppercase;
       font-size: 0.8125em;
       font-weight: bold;
       position: relative;
       display: block;
-      padding: 0 15px;
-      height: 45px;
-      line-height: 45px; }
+      padding: 0 20px;
+      height: 60px;
+      line-height: 60px; }
     .top-bar .toggle-topbar.menu-icon {
-      right: 15px;
+      right: 20px;
       top: 50%;
       margin-top: -16px;
       padding-left: 40px; }
@@ -2925,7 +2925,7 @@ meta.foundation-mq-topbar {
     height: auto;
     background: transparent; }
     .top-bar.expanded .title-area {
-      background: #dbdbdb; }
+      background: #e1e1e1; }
     .top-bar.expanded .toggle-topbar a {
       color: #888888; }
       .top-bar.expanded .toggle-topbar a span {
@@ -2948,25 +2948,25 @@ meta.foundation-mq-topbar {
     margin: 0; }
   .top-bar-section .divider,
   .top-bar-section [role="separator"] {
-    border-bottom: solid 1px whitesmoke;
-    border-top: solid 1px #c2c2c2;
+    border-bottom: solid 1px #fbfbfb;
+    border-top: solid 1px #c8c8c8;
     clear: both;
     height: 1px;
     width: 100%; }
   .top-bar-section ul li > a {
     display: block;
     width: 100%;
-    color: white;
+    color: #5d6262;
     padding: 12px 0 12px 0;
-    padding-left: 15px;
+    padding-left: 20px;
     font-size: 0.8125em;
     font-weight: bold;
     background: #222222; }
     .top-bar-section ul li > a.button {
       background: #2ba6cb;
       font-size: 0.8125em;
-      padding-right: 15px;
-      padding-left: 15px; }
+      padding-right: 20px;
+      padding-left: 20px; }
       .top-bar-section ul li > a.button:hover {
         background: #2284a1; }
     .top-bar-section ul li > a.button.secondary {
@@ -2982,13 +2982,13 @@ meta.foundation-mq-topbar {
       .top-bar-section ul li > a.button.alert:hover {
         background: #970b0e; }
   .top-bar-section ul li:hover > a {
-    background: black;
+    background: #5d6262;
     color: white; }
   .top-bar-section ul li.active > a {
-    background: #d4d4d4;
+    background: #5d6262;
     color: white; }
   .top-bar-section .has-form {
-    padding: 15px; }
+    padding: 20px; }
   .top-bar-section .has-dropdown {
     position: relative; }
     .top-bar-section .has-dropdown > a:after {
@@ -2999,7 +2999,7 @@ meta.foundation-mq-topbar {
       border: inset 5px;
       border-color: transparent transparent transparent rgba(255, 255, 255, 0.5);
       border-left-style: solid;
-      margin-right: 15px;
+      margin-right: 20px;
       margin-top: -4.5px;
       position: absolute;
       top: 50%;
@@ -3019,17 +3019,17 @@ meta.foundation-mq-topbar {
       height: auto; }
       .top-bar-section .dropdown li a {
         font-weight: normal;
-        padding: 8px 15px; }
+        padding: 8px 20px; }
         .top-bar-section .dropdown li a.parent-link {
           font-weight: bold; }
       .top-bar-section .dropdown li.title h5 {
         margin-bottom: 0; }
         .top-bar-section .dropdown li.title h5 a {
-          color: white;
-          line-height: 22.5px;
+          color: #5d6262;
+          line-height: 30px;
           display: block; }
     .top-bar-section .dropdown label {
-      padding: 8px 15px 2px;
+      padding: 8px 20px 2px;
       margin-bottom: 0;
       text-transform: uppercase;
       color: #555555;
@@ -3041,7 +3041,7 @@ meta.foundation-mq-topbar {
 
 @media only screen and (min-width: 940px) {
   .top-bar {
-    background: #dbdbdb;
+    background: #e1e1e1;
     *zoom: 1;
     overflow: visible; }
     .top-bar:before, .top-bar:after {
@@ -3065,7 +3065,7 @@ meta.foundation-mq-topbar {
     .top-bar .button {
       line-height: 2em; }
     .top-bar.expanded {
-      background: #dbdbdb; }
+      background: #e1e1e1; }
 
   .contain-to-grid .top-bar {
     max-width: 62.5em;
@@ -3086,16 +3086,16 @@ meta.foundation-mq-topbar {
         .top-bar-section ul li .js-generated {
           display: none; }
     .top-bar-section li.hover > a:not(.button) {
-      background: black;
+      background: #5d6262;
       color: white; }
     .top-bar-section li a:not(.button) {
-      padding: 0 15px;
-      line-height: 45px;
-      background: #dbdbdb; }
+      padding: 0 20px;
+      line-height: 60px;
+      background: #e1e1e1; }
       .top-bar-section li a:not(.button):hover {
-        background: black; }
+        background: #5d6262; }
     .top-bar-section .has-dropdown > a {
-      padding-right: 35px !important; }
+      padding-right: 40px !important; }
       .top-bar-section .has-dropdown > a:after {
         content: "";
         display: block;
@@ -3105,7 +3105,7 @@ meta.foundation-mq-topbar {
         border-color: rgba(255, 255, 255, 0.5) transparent transparent transparent;
         border-top-style: solid;
         margin-top: -2.5px;
-        top: 22.5px; }
+        top: 30px; }
     .top-bar-section .has-dropdown.moved {
       position: relative; }
       .top-bar-section .has-dropdown.moved > .dropdown {
@@ -3127,26 +3127,26 @@ meta.foundation-mq-topbar {
         color: white;
         line-height: 1;
         white-space: nowrap;
-        padding: 7px 15px;
-        background: #e8e8e8; }
+        padding: 7px 20px;
+        background: #eeeeee; }
       .top-bar-section .dropdown li label {
         white-space: nowrap;
-        background: #e8e8e8; }
+        background: #eeeeee; }
       .top-bar-section .dropdown li .dropdown {
         left: 100%;
         top: 0; }
     .top-bar-section > ul > .divider, .top-bar-section > ul > [role="separator"] {
       border-bottom: none;
       border-top: none;
-      border-right: solid 1px whitesmoke;
-      border-left: solid 1px #c2c2c2;
+      border-right: solid 1px #fbfbfb;
+      border-left: solid 1px #c8c8c8;
       clear: none;
-      height: 45px;
+      height: 60px;
       width: 0; }
     .top-bar-section .has-form {
-      background: #dbdbdb;
-      padding: 0 15px;
-      height: 45px; }
+      background: #e1e1e1;
+      padding: 0 20px;
+      height: 60px; }
     .top-bar-section ul.right li .dropdown {
       left: auto;
       right: 0; }
@@ -3154,10 +3154,10 @@ meta.foundation-mq-topbar {
         right: 100%; }
 
   .no-js .top-bar-section ul li:hover > a {
-    background: black;
+    background: #5d6262;
     color: white; }
   .no-js .top-bar-section ul li:active > a {
-    background: #d4d4d4;
+    background: #5d6262;
     color: white; }
   .no-js .top-bar-section .has-dropdown:hover > .dropdown {
     display: block; } }
@@ -4748,36 +4748,48 @@ a.th {
   font-style: normal; }
 
 body {
-  background: #e8e8e8;
+  background: #eeeeee;
   color: #5d6262;
   font: 16px/24px "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
 
-.container {
-  width: 896px;
-  margin: 0 auto; }
+nav .name {
+  text-transform: uppercase; }
+nav .logo {
+  margin: 0 auto;
+  width: 90px;
+  height: 90px;
+  background: transparent url("../img/logo.png") center center no-repeat;
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  margin-left: -45px; }
+nav .social-icons li {
+  font-size: 190%; }
 
 h1, h2, h3, h4, h5 {
   font-family: 'Montserrat';
   color: #5d6262;
   font-weight: normal;
   -webkit-font-smoothing: antialiased;
-  /* Prevents fonts looking so bold on Mac */ }
+  /* Prevents fonts looking so bold on Mac */
+  text-transform: uppercase; }
 
-.huge, h1 {
+h1 {
   font-size: 48px;
   line-height: 72px; }
 
-.large, h2 {
+h2 {
   font-size: 32px;
-  line-height: 48px;
-  letter-spacing: -1px; }
+  line-height: 60px;
+  letter-spacing: -1px;
+  height: 60px; }
 
-.bigger, h3 {
+h3 {
   font-size: 18px;
   line-height: 18px;
   letter-spacing: -1px; }
 
-.big, h4 {
+h4 {
   font-size: 22px;
   line-height: 22px;
   letter-spacing: -1px; }
@@ -4791,45 +4803,18 @@ h5 {
   font-size: 12px;
   line-height: 18px; }
 
-/* Selection colours (easy to forget) */
-::selection {
-  background: #ffff9e; }
+#about {
+  height: 400px;
+  background-color: #fbfbfb; }
 
-::-moz-selection {
-  background: #ffff9e; }
-
-img::selection {
-  background: transparent; }
-
-img::-moz-selection {
-  background: transparent; }
-
-body {
-  -webkit-tap-highlight-color: #ffff9e; }
-
-/*    Default Layout: 992px. 
-    Gutters: 24px.
-    Outer margins: 48px.
-    Leftover space for scrollbars @1024px: 32px.
--------------------------------------------------------------------------------
-cols    1     2      3      4      5      6      7      8      9      10
-px      68    160    252    344    436    528    620    712    804    896    */
-@media only all and (max-width: 1080px) and (max-height: 720px) {
-  body, #background {
-    -moz-background-size: 1080px 720px;
-    background-size: 1080px 720px; } }
-h1 {
-  margin: 0 0 10px 0; }
-
-h1 a {
-  border: 0 !important; }
-
-h2 {
-  text-align: right;
-  width: 100%;
-  text-transform: uppercase;
-  height: 60px;
-  overflow: hidden; }
+.portrait {
+  width: 260px;
+  height: 260px;
+  margin: 0 auto;
+  margin-top: 70px;
+  border-radius: 130px;
+  background: white url("../img/portrait.jpg") center center no-repeat;
+  background-size: 100%; }
 
 h1 span, h2 span {
   display: none; }
@@ -4855,23 +4840,6 @@ hr {
   margin-right: 10px;
   padding-bottom: 6px;
   position: fixed; }
-
-#title {
-  position: relative;
-  margin: 48px 12px 12px 12px;
-  border-bottom: 3px solid #5d6262; }
-
-#title img {
-  position: relative; }
-
-#about {
-  padding: 20px 12px 10px; }
-
-.text {
-  line-height: 150%; }
-
-.text p {
-  margin-bottom: 8px; }
 
 #navbox ul {
   list-style: none;
@@ -5153,179 +5121,3 @@ a, a:hover, a:active, a:visited {
   .current img:first-child {
     float: left;
     margin: 0 10px 10px 0; }
-
-/*    Tablet Layout: 768px.
-    Gutters: 24px.
-    Outer margins: 28px.
-    Inherits styles from: Default Layout.
------------------------------------------------------------------
-cols    1     2      3      4      5      6      7      8
-px      68    160    252    344    436    528    620    712    */
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  body {
-    width: 674px;
-    padding: 0 28px 60px; }
-
-  #col1, #col2 {
-    width: 100%; }
-
-  #col1 {
-    position: relative;
-    float: left; }
-
-  #col2 {
-    left: 0;
-    position: relative;
-    float: left; }
-
-  #about, #title, #navbox ul {
-    height: 170px; }
-
-  #title {
-    float: left;
-    margin: 12px; }
-
-  #about {
-    width: 190px;
-    float: left;
-    border-bottom: 3px solid #555;
-    padding: 0 24px 0 0;
-    margin-top: 12px; }
-
-  #nav {
-    width: 180px;
-    float: left; }
-
-  #d-portfolio, #d-resume, #d-projects, #d-contact {
-    width: 650px;
-    padding: 0 12px;
-    position: absolute;
-    top: 0; }
-
-  #port-backbutton {
-    top: 25px; }
-
-  #port-dropbutton {
-    top: 25px;
-    left: 42px; }
-
-  #port-dropdown {
-    top: 55px; } }
-/*    Mobile Layout: 320px.
-    Gutters: 24px.
-    Outer margins: 34px.
-    Inherits styles from: Default Layout.
----------------------------------------------
-cols    1     2      3
-px      68    160    252    */
-@media only screen and (max-width: 767px) {
-  body {
-    width: 320px;
-    padding: 0; }
-
-  #col1, #col2 {
-    width: 100%; }
-
-  #col1 {
-    position: relative;
-    float: left; }
-
-  #col2 {
-    left: 0;
-    height: 1400px;
-    position: relative;
-    float: left; }
-
-  #title {
-    text-align: center; }
-
-  #about {
-    padding: 0 12px; }
-
-  #d-portfolio, #d-resume, #d-projects, #d-contact {
-    width: 296px;
-    padding: 0 12px;
-    position: absolute;
-    top: 0; }
-
-  .resume-left {
-    width: 296px;
-    border: 0; }
-
-  .resume-right {
-    width: 296px; }
-
-  #port-backbutton {
-    top: 55px; }
-
-  #port-dropbutton {
-    top: 55px;
-    left: 42px;
-    width: 250px; }
-
-  #port-dropdown {
-    width: 200px;
-    top: 85px; }
-
-  #port-projectdata {
-    margin-top: 30px;
-    width: 296px; }
-
-  #port-images {
-    width: 296px;
-    height: 182px; }
-
-  .loader img {
-    height: 100%; }
-
-  #port-info {
-    width: 296px;
-    padding-right: 0; }
-
-  #port-images div.caption {
-    max-width: 285px;
-    margin-left: 5px;
-    margin-top: -35px; } }
-/*    Wide Mobile Layout: 480px.
-    Gutters: 24px.
-    Outer margins: 22px.
-    Inherits styles from: Default Layout, Mobile Layout.
-------------------------------------------------------------
-cols    1     2      3      4      5
-px      68    160    252    344    436    */
-@media only screen and (min-width: 480px) and (max-width: 767px) {
-  body {
-    width: 444px;
-    padding: 0 18px 48px; }
-
-  #d-portfolio, #d-resume, #d-projects, #d-contact {
-    width: 420px; }
-
-  .resume-left {
-    width: 420px; }
-
-  .resume-right {
-    width: 420px; }
-
-  #port-backbutton {
-    top: 20px; }
-
-  #port-dropbutton {
-    top: 20px;
-    width: 170px; }
-
-  #port-dropdown {
-    width: 200px;
-    top: 50px; }
-
-  #port-projectdata {
-    margin-top: 0;
-    width: 420px; }
-
-  #port-images {
-    width: 420px;
-    height: 259px; }
-
-  #port-info {
-    width: 420px;
-    padding-right: 0; } }

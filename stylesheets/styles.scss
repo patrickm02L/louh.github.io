@@ -1,10 +1,16 @@
 
 // VARIABLES
-$link-color:       #7c8282;
-$main-color:       #5d6262;
-$background-color: rgb(232,232,232);
+$link-color:        #7c8282;
+$main-color:        #5d6262;
+$background-color:  rgb(238,238,238);
 
-$topbar-bg-color:  darken($background-color, 5%);
+$topbar-bg-color:         darken($background-color, 5%);
+$topbar-height:           60px;
+$topbar-title-weight:     normal;
+$topbar-title-font-size:  20px;
+$topbar-link-color:       $main-color;
+$topbar-link-bg-hover:    #5d6262;
+$topbar-link-bg-active:   #5d6262;
 
 // IMPORTS
 @import 'bourbon/bourbon';
@@ -52,9 +58,24 @@ body {
   font: 16px/24px "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
 
-.container {
-  width: 896px;
-  margin: 0 auto;
+
+nav {
+  .name {
+    text-transform: uppercase;
+  }
+  .logo {
+    margin: 0 auto;
+    width: 90px;
+    height: 90px;
+    background: transparent url('../img/logo.png') center center no-repeat;
+    position: absolute;
+    top: -14px;
+    left: 50%;
+    margin-left: -45px;
+  }
+  .social-icons li {
+    font-size: 190%;
+  }
 }
 
 // HEADINGS
@@ -64,25 +85,29 @@ h1, h2, h3, h4, h5 {
   color: $main-color;
   font-weight: normal;
   -webkit-font-smoothing: antialiased; /* Prevents fonts looking so bold on Mac */
+  text-transform: uppercase;
 }
-.huge, h1 {
+
+h1 {
   font-size: 48px;
   line-height: 72px;
 }
 
-.large, h2 {
+h2 {
   font-size: 32px;
-  line-height: 48px;
+  line-height: 60px;
   letter-spacing: -1px;
+  height: 60px;
+//  overflow: hidden;
 }
 
-.bigger, h3 {
+h3 {
   font-size: 18px;
   line-height: 18px;
   letter-spacing: -1px;
 }
 
-.big, h4 {
+h4 {
   font-size: 22px;
   line-height: 22px;
   letter-spacing: -1px;
@@ -99,46 +124,31 @@ h5 {
   line-height: 18px;
 }
 
-/* Selection colours (easy to forget) */
+// SECTIONS
 
-::selection     {background: rgb(255,255,158);}
-::-moz-selection  {background: rgb(255,255,158);}
-img::selection    {background: transparent;}
-img::-moz-selection {background: transparent;}
-body {-webkit-tap-highlight-color: rgb(255,255,158);}
-
-
-
-/*    Default Layout: 992px. 
-    Gutters: 24px.
-    Outer margins: 48px.
-    Leftover space for scrollbars @1024px: 32px.
--------------------------------------------------------------------------------
-cols    1     2      3      4      5      6      7      8      9      10
-px      68    160    252    344    436    528    620    712    804    896    */
-
-@media only all and (max-width: 1080px) and (max-height: 720px) {
-  
-  body, #background { 
-    -moz-background-size: 1080px 720px;
-    background-size: 1080px 720px;
-  }
-  
+#about {
+  height: 400px;
+  background-color: lighten($background-color, 5%);
 }
 
-h1 {
-  margin: 0 0 10px 0;
+// STUFF
+
+.portrait {
+  width: 260px;
+  height: 260px;
+  margin: 0 auto;
+  margin-top: 70px;
+  border-radius: 130px;
+  background: white url('../img/portrait.jpg') center center no-repeat;
+  background-size: 100%;
 }
-h1 a {
-  border: 0 !important;
-}
-h2 {
-  text-align: right;
-  width: 100%;
-  text-transform: uppercase;
-  height: 60px;
-  overflow: hidden;
-}
+
+
+
+
+// OLD
+
+
 h1 span, h2 span {
   display: none;
 }
@@ -164,28 +174,6 @@ hr {
   margin-right: 10px;
   padding-bottom: 6px;
   position: fixed;
-}
-
-#title {
-  position: relative;
-  margin: 48px 12px 12px 12px;
-  border-bottom: 3px solid $main-color;
-}
-
-#title img {
-  position: relative;
-}
-
-#about {
-  padding: 20px 12px 10px;
-}
-
-.text {
-  line-height: 150%;
-}
-
-.text p {
-  margin-bottom: 8px;
 }
 
 #navbox ul {
@@ -503,224 +491,4 @@ a, a:hover, a:active, a:visited {
 
 
 
-/*    Tablet Layout: 768px.
-    Gutters: 24px.
-    Outer margins: 28px.
-    Inherits styles from: Default Layout.
------------------------------------------------------------------
-cols    1     2      3      4      5      6      7      8
-px      68    160    252    344    436    528    620    712    */
-
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-
-  body {
-    width: 674px;
-    padding: 0 28px 60px;
-  }
-  
-  #col1, #col2 {
-    width: 100%;
-  }
-  
-  #col1 {
-    position: relative;
-    float: left;
-  }
-  
-  #col2 {
-    left: 0;
-    position: relative;
-    float: left;
-  }
-
-  #about, #title, #navbox ul {
-    height: 170px;
-  }
-
-  #title {
-    float: left;
-    margin: 12px;
-  }
-  
-  #about {
-    width: 190px;
-    float: left;
-    border-bottom: 3px solid #555;
-    padding: 0 24px 0 0;
-    margin-top: 12px;
-  }
-
-  #nav {
-    width: 180px;
-    float: left;
-  }
-  
-  #d-portfolio, #d-resume, #d-projects, #d-contact {
-    width: 650px;
-    padding: 0 12px;
-    position: absolute;
-    top: 0;
-  }
-  
-  #port-backbutton { 
-    top: 25px;
-  }
-  #port-dropbutton {
-    top: 25px;
-    left: 42px;
-  }
-  #port-dropdown {
-    top: 55px;
-  }
-  
-}
-
-
-
-/*    Mobile Layout: 320px.
-    Gutters: 24px.
-    Outer margins: 34px.
-    Inherits styles from: Default Layout.
----------------------------------------------
-cols    1     2      3
-px      68    160    252    */
-
-@media only screen and (max-width: 767px) {
-
-  body {
-    width: 320px;
-    padding: 0;
-  }
-
-  #col1, #col2 {
-    width: 100%;
-  }
-  
-  #col1 {
-    position: relative;
-    float: left;
-  }
-  
-  #col2 {
-    left: 0;
-    height: 1400px;
-    position: relative;
-    float: left;
-  }
-
-  #title {
-    text-align: center;
-  }
-
-  #about {
-    padding: 0 12px;
-  }
-    
-  #d-portfolio, #d-resume, #d-projects, #d-contact {
-    width: 296px;
-    padding: 0 12px;
-    position: absolute;
-    top: 0;
-  }
-  
-  .resume-left {
-    width: 296px;
-    border: 0;
-  }
-  
-  .resume-right {
-    width: 296px;
-  }
-
-  #port-backbutton { 
-    top: 55px;
-  }
-  #port-dropbutton {
-    top: 55px;
-    left: 42px;
-    width: 250px;
-  }
-  #port-dropdown {
-    width: 200px;
-    top: 85px;
-  }
-  #port-projectdata { 
-    margin-top: 30px;
-    width: 296px;
-  }
-  #port-images {
-    width: 296px;
-    height: 182px;
-  }
-  .loader img {
-    height: 100%;
-  }
-
-  #port-info {
-    width: 296px;
-    padding-right: 0;
-  }
-
-  #port-images div.caption {
-    max-width: 285px;
-    margin-left: 5px;
-    margin-top: -35px;
-  }
-  
-}
-
-
-/*    Wide Mobile Layout: 480px.
-    Gutters: 24px.
-    Outer margins: 22px.
-    Inherits styles from: Default Layout, Mobile Layout.
-------------------------------------------------------------
-cols    1     2      3      4      5
-px      68    160    252    344    436    */
-
-@media only screen and (min-width: 480px) and (max-width: 767px) {
-
-  body {
-    width: 444px;
-    padding: 0 18px 48px;
-  }
-  
-  #d-portfolio, #d-resume, #d-projects, #d-contact {
-    width: 420px;
-  } 
-  
-  .resume-left {
-    width: 420px;
-  }
-  
-  .resume-right {
-    width: 420px;
-  }
-  
-  #port-backbutton { 
-    top: 20px;
-  }
-  #port-dropbutton {
-    top: 20px;
-    width: 170px;
-  }
-  #port-dropdown {
-    width: 200px;
-    top: 50px;
-  }
-  #port-projectdata {
-    margin-top: 0;
-    width: 420px;
-  }
-  #port-images {
-    width: 420px;
-    height: 259px;
-  }
-
-  #port-info {
-    width: 420px;
-    padding-right: 0;
-  }
-  
-}
 

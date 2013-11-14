@@ -1,5 +1,7 @@
-var projectJSON = 'portfolio.json';
-var projects = {};
+'use strict'
+
+var projectJSON = 'portfolio.json'
+var projects = {}
 
 /* INTERFACE */
 
