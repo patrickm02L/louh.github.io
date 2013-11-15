@@ -6,8 +6,7 @@
 
     <title>Lou Huang</title>
 
-    <meta name='description' content='Lou Huang is a LEED-accredited urban designer and architect based in San Francisco, specializing in graphic presentation, environmental sustainability and transit-oriented planning for progressive, human-centric communities.'> 
-    <meta name='keywords' content='urban, city, planner, designer, design, web, technology, information, maps, mapping, architect, architecture, developer, San Francisco, Bay Area, California'>
+    <meta name='description' content='Lou Huang is an urban designer and front-end web developer who uses technology to improve cities.'>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
 
     <link rel='icon' type='image/png' href='favicon.png'>  
@@ -17,12 +16,15 @@
   </head>
   
   <body>
-    <!--[if lt IE 7]>
+    <!--[if lte IE 9]>
         <p class='browsehappy'>You are using an <strong>outdated</strong> browser. Please <a href='http://browsehappy.com/'>upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <div class='contain-to-grid sticky'>
+    <div class='top-bar-container contain-to-grid sticky'>
       <nav class='top-bar'>
+        <section class='top-bar-logo'>
+          <div class='logo'></div>
+        </section>
         <ul class='title-area'>
           <li class='name'>
             <h1>
@@ -31,9 +33,6 @@
           </li>
           <li class='toggle-topbar menu-icon'><a href='#'><span>menu</span></a></li>
         </ul>
-        <section class='top-bar-logo'>
-          <div class='logo'></div>
-        </section>
         <section class='top-bar-section'>
           <ul class='right social-icons'>
             <li>
@@ -54,40 +53,74 @@
     </div>
 
     <section role='main'>
+
       <section id='about'>
         <div class='row'>
           <div class='large-4 columns'>
             <div class='portrait'></div>
           </div>
           <div class='large-8 columns'>
-            <h2>Hi! I'm Lou.</h2>
+            <div class='bio'>
+              <h2>Hi! I’m Lou.</h2>
 
-            <p class='bio'>
-              I'm a LEED-ND accredited urban designer based in San Francisco and a 2013 Fellow at Code for America. I specialize in <strong>graphic presentation</strong>, planning for <strong>human-centric communities</strong>, and <strong>open data + virtual environments</strong>.
-            </p>
+              <p>
+                I build better communities with technology.
+              </p>
+
+              <p>
+                Urban designer, iterative placemaker, and 2013 fellow at Code for America. Based in San Francisco. Mixin’ streets, drinks, and metaphors.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
-      <section id='whatever'>
+      <section id='projects'>
+        <div class='row'>
+          <div class='large-12 columns'>
+            <h2>Stuff I've Done</h2>
+          </div>
+        </div>
+        <div class='row'>
+          <div class='large-4 columns'>
+            <h3>Streetmix</h3>
+            <p>
+
+            </p>
+          </div>
+          <div class='large-8 columns'>
+          </div>
+        </div>
       </section>
+
 
 
     </section>
 
+    <footer>
+      <div class='row'>
+        <div class='large-12 columns'>
+          <h2>Contact</h2>
+          <ul class='contact'>
+            <li><i class='fi-mail'></i> <a href='mailto:lou@louhuang.com'>lou@louhuang.com</a></li>
+            <li><i class='fi-telephone'></i> 510.364.0641</li>
+          </ul>
+          <ul class='social'>
+            <li><a href='http://archinect.com/people/cover/25942652/lou-huang' class='image' target='_blank'>archinect</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
     <section>
       <div id='col1'>
-              
-        
         <div id='navbox'>
           <ul id='nav'>
             <li id='n-portfolio'><span>Portfolio</span></li>
             <li id='n-resume'><span>Resume</span></li>
             <li id='n-projects'><span>Current Projects</span></li>
-            <li id='n-contact'><span>Contact</span></li>
           </ul>
         </div>
-        
       </div>
       
       <div id='col2'>
@@ -356,24 +389,7 @@
 
         </div>
 
-        <div id='d-contact' style='display:none;'>
-          <h2>Contact</h2>
-          
-          <p class='text'>
-          <h3>E-mail</h3>
-          <a href='mailto:lou@louhuang.com'>lou@louhuang.com</a>
 
-          <h3>Phone</h3>
-          510.364.0641
-
-          <h3>Social</h3>
- 
-          <a href='http://archinect.com/people/cover/25942652/lou-huang' class='image' target='_blank'><img src='img/social/archinect.png' width=32 height=32 alt='Archinect'></a>
-
-
-          </p>
-          
-        </div>
 
         
       </div>
@@ -382,13 +398,14 @@
     <!-- JQUERY AND PLUGINS -->
     <script src='//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js'></script>
     <script>window.jQuery || document.write('<script src=\'js/vendor/jquery-1.10.2.min.js\'><\/script>')</script>
-    <script src='js/vendor/jquery.mousewheel.js' type='text/javascript'></script>
-    <script src='js/vendor/jquery.ba-hashchange.min.js' type='text/javascript'></script>
+    <script src='js/vendor/jquery.mousewheel.js'></script>
+    <!--script src='js/vendor/jquery.ba-hashchange.min.js'></script-->
+    <script src='js/vendor/jquery.history.js'></script>
     <!-- / JQUERY AND PLUGINS -->
 
     <!-- ADDITIONAL LIBRARIES -->
-    <script src='js/vendor/mustache.js' type='text/javascript'></script>
-    <script src='js/mayor.js' type='text/javascript'></script>
+    <script src='js/vendor/mustache.js'></script>
+    <script src='js/mayor.js'></script>
     <!-- / ADDITIONAL LIBRARIES -->
 
     <!-- SITE JAVASCRIPT -->
@@ -426,7 +443,7 @@
     <!-- / END FOUNDATION -->
 
     <!-- GOOGLE ANALYTICS -->
-    <script type='text/javascript'>
+    <script>
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-84293-2']);
       _gaq.push(['_trackPageview']);

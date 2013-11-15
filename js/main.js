@@ -9,6 +9,7 @@ var mouse_is_inside = false;
 var site_title = document.title;
 var scroller, scrollItemsLeftPos, scrollBoxLeftPos, scrollItemsRightPos, scrollBoxRightPos;
 
+/*
 function loadHash() {
     var hash = window.location.hash;
     switch(hash) {
@@ -39,6 +40,7 @@ function loadHash() {
         }
     }
 }
+*/
 
 function menuArrows(row) {
     // row is passed if we want to only test a specific menu row
@@ -437,11 +439,13 @@ $(document).ready(function() {
     // Load portfolio or resume items immediately if link contains hash elements
     // Currently using BBQ's hashchange plugin for this functionality.
     // Bind hashchange event to window
+/*
     $(window).hashchange(function(){
         loadHash();
     });
     // Trigger hashchange immediately
     $(window).hashchange();
+*/
 
     // Initialize portfolio menu arrows
     menuArrows();

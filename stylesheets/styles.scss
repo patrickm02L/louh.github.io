@@ -4,7 +4,7 @@ $link-color:        #7c8282;
 $main-color:        #5d6262;
 $background-color:  rgb(238,238,238);
 
-$topbar-bg-color:         darken($background-color, 5%);
+$topbar-bg-color:         lighten($background-color, 5%);
 $topbar-height:           60px;
 $topbar-title-weight:     normal;
 $topbar-title-font-size:  20px;
@@ -21,14 +21,13 @@ $topbar-link-bg-active:   #5d6262;
 @import 'vendor/main.css'; // HTML5 Boilerplate default CSS file
 @import '../fonts/foundation-icons.css';
 
-// RESETS
 
+// RESETS
 * {
   box-sizing: border-box;
 }
 
 // TYPOGRAPHY
-
 @font-face {
   font-family: 'Montserrat';
   src: url('../fonts/montserrat-regular-webfont.eot');
@@ -49,32 +48,96 @@ $topbar-link-bg-active:   #5d6262;
   font-weight: bold;
   font-style: normal;
 }
+@font-face {
+    font-family: 'Neris';
+    src: url('../fonts/Neris-Light-webfont.eot');
+    src: url('../fonts/Neris-Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Neris-Light-webfont.woff') format('woff'),
+         url('../fonts/Neris-Light-webfont.ttf') format('truetype'),
+         url('../fonts/Neris-Light-webfont.svg#nerislight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Neris';
+    src: url('../fonts/Neris-SemiBold-webfont.eot');
+    src: url('../fonts/Neris-SemiBold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Neris-SemiBold-webfont.woff') format('woff'),
+         url('../fonts/Neris-SemiBold-webfont.ttf') format('truetype'),
+         url('../fonts/Neris-SemiBold-webfont.svg#nerissemibold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
 
 // LAYOUT
 
 body {
   background: $background-color;
   color: $main-color;
-  font: 16px/24px "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font: 16px/24px 'Neris', "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+.top-bar-container {
+  border-bottom: 1px solid darken($background-color, 2%);
+}
+
+.sticky{
+  position: fixed;
+  z-index: 9999;
+}
 
 nav {
   .name {
     text-transform: uppercase;
+    padding-left: 80px;
   }
   .logo {
-    margin: 0 auto;
     width: 90px;
-    height: 90px;
-    background: transparent url('../img/logo.png') center center no-repeat;
+    height: 100%;
     position: absolute;
-    top: -14px;
-    left: 50%;
-    margin-left: -45px;
+    background: transparent url('../img/logo.png') center center no-repeat;
+    background-size: cover;
   }
   .social-icons li {
     font-size: 190%;
+  }
+}
+
+section[role='main'] {
+  padding-top: $topbar-height;
+}
+
+footer {
+  background-color: $main-color;
+  color: darken($background-color, 20%);
+  padding: 40px 0;
+  text-align: center;
+  font-size: 13px;
+  h2 {
+    display: none;
+  }
+  ul {
+    list-style: none;
+  }
+  li {
+    display: inline-block;
+    margin: 0 0 0 30px;
+  }
+  a {
+    color: darken($background-color, 20%);
+  }
+  i {
+    margin-right: 5px;
+  }
+  .social {
+    display: none;
+  }
+}
+
+a {
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
   }
 }
 
@@ -86,6 +149,7 @@ h1, h2, h3, h4, h5 {
   font-weight: normal;
   -webkit-font-smoothing: antialiased; /* Prevents fonts looking so bold on Mac */
   text-transform: uppercase;
+  font-weight: 300;
 }
 
 h1 {
@@ -128,7 +192,8 @@ h5 {
 
 #about {
   height: 400px;
-  background-color: lighten($background-color, 5%);
+  background-color: lighten($background-color, 3%);
+  position: relative;
 }
 
 // STUFF
@@ -143,7 +208,11 @@ h5 {
   background-size: 100%;
 }
 
-
+.bio {
+  // Manual vertical centering.
+  margin-top: 100px;
+  padding: 0 30px;
+}
 
 
 // OLD
