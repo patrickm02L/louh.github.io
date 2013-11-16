@@ -2827,7 +2827,7 @@ meta.foundation-mq-topbar {
 /* Wrapped around .top-bar to contain to grid width */
 .contain-to-grid {
   width: 100%;
-  background: #f6f6f6; }
+  background: #f8f8f8; }
   .contain-to-grid .top-bar {
     margin-bottom: 0; }
 
@@ -2855,7 +2855,7 @@ meta.foundation-mq-topbar {
   height: 60px;
   line-height: 60px;
   position: relative;
-  background: #f6f6f6;
+  background: #f8f8f8;
   margin-bottom: 0; }
   .top-bar ul {
     margin-bottom: 0;
@@ -2926,7 +2926,7 @@ meta.foundation-mq-topbar {
     height: auto;
     background: transparent; }
     .top-bar.expanded .title-area {
-      background: #f6f6f6; }
+      background: #f8f8f8; }
     .top-bar.expanded .toggle-topbar a {
       color: #888888; }
       .top-bar.expanded .toggle-topbar a span {
@@ -2950,7 +2950,7 @@ meta.foundation-mq-topbar {
   .top-bar-section .divider,
   .top-bar-section [role="separator"] {
     border-bottom: solid 1px white;
-    border-top: solid 1px gainsboro;
+    border-top: solid 1px #dfdfdf;
     clear: both;
     height: 1px;
     width: 100%; }
@@ -3042,7 +3042,7 @@ meta.foundation-mq-topbar {
 
 @media only screen and (min-width: 480px) {
   .top-bar {
-    background: #f6f6f6;
+    background: #f8f8f8;
     *zoom: 1;
     overflow: visible; }
     .top-bar:before, .top-bar:after {
@@ -3066,7 +3066,7 @@ meta.foundation-mq-topbar {
     .top-bar .button {
       line-height: 2em; }
     .top-bar.expanded {
-      background: #f6f6f6; }
+      background: #f8f8f8; }
 
   .contain-to-grid .top-bar {
     max-width: 62.5em;
@@ -3092,7 +3092,7 @@ meta.foundation-mq-topbar {
     .top-bar-section li a:not(.button) {
       padding: 0 20px;
       line-height: 60px;
-      background: #f6f6f6; }
+      background: #f8f8f8; }
       .top-bar-section li a:not(.button):hover {
         background: #5d6262; }
     .top-bar-section .has-dropdown > a {
@@ -3140,12 +3140,12 @@ meta.foundation-mq-topbar {
       border-bottom: none;
       border-top: none;
       border-right: solid 1px white;
-      border-left: solid 1px gainsboro;
+      border-left: solid 1px #dfdfdf;
       clear: none;
       height: 60px;
       width: 0; }
     .top-bar-section .has-form {
-      background: #f6f6f6;
+      background: #f8f8f8;
       padding: 0 20px;
       height: 60px; }
     .top-bar-section ul.right li .dropdown {
@@ -5378,6 +5378,24 @@ h6 {
 #portfolio {
   background-color: #eeeeee; }
 
+#portfolio-grid img {
+  width: 100%; }
+#portfolio-grid a:hover {
+  text-decoration: none; }
+
+.portfolio-name {
+  position: relative; }
+  .portfolio-name .caption {
+    margin-top: 5px;
+    color: #222222;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 14px; }
+  .portfolio-name .subtitle {
+    font-size: 12px;
+    color: #777;
+    font-weight: normal; }
+
 .external-link {
   font-size: 80%;
   text-transform: uppercase;
@@ -5402,66 +5420,6 @@ div.epilogue {
   background: url("../img/loader.gif") center center no-repeat;
   display: none;
   position: absolute; }
-
-#port-menu, #port-project {
-  margin-top: 0; }
-
-.menu-section {
-  margin-bottom: 10px; }
-
-.menu-row {
-  margin-left: 20px;
-  margin-right: 20px;
-  height: 180px;
-  overflow: hidden;
-  position: relative; }
-
-.menu-item {
-  width: 280px;
-  height: 180px;
-  float: left;
-  margin: 0 10px 0 0; }
-
-.menu-row img {
-  position: absolute; }
-
-.menu-leftarrow, .menu-rightarrow {
-  width: 15px;
-  height: 180px;
-  position: absolute;
-  z-index: 5;
-  background-color: #d6d6d6; }
-
-.menu-leftarrow {
-  left: 10px; }
-
-.menu-rightarrow {
-  right: 10px; }
-
-.menu-rightarrow img, .menu-leftarrow img {
-  cursor: pointer; }
-
-.menu-title {
-  z-index: 15;
-  font-size: 13px;
-  line-height: 14px;
-  position: absolute;
-  bottom: 0;
-  width: 272px;
-  -moz-opacity: .75;
-  filter: alpha(opacity=75);
-  opacity: 0.75; }
-
-.caption {
-  padding: 4px;
-  background-color: #000;
-  color: white;
-  font-weight: bold; }
-
-.subtitle {
-  font-size: 10px;
-  color: #ccc;
-  font-weight: normal; }
 
 #port-images div.caption {
   position: absolute;

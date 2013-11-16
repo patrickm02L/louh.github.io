@@ -106,12 +106,37 @@
       <section id='portfolio'>
         <div class='row'>
           <div class='large-12 columns'>
-            <h3>These are the rest of the projects.</h3>
+            <h3>These are some other things I've made.</h3>
+
+            <ul class='small-block-grid-2 large-block-grid-3' id='portfolio-grid'>
+              <script id='m_portfolio_grid' type='text/template'>
+              <li>
+                <a href='#/portfolio/{{id}}'><img src='portfolio/thumb-{{id}}.jpg'>
+                <div class='portfolio-name'>
+                {{#menu_name}}
+                  <div class='caption'>{{menu_name}}<br>
+                {{/menu_name}}
+                {{^menu_name}}
+                  <div class='caption'>{{name}}<br>
+                {{/menu_name}}
+                  {{#menu_location}}
+                    <span class='subtitle'>{{menu_location}}</span>
+                  {{/menu_location}}
+                  {{^menu_location}}
+                    <span class='subtitle'>{{location}}</span>
+                  {{/menu_location}}
+                  </div>
+                </div></a>
+              </li>
+              </script>
+            </ul>
+
+
           </div>
         </div>
 
 <!-- TEMP OLD PORTFOLIO -->
-        <div id='port-content' class='row'>
+        <div id='port-content' class='row' style='display:none'>
           <div class='large-12 columns'>
           
           <section id='port-menu'>

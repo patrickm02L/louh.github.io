@@ -37,30 +37,6 @@ function loadHash() {
   }
 }
 
-function menuArrows(row) {
-  // row is passed if we want to only test a specific menu row
-  // but we don't actually need to do it - even if just one row is interacted with, we can still
-  // test the entire menu without much trouble
-  $('.menu-row').each(function() {
-    scroller = $(this).find('.scroller');
-    scrollItemsLeftPos = $(scroller).offset().left;
-    scrollBoxLeftPos = $(this).offset().left;
-    scrollItemsRightPos = $(scroller).find('img:last').offset().left + $(scroller).find('img:last').width() - 15;
-    scrollBoxRightPos = $(this).offset().left + $(this).width();
-    if (scrollItemsLeftPos < scrollBoxLeftPos) {
-      $(this).parent().find('.menu-leftarrow img').fadeIn(200);
-    }
-    if (scrollItemsLeftPos >= scrollBoxLeftPos) {
-      $(this).parent().find('.menu-leftarrow img').fadeOut(200);
-    }
-    if (scrollItemsRightPos > scrollBoxRightPos) {
-      $(this).parent().find('.menu-rightarrow img').fadeIn(200);
-    }
-    if (scrollItemsRightPos <= scrollBoxRightPos) {
-      $(this).parent().find('.menu-rightarrow img').fadeOut(200);
-    }
-  });
-}
 
 function portArrows() {
   // Test project's image scroller to see if arrows are needed.
@@ -216,41 +192,23 @@ $(document).ready(function() {
     }
   });
 
-  // CREATE PORTFOLIO MENU
-  var item = null;
-  var m_menu_item = $('#m_menu_item').html();
-  var m_dropdown_item = $('#m_dropdown_item').html();
-  // Urban Design Menu
+  // POPULATE 'CURRENT PROJECTS' PAGE
+  var item
+  var m_current_project = $('#m_current_project').html()
   for (var i = 0; i < projects.items.length; i++) {
-    item = projects.items[i];
-    if (item.type == 'urbandesign' && item.status == 'portfolio') {
-      $('#menu-cpln div.scroller').append(Mustache.render(m_menu_item, item));
-      $('#drop-cpln').append(Mustache.render(m_dropdown_item, item));
-    }
-  }
-  // Architecture Menu
-  for (var i = 0; i < projects.items.length; i++) {
-    item = projects.items[i];
-    if (item.type == 'architecture' && item.status == 'portfolio') {
-      $('#menu-arch div.scroller').append(Mustache.render(m_menu_item, item));
-      $('#drop-arch').append(Mustache.render(m_dropdown_item, item));
-    }
-  }
-  // Other (Web & Print)
-  for (var i = 0; i < projects.items.length; i++) {
-    item = projects.items[i];
-    if (item.type == 'other' && item.status == 'portfolio') {
-      $('#menu-misc div.scroller').append(Mustache.render(m_menu_item, item));
-      $('#drop-misc').append(Mustache.render(m_dropdown_item, item));
+    item = projects.items[i]
+    if (item.status == 'current') {
+      $('#projects').append(Mustache.render(m_current_project, item))
     }
   }
 
-  // POPULATE 'CURRENT PROJECTS' PAGE
-  var m_current_project = $('#m_current_project').html();
+  // CREATE PORTFOLIO MENU
+  var project = null
+  var m_portfolio_grid = $('#m_portfolio_grid').html()
   for (var i = 0; i < projects.items.length; i++) {
-    item = projects.items[i];
-    if (item.status == 'current') {
-      $('#projects').append(Mustache.render(m_current_project, item));
+    project = projects.items[i]
+    if (project.status == 'portfolio') {
+      $('#portfolio-grid').append(Mustache.render(m_portfolio_grid, project))
     }
   }
 
@@ -293,30 +251,6 @@ $(document).ready(function() {
     }
   );
 
-
-  // Portfolio - Menu navigation
-  $('div.menu-leftarrow').click(function(){
-    // not the most elegant way of stopping overscrolling, but it works, and what are the odds
-    // someone is looking at this?!
-    scroller = $(this).parent().find('.scroller');
-    scrollItemsLeftPos = $(scroller).offset().left + 90;
-    scrollBoxLeftPos = $(this).offset().left;
-    if (scrollItemsLeftPos <= scrollBoxLeftPos) {
-      $(this).parent().find('.scroller').filter(':not(:animated)').animate({'marginLeft': '+=290px'}, 200, function(){
-        menuArrows($(this).parent());
-      });
-    }
-  });
-  $('div.menu-rightarrow').click(function(){
-    scroller = $(this).parent().find('.scroller');
-    scrollItemsRightPos = $(scroller).find('img:last').offset().left + $(scroller).find('img:last').width();
-    scrollBoxRightPos = $(this).offset().left + $(this).width();
-    if (scrollItemsRightPos >= scrollBoxRightPos) {
-      $(this).parent().find('.scroller').filter(':not(:animated)').animate({'marginLeft': '-=290px'}, 200, function(){
-        menuArrows($(this).parent());
-      });
-    }
-  });
 
   // Portfolio - Dropdown menu
   $('#port-dropbutton').hover(
@@ -414,9 +348,6 @@ $(document).ready(function() {
   });
   // Trigger hashchange immediately
   $(window).hashchange();
-
-  // Initialize portfolio menu arrows
-  menuArrows();
 
   $(window).resize(function() {
     if ($('#port-menu').is(':visible')) {

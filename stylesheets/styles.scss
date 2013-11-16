@@ -5,9 +5,10 @@ $accent-color:      #d83432;
 //$link-color:        #7c8282;
 $link-color:        darken($accent-color, 10%);
 $background-color:  rgb(238,238,238);
+$black:             #222;
 
 // OVERRIDE FOUNDATION VARIABLES - see also _variables.scss
-$topbar-bg-color:         lighten($background-color, 3%);
+$topbar-bg-color:         lighten($background-color, 4%);
 $topbar-height:           60px;
 $topbar-title-weight:     normal;
 $topbar-title-font-size:  20px;
@@ -275,6 +276,33 @@ h6 {
   background-color: $background-color;
 }
 
+#portfolio-grid {
+  img {
+    width: 100%;
+  }
+  a {
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+.portfolio-name {
+  position: relative;
+  .caption {
+    margin-top: 5px;
+    color: $black;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 14px;
+  }
+  .subtitle {
+    font-size: 12px;
+    color: #777;
+    font-weight: normal;
+  }
+}
+
 // STUFF
 
 .external-link {
@@ -313,68 +341,8 @@ div.epilogue {
   display: none;
   position: absolute;
 }
-#port-menu, #port-project {
-  margin-top: 0;
-}
-.menu-section {
-  margin-bottom: 10px;
-}
-.menu-row {
-  margin-left: 20px;
-  margin-right: 20px;
-  height: 180px;
-  overflow: hidden;
-  position: relative;
-}
-.menu-item {
-  width: 280px;
-  height: 180px;
-  float: left;
-  margin: 0 10px 0 0;
-}
 
-.menu-row img {
-  position: absolute;
-}
-.menu-leftarrow, .menu-rightarrow {
-  width: 15px;
-  height: 180px;
-  position: absolute;
-  z-index: 5;
-  background-color: #d6d6d6;
-}
-.menu-leftarrow {
-  left: 10px;
-}
-.menu-rightarrow {
-  right: 10px;
-}
-.menu-rightarrow img, .menu-leftarrow img {
-  cursor: pointer;
-}
 
-.menu-title {
-  z-index: 15;
-  font-size: 13px;
-  line-height: 14px;
-  position: absolute;
-  bottom: 0;
-  width: 272px;
-  -moz-opacity: .75;
-  filter: alpha(opacity=75);
-  opacity: 0.75;
-}
-.caption {
-  padding: 4px;
-  background-color: #000;
-  color: white;
-  font-weight: bold;
-}
-.subtitle {
-  font-size: 10px;
-  color: #ccc;
-  font-weight: normal;
-}
 #port-images div.caption {
   position: absolute;
   max-width: 500px;
