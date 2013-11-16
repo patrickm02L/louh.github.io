@@ -15,6 +15,7 @@ $topbar-link-bg-active:   #5d6262;
 // IMPORTS
 @import 'bourbon/bourbon';
 @import 'foundation';
+@import 'foundation/components/_grid-5';
 
 // OTHER CSSES
 @import 'vendor/normalize.css';
@@ -89,7 +90,10 @@ body {
 nav {
   .name {
     text-transform: uppercase;
-    padding-left: 80px;
+    white-space: nowrap;
+    a {
+      padding-left: 95px !important;
+    }
   }
   .logo {
     width: 90px;
@@ -104,7 +108,10 @@ nav {
 }
 
 section[role='main'] {
-  padding-top: $topbar-height;
+  // padding-top: $topbar-height;
+  section {
+    padding: 30px 0;
+  }
 }
 
 footer {
@@ -113,6 +120,7 @@ footer {
   padding: 40px 0;
   text-align: center;
   font-size: 13px;
+  line-height: 16px;
   h2 {
     display: none;
   }
@@ -121,7 +129,10 @@ footer {
   }
   li {
     display: inline-block;
-    margin: 0 0 0 30px;
+    margin-right: 30px;
+  }
+  li:last-of-type {
+    margin-right: 0;
   }
   a {
     color: darken($background-color, 20%);
@@ -136,10 +147,17 @@ footer {
 
 a {
   text-decoration: none;
+  color: $link-color;
   &:hover {
+    color: lighten($link-color, 10%);
     text-decoration: underline;
   }
+  // IS THIS STILL USED?
+  &.noborder {
+    border-bottom: 0 none;
+  }
 }
+
 
 // HEADINGS
 
@@ -148,32 +166,30 @@ h1, h2, h3, h4, h5 {
   color: $main-color;
   font-weight: normal;
   -webkit-font-smoothing: antialiased; /* Prevents fonts looking so bold on Mac */
-  text-transform: uppercase;
+//  text-transform: uppercase;
   font-weight: 300;
 }
 
 h1 {
   font-size: 48px;
-  line-height: 72px;
+  line-height: 48px;
 }
 
 h2 {
   font-size: 32px;
-  line-height: 60px;
+  line-height: 32px;
   letter-spacing: -1px;
-  height: 60px;
-//  overflow: hidden;
 }
 
 h3 {
-  font-size: 18px;
-  line-height: 18px;
+  font-size: 28px;
+  line-height: 28px;
   letter-spacing: -1px;
 }
 
 h4 {
-  font-size: 22px;
-  line-height: 22px;
+  font-size: 18px;
+  line-height: 18px;
   letter-spacing: -1px;
 }
 
@@ -199,57 +215,41 @@ h5 {
 // STUFF
 
 .portrait {
-  width: 260px;
-  height: 260px;
+  width: 250px;
+  height: 250px;
   margin: 0 auto;
   margin-top: 70px;
-  border-radius: 130px;
+  border-radius: 125px;
   background: white url('../img/portrait.jpg') center center no-repeat;
-  background-size: 100%;
+  background-size: cover;
 }
 
 .bio {
   // Manual vertical centering.
   margin-top: 100px;
-  padding: 0 30px;
 }
 
+div.epilogue {
+  color: darken($background-color, 45%);
+  .quote {
+    &::before {
+      content: '”';
+    }
+    &::after {
+      content: '”';
+    }
+  }
+  .author {
+    text-transform: uppercase;
+    font-size: 80%;
+    white-space: nowrap;
+    &::before {
+      content: '  — ';
+    }
+  }
+}
 
 // OLD
-
-
-h1 span, h2 span {
-  display: none;
-}
-h3 {
-  text-transform: uppercase;
-  margin: 20px 0 5px 0;
-}
-h4 {
-  text-transform: uppercase;
-}
-h5 {
-  text-transform: uppercase;
-  margin: 20px 0 5px 0;
-}
-hr {
-  border: 0;
-  width: 100%;
-}
-
-#col1 {
-  width: 250px;
-  float: left;
-  margin-right: 10px;
-  padding-bottom: 6px;
-  position: fixed;
-}
-
-#navbox ul {
-  list-style: none;
-  margin: 12px;
-  border-bottom: 3px solid $main-color;
-}
 
 #navbox li {
   color: $main-color;
@@ -280,22 +280,6 @@ hr {
   background-color: #f6f6f6;
 }
 
-a, a:hover, a:active, a:visited {
-  text-decoration: none;
-  color: $link-color;
-  &:hover {
-    color: lighten($link-color, 10%);
-  }
-  &.noborder {
-    border-bottom: 0 none;
-  }
-}
-
-.doccontent {
-  padding: 20px;
-  text-align: center;
-}
-
 #col2 {
   width: 670px;
   min-height: 900px;
@@ -314,7 +298,7 @@ a, a:hover, a:active, a:visited {
   z-index: -5;
 }
 
-#d-portfolio, #d-resume, #d-projects, #d-contact {
+#d-resume {
   z-index: 6;
   width: 650px;
   padding: 10px;

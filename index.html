@@ -28,7 +28,7 @@
         <ul class='title-area'>
           <li class='name'>
             <h1>
-              <a href='http://louhuang.com'>Lou Huang</a>
+              <a href='http://louhuang.com/'>Lou Huang</a>
             </h1>
           </li>
           <li class='toggle-topbar menu-icon'><a href='#'><span>menu</span></a></li>
@@ -56,19 +56,19 @@
 
       <section id='about'>
         <div class='row'>
-          <div class='large-4 columns'>
+          <div class='large-4 medium-5 columns'>
             <div class='portrait'></div>
           </div>
-          <div class='large-8 columns'>
+          <div class='large-8 medium-7 columns'>
             <div class='bio'>
               <h2>Hi! I’m Lou.</h2>
 
               <p>
-                I build better communities with technology.
+                I build better communities through technology.
               </p>
 
               <p>
-                Urban designer, iterative placemaker, and 2013 fellow at Code for America. Based in San Francisco. Mixin’ streets, drinks, and metaphors.
+                Urban designer, front-end web developer and 2013 fellow at Code for America. LEED-ND accredited. Based in San Francisco. I work with maps and data, write about iterative placemaking, and speak publicly about civic engagement in a digital world.
               </p>
             </div>
           </div>
@@ -78,61 +78,41 @@
       <section id='projects'>
         <div class='row'>
           <div class='large-12 columns'>
-            <h2>Stuff I've Done</h2>
-          </div>
-        </div>
-        <div class='row'>
-          <div class='large-4 columns'>
-            <h3>Streetmix</h3>
-            <p>
-
-            </p>
-          </div>
-          <div class='large-8 columns'>
+            <h3>Here are some of my recent projects.</h3>
           </div>
         </div>
       </section>
-
-
-
-    </section>
-
-    <footer>
-      <div class='row'>
-        <div class='large-12 columns'>
-          <h2>Contact</h2>
-          <ul class='contact'>
-            <li><i class='fi-mail'></i> <a href='mailto:lou@louhuang.com'>lou@louhuang.com</a></li>
-            <li><i class='fi-telephone'></i> 510.364.0641</li>
-          </ul>
-          <ul class='social'>
-            <li><a href='http://archinect.com/people/cover/25942652/lou-huang' class='image' target='_blank'>archinect</a></li>
-          </ul>
+      <script id='m_current_project' type='text/template'>
+        <div class='row'>
+          <div class='large-8 medium-8 push-4 columns'>
+            <img src='portfolio/thumb_{{id}}.png' width=280 height=180 alt='' />
+          </div>
+          <div class='large-4 medium-4 pull-8 columns'>
+            <h4>{{name}}</h4>
+            <p class='text'> {{description}}
+            {{#ext_url}}
+              <a href='{{ext_url}}' target='_blank'>{{ext_link}}{{^ext_link}}View site{{/ext_link}}</a>
+            {{/ext_url}}
+            </p>
+          </div>
         </div>
-      </div>
-    </footer>
+      </script>
 
-    <section>
-      <div id='col1'>
-        <div id='navbox'>
-          <ul id='nav'>
-            <li id='n-portfolio'><span>Portfolio</span></li>
-            <li id='n-resume'><span>Resume</span></li>
-            <li id='n-projects'><span>Current Projects</span></li>
-          </ul>
+      <section id='portfolio'>
+        <div class='row'>
+          <div class='large-12 columns'>
+            <h3>These are the rest of the projects.</h3>
+          </div>
         </div>
-      </div>
-      
-      <div id='col2'>
-        <div id='d-portfolio' style='display:none;'>
-        <div id='port-content'>
+
+<!-- TEMP OLD PORTFOLIO -->
+        <div id='port-content' class='row'>
+          <div class='large-12 columns'>
           
-          <h2>Portfolio</h2>
-        
           <section id='port-menu'>
             
             <div class='menu-section'>          
-              <h3>Urban Design & Planning</h3>
+              <h4>Urban Design & Planning</h4>
         
               <div class='menu-leftarrow'><img src='img/menu_left.png' alt=''></div>
               <div class='menu-rightarrow'><img src='img/menu_right.png' alt=''></div>
@@ -161,7 +141,7 @@
             </div>
             
             <div class='menu-section'>          
-              <h3>Architecture</h3>
+              <h4>Architecture</h4>
         
               <div class='menu-leftarrow'><img src='img/menu_left.png' alt=''></div>
               <div class='menu-rightarrow'><img src='img/menu_right.png' alt=''></div>
@@ -173,7 +153,7 @@
             </div>
             
             <div class='menu-section'>          
-              <h3>Web & Print</h3>
+              <h4>Web & Print</h4>
         
               <div class='menu-leftarrow'><img src='img/menu_left.png' alt=''></div>
               <div class='menu-rightarrow'><img src='img/menu_right.png' alt=''></div>
@@ -271,7 +251,37 @@
         </div>
         
         
-        <div id='d-resume' style='display:none;'>
+
+<!-- // END TEMP OLD PORTFOLIO -->
+      </section>
+
+    </section>
+
+    <footer>
+      <div class='row'>
+        <div class='large-12 columns'>
+          <h2>Contact</h2>
+          <ul class='contact'>
+            <li><i class='fi-mail'></i> <a href='mailto:lou@louhuang.com'>lou@louhuang.com</a></li>
+            <li><i class='fi-telephone'></i> 510.364.0641</li>
+            <li><i class='fi-social-twitter'></i> <a href='http://twitter.com/saikofish' target='_blank'>saikofish</a></li>
+          </ul>
+          </ul>
+        </div>
+      </div>
+      <div class='row'>
+        <div class='small-6 small-centered columns epilogue'>
+          <span class='quote'>Speed has never killed anyone. Suddenly becoming stationary, that's what gets you.</span>
+          <span class='author'>Jeremy Clarkson</span>
+        </div>
+      </div>
+    </footer>
+
+    <section>
+      
+      <div id='col2' style='display: none;'>
+
+        <div id='d-resume'>
           <h2>Resume</h2>
           
           <div class='resume-left'>
@@ -329,29 +339,21 @@
             <div class='text'>
             <p>
             <strong>Software</strong>
-            <br />ArchiCAD
-            <br />AutoCAD / Revit
-            <br />ArcGIS
-            <br />SketchUp
-            <br />Photoshop
-            <br />InDesign
-            <br />Illustrator
-            <br />OpenStreetMaps
-            <br />Operating system proficiency in Windows XP/
-            Vista, Macintosh OS X, and Linux platforms
+            <br>ArchiCAD
+            <br>ArcGIS
+            <br>SketchUp
+            <br>Photoshop
+            <br>InDesign
+            <br>Illustrator
+            <br>OpenStreetMaps
             </p>
             
             <p>
             <strong>Web Design</strong>
-            <br />Standards-compliant HTML, JavaScript, 
-            Cascading Style Sheets, PHP, MySQL.  
+            <br>Standards-compliant HTML, JavaScript, 
+            CSS  
             </p>
-            <!--
-            <p>
-            <strong>Photography</strong>
-            <br />Portraits, weddings, events and architecture
-            </p>
-            // -->
+
             </div>
             
             <h5>Professional Affiliations</h5>
@@ -370,23 +372,6 @@
             <a href='portfolio/downloads/louhuang_resume.pdf' class='noborder' target='_blank' alt='download resume [pdf]' title='download resume [pdf]'>download resume [pdf]</a>
           </div>
   // -->              
-        </div>
-
-        <div id='d-projects' style='display:none;'>
-          <h2>Current Projects</h2>
-
-          <script id='m_current_project' type='text/template'>
-            <div class='current'>
-              <img src='portfolio/thumb_{{id}}.png' width=280 height=180 alt='' />
-              <h3>{{name}}</h3>
-              <p class='text'> {{description}}
-              {{#ext_url}}
-                <a href='{{ext_url}}' target='_blank'>{{ext_link}}{{^ext_link}}View site{{/ext_link}}</a>
-              {{/ext_url}}
-              </p>
-            </div>
-          </script>
-
         </div>
 
 

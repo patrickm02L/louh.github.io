@@ -2,6 +2,29 @@
   "page_title": "Lou Huang Portfolio - Entries",
   "items": [
     {
+      "id": "fastpass",
+      "name": "Las Vegas Development Fastpass",
+      "type": "civictech",
+      "status": "current",
+      "images": [
+        {
+          "filename": "2175market_01.jpg",
+          "caption": "Perspective Render"
+        },
+        {
+          "filename": "2175market_05.jpg",
+          "caption": "Plan"
+        }
+      ],
+      "year": "2013",
+      "location": "Las Vegas, NV",
+      "client": "City of Las Vegas",
+      "role": "Product design, user experience designer, front-end developer",
+      "team": "Code for America",
+      "ext_url": "http://www.lasvegasnevada.gov/fastpass/",
+      "description": "Got a business idea?  Las Vegas Development Fastpass will help you find the best property for your business and give you the information you need to sail through the entitlements process."
+    },
+    {
       "id": "2175market",
       "name": "2175 Market",
       "type": "architecture",

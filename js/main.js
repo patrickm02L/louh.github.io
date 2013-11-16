@@ -19,9 +19,6 @@ function loadHash() {
         case '#/projects':
             $('#n-projects').click();
             break;
-        case '#/contact':
-            $('#n-contact').click();
-            break;
         case '#/portfolio':
             $('#n-portfolio').click();
             break;
@@ -188,10 +185,6 @@ function initProjectNav () {
     
 }
 
-function debug(text) {
-    console.log(text);
-}
-
 /* INITIALIZE */
 
 $(document).ready(function() {
@@ -240,7 +233,7 @@ $(document).ready(function() {
     for (var i = 0; i < projects.items.length; i++) {
         item = projects.items[i];
         if (item.status == 'current') {
-            $('#d-projects').append(Mustache.render(m_current_project, item));
+            $('#projects').append(Mustache.render(m_current_project, item));
         }
     }
 
@@ -252,8 +245,6 @@ $(document).ready(function() {
             $('#n-resume span.active').removeClass('active');
             $('#d-projects:visible').fadeOut(200);
             $('#n-projects span.active').removeClass('active');
-            $('#d-contact:visible').fadeOut(200);
-            $('#n-contact span.active').removeClass('active');
             // Open portfolio window
             $('#d-portfolio:hidden').fadeIn(300);
             $('#n-portfolio span').addClass('active');
@@ -276,8 +267,6 @@ $(document).ready(function() {
             $('#n-portfolio span.active').removeClass('active');
             $('#d-projects:visible').fadeOut(200);
             $('#n-projects span.active').removeClass('active');
-            $('#d-contact:visible').fadeOut(200);
-            $('#n-contact span.active').removeClass('active');
             // Open Resume
             $('#d-resume:hidden').fadeIn(300, function(){
                 document.title = 'Resume - ' + site_title;
@@ -295,33 +284,12 @@ $(document).ready(function() {
             $('#n-portfolio span.active').removeClass('active');
             $('#d-resume:visible').fadeOut(200);
             $('#n-resume span.active').removeClass('active');
-            $('#d-contact:visible').fadeOut(200);
-            $('#n-contact span.active').removeClass('active');
             // Open Projects
             $('#d-projects:hidden').fadeIn(300, function(){
                 document.title = 'Current Projects - ' + site_title;
                 window.location.hash = '/projects';
             });
             $('#n-projects span').addClass('active');
-        }
-    );
-
-    // Contact
-    $('#n-contact').click(
-        function() {
-            // Close all other tabs if open
-            $('#d-portfolio:visible').fadeOut(200);
-            $('#n-portfolio span.active').removeClass('active');
-            $('#d-resume:visible').fadeOut(200);
-            $('#n-resume span.active').removeClass('active');
-            $('#d-projects:visible').fadeOut(200);
-            $('#n-projects span.active').removeClass('active');
-            // Open Contact
-            $('#d-contact:hidden').fadeIn(300, function(){
-                document.title = 'Contact - ' + site_title;
-                window.location.hash = '/contact';
-            });
-            $('#n-contact span').addClass('active');
         }
     );
 
