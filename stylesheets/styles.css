@@ -5254,6 +5254,8 @@ nav .name {
   white-space: nowrap; }
   nav .name a {
     padding-left: 95px !important; }
+    nav .name a:hover {
+      text-decoration: none; }
 nav .logo {
   width: 90px;
   height: 100%;

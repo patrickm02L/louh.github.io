@@ -8,11 +8,11 @@
       "status": "current",
       "images": [
         {
-          "filename": "2175market_01.jpg",
+          "filename": "2175market-01.jpg",
           "caption": "Perspective Render"
         },
         {
-          "filename": "2175market_05.jpg",
+          "filename": "2175market-05.jpg",
           "caption": "Plan"
         }
       ],
@@ -22,7 +22,7 @@
       "role": "Product design, user experience designer, front-end developer",
       "team": "Code for America",
       "ext_url": "http://www.lasvegasnevada.gov/fastpass/",
-      "description": "Got a business idea?  Las Vegas Development Fastpass will help you find the best property for your business and give you the information you need to sail through the entitlements process."
+      "description": "Got a business idea?  The Las Vegas Development Fastpass will help you find the best property for your business and give you the information you need to sail through the entitlements process."
     },
     {
       "id": "2175market",
@@ -31,11 +31,11 @@
       "status": "hidden",
       "images": [
         {
-          "filename": "2175market_01.jpg",
+          "filename": "2175market-01.jpg",
           "caption": "Perspective Render"
         },
         {
-          "filename": "2175market_05.jpg",
+          "filename": "2175market-05.jpg",
           "caption": "Plan"
         }
       ],
@@ -54,7 +54,7 @@
       "status": "portfolio",
       "images": [
         {
-          "filename": "sunnydale_01.jpg",
+          "filename": "sunnydale-01.jpg",
           "caption": "Aerial view"
         }
       ],
@@ -73,35 +73,35 @@
       "status": "portfolio",
       "images": [
         {
-          "filename": "saccatalyst_01.jpg",
+          "filename": "saccatalyst-01.jpg",
           "caption": "Perspective View (1 of 2)"
         },
         {
-          "filename": "saccatalyst_02.jpg",
+          "filename": "saccatalyst-02.jpg",
           "caption": "Perspective View (2 of 2)"
         },
         {
-          "filename": "saccatalyst_08.jpg",
+          "filename": "saccatalyst-08.jpg",
           "caption": "Plan (Board 1)"
         },
         {
-          "filename": "saccatalyst_07.jpg",
+          "filename": "saccatalyst-07.jpg",
           "caption": "Strategies and Phasing (Board 2)"
         },
         {
-          "filename": "saccatalyst_03.jpg",
+          "filename": "saccatalyst-03.jpg",
           "caption": "Longitudinal Site Section (1 of 4)"
         },
         {
-          "filename": "saccatalyst_04.jpg",
+          "filename": "saccatalyst-04.jpg",
           "caption": "Longitudinal Site Section (2 of 4)"
         },
         {
-          "filename": "saccatalyst_05.jpg",
+          "filename": "saccatalyst-05.jpg",
           "caption": "Longitudinal Site Section (3 of 4)"
         },
         {
-          "filename": "saccatalyst_06.jpg",
+          "filename": "saccatalyst-06.jpg",
           "caption": "Longitudinal Site Section (4 of 4)"
         }
       ],
@@ -122,23 +122,23 @@
       "status": "portfolio",
       "images": [
         {
-          "filename": "centralflorida_01.jpg",
+          "filename": "centralflorida-01.jpg",
           "caption": "View at Daytona Multi-modal Transit Station"
         },
         {
-          "filename": "centralflorida_02.jpg",
+          "filename": "centralflorida-02.jpg",
           "caption": "Carillon Infill Development Plan"
         },
         {
-          "filename": "centralflorida_03.jpg",
+          "filename": "centralflorida-03.jpg",
           "caption": "Trend Land Development Model, 2050"
         },
         {
-          "filename": "centralflorida_04.jpg",
+          "filename": "centralflorida-04.jpg",
           "caption": "Alternative Land Development Model, 2050"
         },
         {
-          "filename": "centralflorida_05.jpg",
+          "filename": "centralflorida-05.jpg",
           "caption": "Proposed Super Region Transit Map"
         }
       ],
@@ -159,48 +159,48 @@
       "status": "portfolio",
       "images": [
         {
-          "filename": "lamodafresca_01.jpg",
+          "filename": "lamodafresca-01.jpg",
           "caption": "E-W Section through Greenway (1 of 4)"
         },
         {
-          "filename": "lamodafresca_02.jpg",
+          "filename": "lamodafresca-02.jpg",
           "caption": "E-W Section through Greenway (2 of 4)"
         },
         {
-          "filename": "lamodafresca_03.jpg",
+          "filename": "lamodafresca-03.jpg",
           "caption": "E-W Section through Greenway (3 of 4)"
         },
         {
-          "filename": "lamodafresca_04.jpg",
+          "filename": "lamodafresca-04.jpg",
           "caption": "E-W Section through Greenway (4 of 4)"
         },
         {
-          "filename": "lamodafresca_05.jpg",
+          "filename": "lamodafresca-05.jpg",
           "caption": "Site Section (disabled)",
           "disabled": "yes"
         },
         {
-          "filename": "lamodafresca_07.jpg",
+          "filename": "lamodafresca-07.jpg",
           "caption": "Site Plan"
         },
         {
-          "filename": "lamodafresca_10.jpg",
+          "filename": "lamodafresca-10.jpg",
           "caption": "Site Model"
         },
         {
-          "filename": "lamodafresca_06.jpg",
+          "filename": "lamodafresca-06.jpg",
           "caption": "Eat Street View from Transit Center"
         },
         {
-          "filename": "lamodafresca_09.jpg",
+          "filename": "lamodafresca-09.jpg",
           "caption": "Eat Street Transit Center Detail Plan"
         },
         {
-          "filename": "lamodafresca_11.jpg",
+          "filename": "lamodafresca-11.jpg",
           "caption": "Eat Street View"
         },
         {
-          "filename": "lamodafresca_08.jpg",
+          "filename": "lamodafresca-08.jpg",
           "caption": "Eat Street Plan"
         }
       ],
@@ -221,51 +221,51 @@
       "status": "portfolio",
       "images": [
         {
-          "filename": "schuylkill_04.jpg",
+          "filename": "schuylkill-04.jpg",
           "caption": "View at Gray's Ferry Waterfront"
         },
         {
-          "filename": "schuylkill_05.jpg",
+          "filename": "schuylkill-05.jpg",
           "caption": "Gray's Ferry Waterfront, Detail Plan"
         },
         {
-          "filename": "schuylkill_01.jpg",
+          "filename": "schuylkill-01.jpg",
           "caption": "Street Section at 34th St"
         },
         {
-          "filename": "schuylkill_02.jpg",
+          "filename": "schuylkill-02.jpg",
           "caption": "Gray's Ferry Neighborhood Plan"
         },
         {
-          "filename": "schuylkill_03.jpg",
+          "filename": "schuylkill-03.jpg",
           "caption": "Gray's Ferry Land Use Plan"
         },
         {
-          "filename": "schuylkill_06.jpg",
+          "filename": "schuylkill-06.jpg",
           "caption": "The Lower Schuylkill Master Plan (1 of 2)"
         },
         {
-          "filename": "schuylkill_07.jpg",
+          "filename": "schuylkill-07.jpg",
           "caption": "The Lower Schuylkill Master Plan (2 of 2)"
         },
         {
-          "filename": "schuylkill_09.jpg",
+          "filename": "schuylkill-09.jpg",
           "caption": "Section Through Schuylkill River (1 of 5)"
         },
         {
-          "filename": "schuylkill_10.jpg",
+          "filename": "schuylkill-10.jpg",
           "caption": "Section Through Schuylkill River (2 of 5)"
         },
         {
-          "filename": "schuylkill_11.jpg",
+          "filename": "schuylkill-11.jpg",
           "caption": "Section Through Schuylkill River (3 of 5)"
         },
         {
-          "filename": "schuylkill_12.jpg",
+          "filename": "schuylkill-12.jpg",
           "caption": "Section Through Schuylkill River (4 of 5)"
         },
         {
-          "filename": "schuylkill_13.jpg",
+          "filename": "schuylkill-13.jpg",
           "caption": "Section Through Schuylkill River (5 of 5)"
         }
       ],
@@ -281,23 +281,23 @@
       "status": "portfolio",
       "images": [
         {
-          "filename": "scotchhollow_01.jpg",
+          "filename": "scotchhollow-01.jpg",
           "caption": "Bird's Eye Site View"
         },
         {
-          "filename": "scotchhollow_02.jpg",
+          "filename": "scotchhollow-02.jpg",
           "caption": "Residential Entry Courtyard"
         },
         {
-          "filename": "scotchhollow_03.jpg",
+          "filename": "scotchhollow-03.jpg",
           "caption": "Community Center Option 1"
         },
         {
-          "filename": "scotchhollow_04.jpg",
+          "filename": "scotchhollow-04.jpg",
           "caption": "Community Center Option 2"
         },
         {
-          "filename": "scotchhollow_05.jpg",
+          "filename": "scotchhollow-05.jpg",
           "caption": "Residential Common Area"
         }
       ],
@@ -315,19 +315,19 @@
       "status": "portfolio",
       "images": [
         {
-          "filename": "northarlington_01.jpg",
+          "filename": "northarlington-01.jpg",
           "caption": "Ridge Road Infill Plan"
         },
         {
-          "filename": "northarlington_02.jpg",
+          "filename": "northarlington-02.jpg",
           "caption": "Schuyler Ave Redevelopment Plan"
         },
         {
-          "filename": "northarlington_03.jpg",
+          "filename": "northarlington-03.jpg",
           "caption": "Schuyler Ave Redevelopment Plan"
         },
         {
-          "filename": "northarlington_04.jpg",
+          "filename": "northarlington-04.jpg",
           "caption": "River Road Land Swap Diagram"
         }
       ],
@@ -345,31 +345,31 @@
       "status": "portfolio",
       "images": [
         {
-          "filename": "caciquegardens_01.jpg",
+          "filename": "caciquegardens-01.jpg",
           "caption": ""
         },
         {
-          "filename": "caciquegardens_02.jpg",
+          "filename": "caciquegardens-02.jpg",
           "caption": ""
         },
         {
-          "filename": "caciquegardens_03.png",
+          "filename": "caciquegardens-03.png",
           "caption": ""
         },
         {
-          "filename": "caciquegardens_04.png",
+          "filename": "caciquegardens-04.png",
           "caption": ""
         },
         {
-          "filename": "caciquegardens_05.png",
+          "filename": "caciquegardens-05.png",
           "caption": ""
         },
         {
-          "filename": "caciquegardens_06.png",
+          "filename": "caciquegardens-06.png",
           "caption": ""
         },
         {
-          "filename": "caciquegardens_07.png",
+          "filename": "caciquegardens-07.png",
           "caption": ""
         }
       ],
@@ -385,31 +385,31 @@
       "status": "portfolio",
       "images": [
         {
-          "filename": "eastorange_01.jpg",
+          "filename": "eastorange-01.jpg",
           "caption": "Main Street Before & After View"
         },
         {
-          "filename": "eastorange_02.jpg",
+          "filename": "eastorange-02.jpg",
           "caption": "Gateway District Map"
         },
         {
-          "filename": "eastorange_03.jpg",
+          "filename": "eastorange-03.jpg",
           "caption": "Central Ave Before & After View"
         },
         {
-          "filename": "eastorange_04.jpg",
+          "filename": "eastorange-04.jpg",
           "caption": "Main Street (Brick Church Area) Before & After"
         },
         {
-          "filename": "eastorange_05.jpg",
+          "filename": "eastorange-05.jpg",
           "caption": "Central Ave Before & After View"
         },
         {
-          "filename": "eastorange_06.jpg",
+          "filename": "eastorange-06.jpg",
           "caption": ""
         },
         {
-          "filename": "eastorange_07.jpg",
+          "filename": "eastorange-07.jpg",
           "caption": "Signage Guidelines Document"
         }
       ],
@@ -427,27 +427,27 @@
       "status": "portfolio",
       "images": [
         {
-          "filename": "portrichmond_01.jpg",
+          "filename": "portrichmond-01.jpg",
           "caption": "Richmond St Proposed Streetscape Sketch"
         },
         {
-          "filename": "portrichmond_06.jpg",
+          "filename": "portrichmond-06.jpg",
           "caption": ""
         },
         {
-          "filename": "portrichmond_02.jpg",
+          "filename": "portrichmond-02.jpg",
           "caption": "Richmond St Proposed Streetscape Sketch"
         },
         {
-          "filename": "portrichmond_03.jpg",
+          "filename": "portrichmond-03.jpg",
           "caption": "Richmond St Existing Conditions Photo"
         },
         {
-          "filename": "portrichmond_04.jpg",
+          "filename": "portrichmond-04.jpg",
           "caption": "Port Richmond Redevelopment Plan (1 of 2)"
         },
         {
-          "filename": "portrichmond_05.jpg",
+          "filename": "portrichmond-05.jpg",
           "caption": "Port Richmond Redevelopment Plan (2 of 2)"
         }
       ],
@@ -464,35 +464,35 @@
       "status": "portfolio",
       "images": [
         {
-          "filename": "peets_01.jpg",
+          "filename": "peets-01.jpg",
           "caption": "Prototype Store in Emeryville, CA"
         },
         {
-          "filename": "peets_02.png",
+          "filename": "peets-02.png",
           "caption": "Typical Store Floor Plan (Berkeley, CA)"
         },
         {
-          "filename": "peets_03.jpg",
+          "filename": "peets-03.jpg",
           "caption": "Exterior View (Lake Forest, CA)"
         },
         {
-          "filename": "peets_04.jpg",
+          "filename": "peets-04.jpg",
           "caption": "Exterior Rendering (Dimond District, Oakland, CA)"
         },
         {
-          "filename": "peets_05.jpg",
+          "filename": "peets-05.jpg",
           "caption": "Supermarket Kiosk Rendering"
         },
         {
-          "filename": "peets_06.png",
+          "filename": "peets-06.png",
           "caption": "Supermarket Kiosk Isometric Views"
         },
         {
-          "filename": "peets_07.jpg",
+          "filename": "peets-07.jpg",
           "caption": "Exterior View (Redwood City, CA)"
         },
         {
-          "filename": "peets_08.png",
+          "filename": "peets-08.png",
           "caption": "Elevation View (Berkeley, CA)"
         }
       ],
@@ -510,19 +510,19 @@
       "status": "portfolio",
       "images": [
         {
-          "filename": "tandoorioven_01.jpg",
+          "filename": "tandoorioven-01.jpg",
           "caption": "3D Rendering from Entrance"
         },
         {
-          "filename": "tandoorioven_02.png",
+          "filename": "tandoorioven-02.png",
           "caption": "Floor Plan"
         },
         {
-          "filename": "tandoorioven_03.jpg",
+          "filename": "tandoorioven-03.jpg",
           "caption": "3D Rendering of Dining Area"
         },
         {
-          "filename": "tandoorioven_04.jpg",
+          "filename": "tandoorioven-04.jpg",
           "caption": "3D Rendering from Staff Area"
         }
       ],
@@ -539,23 +539,23 @@
       "status": "portfolio",
       "images": [
         {
-          "filename": "dealhouse_01.jpg",
+          "filename": "dealhouse-01.jpg",
           "caption": "3D Model, Isometric View"
         },
         {
-          "filename": "dealhouse_02.jpg",
+          "filename": "dealhouse-02.jpg",
           "caption": "3D Model, Isometric View at Night"
         },
         {
-          "filename": "dealhouse_03.png",
+          "filename": "dealhouse-03.png",
           "caption": "Floor Plans (1 of 2)"
         },
         {
-          "filename": "dealhouse_04.png",
+          "filename": "dealhouse-04.png",
           "caption": "Floor Plans (2 of 2)"
         },
         {
-          "filename": "dealhouse_05.jpg",
+          "filename": "dealhouse-05.jpg",
           "caption": "3D Model, Rear Elevation"
         }
       ],
@@ -572,19 +572,19 @@
       "status": "portfolio",
       "images": [
         {
-          "filename": "epstein_01.jpg",
+          "filename": "epstein-01.jpg",
           "caption": "3D Model, Rear View"
         },
         {
-          "filename": "epstein_02.jpg",
+          "filename": "epstein-02.jpg",
           "caption": "3D Model, Front View"
         },
         {
-          "filename": "epstein_03.png",
+          "filename": "epstein-03.png",
           "caption": "Floor Plans (Sketch)"
         },
         {
-          "filename": "epstein_04.jpg",
+          "filename": "epstein-04.jpg",
           "caption": "3D Model, Rear View with Neighborhood Context"
         }
       ],
@@ -601,27 +601,27 @@
       "status": "portfolio",
       "images": [
         {
-          "filename": "resto_03.png",
+          "filename": "resto-03.png",
           "caption": "Interior Elevations"
         },
         {
-          "filename": "resto_04.png",
+          "filename": "resto-04.png",
           "caption": "Partial Floor Plan"
         },
         {
-          "filename": "resto_05.png",
+          "filename": "resto-05.png",
           "caption": "Details"
         },
         {
-          "filename": "resto_06.png",
+          "filename": "resto-06.png",
           "caption": "Interior Elevations"
         },
         {
-          "filename": "resto_01.jpg",
+          "filename": "resto-01.jpg",
           "caption": "Interior View (Fixtures Department)"
         },
         {
-          "filename": "resto_02.jpg",
+          "filename": "resto-02.jpg",
           "caption": "Interior View (Bedroom Department)"
         }
       ],
@@ -638,15 +638,15 @@
       "status": "portfolio",
       "images": [
         {
-          "filename": "vonscheven_01.jpg",
+          "filename": "vonscheven-01.jpg",
           "caption": "Front Elevation sketch"
         },
         {
-          "filename": "vonscheven_02.jpg",
+          "filename": "vonscheven-02.jpg",
           "caption": "Elevation sketches"
         },
         {
-          "filename": "vonscheven_03.jpg",
+          "filename": "vonscheven-03.jpg",
           "caption": "Proposed floor plan"
         }
       ],
@@ -663,7 +663,7 @@
       "status": "portfolio",
       "images": [
         {
-          "filename": "calitransit_01.png",
+          "filename": "calitransit-01.png",
           "caption": ""
         }
       ],
@@ -677,39 +677,39 @@
       "status": "portfolio",
       "images": [
         {
-          "filename": "panorama_01.jpg",
+          "filename": "panorama-01.jpg",
           "caption": ""
         },
         {
-          "filename": "panorama_02.jpg",
+          "filename": "panorama-02.jpg",
           "caption": ""
         },
         {
-          "filename": "panorama_03.jpg",
+          "filename": "panorama-03.jpg",
           "caption": ""
         },
         {
-          "filename": "panorama_04.jpg",
+          "filename": "panorama-04.jpg",
           "caption": ""
         },
         {
-          "filename": "panorama_05.jpg",
+          "filename": "panorama-05.jpg",
           "caption": ""
         },
         {
-          "filename": "panorama_06.jpg",
+          "filename": "panorama-06.jpg",
           "caption": ""
         },
         {
-          "filename": "panorama_07.jpg",
+          "filename": "panorama-07.jpg",
           "caption": ""
         },
         {
-          "filename": "panorama_08.jpg",
+          "filename": "panorama-08.jpg",
           "caption": ""
         },
         {
-          "filename": "panorama_09.jpg",
+          "filename": "panorama-09.jpg",
           "caption": ""
         }
       ],
@@ -724,7 +724,7 @@
       "status": "portfolio",
       "images": [
         {
-          "filename": "fabboard_01.jpg",
+          "filename": "fabboard-01.jpg",
           "caption": ""
         }
       ],
@@ -741,7 +741,7 @@
       "status": "portfolio",
       "images": [
         {
-          "filename": "nomelette_01.jpg",
+          "filename": "nomelette-01.jpg",
           "caption": ""
         }
       ],
@@ -756,23 +756,23 @@
       "status": "portfolio",
       "images": [
         {
-          "filename": "crome_01.jpg",
+          "filename": "crome-01.jpg",
           "caption": ""
         },
         {
-          "filename": "crome_02.jpg",
+          "filename": "crome-02.jpg",
           "caption": ""
         },
         {
-          "filename": "crome_03.jpg",
+          "filename": "crome-03.jpg",
           "caption": ""
         },
         {
-          "filename": "crome_04.jpg",
+          "filename": "crome-04.jpg",
           "caption": ""
         },
         {
-          "filename": "crome_05.jpg",
+          "filename": "crome-05.jpg",
           "caption": ""
         }
       ],
@@ -787,51 +787,51 @@
       "status": "portfolio",
       "images": [
         {
-          "filename": "lhphoto_01.jpg",
+          "filename": "lhphoto-01.jpg",
           "caption": "Website"
         },
         {
-          "filename": "photo_01.jpg",
+          "filename": "photo-01.jpg",
           "caption": "Business card design"
         },
         {
-          "filename": "photo_02.jpg",
+          "filename": "photo-02.jpg",
           "caption": ""
         },
         {
-          "filename": "photo_03.jpg",
+          "filename": "photo-03.jpg",
           "caption": ""
         },
         {
-          "filename": "photo_04.jpg",
+          "filename": "photo-04.jpg",
           "caption": ""
         },
         {
-          "filename": "photo_05.jpg",
+          "filename": "photo-05.jpg",
           "caption": ""
         },
         {
-          "filename": "photo_06.jpg",
+          "filename": "photo-06.jpg",
           "caption": ""
         },
         {
-          "filename": "photo_07.jpg",
+          "filename": "photo-07.jpg",
           "caption": ""
         },
         {
-          "filename": "photo_08.jpg",
+          "filename": "photo-08.jpg",
           "caption": ""
         },
         {
-          "filename": "photo_09.jpg",
+          "filename": "photo-09.jpg",
           "caption": ""
         },
         {
-          "filename": "photo_10.jpg",
+          "filename": "photo-10.jpg",
           "caption": ""
         },
         {
-          "filename": "photo_11.jpg",
+          "filename": "photo-11.jpg",
           "caption": ""
         }
       ],
@@ -846,39 +846,39 @@
       "status": "portfolio",
       "images": [
         {
-          "filename": "bluegold_01.jpg",
+          "filename": "bluegold-01.jpg",
           "caption": ""
         },
         {
-          "filename": "bluegold_04.jpg",
+          "filename": "bluegold-04.jpg",
           "caption": ""
         },
         {
-          "filename": "bluegold_09.jpg",
+          "filename": "bluegold-09.jpg",
           "caption": ""
         },
         {
-          "filename": "bluegold_02.jpg",
+          "filename": "bluegold-02.jpg",
           "caption": ""
         },
         {
-          "filename": "bluegold_03.jpg",
+          "filename": "bluegold-03.jpg",
           "caption": ""
         },
         {
-          "filename": "bluegold_05.jpg",
+          "filename": "bluegold-05.jpg",
           "caption": ""
         },
         {
-          "filename": "bluegold_06.jpg",
+          "filename": "bluegold-06.jpg",
           "caption": ""
         },
         {
-          "filename": "bluegold_07.jpg",
+          "filename": "bluegold-07.jpg",
           "caption": ""
         },
         {
-          "filename": "bluegold_08.jpg",
+          "filename": "bluegold-08.jpg",
           "caption": ""
         }
       ],
@@ -893,7 +893,7 @@
       "status": "portfolio",
       "images": [
         {
-          "filename": "chocolatemango_01.jpg",
+          "filename": "chocolatemango-01.jpg",
           "caption": ""
         }
       ],
@@ -910,7 +910,7 @@
       "status": "portfolio",
       "images": [
         {
-          "filename": "sfbaymosaic_01.jpg",
+          "filename": "sfbaymosaic-01.jpg",
           "caption": ""
         }
       ],
@@ -925,7 +925,7 @@
       "status": "hidden",
       "images": [
         {
-          "filename": "digitalshoebox_01.jpg",
+          "filename": "digitalshoebox-01.jpg",
           "caption": ""
         }
       ],
@@ -940,11 +940,11 @@
       "status": "portfolio",
       "images": [
         {
-          "filename": "tab_01.png",
+          "filename": "tab-01.png",
           "caption": ""
         },
         {
-          "filename": "tab_02.png",
+          "filename": "tab-02.png",
           "caption": ""
         }
       ],
@@ -959,7 +959,7 @@
       "status": "hidden",
       "images": [
         {
-          "filename": "lifeshelf_01.jpg",
+          "filename": "lifeshelf-01.jpg",
           "caption": ""
         }
       ],
@@ -974,7 +974,7 @@
       "status": "current",
       "year": "2013",
       "ext_url": "http://streetmix.net/",
-      "description": "Interactive drag and drop street section creator."
+      "description": "An interactive website that empowers citizens to create their own street designs and share them with each other and with city planners."
     },
     {
       "id": "umloud",

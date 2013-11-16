@@ -93,6 +93,9 @@ nav {
     white-space: nowrap;
     a {
       padding-left: 95px !important;
+      &:hover {
+        text-decoration: none;
+      }
     }
   }
   .logo {
