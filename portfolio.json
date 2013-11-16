@@ -753,7 +753,7 @@
       "id": "crome",
       "name": "Crome Architecture Marketing",
       "type": "other",
-      "status": "portfolio",
+      "status": "hidden",
       "images": [
         {
           "filename": "crome-01.jpg",
@@ -843,7 +843,7 @@
       "id": "bluegold",
       "name": "Blue & Gold Yearbook",
       "type": "other",
-      "status": "portfolio",
+      "status": "hidden",
       "images": [
         {
           "filename": "bluegold-01.jpg",
@@ -890,7 +890,7 @@
       "id": "chocolatemango",
       "name": "Better Together: Andrew and Kelly",
       "type": "other",
-      "status": "portfolio",
+      "status": "hidden",
       "images": [
         {
           "filename": "chocolatemango-01.jpg",
@@ -907,7 +907,7 @@
       "id": "sfbaymosaic",
       "name": "SF Bay Mosaic",
       "type": "other",
-      "status": "portfolio",
+      "status": "hidden",
       "images": [
         {
           "filename": "sfbaymosaic-01.jpg",
@@ -937,7 +937,7 @@
       "id": "tab",
       "name": "The Address Book",
       "type": "other",
-      "status": "portfolio",
+      "status": "hidden",
       "images": [
         {
           "filename": "tab-01.png",
@@ -980,7 +980,7 @@
       "id": "umloud",
       "name": "Ümloud!",
       "type": "other",
-      "status": "current",
+      "status": "hidden",
       "year": "2012-current",
       "role": "Art direction and design",
       "ext_url": "http://www.umloud.org/",
@@ -990,7 +990,7 @@
       "id": "nerdnite",
       "name": "An Open World (at Nerd Nite SF)",
       "type": "other",
-      "status": "current",
+      "status": "hidden",
       "year": "2012",
       "ext_url": "http://sf.nerdnite.com/2012/06/12/nerd-nite-sf-25-video-games-urban-design-death-proof-cities-and-the-science-of-futurama/",
       "description": "Urban design and open-world video games have in common environments designed for activities and exploration.  To create these spaces, video games have reimagined existing cities, inspired new ones, or copied them entirely, and many have even improved on certain experiences.  What can the real world learn from these virtual environments? How can we engage gamers in the development of the physical built environment? (Video of talk coming soon!)"
@@ -1004,6 +1004,25 @@
       "role": "Web design and development",
       "ext_url": "http://sfpopos.com/",
       "description": "An online guide to San Francisco's Privately Owned Publicly Open Spaces (POPOS)."
+    },
+    {
+      "id": "urbanwander",
+      "name": "Urban Wander",
+      "type": "other",
+      "status": "hidden",
+      "year": "2013",
+      "role": "Web development, data wrangler",
+      "ext_url": "http://urbanwander.com/",
+      "description": "An online guide to San Francisco's Privately Owned Publicly Open Spaces (POPOS)."
+    },
+    {
+      "id": "foodtrucks",
+      "name": "Las Vegas Food Trucks",
+      "type": "other",
+      "status": "current",
+      "year": "2013",
+      "ext_url": "http://clvfoodtrucks.com/",
+      "description": "Real time food truck information for Downtown Las Vegas."
     },
     {}
   ]

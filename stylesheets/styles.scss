@@ -1,7 +1,9 @@
 
 // VARIABLES
-$link-color:        #7c8282;
 $main-color:        #5d6262;
+$accent-color:      #d83432;
+//$link-color:        #7c8282;
+$link-color:        darken($accent-color, 10%);
 $background-color:  rgb(238,238,238);
 
 $topbar-bg-color:         lighten($background-color, 5%);
@@ -168,14 +170,13 @@ h1, h2, h3, h4, h5 {
   font-family: 'Montserrat';
   color: $main-color;
   font-weight: normal;
-  -webkit-font-smoothing: antialiased; /* Prevents fonts looking so bold on Mac */
-//  text-transform: uppercase;
   font-weight: 300;
 }
 
 h1 {
   font-size: 48px;
   line-height: 48px;
+  -webkit-font-smoothing: antialiased; /* Prevents fonts looking so bold on Mac */
 }
 
 h2 {
@@ -185,8 +186,8 @@ h2 {
 }
 
 h3 {
-  font-size: 28px;
-  line-height: 28px;
+  font-size: 26px;
+  line-height: 26px;
   letter-spacing: -1px;
 }
 
@@ -194,12 +195,20 @@ h4 {
   font-size: 18px;
   line-height: 18px;
   letter-spacing: -1px;
+//  color: darken($accent-color, 25%);
+  color: lighten($main-color, 10%);
+  margin-top: 10px;
 }
 
 h5 {
   font-size: 18px;
   line-height: 18px;
   letter-spacing: -1px;
+}
+
+h6 {
+  font-size: 14px;
+  line-height: 14px;
 }
 
 .small, small {
@@ -213,6 +222,15 @@ h5 {
   height: 400px;
   background-color: lighten($background-color, 3%);
   position: relative;
+}
+
+#projects {
+  div.row {
+    margin-bottom: 10px;
+  }
+  img {
+    margin-bottom: 10px;
+  }
 }
 
 // STUFF
@@ -230,6 +248,12 @@ h5 {
 .bio {
   // Manual vertical centering.
   margin-top: 100px;
+}
+
+.external-link {
+  font-size: 80%;
+  text-transform: uppercase;
+  white-space: nowrap;
 }
 
 div.epilogue {
@@ -254,52 +278,7 @@ div.epilogue {
 
 // OLD
 
-#navbox li {
-  color: $main-color;
-  font-family: Montserrat;
-  font-size: 16px;
-  letter-spacing: -1px;
-  text-align: right;
-  text-transform: uppercase;
-  padding: 6px 0;
-  cursor: pointer;
-  margin: 0;
-  border-top: 1px solid #7c8282;
-}
 
-#navbox li span {
-  display: block;
-  position: relative;
-  width: 100%;
-  padding: 2px 6px 2px 0;
-}
-
-#navbox li span:not(.nohover):hover {
-  border-right: 4px solid #d83432;
-}
-
-#navbox li span.active {
-  border-right: 4px solid #d83432;
-  background-color: #f6f6f6;
-}
-
-#col2 {
-  width: 670px;
-  min-height: 900px;
-  left: 260px;
-  position: relative;
-}
-
-.translucentBox {
-  width: 100%;
-  height: 100%;
-  background-color: #000;
-  position: absolute;
-  -moz-opacity: .80;
-  filter: alpha(opacity=80);
-  opacity: 0.8;
-  z-index: -5;
-}
 
 #d-resume {
   z-index: 6;
@@ -533,15 +512,6 @@ div.epilogue {
     background: url('../img/pdf.png') left center no-repeat;
     display: block;
     padding-left: 24px;
-  }
-}
-
-.current{
-  min-height: 180px;
-  margin: 10px 0 0 0;
-  img:first-child {
-    float: left;
-    margin: 0 10px 10px 0;
   }
 }
 

@@ -31,7 +31,9 @@
               <a href='http://louhuang.com/'>Lou Huang</a>
             </h1>
           </li>
+<!--
           <li class='toggle-topbar menu-icon'><a href='#'><span>menu</span></a></li>
+// -->
         </ul>
         <section class='top-bar-section'>
           <ul class='right social-icons'>
@@ -77,23 +79,26 @@
 
       <section id='projects'>
         <div class='row'>
-          <div class='large-12 columns' style='margin-bottom: 20px;'>
+          <div class='large-12 columns'>
             <h3>Here are some of my recent projects.</h3>
           </div>
         </div>
       </section>
       <script id='m_current_project' type='text/template'>
         <div class='row'>
-          <div class='large-8 medium-8 push-4 columns'>
+          <div class='large-7 medium-7 push-5 columns'>
             <img src='portfolio/thumb-{{id}}.png' width='100%' alt=''>
           </div>
-          <div class='large-4 medium-4 pull-8 columns'>
+          <div class='large-5 medium-5 pull-7 columns'>
             <h4>{{name}}</h4>
-            <p class='text'> {{description}}
-            {{#ext_url}}
-              <a href='{{ext_url}}' target='_blank'>{{ext_link}}{{^ext_link}}View site{{/ext_link}}</a>
-            {{/ext_url}}
+            <p class='text'>
+              {{description}}
             </p>
+            {{#ext_url}}
+            <p>
+              <a href='{{ext_url}}' target='_blank' class='external-link'><i class='fi-page-export' style='margin-left: 4px;'></i> {{ext_link}}{{^ext_link}}View site{{/ext_link}}</a>
+            </p>
+            {{/ext_url}}
           </div>
         </div>
       </script>
@@ -384,8 +389,8 @@
     <script src='//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js'></script>
     <script>window.jQuery || document.write('<script src=\'js/vendor/jquery-1.10.2.min.js\'><\/script>')</script>
     <script src='js/vendor/jquery.mousewheel.js'></script>
-    <!--script src='js/vendor/jquery.ba-hashchange.min.js'></script-->
-    <script src='js/vendor/jquery.history.js'></script>
+    <script src='js/vendor/jquery.ba-hashchange.min.js'></script>
+    <!--script src='js/vendor/jquery.history.js'></script-->
     <!-- / JQUERY AND PLUGINS -->
 
     <!-- ADDITIONAL LIBRARIES -->
@@ -399,11 +404,6 @@
     <!-- / SITE JAVASCRIPT -->
 
     <!-- FOUNDATION -->
-    <script>
-      document.write('<script src=' +
-      ('__proto__' in {} ? 'js/vendor/zepto' : 'js/vendor/jquery') +
-      '.js><\/script>')
-    </script>
     <script src='js/foundation/foundation.js'></script>
     <!--
     // Foundation plugins. Uncomment as necessary
