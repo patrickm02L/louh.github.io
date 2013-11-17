@@ -1,11 +1,14 @@
 
 // VARIABLES
-$main-color:        #5d6262;
-$accent-color:      #d83432;
-//$link-color:        #7c8282;
-$link-color:        darken($accent-color, 10%);
-$background-color:  rgb(238,238,238);
-$black:             #222;
+$main-color:          #5d6262;
+$accent-color:        #d83432;
+//$link-color:          #7c8282;
+$link-color:          darken($accent-color, 10%);
+$background-color:    rgb(238,238,238);
+$black:               #222;
+
+$portrait-size:       250px;
+$portrait-size-small: 200px;
 
 // OVERRIDE FOUNDATION VARIABLES - see also _variables.scss
 $topbar-bg-color:         lighten($background-color, 4%);
@@ -79,12 +82,12 @@ $topbar-breakpoint:       480px;
 
 body {
   background: $background-color;
-  color: $main-color;
+  color: $black;
   font: 16px/24px 'Neris', "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .top-bar-container {
-  border-bottom: 1px solid darken($background-color, 2%);
+  border-bottom: 1px solid darken($background-color, 5%);
 }
 
 nav {
@@ -106,18 +109,8 @@ nav {
     background-size: cover;
   }
   .social-icons {
-// Overrides for Foundation's smaller styles
-//      width: auto;
-//      margin-top: -$topbar-height;
-//      background: transparent;
     li {
       font-size: 190%;
-      // Overrides for Foundation's smaller styles
-//      display: inline-block;
-//      width: $topbar-height;
-//      a {
-//        background: transparent;
-//      }
     }
   }
 }
@@ -170,63 +163,25 @@ a {
     color: lighten($link-color, 10%);
     text-decoration: underline;
   }
-  // IS THIS STILL USED?
-  &.noborder {
-    border-bottom: 0 none;
-  }
 }
 
 
 // HEADINGS
 
-h1, h2, h3, h4, h5 {
+h1, h2, h3, h4, h5, h6 {
   font-family: 'Montserrat';
   color: $main-color;
   font-weight: normal;
   font-weight: 300;
+  letter-spacing: -1px;
 }
 
 h1 {
-  font-size: 48px;
-  line-height: 48px;
   -webkit-font-smoothing: antialiased; /* Prevents fonts looking so bold on Mac */
 }
 
-h2 {
-  font-size: 32px;
-  line-height: 32px;
-  letter-spacing: -1px;
-}
-
-h3 {
-  font-size: 26px;
-  line-height: 26px;
-  letter-spacing: -1px;
-}
-
 h4 {
-  font-size: 18px;
-  line-height: 18px;
-  letter-spacing: -1px;
-//  color: darken($accent-color, 25%);
-  color: lighten($main-color, 10%);
-  margin-top: 10px;
-}
-
-h5 {
-  font-size: 18px;
-  line-height: 18px;
-  letter-spacing: -1px;
-}
-
-h6 {
-  font-size: 14px;
-  line-height: 14px;
-}
-
-.small, small {
-  font-size: 12px;
-  line-height: 18px;
+  color: lighten($main-color, 12%);
 }
 
 // SECTIONS
@@ -239,18 +194,18 @@ h6 {
     padding-bottom: 50px;
   }
   .portrait {
-    width: 200px;
-    height: 200px;
+    width: $portrait-size-small;
+    height: $portrait-size-small;
     margin: 0 auto;
     margin-top: 60px;
-    border-radius: 100px;
+    border-radius: $portrait-size-small / 2;
     background: transparent url('../img/portrait.jpg') center center no-repeat;
     background-size: cover;
     @media #{$small} {
-      width: 250px;
-      height: 250px;
+      width: $portrait-size;
+      height: $portrait-size;
       margin-top: 70px;
-      border-radius: 125px;   
+      border-radius: 50%;
     }
   }
   .bio {

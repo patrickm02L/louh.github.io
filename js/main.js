@@ -212,28 +212,6 @@ $(document).ready(function() {
     }
   }
 
-  // Portfolio
-  $('#n-portfolio').click(
-    function() {
-      // Close all other tabs if open
-      $('#d-resume:visible').fadeOut(200);
-      $('#n-resume span.active').removeClass('active');
-      $('#d-projects:visible').fadeOut(200);
-      $('#n-projects span.active').removeClass('active');
-      // Open portfolio window
-      $('#d-portfolio:hidden').fadeIn(300);
-      $('#n-portfolio span').addClass('active');
-      // Reset to main menu
-      $('#port-projectdata').fadeOut(200);
-      $('#port-project').fadeOut(200, function(){
-        $('#port-menu').fadeIn(200);
-      });
-      menuArrows();
-      document.title = 'Portfolio - ' + site_title;
-      window.location.hash = '/portfolio';
-    }
-  );
-
   // Resume
   $('#n-resume').click(
     function() {
@@ -301,12 +279,6 @@ $(document).ready(function() {
 
   // Keybindings
   $(document).keydown(function (e) {
-    if (e.which == 80 && e.ctrlKey == false && e.metaKey == false) {    // key 'p'      opens "portfolio" window
-      $('#n-portfolio').click(); return false; 
-    }
-    if (e.which == 82 && e.ctrlKey == false && e.metaKey == false) {    // key 'r'      opens "resume" window
-      $('#n-resume').click(); return false; 
-    }
     if (e.which == 37) {            // key 'left'   scrolls portfolio left
     //  $('.port-leftarrow img').fadeIn(0);
       $('.port-leftarrow img').click();
@@ -348,12 +320,6 @@ $(document).ready(function() {
   });
   // Trigger hashchange immediately
   $(window).hashchange();
-
-  $(window).resize(function() {
-    if ($('#port-menu').is(':visible')) {
-      menuArrows();
-    }
-  });
 
   
 });
