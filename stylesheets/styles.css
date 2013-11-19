@@ -5243,6 +5243,7 @@ body {
   font: 16px/24px 'Neris', "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 .top-bar-container {
+  z-index: 200;
   border-bottom: 1px solid #e1e1e1; }
 
 nav .name {
@@ -5366,6 +5367,27 @@ h4 {
     color: #777;
     font-weight: normal; }
 
+.fixed-viewer {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  display: none;
+  top: 0;
+  padding-top: 70px;
+  z-index: 100;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background-color: #eeeeee; }
+
+.project-template {
+  display: none; }
+
+.project-data-key {
+  font-weight: bold; }
+
+.project-description {
+  margin-top: 16px; }
+
 .external-link {
   font-size: 80%;
   text-transform: uppercase;
@@ -5383,13 +5405,6 @@ div.epilogue {
     white-space: nowrap; }
     div.epilogue .author::before {
       content: '  — '; }
-
-#port-loader {
-  width: 100%;
-  height: 400px;
-  background: url("../img/loader.gif") center center no-repeat;
-  display: none;
-  position: absolute; }
 
 #port-images div.caption {
   position: absolute;
@@ -5416,9 +5431,6 @@ div.epilogue {
   position: relative;
   overflow: hidden;
   margin-bottom: 10px; }
-
-#port-info p {
-  margin-top: 12px; }
 
 .port-leftarrow, .port-rightarrow {
   width: 50px;

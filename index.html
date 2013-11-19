@@ -134,101 +134,129 @@
 
           </div>
         </div>
-
-<!-- TEMP OLD PORTFOLIO -->
-        <div id='port-content' class='row' style='display:none'>
-          <div class='large-12 columns'>
-                  
-          <section id='port-loader'></section>
-        
-          <section id='port-project' style='display:none;'>
-            
-            <div id='port-backbutton' title='return to main menu [up arrow]'></div>
-            <div id='port-dropbutton'>More projects</div>
-            <div id='port-dropdown'>
-              <h6>Urban Design & Planning</h6>
-                <ul id='drop-cpln'>
-                <script id='m_dropdown_item' type='text/template'>
-                  <li><a href='#/portfolio/{{id}}'>{{#menu_name}}{{menu_name}}{{/menu_name}}{{^menu_name}}{{name}}{{/menu_name}}</a></li>
-                </script>
-                </ul>
-
-              <h6>Architecture</h6>
-                <ul id='drop-arch'>
-                <!-- TO BE REPLACED WITH DROPDOWN ITEM TEMPLATE -->            
-                </ul>
-
-              <h6>Web & Print</h6>
-                <ul id='drop-misc'>
-                <!-- TO BE REPLACED WITH DROPDOWN ITEM TEMPLATE -->            
-                </ul>
-            </div>
-            
-            <div id='port-projectdata'>
-              <!-- TO BE REPLACED WITH PROJECT DATA -->
-            </div>
-
-            <div id='port-projectdata-template'>
-            <script id='m_project' type='text/template'>
-              <div id='{{id}}'>
-                <div id='port-images'>
-                  <div class='port-leftarrow'><img src='img/port-leftarrow.png' alt='&laquo;' title='scroll images [left arrow]' /></div>
-                  <div class='port-rightarrow'><img src='img/port-rightarrow.png' alt='&raquo;' title='scroll images [right arrow]' /></div>
-                  <div class='scroller'>
-                    {{#images}}
-                    <div class='loader'>
-                      <img src='portfolio/{{filename}}' alt='' />
-                      {{#caption}}
-                      <div class='caption'>{{caption}}</div>
-                      {{/caption}}
-                    </div>
-                    {{/images}}
-                  </div>
-                </div>
-                
-                <h4>{{name}}</h4>
-                
-                <div id='port-info'>
-                  <b>year</b> {{year}}
-                  {{#location}}
-                  <br><b>location</b> {{location}}
-                  {{/location}}
-                  {{#client}}
-                  <br><b>client</b> {{client}}
-                  {{/client}}
-                  {{#role}}
-                  <br><b>role</b> {{role}}
-                  {{/role}}
-                  {{#team}}
-                  <br><b>team</b> {{team}}
-                  {{/team}}
-                  
-                  <p>{{description}}</p>
-                  
-                  {{#pdf_url}}
-                  <p><a href='{{pdf_url}}' target='_blank' title='download PDF'>{{pdf_link}}{{^pdf_link}}Download PDF{{/pdf_link}} [pdf]</a></p>
-                  {{/pdf_url}}
-                  
-                  {{#ext_url}}
-                  <p><a href='{{ext_url}}' target='_blank' title='view external link'>{{ext_link}}{{^ext_link}}View site{{/ext_link}}</a></p>
-                  {{/ext_url}}
-                </div>
-              </div>
-            </script>
-            </div>
-
-          </section>
-        
-        
-        </div>
-        </div>
-        
-        
-
-<!-- // END TEMP OLD PORTFOLIO -->
       </section>
 
     </section>
+
+
+    <!-- PROJECT VIEW -->
+    <section id='project-view' class='fixed-viewer'>
+
+      <!-- PROJECT NAVIGATION -->
+      <div class='row' style='display: none;'>
+        <div class='large-12 columns' id='project-navigation'>
+          <div id='port-backbutton' title='return to main menu [up arrow]'></div>
+          <div id='port-dropbutton'>More projects</div>
+          <div id='port-dropdown'>
+            <h6>Urban Design & Planning</h6>
+              <ul id='drop-cpln'>
+              <script id='m_dropdown_item' type='text/template'>
+                <li><a href='#/portfolio/{{id}}'>{{#menu_name}}{{menu_name}}{{/menu_name}}{{^menu_name}}{{name}}{{/menu_name}}</a></li>
+              </script>
+              </ul>
+
+            <h6>Architecture</h6>
+              <ul id='drop-arch'>
+              <!-- TO BE REPLACED WITH DROPDOWN ITEM TEMPLATE -->            
+              </ul>
+
+            <h6>Web & Print</h6>
+              <ul id='drop-misc'>
+              <!-- TO BE REPLACED WITH DROPDOWN ITEM TEMPLATE -->            
+              </ul>
+          </div>
+        </div>
+      </div>
+      <!-- // END PROJECT NAVIGATION -->
+      
+      <!-- PROJECT DATA -->
+      <div id='port-projectdata'>
+        <!-- TO BE REPLACED WITH PROJECT DATA -->
+      </div>
+      <!-- // END PROJECT DATA -->
+
+      <!-- PROJECT DATA VIEW TEMPLATE -->
+      <div id='project-template'>
+      <script id='m_project' type='text/template'>
+
+        <div class='row project-images'>
+          <div class='large-12 columns slideshow-wrapper'>
+            <div class='preloader'></div>
+            <ul id='orbit' data-orbit>
+              {{#images}}
+              <li>
+                <img src='portfolio/{{filename}}' alt=''>
+                {{#caption}}
+                <div class='orbit-caption'>
+                    {{caption}}
+                </div>
+                {{/caption}}
+              </li>
+              {{/images}}
+            </ul>
+          </div>
+        </div>
+
+        <div class='row project-title'>
+          <div class='large-12 columns'>
+            <h4>{{name}}</h4>
+          </div>
+        </div>
+
+        <div class='project-data'>
+          <div class='row'>
+            <div class='small-2 medium-1 large-1 columns project-data-key'>year</div>
+            <div class='small-10 medium-11 large-11 columns project-data-value'>{{year}}</div>
+          </div>
+          {{#location}}
+          <div class='row'>
+            <div class='small-2 medium-1 large-1 columns project-data-key'>location</div>
+            <div class='small-10 medium-11 large-11 columns project-data-value'>{{location}}</div>
+          </div>
+          {{/location}}
+          {{#client}}
+          <div class='row'>
+            <div class='small-2 medium-1 large-1 columns project-data-key'>client</div>
+            <div class='small-10 medium-11 large-11 columns project-data-value'>{{client}}</div>
+          </div>
+          {{/client}}
+          {{#role}}
+          <div class='row'>
+            <div class='small-2 medium-1 large-1 columns project-data-key'>role</div>
+            <div class='small-10 medium-11 large-11 columns project-data-value'>{{role}}</div>
+          </div>
+          {{/role}}
+          {{#team}}
+          <div class='row'>
+            <div class='small-2 medium-1 large-1 columns project-data-key'>team</div>
+            <div class='small-10 medium-11 large-11 columns project-data-value'>{{team}}</div>
+          </div>
+          {{/team}}
+        </div>
+
+        <div class='row project-description'>
+          <div class='large-12 columns'>
+            <p>{{description}}</p>
+          </div>
+        </div>
+
+        <div class='row project-links'>
+          <div class='large-12 columns'>
+            {{#pdf_url}}
+            <p><a href='{{pdf_url}}' target='_blank' title='download PDF'>{{pdf_link}}{{^pdf_link}}Download PDF{{/pdf_link}} [pdf]</a></p>
+            {{/pdf_url}}
+            
+            {{#ext_url}}
+            <p><a href='{{ext_url}}' target='_blank' title='view external link'>{{ext_link}}{{^ext_link}}View site{{/ext_link}}</a></p>
+            {{/ext_url}}
+          </div>
+        </div>
+      </script>
+      </div>
+      <!-- // END PROJECT DATA VIEW TEMPLATE -->
+
+    </section>
+    <!-- // END PROJECT VIEW -->
 
     <footer>
       <div class='row'>

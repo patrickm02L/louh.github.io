@@ -635,7 +635,7 @@
       "id": "vonscheven",
       "name": "Von Scheven House",
       "type": "architecture",
-      "status": "portfolio",
+      "status": "hidden",
       "images": [
         {
           "filename": "vonscheven-01.jpg",
@@ -721,7 +721,7 @@
       "id": "fabboard",
       "name": "Fabboard",
       "type": "other",
-      "status": "portfolio",
+      "status": "hidden",
       "images": [
         {
           "filename": "fabboard-01.jpg",
