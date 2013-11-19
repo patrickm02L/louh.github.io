@@ -109,28 +109,8 @@
             <h3>These are some other things I've made.</h3>
 
             <ul class='small-block-grid-2 large-block-grid-3' id='portfolio-grid'>
-              <script id='m_portfolio_grid' type='text/template'>
-              <li>
-                <a href='#/portfolio/{{id}}'><img src='portfolio/thumb-{{id}}.jpg'>
-                <div class='portfolio-name'>
-                {{#menu_name}}
-                  <div class='caption'>{{menu_name}}<br>
-                {{/menu_name}}
-                {{^menu_name}}
-                  <div class='caption'>{{name}}<br>
-                {{/menu_name}}
-                  {{#menu_location}}
-                    <span class='subtitle'>{{menu_location}}</span>
-                  {{/menu_location}}
-                  {{^menu_location}}
-                    <span class='subtitle'>{{location}}</span>
-                  {{/menu_location}}
-                  </div>
-                </div></a>
-              </li>
-              </script>
+              <!-- To be replaced with project grid item template -->
             </ul>
-
 
           </div>
         </div>
@@ -180,7 +160,7 @@
       <script id='m_project' type='text/template'>
 
         <div class='row project-images'>
-          <div class='large-12 columns slideshow-wrapper'>
+          <div class='slideshow-wrapper'>
             <div class='preloader'></div>
             <ul id='orbit' data-orbit>
               {{#images}}
@@ -243,11 +223,11 @@
         <div class='row project-links'>
           <div class='large-12 columns'>
             {{#pdf_url}}
-            <p><a href='{{pdf_url}}' target='_blank' title='download PDF'>{{pdf_link}}{{^pdf_link}}Download PDF{{/pdf_link}} [pdf]</a></p>
+            <p><a href='{{pdf_url}}' target='_blank' title='download PDF' class='external-link'><i class='fi-page-pdf' style='margin-left: 4px;'></i> {{pdf_link}}{{^pdf_link}}Download PDF{{/pdf_link}} [pdf]</a></p>
             {{/pdf_url}}
             
             {{#ext_url}}
-            <p><a href='{{ext_url}}' target='_blank' title='view external link'>{{ext_link}}{{^ext_link}}View site{{/ext_link}}</a></p>
+            <p><a href='{{ext_url}}' target='_blank' title='view external link' class='external-link'><i class='fi-page-export' style='margin-left: 4px;'></i> {{ext_link}}{{^ext_link}}View site{{/ext_link}}</a></p>
             {{/ext_url}}
           </div>
         </div>
@@ -290,34 +270,34 @@
             
             <div class='text'>
               <p><strong><a href='http://www.design.upenn.edu/' target='_blank'>University of Pennsylvania School of Design</a></strong>
-              <br />Master of City Planning, Class of 2010
-              <br />Concentration in Urban Design</p>
+              <br>Master of City Planning, Class of 2010
+              <br>Concentration in Urban Design</p>
               
               <p><strong><a href='http://arch.ced.berkeley.edu/' target='_blank'>University of California, Berkeley</a></strong> 
-              <br />Bachelor of Arts in Architecture, Class of 2004
-              <br />Minor in Social and Cultural Factors in Environmental Design</p>
+              <br>Bachelor of Arts in Architecture, Class of 2004
+              <br>Minor in Social and Cultural Factors in Environmental Design</p>
             </div>
               
             <h3>Experience</h3>
             
             <div class='text'>
               <p><strong><a href='http://www.codeforamerica.org/' target='_blank'>Code for America</a></strong> San Francisco, CA
-              <br />Fellow (2013)</p>
+              <br>Fellow (2013)</p>
               
               <p><strong><a href='http://www.umloud.org/' target='_blank'>Ümloud!</a></strong>  San Francisco, CA
-              <br />Art Director (2012)</p>
+              <br>Art Director (2012)</p>
               
               <p><strong><a href='http://www.vmwp.com/' target='_blank'>Van Meter Williams Pollack</a></strong>  San Francisco, CA
-              <br />Urban Designer (2011-2012)</p>
+              <br>Urban Designer (2011-2012)</p>
               
               <p><strong><a href='http://www.bkurbandesign.com/' target='_blank'>Brown & Keener Urban Design</a></strong>  Philadelphia, PA
-              <br />Intern/Designer (2009-2010)</p>
+              <br>Intern/Designer (2009-2010)</p>
               
               <p><strong><a href='http://www.issuu.com/pennpanorama/docs/2010_panorama/1' target='_blank'>Panorama</a></strong>  University of Pennsylvania, Philadelphia, PA
-              <br />Design Editor (2008-2010)</p>
+              <br>Design Editor (2008-2010)</p>
               
               <p><strong><a href='http://www.cromearchitecture.com/' target='_blank'>Crome Architecture</a></strong>  San Rafael, CA
-              <br />Designer, Project Manager (2004-2008)</p>
+              <br>Designer, Project Manager (2004-2008)</p>
             </div>
             
             <h3>Awards</h3>
@@ -361,8 +341,8 @@
             
             <div class='text'>
             <p>
-            <strong>LEED AP</strong>  Neighborhood Development<br />
-            <strong>APA</strong>  Member<br />
+            <strong>LEED AP</strong>  Neighborhood Development<br>
+            <strong>APA</strong>  Member<br>
             <strong><a href='http://spur.org/' target='_blank'>SPUR</a></strong>  Member
             </p>
             </div>
@@ -380,6 +360,33 @@
         
       </div>
     </section>
+    <!-- // END RESUME -->
+
+    <!-- BEGIN TEMPLATE -->
+    <section id='templates'>
+      <!-- PORTFOLIO GRID -->
+      <script id='m_portfolio_grid' type='text/template'>
+        <li class='portfolio-grid-item'>
+          <a href='#/portfolio/{{id}}'><img src='portfolio/thumb-{{id}}.jpg'>
+          <div class='portfolio-name'>
+          {{#menu_name}}
+            <div class='caption'>{{menu_name}}<br>
+          {{/menu_name}}
+          {{^menu_name}}
+            <div class='caption'>{{name}}<br>
+          {{/menu_name}}
+            {{#menu_location}}
+              <span class='subtitle'>{{menu_location}}</span>
+            {{/menu_location}}
+            {{^menu_location}}
+              <span class='subtitle'>{{location}}</span>
+            {{/menu_location}}
+            </div>
+          </div></a>
+        </li>
+      </script>
+    </section>
+    <!-- // END TEMPLATES -->
 
     <!-- JQUERY AND PLUGINS -->
     <script src='//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js'></script>
@@ -387,17 +394,17 @@
     <script src='js/vendor/jquery.mousewheel.js'></script>
     <script src='js/vendor/jquery.ba-hashchange.min.js'></script>
     <!--script src='js/vendor/jquery.history.js'></script-->
-    <!-- / JQUERY AND PLUGINS -->
+    <!-- // JQUERY AND PLUGINS -->
 
     <!-- ADDITIONAL LIBRARIES -->
     <script src='js/vendor/mustache.js'></script>
     <script src='js/mayor.js'></script>
-    <!-- / ADDITIONAL LIBRARIES -->
+    <!-- // ADDITIONAL LIBRARIES -->
 
     <!-- SITE JAVASCRIPT -->
     <script src='js/plugins.js'></script> <!-- from HTML5 Boilerplate -->
     <script src='js/main.js'></script>
-    <!-- / SITE JAVASCRIPT -->
+    <!-- // SITE JAVASCRIPT -->
 
     <!-- FOUNDATION -->
     <script src='js/foundation/foundation.js'></script>
@@ -421,7 +428,7 @@
     <script>
       $(document).foundation();
     </script>
-    <!-- / END FOUNDATION -->
+    <!-- // END FOUNDATION -->
 
     <!-- GOOGLE ANALYTICS -->
     <script>
@@ -434,7 +441,7 @@
       ga('send', 'pageview');
 
     </script>
-    <!-- / GOOGLE ANALYTICS -->
+    <!-- // GOOGLE ANALYTICS -->
 
   </body>
   

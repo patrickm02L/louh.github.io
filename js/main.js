@@ -59,10 +59,11 @@ $(document).ready(function() {
     loadHash();
   });
   // Trigger hashchange immediately
-  $(window).hashchange();
+  //$(window).hashchange();
 
 
   // Resume
+/*
   $('#n-resume').click(
     function() {
       // Close all other tabs if open
@@ -78,6 +79,7 @@ $(document).ready(function() {
       $('#n-resume span').addClass('active');
     }
   );
+*/
 
   // Portfolio - Dropdown menu
   $('#port-dropbutton').hover(
@@ -126,38 +128,6 @@ $(document).ready(function() {
     }
   );
 
-  // Keybindings
-  $(document).keydown(function (e) {
-    if (e.which == 37) {            // key 'left'   scrolls portfolio left
-    //  $('.port-leftarrow img').fadeIn(0);
-      $('.port-leftarrow img').click();
-    //  $('.port-leftarrow img').fadeOut(300);
-      return false;
-    }
-    if (e.which == 39) {            // key 'right'  scrolls portfolio right
-    //  $('.port-rightarrow img').fadeIn(0);
-      $('.port-rightarrow img').click();
-    //  $('.port-rightarrow img').fadeOut(300);
-      return false;
-    }
-    if (e.which == 38) {            // key 'up'     returns to main menu or closes dropdown
-      if ($('#port-dropdown').is(':visible')){
-        $('#port-dropdown').slideUp(200);
-        $('#port-dropbutton').stop(false,true).animate({opacity: 0.5}, 200);
-      }
-      else {
-        $('#port-dropback').click();
-      }
-      return false;
-    }
-    if (e.which == 40) {            // key 'down'   opens dropdown menu
-      if ($('#port-dropdown').is(':hidden') && $('#port-project').is(':visible')){
-        $('#port-dropbutton').click();
-      }
-      return false;
-    }
-  });
-  
   
 });
 

@@ -233,6 +233,12 @@ h4 {
 }
 
 #portfolio-grid {
+  .portfolio-grid-item {
+    padding-top: 10px;
+    &:hover {
+      background-color: rgba(0,0,0,0.1);
+    }
+  }
   img {
     width: 100%;
   }
@@ -241,23 +247,23 @@ h4 {
       text-decoration: none;
     }
   }
+  .portfolio-name {
+    position: relative;
+    .caption {
+      margin-top: 5px;
+      color: $black;
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 14px;
+    }
+    .subtitle {
+      font-size: 12px;
+      color: #777;
+      font-weight: normal;
+    }
+  }
 }
 
-.portfolio-name {
-  position: relative;
-  .caption {
-    margin-top: 5px;
-    color: $black;
-    font-weight: bold;
-    font-size: 14px;
-    line-height: 14px;
-  }
-  .subtitle {
-    font-size: 12px;
-    color: #777;
-    font-weight: normal;
-  }
-}
 
 // PROJECT VIEW
 .fixed-viewer {
@@ -266,7 +272,7 @@ h4 {
   position: fixed;
   display: none;
   top: 0;
-  padding-top: $topbar-height + 10px;
+  padding-top: $topbar-height;
   z-index: 100;
   overflow-y: auto;
   overflow-x: hidden;
@@ -278,8 +284,20 @@ h4 {
 .project-template {
   display: none;
 }
+.project-images {
+}
+.orbit-bullets {
+  display: none;
+}
+.project-title {
+  margin-top: 20px;
+}
 .project-data-key {
-  font-weight: bold;
+  font-size: 80%;
+  text-transform: uppercase;
+  color: gray;
+  // Positioning hack
+  padding-left: 15px;
 }
 .project-description {
   margin-top: 16px;

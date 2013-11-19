@@ -738,7 +738,7 @@
       "id": "nomelette",
       "name": "Nomelette",
       "type": "other",
-      "status": "portfolio",
+      "status": "hidden",
       "images": [
         {
           "filename": "nomelette-01.jpg",
