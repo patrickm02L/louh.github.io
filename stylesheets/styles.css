@@ -5350,7 +5350,11 @@ h4 {
   background-color: #eeeeee; }
 
 #portfolio-grid .portfolio-grid-item {
-  padding-top: 10px; }
+  padding-top: 10px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
   #portfolio-grid .portfolio-grid-item:hover {
     background-color: rgba(0, 0, 0, 0.1); }
 #portfolio-grid img {
