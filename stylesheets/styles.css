@@ -5243,7 +5243,6 @@ body {
   font: 16px/24px 'Neris', "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 .top-bar-container {
-  z-index: 200;
   border-bottom: 1px solid #e1e1e1; }
 
 nav .name {
@@ -5258,7 +5257,11 @@ nav .logo {
   height: 100%;
   position: absolute;
   background: transparent url("../img/logo.png") center center no-repeat;
-  background-size: cover; }
+  background-size: cover;
+  top: 0; }
+@media only screen and (min-width: 480px) {
+  nav .top-bar-section ul {
+    margin-top: -1px; } }
 nav .social-icons li {
   font-size: 190%; }
 
@@ -5283,7 +5286,7 @@ footer {
   footer li {
     display: inline-block;
     margin-right: 30px; }
-    @media only screen and (max-width: 480px) {
+    @media only screen and (max-width: 479px) {
       footer li {
         margin-right: 0;
         width: 100%; } }
@@ -5330,7 +5333,7 @@ h4 {
 #about {
   background-color: #eeeeee;
   position: relative;
-  min-height: 400px; }
+  min-height: 350px; }
   @media only screen and (min-width: 768px) {
     #about {
       padding-bottom: 50px; } }
@@ -5338,7 +5341,6 @@ h4 {
     width: 200px;
     height: 200px;
     margin: 0 auto;
-    margin-top: 60px;
     border-radius: 100px;
     background: transparent url("../img/portrait.jpg") center center no-repeat;
     background-size: cover; }
@@ -5346,11 +5348,11 @@ h4 {
       #about .portrait {
         width: 250px;
         height: 250px;
-        margin-top: 70px;
+        margin-top: 10px;
         border-radius: 50%; } }
   @media only screen and (min-width: 768px) {
     #about .bio {
-      margin-top: 100px; } }
+      margin-top: 30px; } }
 
 #projects {
   background-color: #e4e4e4; }
@@ -5403,7 +5405,6 @@ h4 {
   position: fixed;
   display: none;
   top: 0;
-  padding-top: 60px;
   z-index: 100;
   overflow-y: auto;
   overflow-x: hidden;
