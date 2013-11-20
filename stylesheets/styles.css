@@ -2920,8 +2920,8 @@ meta.foundation-mq-topbar {
           display: block;
           width: 16px;
           height: 0;
-          -webkit-box-shadow: 0 10px 0 1px white, 0 16px 0 1px white, 0 22px 0 1px white;
-          box-shadow: 0 10px 0 1px white, 0 16px 0 1px white, 0 22px 0 1px white; }
+          -webkit-box-shadow: 0 10px 0 1px #5d6262, 0 16px 0 1px #5d6262, 0 22px 0 1px #5d6262;
+          box-shadow: 0 10px 0 1px #5d6262, 0 16px 0 1px #5d6262, 0 22px 0 1px #5d6262; }
   .top-bar.expanded {
     height: auto;
     background: transparent; }
@@ -2930,8 +2930,8 @@ meta.foundation-mq-topbar {
     .top-bar.expanded .toggle-topbar a {
       color: #888888; }
       .top-bar.expanded .toggle-topbar a span {
-        -webkit-box-shadow: 0 10px 0 1px #888888, 0 16px 0 1px #888888, 0 22px 0 1px #888888;
-        box-shadow: 0 10px 0 1px #888888, 0 16px 0 1px #888888, 0 22px 0 1px #888888; }
+        -webkit-box-shadow: 0 10px 0 1px #767c7c, 0 16px 0 1px #767c7c, 0 22px 0 1px #767c7c;
+        box-shadow: 0 10px 0 1px #767c7c, 0 16px 0 1px #767c7c, 0 22px 0 1px #767c7c; }
 
 .top-bar-section {
   left: 0;
@@ -5287,6 +5287,8 @@ footer {
     margin-right: 0; }
   footer a {
     color: #bbbbbb; }
+    footer a:hover, footer a:active {
+      color: #d4d4d4; }
   footer i {
     margin-right: 5px; }
   footer .social {
@@ -5295,7 +5297,9 @@ footer {
 @media only screen and (max-width: 767px) {
   .bleed {
     padding-left: 0;
-    padding-right: 0; } }
+    padding-right: 0;
+    border-left: 0;
+    border-right: 0; } }
 
 a {
   text-decoration: none;
@@ -5355,7 +5359,7 @@ h4 {
   background-color: #eeeeee; }
 
 #portfolio-grid .portfolio-grid-item {
-  padding-top: 10px; }
+  padding: 0.625em; }
   #portfolio-grid .portfolio-grid-item:hover {
     background-color: rgba(0, 0, 0, 0.1); }
 #portfolio-grid img {

@@ -19,6 +19,8 @@ $topbar-link-color:       $main-color;
 $topbar-link-bg-hover:    #5d6262;
 $topbar-link-bg-active:   #5d6262;
 $topbar-breakpoint:       480px;
+$topbar-menu-icon-color:  $main-color;
+$topbar-menu-icon-color-toggled: lighten($main-color, 10%);
 
 // IMPORTS
 @import 'bourbon/bourbon';
@@ -154,7 +156,11 @@ footer {
     margin-right: 0;
   }
   a {
+    // Override default link color styles
     color: darken($background-color, 20%);
+    &:hover, &:active {
+      color: darken($background-color, 10%);
+    }
   }
   i {
     margin-right: 5px;
@@ -165,9 +171,15 @@ footer {
 }
 
 .bleed {
+  // This class, when used with a 'columns' div class, pushes it to the edge of the mobile screen.
+  // Great for images that should take up more room.
   @media #{$max-small} {
+    // Eliminates side padding, if any
     padding-left: 0;
     padding-right: 0;
+    // Eliminates left and right borders, if any
+    border-left: 0;
+    border-right: 0;
   }
 }
 
@@ -248,7 +260,7 @@ h4 {
 
 #portfolio-grid {
   .portfolio-grid-item {
-    padding-top: 10px;
+    padding: 0.625em; // Default has extra bottom padding and no top padding - this makes it equal all around
     &:hover {
       background-color: rgba(0,0,0,0.1);
     }

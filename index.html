@@ -31,9 +31,7 @@
               <a href='http://louhuang.com/'>Lou Huang</a>
             </h1>
           </li>
-<!--
-          <li class='toggle-topbar menu-icon'><a href='#'><span>menu</span></a></li>
-// -->
+          <li class='toggle-topbar menu-icon'><a href='#'><span></span></a></li>
         </ul>
         <section class='top-bar-section'>
           <ul class='right social-icons'>
@@ -83,25 +81,8 @@
             <h3>Here are some of my recent projects.</h3>
           </div>
         </div>
+        <!-- Current / featured project templates are appended here -->
       </section>
-      <script id='m_current_project' type='text/template'>
-        <div class='row'>
-          <div class='large-7 medium-7 push-5 columns bleed'>
-            <img src='portfolio/thumb-{{id}}.png' width='100%' alt=''>
-          </div>
-          <div class='large-5 medium-5 pull-7 columns'>
-            <h4>{{name}}</h4>
-            <p class='text'>
-              {{description}}
-            </p>
-            {{#ext_url}}
-            <p>
-              <a href='{{ext_url}}' target='_blank' class='external-link'><i class='fi-page-export' style='margin-left: 4px;'></i> {{ext_link}}{{^ext_link}}View site{{/ext_link}}</a>
-            </p>
-            {{/ext_url}}
-          </div>
-        </div>
-      </script>
 
       <section id='portfolio'>
         <div class='row'>
@@ -137,12 +118,12 @@
 
             <h6>Architecture</h6>
               <ul id='drop-arch'>
-              <!-- TO BE REPLACED WITH DROPDOWN ITEM TEMPLATE -->            
+              <!-- To be replaced with dropdown item template -->            
               </ul>
 
             <h6>Web & Print</h6>
               <ul id='drop-misc'>
-              <!-- TO BE REPLACED WITH DROPDOWN ITEM TEMPLATE -->            
+              <!-- To be replaced with dropdown item template -->            
               </ul>
           </div>
         </div>
@@ -151,7 +132,7 @@
       
       <!-- PROJECT DATA -->
       <div id='port-projectdata'>
-        <!-- TO BE REPLACED WITH PROJECT DATA -->
+        <!-- To be replaced with project data template -->
       </div>
       <!-- // END PROJECT DATA -->
 
@@ -279,6 +260,26 @@
 
     <!-- BEGIN TEMPLATES -->
     <section id='templates'>
+      <!-- CURRENT / FEATURED PROJECTS -->
+      <script id='m_current_project' type='text/template'>
+        <div class='row'>
+          <div class='large-7 medium-7 push-5 columns bleed'>
+            <img src='portfolio/thumb-{{id}}.png' width='100%' alt=''>
+          </div>
+          <div class='large-5 medium-5 pull-7 columns'>
+            <h4>{{name}}</h4>
+            <p class='text'>
+              {{description}}
+            </p>
+            {{#ext_url}}
+            <p>
+              <a href='{{ext_url}}' target='_blank' class='external-link'><i class='fi-page-export' style='margin-left: 4px;'></i> {{ext_link}}{{^ext_link}}View site{{/ext_link}}</a>
+            </p>
+            {{/ext_url}}
+          </div>
+        </div>
+      </script>
+
       <!-- PORTFOLIO GRID -->
       <script id='m_portfolio_grid' type='text/template'>
         <li class='portfolio-grid-item'>
