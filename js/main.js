@@ -225,21 +225,29 @@ function loadProject(projectID) {
   // Adjust DOM
   $('body').css('overflow', 'hidden')
   $('#project-view').show()
+  $('#main').hide()
 
   // Create the project html snippet
   var template = $('#m_project').html()
   for (var i = 0; i < projects.items.length; i++) {
     var item = projects.items[i]
     if (item.id == projectID) {
-      $('#port-projectdata').html(Mustache.render(template, item)).fadeIn(200, function() { 
-        // Initialize Foundation Orbit
+      $('#port-projectdata').html(Mustache.render(template, item))
+      $("#orbit").on("orbit:ready", function(event) {
+        console.log('blargh')
+      })
+
+      // Initialize Foundation Orbit
+      window.setTimeout(function () {
         $(document).foundation('orbit', {
           animation_speed: 300,
           slide_number: false,
           bullets: false,
-          timer: false
+          timer: false,
+          variable_height: true
         })
-      })
+      },0)
+
       document.title = item.name + ' - ' + site_title
       return true
     }

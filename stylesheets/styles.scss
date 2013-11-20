@@ -1,4 +1,3 @@
-
 // VARIABLES
 $main-color:          #5d6262;
 $accent-color:        #d83432;
@@ -11,6 +10,7 @@ $portrait-size:       250px;
 $portrait-size-small: 200px;
 
 // OVERRIDE FOUNDATION VARIABLES - see also _variables.scss
+// This needs to come before the foundation import
 $topbar-bg-color:         lighten($background-color, 4%);
 $topbar-height:           60px;
 $topbar-title-weight:     normal;
@@ -29,6 +29,13 @@ $topbar-breakpoint:       480px;
 @import 'vendor/normalize.css';
 @import 'vendor/main.css'; // HTML5 Boilerplate default CSS file
 @import '../fonts/foundation-icons.css';
+
+// MEDIA QUERIES
+// This depends on some other Foundation variables, so put it after the Foundation import
+$max-small: "only screen and (max-width: #{$small-screen - 1px})";
+$max-medium: "only screen and (max-width: #{$medium-screen - 1px})";
+$max-large: "only screen and (max-width: #{$large-screen - 1px})";
+
 
 
 // RESETS
@@ -157,6 +164,13 @@ footer {
   }
 }
 
+.bleed {
+  @media #{$max-small} {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
 a {
   text-decoration: none;
   color: $link-color;
@@ -254,8 +268,11 @@ h4 {
       margin-top: 5px;
       color: $black;
       font-weight: bold;
-      font-size: 14px;
-      line-height: 14px;
+      line-height: 16px;
+      @media #{$max-small} {
+        font-size: 14px;
+        line-height: 14px;
+      }
     }
     .subtitle {
       font-size: 12px;
@@ -264,7 +281,9 @@ h4 {
     }
   }
 }
-
+#resume {
+  display: none;
+}
 #templates {
   display: none;
 }
@@ -283,7 +302,6 @@ h4 {
   background-color: $background-color;
 }
 .slideshow-wrapper {
-
 }
 .project-images {
 }
@@ -305,7 +323,6 @@ h4 {
 }
 
 // STUFF
-
 .external-link {
   font-size: 80%;
   text-transform: uppercase;
@@ -462,22 +479,6 @@ div.epilogue {
   width: 30%;
   float: left;
 }
-
-#col2 {
-  a[href^='http']:not(.image):after {
-    content: '';
-    background: url('../img/extlink.gif') right center no-repeat;  
-    padding-right: 14px;
-    margin-right: 6px;
-  }
-  a[href$='.pdf']:after {
-    content: '';
-    background: url('../img/pdf.png') left center no-repeat;
-    display: block;
-    padding-left: 24px;
-  }
-}
-
 
 
 
