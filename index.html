@@ -22,29 +22,29 @@
 
     <div class='top-bar-container contain-to-grid sticky'>
       <nav class='top-bar'>
-        <section class='top-bar-logo'>
-          <div class='logo'></div>
-        </section>
         <ul class='title-area'>
-          <li class='name'>
-            <h1>
-              <a href='http://louhuang.com/'>Lou Huang</a>
-            </h1>
-          </li>
+          <a href='http://louhuang.com/'>
+            <li class='name'>
+              <div class='logo'></div>
+              <h1>
+                Lou Huang
+              </h1>
+            </li>
+          </a>
           <li class='toggle-topbar menu-icon'><a href='#'><span></span></a></li>
         </ul>
         <section class='top-bar-section'>
           <ul class='right social-icons'>
             <li>
-              <a href='https://twitter.com/saikofish' target='_blank'><i class='fi-social-twitter'></i></a>
+              <a href='https://twitter.com/saikofish' target='_blank'><i class='fi-social-twitter'></i> <span>Twitter @saikofish</span></a>
             </li>
             <li>
-              <a href='http://www.linkedin.com/in/louhuang' target='_blank'><i class='fi-social-linkedin'></i></a>
+              <a href='http://www.linkedin.com/in/louhuang' target='_blank'><i class='fi-social-linkedin'></i> <span>LinkedIn</span></a>
             </li>
             <li>
-              <a href='https://github.com/louh/' target='_blank'><i class='fi-social-github'></i></a>
+              <a href='https://github.com/louh/' target='_blank'><i class='fi-social-github'></i> <span>GitHub @louh</span></a>
             </li>
-            <li>
+            <li class='hide-for-small'>
               <a href='http://instagram.com/saikofish?ref=badge' target='_blank'><i class='fi-social-instagram'></i></a>
             </li>
           </ul>
@@ -52,6 +52,47 @@
       </nav>
     </div>
 
+
+    <!-- PROJECT VIEW -->
+    <section id='project-view' class='fixed-viewer'>
+
+      <!-- PROJECT NAVIGATION -->
+      <div class='row' style='display: none;'>
+        <div class='large-12 columns' id='project-navigation'>
+          <div id='port-backbutton' title='return to main menu [up arrow]'></div>
+          <div id='port-dropbutton'>More projects</div>
+          <div id='port-dropdown'>
+            <h6>Urban Design & Planning</h6>
+              <ul id='drop-cpln'>
+              <script id='m_dropdown_item' type='text/template'>
+                <li><a href='#/portfolio/{{id}}'>{{#menu_name}}{{menu_name}}{{/menu_name}}{{^menu_name}}{{name}}{{/menu_name}}</a></li>
+              </script>
+              </ul>
+
+            <h6>Architecture</h6>
+              <ul id='drop-arch'>
+              <!-- To be replaced with dropdown item template -->            
+              </ul>
+
+            <h6>Web & Print</h6>
+              <ul id='drop-misc'>
+              <!-- To be replaced with dropdown item template -->            
+              </ul>
+          </div>
+        </div>
+      </div>
+      <!-- // END PROJECT NAVIGATION -->
+      
+      <!-- PROJECT DATA -->
+      <div id='project-data'>
+        <!-- To be replaced with project data template -->
+      </div>
+      <!-- // END PROJECT DATA -->
+
+    </section>
+    <!-- // END PROJECT VIEW -->
+
+    <!-- MAIN PAGE -->
     <section role='main'>
 
       <section id='about'>
@@ -98,46 +139,7 @@
       </section>
 
     </section>
-
-
-    <!-- PROJECT VIEW -->
-    <section id='project-view' class='fixed-viewer'>
-
-      <!-- PROJECT NAVIGATION -->
-      <div class='row' style='display: none;'>
-        <div class='large-12 columns' id='project-navigation'>
-          <div id='port-backbutton' title='return to main menu [up arrow]'></div>
-          <div id='port-dropbutton'>More projects</div>
-          <div id='port-dropdown'>
-            <h6>Urban Design & Planning</h6>
-              <ul id='drop-cpln'>
-              <script id='m_dropdown_item' type='text/template'>
-                <li><a href='#/portfolio/{{id}}'>{{#menu_name}}{{menu_name}}{{/menu_name}}{{^menu_name}}{{name}}{{/menu_name}}</a></li>
-              </script>
-              </ul>
-
-            <h6>Architecture</h6>
-              <ul id='drop-arch'>
-              <!-- To be replaced with dropdown item template -->            
-              </ul>
-
-            <h6>Web & Print</h6>
-              <ul id='drop-misc'>
-              <!-- To be replaced with dropdown item template -->            
-              </ul>
-          </div>
-        </div>
-      </div>
-      <!-- // END PROJECT NAVIGATION -->
-      
-      <!-- PROJECT DATA -->
-      <div id='project-data'>
-        <!-- To be replaced with project data template -->
-      </div>
-      <!-- // END PROJECT DATA -->
-
-    </section>
-    <!-- // END PROJECT VIEW -->
+    <!-- // END MAIN PAGE -->
 
     <footer>
       <div class='row'>

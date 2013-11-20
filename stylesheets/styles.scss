@@ -100,18 +100,21 @@ body {
 }
 
 .top-bar-container {
+  z-index: 900;
   border-bottom: 1px solid darken($background-color, 5%);
 }
 
 nav {
+  a {
+    &:hover {
+      text-decoration: none;
+    }
+  }
   .name {
     text-transform: uppercase;
     white-space: nowrap;
-    a {
+    h1 {
       padding-left: 95px !important;
-      &:hover {
-        text-decoration: none;
-      }
     }
   }
   .logo {
@@ -131,6 +134,11 @@ nav {
   .social-icons {
     li {
       font-size: 190%;
+    }
+    @media #{$x-small} {
+      span {
+        display: none;
+      }
     }
   }
 }
@@ -325,7 +333,6 @@ h4 {
   height: 100%;
   position: fixed;
   display: none;
-  top: 0;
   z-index: 100;
   overflow-y: auto;
   overflow-x: hidden;

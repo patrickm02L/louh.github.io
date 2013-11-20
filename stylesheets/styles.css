@@ -5243,15 +5243,16 @@ body {
   font: 16px/24px 'Neris', "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 .top-bar-container {
+  z-index: 900;
   border-bottom: 1px solid #e1e1e1; }
 
+nav a:hover {
+  text-decoration: none; }
 nav .name {
   text-transform: uppercase;
   white-space: nowrap; }
-  nav .name a {
+  nav .name h1 {
     padding-left: 95px !important; }
-    nav .name a:hover {
-      text-decoration: none; }
 nav .logo {
   width: 90px;
   height: 100%;
@@ -5264,6 +5265,9 @@ nav .logo {
     margin-top: -1px; } }
 nav .social-icons li {
   font-size: 190%; }
+@media only screen and (min-width: 480px) {
+  nav .social-icons span {
+    display: none; } }
 
 section[role='main'] section {
   min-height: 400px;
@@ -5404,7 +5408,6 @@ h4 {
   height: 100%;
   position: fixed;
   display: none;
-  top: 0;
   z-index: 100;
   overflow-y: auto;
   overflow-x: hidden;
