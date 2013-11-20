@@ -5432,6 +5432,9 @@ h4 {
   text-transform: uppercase;
   color: gray;
   padding-left: 15px; }
+  @media only screen and (max-width: 479px) {
+    .project-data-key {
+      font-size: 60%; } }
 
 .project-description {
   margin-top: 16px; }

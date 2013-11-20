@@ -5,7 +5,7 @@ $accent-color:        #d83432;
 $link-color:          darken($accent-color, 10%);
 $background-color:    rgb(238,238,238);
 $black:               #222;
-$x-small:             480px;
+$x-small-screen:      480px;
 
 $portrait-size:       250px;
 $portrait-size-small: 200px;
@@ -19,7 +19,7 @@ $topbar-title-font-size:  20px;
 $topbar-link-color:       $main-color;
 $topbar-link-bg-hover:    #5d6262;
 $topbar-link-bg-active:   #5d6262;
-$topbar-breakpoint:       $x-small;
+$topbar-breakpoint:       $x-small-screen;
 $topbar-menu-icon-color:  $main-color;
 $topbar-menu-icon-color-toggled: lighten($main-color, 10%);
 
@@ -39,8 +39,8 @@ $topbar-menu-icon-color-toggled: lighten($main-color, 10%);
 $max-small:   'only screen and (max-width: #{$small-screen - 1px})';
 $max-medium:  'only screen and (max-width: #{$medium-screen - 1px})';
 $max-large:   'only screen and (max-width: #{$large-screen - 1px})';
-$max-x-small: 'only screen and (max-width: #{$x-small - 1px})';
-$x-small:     'only screen and (min-width: #{$x-small})';
+$max-x-small: 'only screen and (max-width: #{$x-small-screen - 1px})';
+$x-small:     'only screen and (min-width: #{$x-small-screen})';
 
 
 
@@ -362,6 +362,9 @@ h4 {
   color: gray;
   // Positioning hack
   padding-left: 15px;
+  @media #{$max-x-small} {
+    font-size: 60%;
+  }
 }
 .project-description {
   margin-top: 16px;
