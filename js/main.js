@@ -197,7 +197,7 @@ function displayRandomQuote (quotes) {
 
 function portArrows() {
   // Test project's image scroller to see if arrows are needed.
-  // Call this function after #port-projectdata is fully visible, otherwise offset() might return
+  // Call this function after #project-data is fully visible, otherwise offset() might return
   // unpredictable results (depending on browser)
   /*
   scroller = $('#port-images').find('.scroller');
@@ -232,7 +232,7 @@ function loadProject(projectID) {
   for (var i = 0; i < projects.items.length; i++) {
     var item = projects.items[i]
     if (item.id == projectID) {
-      $('#port-projectdata').html(Mustache.render(template, item))
+      $('#project-data').html(Mustache.render(template, item))
       $("#orbit").on("orbit:ready", function(event) {
         console.log('blargh')
       })

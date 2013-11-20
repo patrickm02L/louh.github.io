@@ -182,9 +182,11 @@ footer {
     // Eliminates side padding, if any
     padding-left: 0;
     padding-right: 0;
-    // Eliminates left and right borders, if any
-    border-left: 0;
-    border-right: 0;
+    & > img {
+      // Eliminates left and right borders of images, if any
+      border-left: 0 !important;
+      border-right: 0 !important;
+    }
   }
 }
 
@@ -274,13 +276,13 @@ h4 {
     width: 100%;
   }
   a {
+    // Disable highlighting that occurs on tap
+    // See here: http://phonegap-tips.com/articles/essential-phonegap-css-webkit-tap-highlight-color.html
     -webkit-tap-highlight-color: rgba(0,0,0,0);
     -webkit-tap-highlight-color: transparent; /* For some Androids */
     &:hover {
+      // Override default link behavior
       text-decoration: none;
-    }
-    &:active {
-      -webkit-transform: scale3d(0.9, 0.9, 1);
     }
   }
   .portfolio-name {

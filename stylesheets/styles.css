@@ -5301,9 +5301,10 @@ footer {
 @media only screen and (max-width: 767px) {
   .bleed {
     padding-left: 0;
-    padding-right: 0;
-    border-left: 0;
-    border-right: 0; } }
+    padding-right: 0; }
+    .bleed > img {
+      border-left: 0 !important;
+      border-right: 0 !important; } }
 
 a {
   text-decoration: none;
@@ -5374,8 +5375,6 @@ h4 {
   /* For some Androids */ }
   #portfolio-grid a:hover {
     text-decoration: none; }
-  #portfolio-grid a:active {
-    -webkit-transform: scale3d(0.9, 0.9, 1); }
 #portfolio-grid .portfolio-name {
   position: relative; }
   #portfolio-grid .portfolio-name .caption {
