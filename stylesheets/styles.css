@@ -5269,6 +5269,9 @@ nav .social-icons li {
   nav .social-icons span {
     display: none; } }
 
+.top-bar .toggle-topbar.menu-icon a span {
+  right: 8px; }
+
 section[role='main'] section {
   min-height: 400px;
   padding: 20px 0; }

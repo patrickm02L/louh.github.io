@@ -142,6 +142,10 @@ nav {
     }
   }
 }
+// Position hack for hamburger
+.top-bar .toggle-topbar.menu-icon a span {
+  right: 8px;
+}
 
 section[role='main'] {
   section {
