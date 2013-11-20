@@ -5283,6 +5283,10 @@ footer {
   footer li {
     display: inline-block;
     margin-right: 30px; }
+    @media only screen and (max-width: 480px) {
+      footer li {
+        margin-right: 0;
+        width: 100%; } }
   footer li:last-of-type {
     margin-right: 0; }
   footer a {
@@ -5291,8 +5295,8 @@ footer {
       color: #d4d4d4; }
   footer i {
     margin-right: 5px; }
-  footer .social {
-    display: none; }
+  footer .contact-info {
+    margin-bottom: 30px; }
 
 @media only screen and (max-width: 767px) {
   .bleed {

@@ -5,6 +5,7 @@ $accent-color:        #d83432;
 $link-color:          darken($accent-color, 10%);
 $background-color:    rgb(238,238,238);
 $black:               #222;
+$x-small:             480px;
 
 $portrait-size:       250px;
 $portrait-size-small: 200px;
@@ -18,7 +19,7 @@ $topbar-title-font-size:  20px;
 $topbar-link-color:       $main-color;
 $topbar-link-bg-hover:    #5d6262;
 $topbar-link-bg-active:   #5d6262;
-$topbar-breakpoint:       480px;
+$topbar-breakpoint:       $x-small;
 $topbar-menu-icon-color:  $main-color;
 $topbar-menu-icon-color-toggled: lighten($main-color, 10%);
 
@@ -34,9 +35,9 @@ $topbar-menu-icon-color-toggled: lighten($main-color, 10%);
 
 // MEDIA QUERIES
 // This depends on some other Foundation variables, so put it after the Foundation import
-$max-small: "only screen and (max-width: #{$small-screen - 1px})";
+$max-small:  "only screen and (max-width: #{$small-screen - 1px})";
 $max-medium: "only screen and (max-width: #{$medium-screen - 1px})";
-$max-large: "only screen and (max-width: #{$large-screen - 1px})";
+$max-large:  "only screen and (max-width: #{$large-screen - 1px})";
 
 
 
@@ -151,6 +152,10 @@ footer {
   li {
     display: inline-block;
     margin-right: 30px;
+    @media only screen and (max-width: $x-small) {
+      margin-right: 0;
+      width: 100%;
+    }
   }
   li:last-of-type {
     margin-right: 0;
@@ -165,8 +170,8 @@ footer {
   i {
     margin-right: 5px;
   }
-  .social {
-    display: none;
+  .contact-info {
+    margin-bottom: 30px;
   }
 }
 
