@@ -341,8 +341,12 @@ h4 {
   overflow-y: auto;
   overflow-x: hidden;
   background-color: $background-color;
+  padding-bottom: $topbar-height;
 }
 .slideshow-wrapper {
+  // Temporarily make orbit no wider than current image sizes.
+  max-width: 650px;
+  min-height: 200px;
 }
 .project-images {
 }

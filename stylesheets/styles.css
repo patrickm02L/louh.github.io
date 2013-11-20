@@ -5414,7 +5414,12 @@ h4 {
   z-index: 100;
   overflow-y: auto;
   overflow-x: hidden;
-  background-color: #eeeeee; }
+  background-color: #eeeeee;
+  padding-bottom: 60px; }
+
+.slideshow-wrapper {
+  max-width: 650px;
+  min-height: 200px; }
 
 .orbit-bullets {
   display: none; }

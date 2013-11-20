@@ -12,13 +12,16 @@ var currentPage = null
 
 // Initalize Foundation
 $(document).foundation()
+
+// Set up orbit
 $(document).foundation('orbit', {
-  animation_speed: 300,
+  animation_speed: 250,
   slide_number: false,
   bullets: false,
   timer: false,
   variable_height: true
 })
+
 
 /* LOAD DATAS */
 
@@ -72,7 +75,7 @@ $(document).ready(function() {
   // Bind hashchange event to window
   $(window).hashchange(function(){
     loadHash()
-    if (currentProject) {
+    if (currentProject && !_.isEmpty(projects)) {
       loadProject(currentProject)
     }
   })
@@ -96,17 +99,32 @@ function loadHash() {
   }
   switch(currentPage) {
     case 'resume':
-      $('#n-resume').click();
-      break;
+      $('#n-resume').click()
+      break
     default:
-      $('body').css('overflow', 'visible')
-      $('#project-view').hide()
-      break;
+      _unloadProject()
+      _loadMainPage()
+      break
   }
 }
 
+function _loadMainPage () {
+  $('body').css('overflow', 'visible')
+  $('#main').show()
+}
+
+function _hideMainPage () {
+  $('body').css('overflow', 'hidden')
+  $('#main').hide()
+}
+
+function _unloadProject () {
+  $('#project-view').hide()
+}
+
+
 // Displays all current / featured / recent projects
-function displayFeaturedProjects(projects) {
+function displayFeaturedProjects (projects) {
   var template = $('#m_current_project').html()
   for (var i = 0; i < projects.items.length; i++) {
     var project = projects.items[i]
@@ -117,7 +135,7 @@ function displayFeaturedProjects(projects) {
 }
 
 // Displays all portfolio projects
-function displayProjectGrid(projects) {
+function displayProjectGrid (projects) {
   var template = $('#m_portfolio_grid').html()
   for (var i = 0; i < projects.items.length; i++) {
     var project = projects.items[i]
@@ -135,30 +153,34 @@ function displayRandomQuote (quotes) {
 }
 
 
-function loadProject(projectID) {
+function loadProject (projectID) {
   // Adjust DOM
-  $('body').css('overflow', 'hidden')
+  _hideMainPage()
   $('#project-view').show()
-  $('#main').hide()
 
   // Create the project html snippet
   var template = $('#m_project').html()
   for (var i = 0; i < projects.items.length; i++) {
     var item = projects.items[i]
-    if (item.id == projectID) {
+    if (item.id === projectID) {
       $('#project-data').html(Mustache.render(template, item))
-
-      // Set up orbit
-      $('#orbit').on('orbit:ready', function(event) {
-        $('.preloader').hide()
-      })
-      $(document).foundation('reflow')
-
-      // Initialize Foundation Orbit
       document.title = item.name + ' - ' + site_title
-      return true
+      break
     }
   }
+
+  // To do: handle an error where project isn't found.
+
+  // Orbit stuff
+  $('#orbit').on('orbit:ready', function(event) {
+    console.log('Orbit is ready.')
+  })
+  $('#orbit').on('orbit:orbit:after-slide-change', function(event) {
+    $('.preloader').hide()
+  })
+
+  // Force orbit to recalculate itself after loading new stuff.
+  $(document).foundation('reflow')
 }
 
 
