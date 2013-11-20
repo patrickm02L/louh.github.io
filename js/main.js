@@ -9,6 +9,12 @@ var site_title = document.title
 var mouse_is_inside = false
 var scroller, scrollItemsLeftPos, scrollBoxLeftPos, scrollItemsRightPos, scrollBoxRightPos
 
+var currentProject = null
+var currentPage = null
+
+// Initalize Foundation
+$(document).foundation()
+
 /* LOAD DATAS */
 
 // QUOTES
@@ -26,7 +32,7 @@ $.when(
   })
 ).then(function() {
   // Do stuff with quotes
-  _displayRandomQuote(quotes)
+  displayRandomQuote(quotes)
 })
 
 // PROJECTS
@@ -44,7 +50,9 @@ $.when(
   })
 ).then(function() {
   // Do stuff with projects
-  loadHash()
+  if (currentProject) {
+    loadProject(currentProject)    
+  }
   displayFeaturedProjects(projects)
   displayProjectGrid(projects)
 })
@@ -52,16 +60,19 @@ $.when(
 /* INTERFACE */
 $(document).ready(function() {
 
+
+  /* INITIALIZE HASHCHANGE PLUGIN */
   // Load portfolio or resume items immediately if link contains hash elements
   // Currently using BBQ's hashchange plugin for this functionality.
   // Bind hashchange event to window
   $(window).hashchange(function(){
-    loadHash();
-  });
+    loadHash()
+    if (currentProject) {
+      loadProject(currentProject)
+    }
+  })
   // Trigger hashchange immediately
-  //$(window).hashchange();
-
-
+  $(window).hashchange()
   // Resume
 /*
   $('#n-resume').click(
@@ -134,24 +145,24 @@ $(document).ready(function() {
 
 /* FUNCTIONS */
 
-
 function loadHash() {
-  var hash = window.location.hash;
-  switch(hash) {
-    case '#/resume':
+  var rawHash = window.location.hash
+  var hash = rawHash.split('/')
+  currentPage = hash[1]
+  if (rawHash.match(/\/portfolio\//)) {
+    currentProject = hash[2]
+  }
+  else {
+    currentProject = null
+  }
+  switch(currentPage) {
+    case 'resume':
       $('#n-resume').click();
       break;
-    case '':
+    default:
       $('body').css('overflow', 'visible')
       $('#project-view').hide()
       break;
-  }
-  if (hash.match(/\/portfolio\//)) {
-    var splitHash = hash.split(/\/portfolio\//);
-    var projectID = splitHash[1];
-    if (projectID) {
-      loadProject(projectID);
-    }
   }
 }
 
@@ -175,7 +186,13 @@ function displayProjectGrid(projects) {
       $('#portfolio-grid').append(Mustache.render(template, project))
     }
   }
+}
 
+function displayRandomQuote (quotes) {
+  // Quotes should be an array
+  var i = Math.floor(Math.random() * quotes.length)
+  $('.quote').html(quotes[i].quote)
+  $('.author').html(quotes[i].author)
 }
 
 function portArrows() {
@@ -205,44 +222,27 @@ function portArrows() {
 
 function loadProject(projectID) {
 
-  // Show project
+  // Adjust DOM
   $('body').css('overflow', 'hidden')
   $('#project-view').show()
 
   // Create the project html snippet
-  var item = null;
-  var m_project = $('#m_project').html();
+  var template = $('#m_project').html()
   for (var i = 0; i < projects.items.length; i++) {
-    item = projects.items[i];
+    var item = projects.items[i]
     if (item.id == projectID) {
-      $('#port-projectdata').html(Mustache.render(m_project, item)).fadeIn(200, function() { 
-//          $('#port-loader').hide();
-//          initProjectNav();
-//          portArrows();
-
-          // Initialize Foundation Orbit
-          $(document).foundation('orbit', {
-            timer: false,
-            slide_number: false,
-            animation_speed: 300
-          })
-
-      });
-       document.title = item.name + ' - ' + site_title;
-       return true;
+      $('#port-projectdata').html(Mustache.render(template, item)).fadeIn(200, function() { 
+        // Initialize Foundation Orbit
+        $(document).foundation('orbit', {
+          animation_speed: 300,
+          slide_number: false,
+          bullets: false,
+          timer: false
+        })
+      })
+      document.title = item.name + ' - ' + site_title
+      return true
     }
-  }
-}
-
-function backToMenu() {
-  if ($('#port-menu').is(':hidden')) {
-    $('#port-projectdata').fadeOut(200);
-    $('#port-project').fadeOut(200, function(){
-      $('#port-menu').fadeIn(200);
-      menuArrows();
-    });
-    document.title = 'Portfolio - ' + site_title;
-    window.location.hash = '/portfolio';
   }
 }
 
@@ -297,9 +297,3 @@ function initProjectNav () {
   */
 }
 
-function _displayRandomQuote (quotes) {
-  // Quotes should be an array
-  var i = Math.floor(Math.random() * quotes.length)
-  $('.quote').html(quotes[i].quote)
-  $('.author').html(quotes[i].author)
-}
