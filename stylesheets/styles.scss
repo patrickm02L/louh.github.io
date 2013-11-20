@@ -235,7 +235,6 @@ h4 {
 #portfolio-grid {
   .portfolio-grid-item {
     padding-top: 10px;
-    @include user-select(none);
     &:hover {
       background-color: rgba(0,0,0,0.1);
     }
@@ -244,6 +243,7 @@ h4 {
     width: 100%;
   }
   a {
+    @include user-select(none);
     &:hover {
       text-decoration: none;
     }
@@ -265,6 +265,9 @@ h4 {
   }
 }
 
+#templates {
+  display: none;
+}
 
 // PROJECT VIEW
 .fixed-viewer {
@@ -281,9 +284,6 @@ h4 {
 }
 .slideshow-wrapper {
 
-}
-.project-template {
-  display: none;
 }
 .project-images {
 }
