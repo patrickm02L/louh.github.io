@@ -399,55 +399,6 @@ div.epilogue {
 
 // OLD
 
-#port-images div.caption {
-  position: absolute;
-  max-width: 500px;
-  margin-left: 20px;
-  margin-top: -50px;
-  font-size: 11px;
-  line-height: 100%;
-  white-space: nowrap;
-}
-
-.scroller{
-  width: 9999px;
-  position: absolute;
-  z-index: 0;
-}
-.scroller > div.loader {
-  background: url('../img/loader.gif') no-repeat center center;
-  height: 100%;
-  float: left;
-}
-#port-images {
-  width: 650px;
-  height: 400px;
-  position: relative;
-  overflow: hidden;
-  margin-bottom: 10px;
-}
-
-
-.port-leftarrow, .port-rightarrow {
-  width: 50px;
-  height: 60px;
-  top: 20%;
-  overflow: hidden;
-  position: absolute;
-  display: none;
-  z-index: 20;
-}
-.port-rightarrow {
-  right: 0;
-}
-.port-rightarrow img, .port-leftarrow img {
-  cursor: pointer;
-  /* display: none;    //  HOVER DELEGATION DOESNT WORK */
-}
-.port-rightarrow img {
-  position: absolute;
-  right: 0;
-}
 #port-backbutton { 
   position: absolute;
   top: 40px;
