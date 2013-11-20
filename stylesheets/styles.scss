@@ -271,7 +271,7 @@ h4 {
 }
 
 #projects {
-  background-color: darken($background-color, 4%);
+  background-color: lighten($background-color, 4%);
   div.row {
     margin-bottom: 10px;
   }
