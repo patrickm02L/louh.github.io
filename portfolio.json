@@ -22,7 +22,7 @@
       "role": "Product design, user experience designer, front-end developer",
       "team": "Code for America",
       "ext_url": "http://www.lasvegasnevada.gov/fastpass/",
-      "description": "Got a business idea?  The Las Vegas Development Fastpass will help you find the best property for your business and give you the information you need to sail through the entitlements process."
+      "description": "Got a business idea?  The Development Fastpass will help you find the best property for your business and give you the information you need to sail through the entitlements process."
     },
     {
       "id": "2175market",
@@ -1022,7 +1022,7 @@
       "status": "current",
       "year": "2013",
       "ext_url": "http://clvfoodtrucks.com/",
-      "description": "Real time food truck information for Downtown Las Vegas."
+      "description": "A mobile-friendly web app that displays real-time food truck information from Downtown Las Vegas."
     },
     {}
   ]

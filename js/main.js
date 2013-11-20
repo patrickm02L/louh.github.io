@@ -14,6 +14,13 @@ var currentPage = null
 
 // Initalize Foundation
 $(document).foundation()
+$(document).foundation('orbit', {
+  animation_speed: 300,
+  slide_number: false,
+  bullets: false,
+  timer: false,
+  variable_height: true
+})
 
 /* LOAD DATAS */
 
@@ -233,21 +240,14 @@ function loadProject(projectID) {
     var item = projects.items[i]
     if (item.id == projectID) {
       $('#project-data').html(Mustache.render(template, item))
-      $("#orbit").on("orbit:ready", function(event) {
-        console.log('blargh')
+
+      // Set up orbit
+      $('#orbit').on('orbit:ready', function(event) {
+        $('.preloader').hide()
       })
+      $(document).foundation('reflow')
 
       // Initialize Foundation Orbit
-      window.setTimeout(function () {
-        $(document).foundation('orbit', {
-          animation_speed: 300,
-          slide_number: false,
-          bullets: false,
-          timer: false,
-          variable_height: true
-        })
-      },0)
-
       document.title = item.name + ' - ' + site_title
       return true
     }
