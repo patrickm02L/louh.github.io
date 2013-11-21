@@ -2827,7 +2827,7 @@ meta.foundation-mq-topbar {
 /* Wrapped around .top-bar to contain to grid width */
 .contain-to-grid {
   width: 100%;
-  background: #f8f8f8; }
+  background: #fdfdfd; }
   .contain-to-grid .top-bar {
     margin-bottom: 0; }
 
@@ -2855,7 +2855,7 @@ meta.foundation-mq-topbar {
   height: 60px;
   line-height: 60px;
   position: relative;
-  background: #f8f8f8;
+  background: #fdfdfd;
   margin-bottom: 0; }
   .top-bar ul {
     margin-bottom: 0;
@@ -2926,7 +2926,7 @@ meta.foundation-mq-topbar {
     height: auto;
     background: transparent; }
     .top-bar.expanded .title-area {
-      background: #f8f8f8; }
+      background: #fdfdfd; }
     .top-bar.expanded .toggle-topbar a {
       color: #888888; }
       .top-bar.expanded .toggle-topbar a span {
@@ -2950,7 +2950,7 @@ meta.foundation-mq-topbar {
   .top-bar-section .divider,
   .top-bar-section [role="separator"] {
     border-bottom: solid 1px white;
-    border-top: solid 1px #dfdfdf;
+    border-top: solid 1px #e4e4e4;
     clear: both;
     height: 1px;
     width: 100%; }
@@ -3042,7 +3042,7 @@ meta.foundation-mq-topbar {
 
 @media only screen and (min-width: 480px) {
   .top-bar {
-    background: #f8f8f8;
+    background: #fdfdfd;
     *zoom: 1;
     overflow: visible; }
     .top-bar:before, .top-bar:after {
@@ -3066,7 +3066,7 @@ meta.foundation-mq-topbar {
     .top-bar .button {
       line-height: 2em; }
     .top-bar.expanded {
-      background: #f8f8f8; }
+      background: #fdfdfd; }
 
   .contain-to-grid .top-bar {
     max-width: 62.5em;
@@ -3092,7 +3092,7 @@ meta.foundation-mq-topbar {
     .top-bar-section li a:not(.button) {
       padding: 0 20px;
       line-height: 60px;
-      background: #f8f8f8; }
+      background: #fdfdfd; }
       .top-bar-section li a:not(.button):hover {
         background: #5d6262; }
     .top-bar-section .has-dropdown > a {
@@ -3140,12 +3140,12 @@ meta.foundation-mq-topbar {
       border-bottom: none;
       border-top: none;
       border-right: solid 1px white;
-      border-left: solid 1px #dfdfdf;
+      border-left: solid 1px #e4e4e4;
       clear: none;
       height: 60px;
       width: 0; }
     .top-bar-section .has-form {
-      background: #f8f8f8;
+      background: #fdfdfd;
       padding: 0 20px;
       height: 60px; }
     .top-bar-section ul.right li .dropdown {
@@ -5278,6 +5278,15 @@ section[role='main'] section {
   @media only screen and (min-width: 768px) {
     section[role='main'] section {
       padding: 30px 0; } }
+  @media only screen and (min-width: 1280px) {
+    section[role='main'] section {
+      padding: 60px 0; } }
+  @media only screen and (min-width: 1440px) {
+    section[role='main'] section {
+      padding: 80px; } }
+
+section .background-2 {
+  background-color: #f8f8f8; }
 
 footer {
   background-color: #5d6262;
@@ -5286,6 +5295,12 @@ footer {
   text-align: center;
   font-size: 13px;
   line-height: 16px; }
+  @media only screen and (min-width: 1280px) {
+    footer {
+      padding: 50px 0; } }
+  @media only screen and (min-width: 1440px) {
+    footer {
+      padding: 60px 0; } }
   footer h2 {
     display: none; }
   footer ul {
@@ -5335,15 +5350,11 @@ h1 {
   /* Prevents fonts looking so bold on Mac */ }
 
 h4 {
-  color: #7b8181; }
+  color: #737a7a; }
 
 #about {
-  background-color: #eeeeee;
   position: relative;
   min-height: 350px; }
-  @media only screen and (min-width: 768px) {
-    #about {
-      padding-bottom: 50px; } }
   #about .portrait {
     width: 200px;
     height: 200px;
@@ -5361,13 +5372,21 @@ h4 {
     #about .bio {
       margin-top: 30px; } }
 
-#projects {
-  background-color: #f8f8f8; }
-  #projects div.row {
-    margin-bottom: 10px; }
-  #projects img {
-    margin-bottom: 10px;
-    border: 1px solid #dadada; }
+#projects div.row {
+  margin-bottom: 10px; }
+  @media only screen and (min-width: 1280px) {
+    #projects div.row {
+      margin-bottom: 20px; } }
+#projects img {
+  margin-bottom: 10px;
+  border: 1px solid #dadada; }
+#projects .info {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 85%;
+  color: gray; }
+  #projects .info span {
+    color: #b52422; }
 
 #portfolio {
   background-color: #eeeeee; }
@@ -5399,6 +5418,15 @@ h4 {
     font-size: 12px;
     color: #777;
     font-weight: normal; }
+
+#talks ul {
+  margin-left: 20px; }
+#talks iframe {
+  width: 100%;
+  height: 100%; }
+#talks .video-wrapper {
+  width: 100%;
+  margin-bottom: 20px; }
 
 #resume {
   display: none; }

@@ -81,6 +81,14 @@ $(document).ready(function() {
   })
   // Trigger hashchange immediately
   $(window).hashchange()
+
+  // Do this one time
+  _recalculateVideoPlayer()
+
+  // Bind to the window to do this more
+  $(window).resize(function () {
+    _recalculateVideoPlayer()
+  })
   
 });
 
@@ -122,6 +130,12 @@ function _unloadProject () {
   $('#project-view').hide()
 }
 
+function _recalculateVideoPlayer () {
+  var ratio  = 0.562 // ratio for video width/height
+  var width  = $('.video-wrapper').width()
+  var height = width * ratio 
+  $('.video-wrapper').css('height', height + 'px')
+}
 
 // Displays all current / featured / recent projects
 function displayFeaturedProjects (projects) {
@@ -130,6 +144,7 @@ function displayFeaturedProjects (projects) {
     var project = projects.items[i]
     if (project.status == 'current') {
       $('#projects').append(Mustache.render(template, project))
+      $('#projects .preloader').hide()
     }
   }
 }
@@ -141,6 +156,7 @@ function displayProjectGrid (projects) {
     var project = projects.items[i]
     if (project.status == 'portfolio') {
       $('#portfolio-grid').append(Mustache.render(template, project))
+      $('#portfolio .preloader').hide()
     }
   }
 }

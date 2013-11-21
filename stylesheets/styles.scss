@@ -12,7 +12,7 @@ $portrait-size-small: 200px;
 
 // OVERRIDE FOUNDATION VARIABLES - see also _variables.scss
 // This needs to come before the foundation import
-$topbar-bg-color:         lighten($background-color, 4%);
+$topbar-bg-color:         lighten($background-color, 6%);
 $topbar-height:           60px;
 $topbar-title-weight:     normal;
 $topbar-title-font-size:  20px;
@@ -154,6 +154,18 @@ section[role='main'] {
     @media #{$small} {
       padding: 30px 0;
     }
+    @media #{$medium} {
+      padding: 60px 0;
+    }
+    @media #{$large} {
+      padding: 80px;
+    }
+  }
+}
+
+section {
+  .background-2 {
+    background-color: lighten($background-color, 4%);
   }
 }
 
@@ -164,6 +176,12 @@ footer {
   text-align: center;
   font-size: 13px;
   line-height: 16px;
+  @media #{$medium} {
+    padding: 50px 0;
+  }
+  @media #{$large} {
+    padding: 60px 0;
+  }
   h2 {
     display: none;
   }
@@ -236,18 +254,14 @@ h1 {
 }
 
 h4 {
-  color: lighten($main-color, 12%);
+  color: lighten($main-color, 9%);
 }
 
 // SECTIONS
 
 #about {
-  background-color: $background-color;
   position: relative;
   min-height: 350px;
-  @media #{$small} {
-    padding-bottom: 50px;
-  }
   .portrait {
     width: $portrait-size-small;
     height: $portrait-size-small;
@@ -271,13 +285,25 @@ h4 {
 }
 
 #projects {
-  background-color: lighten($background-color, 4%);
+  // Featured projects
   div.row {
     margin-bottom: 10px;
+    @media #{$medium} {
+      margin-bottom: 20px;
+    }
   }
   img {
     margin-bottom: 10px;
     border: 1px solid darken($background-color, 8%);
+  }
+  .info {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 85%;
+    color: gray;
+    span {
+      color: $link-color;
+    }
   }
 }
 
@@ -322,6 +348,19 @@ h4 {
       color: #777;
       font-weight: normal;
     }
+  }
+}
+#talks {
+  ul {
+    margin-left: 20px;
+  }
+  iframe {
+    width: 100%;
+    height: 100%;
+  }
+  .video-wrapper {
+    width: 100%;
+    margin-bottom: 20px;
   }
 }
 #resume {

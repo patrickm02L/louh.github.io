@@ -19,10 +19,37 @@
       "year": "2013",
       "location": "Las Vegas, NV",
       "client": "City of Las Vegas",
-      "role": "Product design, user experience designer, front-end developer",
-      "team": "Code for America",
+      "role": "Product manager, user experience designer, front-end developer",
+      "team": "Code for America fellowship with Ryan Closner",
       "ext_url": "http://www.lasvegasnevada.gov/fastpass/",
-      "description": "Got a business idea?  The Development Fastpass will help you find the best property for your business and give you the information you need to sail through the entitlements process."
+      "description": "",
+      "feature_description": "Got a business idea?  The Development Fastpass will help you find the best property for your business and give you the information you need to sail through the entitlements process."
+    },
+    {
+      "id": "streetmix",
+      "name": "Streetmix",
+      "type": "other",
+      "status": "current",
+      "year": "2013",
+      "role": "Product manager, chief urbanist",
+      "team": "Marcin Wichary, Katie Lewis, Shaunak Kashyap, Ezra Spier, Marc Hébert, Anselm Bradford",
+      "ext_url": "http://streetmix.net/",
+      "description": "",
+      "feature_description": "An interactive website that empowers citizens to create their own street designs and share them with each other and with city planners."
+    },
+    {
+      "id": "foodtrucks",
+      "name": "Las Vegas Food Trucks",
+      "type": "other",
+      "status": "current",
+      "year": "2013",
+      "location": "Las Vegas, NV",
+      "client": "City of Las Vegas",
+      "role": "Product manager, user experience designer, front-end developer",
+      "team": "Ryan Closner, Lindsay Ballant",
+      "ext_url": "http://clvfoodtrucks.com/",
+      "description": "",
+      "feature_description": "A mobile-friendly web app that displays real-time food truck information from Downtown Las Vegas."
     },
     {
       "id": "2175market",
@@ -45,7 +72,7 @@
       "role": "Designer",
       "team": "Van Meter Williams Pollack",
       "ext_url": "http://www.2175market.com/",
-      "description": "A 80+ unit mixed use development in the Upper Market/Lower Octavia area in San Francisco."
+      "feature_description": "A 80+ unit mixed use development in the Upper Market/Lower Octavia area in San Francisco."
     },
     {
       "id": "sunnydale",
@@ -968,15 +995,6 @@
       "description": ""
     },
     {
-      "id": "streetmix",
-      "name": "Streetmix",
-      "type": "other",
-      "status": "current",
-      "year": "2013",
-      "ext_url": "http://streetmix.net/",
-      "description": "An interactive website that empowers citizens to create their own street designs and share them with each other and with city planners."
-    },
-    {
       "id": "umloud",
       "name": "Ümloud!",
       "type": "other",
@@ -1014,15 +1032,6 @@
       "role": "Web development, data wrangler",
       "ext_url": "http://urbanwander.com/",
       "description": "An online guide to San Francisco's Privately Owned Publicly Open Spaces (POPOS)."
-    },
-    {
-      "id": "foodtrucks",
-      "name": "Las Vegas Food Trucks",
-      "type": "other",
-      "status": "current",
-      "year": "2013",
-      "ext_url": "http://clvfoodtrucks.com/",
-      "description": "A mobile-friendly web app that displays real-time food truck information from Downtown Las Vegas."
     },
     {}
   ]

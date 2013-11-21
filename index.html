@@ -52,7 +52,6 @@
       </nav>
     </div>
 
-
     <!-- PROJECT VIEW -->
     <section id='project-view' class='fixed-viewer'>
 
@@ -116,12 +115,13 @@
         </div>
       </section>
 
-      <section id='projects'>
+      <section id='projects' class='background-2'>
         <div class='row'>
           <div class='large-12 columns'>
             <h3>Here are some of my recent projects.</h3>
           </div>
         </div>
+        <div class='preloader'></div>
         <!-- Current / featured project templates are appended here -->
       </section>
 
@@ -134,6 +134,49 @@
               <!-- To be replaced with project grid item template -->
             </ul>
 
+            <div class='preloader'></div>
+
+          </div>
+        </div>
+      </section>
+
+      <section id='talks' class='background-2'>
+        <div class='row'>
+          <div class='large-12 columns'>
+            <h3>Here is a talk I did recently.</h3>
+          </div>
+        </div>
+        <div class='row'>
+          <div class='large-7 medium-7 columns bleed'>
+            <div class='video-wrapper'>
+              <iframe width='480' height='360' src='//www.youtube.com/embed/6IPZ7lWc5D8?rel=0' frameborder='0' allowfullscreen></iframe>
+            </div>
+          </div>
+          <div class='large-5 medium-5 columns'>
+            <h5>I also gave other talks here.</h5>
+            <ul>
+              <li><a href='http://nacto.org/designing-cities-sessions-2013/' target='_blank'>NACTO Designing Cities 2013</a> &mdash; <em>Phoenix, AZ</em> “Participatory Planning Applications and New Technologies”</li>
+              <li><a href='http://sf.nerdnite.com/2012/06/12/nerd-nite-sf-25-video-games-urban-design-death-proof-cities-and-the-science-of-futurama/' target='_blank'>Nerd Nite San Francisco (#25)</a> &mdash; “An Open World: Playing in the Intersection of Video Games and Urban Design”</li>
+            </ul>
+
+            <h5>Upcoming shows. Get your tickets now!</h5>
+            <ul>
+              <li><a href='http://kevinlynchaward.mit.edu/' target='_blank'>2014 Kevin Lynch Award</a> &mdash; <em>Boston, MA (February 6, 2014)</em></li>
+              <li><a href='http://newpartners.org/' target='_blank'>New Partners for Smart Growth</a> &mdash; <em>Denver, CO (February 14, 2014)</em></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id='contact'>
+        <div class='row'>
+          <div class='large-12 columns'>
+            <h3>I’d love to work with you on your next project.</h3>
+          </div>
+        </div>
+        <div class='row'>
+          <div class='large-8 columns'>
+            <p>Please reach out if you’d like to connect with me on interesting projects that meet at the intersection of urban planning and technology. Bonus points for ideas that emphasize real placemaking and data-driven decision making, and cross-disciplinary teams with amazing people. You can reach me at <a href='mailto:lou@codeforamerica.org'>lou@codeforamerica.org</a>.</p>
           </div>
         </div>
       </section>
@@ -268,17 +311,24 @@
       <!-- CURRENT / FEATURED PROJECTS -->
       <script id='m_current_project' type='text/template'>
         <div class='row'>
-          <div class='large-8 large-push-4 medium-8 medium-push-4 columns bleed'>
-            <img src='portfolio/thumb-{{id}}.png' width='100%' alt=''>
+          <div class='large-8 large-push-4 medium-7 medium-push-5 columns bleed'>
+            <a href='#/portfolio/{{id}}'><img src='portfolio/thumb-{{id}}.png' width='100%' alt=''></a>
           </div>
-          <div class='large-4 large-pull-8 medium-4 medium-pull-8 columns'>
+          <div class='large-4 large-pull-8 medium-5 medium-pull-7 columns'>
             <h4>{{name}}</h4>
             <p class='text'>
-              {{description}}
+              {{feature_description}}
             </p>
+            {{#role}}
+            <p class='info'>
+              <span>My roles.</span>
+              {{role}}
+            </p>
+            {{/role}}
             {{#ext_url}}
-            <p>
-              <a href='{{ext_url}}' target='_blank' class='external-link'><i class='fi-page-export' style='margin-left: 4px;'></i> {{ext_link}}{{^ext_link}}View site{{/ext_link}}</a>
+            <p class='info'>
+              <span>Check it out at</span>
+              <a href='{{ext_url}}' target='_blank'>{{ext_url}}</a>
             </p>
             {{/ext_url}}
           </div>
@@ -369,7 +419,12 @@
 
         <div class='row project-description'>
           <div class='large-12 columns'>
+          {{#description}}
             <p>{{description}}</p>
+          {{/description}}
+          {{^description}}
+            <p>{{feature_description}}</p>
+          {{/description}}
           </div>
         </div>
 
