@@ -194,9 +194,14 @@ function loadProject (projectID) {
   $('#orbit').on('orbit:orbit:after-slide-change', function(event) {
     $('.preloader').hide()
   })
-
+  // Hide prev/next arrows if there is only one image.
+  if (item.images.length <= 1) {
+    $('#orbit').attr('data-options', 'navigation_arrows: false')
+  }
   // Force orbit to recalculate itself after loading new stuff.
   $(document).foundation('reflow')
+
+
 }
 
 
