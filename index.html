@@ -54,33 +54,6 @@
 
     <!-- PROJECT VIEW -->
     <section id='project-view' class='fixed-viewer'>
-
-      <!-- PROJECT NAVIGATION -->
-      <div class='row' style='display: none;'>
-        <div class='large-12 columns' id='project-navigation'>
-          <div id='port-backbutton' title='return to main menu [up arrow]'></div>
-          <div id='port-dropbutton'>More projects</div>
-          <div id='port-dropdown'>
-            <h6>Urban Design & Planning</h6>
-              <ul id='drop-cpln'>
-              <script id='m_dropdown_item' type='text/template'>
-                <li><a href='#/portfolio/{{id}}'>{{#menu_name}}{{menu_name}}{{/menu_name}}{{^menu_name}}{{name}}{{/menu_name}}</a></li>
-              </script>
-              </ul>
-
-            <h6>Architecture</h6>
-              <ul id='drop-arch'>
-              <!-- To be replaced with dropdown item template -->            
-              </ul>
-
-            <h6>Web & Print</h6>
-              <ul id='drop-misc'>
-              <!-- To be replaced with dropdown item template -->            
-              </ul>
-          </div>
-        </div>
-      </div>
-      <!-- // END PROJECT NAVIGATION -->
       
       <!-- PROJECT DATA -->
       <div id='project-data'>
@@ -180,7 +153,7 @@
         </div>
         <div class='row'>
           <div class='large-8 columns'>
-            <p>Please get in touch if you’d like to connect with me on interesting projects that meet at the intersection of urban planning and technology. Bonus points for ideas that emphasize real placemaking and data-driven decision making, and cross-disciplinary teams with amazing people. You can reach me at <a href='mailto:lou@codeforamerica.org'>lou@codeforamerica.org</a>.</p>
+            <p>Please get in touch if you’d like to connect with me on interesting projects that meet at the intersection of urban planning and technology. Bonus points for ideas that emphasize real placemaking and data-driven decision making, and cross-disciplinary teams with amazing people. You can reach me at <a href='mailto:lou@louhuang.com'>lou@louhuang.com</a>.</p>
           </div>
         </div>
       </section>
@@ -312,8 +285,8 @@
 
     <!-- BEGIN TEMPLATES -->
     <section id='templates'>
-      <!-- CURRENT / FEATURED PROJECTS -->
-      <script id='m_current_project' type='text/template'>
+      <!-- FEATURED PROJECTS -->
+      <script id='m_featured_project' type='text/template'>
         <div class='row'>
           <div class='large-8 large-push-4 medium-7 medium-push-5 columns bleed'>
             <a href='#/portfolio/{{id}}'><img src='portfolio/thumb-{{id}}.png' width='100%' alt=''></a>

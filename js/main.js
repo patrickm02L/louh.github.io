@@ -139,10 +139,10 @@ function _recalculateVideoPlayer () {
 
 // Displays all current / featured / recent projects
 function displayFeaturedProjects (projects) {
-  var template = $('#m_current_project').html()
+  var template = $('#m_featured_project').html()
   for (var i = 0; i < projects.items.length; i++) {
     var project = projects.items[i]
-    if (project.status == 'current') {
+    if (project.status == 'featured') {
       $('#projects').append(Mustache.render(template, project))
       $('#projects .preloader').hide()
     }
@@ -183,6 +183,11 @@ function loadProject (projectID) {
       document.title = item.name + ' - ' + site_title
       break
     }
+  }
+
+  // Hack the max-width for featured projects
+  if (item.status == 'featured') {
+    $('.slideshow-wrapper').css('max-width', '100%')
   }
 
   // To do: handle an error where project isn't found.
