@@ -8,12 +8,8 @@
       "status": "current",
       "images": [
         {
-          "filename": "2175market-01.jpg",
-          "caption": "Perspective Render"
-        },
-        {
-          "filename": "2175market-05.jpg",
-          "caption": "Plan"
+          "filename": "fastpass-01.png",
+          "caption": ""
         }
       ],
       "year": "2013",
@@ -30,6 +26,12 @@
       "name": "Streetmix",
       "type": "other",
       "status": "current",
+      "images": [
+        {
+          "filename": "streetmix-01.png",
+          "caption": ""
+        }
+      ],
       "year": "2013",
       "role": "Product manager, chief urbanist",
       "team": "Marcin Wichary, Katie Lewis, Shaunak Kashyap, Ezra Spier, Marc Hébert, Anselm Bradford",
@@ -42,6 +44,12 @@
       "name": "Las Vegas Food Trucks",
       "type": "other",
       "status": "current",
+      "images": [
+        {
+          "filename": "foodtrucks-01.png",
+          "caption": ""
+        }
+      ],
       "year": "2013",
       "location": "Las Vegas, NV",
       "client": "City of Las Vegas",
