@@ -68,7 +68,6 @@ $.when(
 /* INTERFACE */
 $(document).ready(function() {
 
-
   /* INITIALIZE HASHCHANGE PLUGIN */
   // Load portfolio or resume items immediately if link contains hash elements
   // Currently using BBQ's hashchange plugin for this functionality.
@@ -83,7 +82,7 @@ $(document).ready(function() {
   $(window).hashchange()
 
   // Do this one time
-  _recalculateVideoPlayer()
+//  _recalculateVideoPlayer()
 
   // Bind to the window to do this more
   $(window).resize(function () {
@@ -119,6 +118,7 @@ function loadHash() {
 function _loadMainPage () {
   $('body').css('overflow', 'visible')
   $('#main').show()
+  _recalculateVideoPlayer()
 }
 
 function _hideMainPage () {
