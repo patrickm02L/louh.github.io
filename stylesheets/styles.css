@@ -5365,12 +5365,12 @@ h4 {
     background: transparent url("../img/portrait.jpg") center center no-repeat;
     background-size: cover;
     margin: 10px auto; }
-    #about .portrait:hover {
+    #about .portrait:hover, #about .portrait:active {
       background-image: url("../img/portrait-doodle.png"); }
     @media only screen and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
       #about .portrait {
         background-image: url("../img/portrait@2x.jpg"); }
-        #about .portrait:hover {
+        #about .portrait:hover, #about .portrait:active {
           background-image: url("../img/portrait-doodle@2x.png"); } }
     @media only screen and (max-width: 767px) {
       #about .portrait {
