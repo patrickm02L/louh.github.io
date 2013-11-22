@@ -155,7 +155,7 @@ function displayProjectGrid (projects) {
   var template = $('#m_portfolio_grid').html()
   for (var i = 0; i < projects.items.length; i++) {
     var project = projects.items[i]
-    if (project.status == 'portfolio') {
+    if (project.status == 'portfolio' || project.status == 'portfolio-legacy') {
       $('#portfolio-grid').append(Mustache.render(template, project))
       $('#portfolio .preloader').hide()
     }
@@ -186,9 +186,9 @@ function loadProject (projectID) {
     }
   }
 
-  // Hack the max-width for featured projects
-  if (item.status == 'featured') {
-    $('.slideshow-wrapper').css('max-width', '100%')
+  // Hack the max-width for legacy portfolio projects
+  if (item.status == 'portfolio-legacy') {
+    $('.slideshow-wrapper').css('max-width', '650px')
   }
 
   // To do: handle an error where project isn't found.

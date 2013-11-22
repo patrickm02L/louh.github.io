@@ -86,7 +86,7 @@
       "id": "sunnydale",
       "name": "Sunnydale HOPE SF",
       "type": "urbandesign",
-      "status": "portfolio",
+      "status": "portfolio-legacy",
       "images": [
         {
           "filename": "sunnydale-01.jpg",
@@ -105,7 +105,7 @@
       "id": "saccatalyst",
       "name": "River City Promenade",
       "type": "urbandesign",
-      "status": "portfolio",
+      "status": "portfolio-legacy",
       "images": [
         {
           "filename": "saccatalyst-01.jpg",
@@ -153,7 +153,7 @@
       "id": "calitransit",
       "name": "California Transit Diagram",
       "type": "other",
-      "status": "portfolio",
+      "status": "portfolio-legacy",
       "images": [
         {
           "filename": "calitransit-01.png",
@@ -168,7 +168,7 @@
       "name": "Central Florida: Connecting for Global Competitiveness",
       "menu_name": "Connecting for Global Competitiveness",
       "type": "urbandesign",
-      "status": "portfolio",
+      "status": "portfolio-legacy",
       "images": [
         {
           "filename": "centralflorida-01.jpg",
@@ -205,7 +205,7 @@
       "id": "lamodafresca",
       "name": "La Moda Fresca",
       "type": "urbandesign",
-      "status": "portfolio",
+      "status": "portfolio-legacy",
       "images": [
         {
           "filename": "lamodafresca-01.jpg",
@@ -267,7 +267,7 @@
       "id": "schuylkill",
       "name": "The Lower Schuylkill: Smart by Design",
       "type": "urbandesign",
-      "status": "portfolio",
+      "status": "portfolio-legacy",
       "images": [
         {
           "filename": "schuylkill-04.jpg",
@@ -327,7 +327,7 @@
       "id": "scotchhollow",
       "name": "Scotchhollow Apartments",
       "type": "urbandesign",
-      "status": "portfolio",
+      "status": "portfolio-legacy",
       "images": [
         {
           "filename": "scotchhollow-01.jpg",
@@ -361,7 +361,7 @@
       "id": "northarlington",
       "name": "North Arlington Infill Development",
       "type": "urbandesign",
-      "status": "portfolio",
+      "status": "portfolio-legacy",
       "images": [
         {
           "filename": "northarlington-01.jpg",
@@ -391,7 +391,7 @@
       "id": "caciquegardens",
       "name": "Cacique Gardens Pattern Book",
       "type": "urbandesign",
-      "status": "portfolio",
+      "status": "portfolio-legacy",
       "images": [
         {
           "filename": "caciquegardens-01.jpg",
@@ -431,7 +431,7 @@
       "id": "eastorange",
       "name": "East Orange Gateways",
       "type": "urbandesign",
-      "status": "portfolio",
+      "status": "portfolio-legacy",
       "images": [
         {
           "filename": "eastorange-01.jpg",
@@ -473,7 +473,7 @@
       "id": "portrichmond",
       "name": "Vision for the Richmond Corridor",
       "type": "urbandesign",
-      "status": "portfolio",
+      "status": "portfolio-legacy",
       "images": [
         {
           "filename": "portrichmond-01.jpg",
@@ -510,7 +510,7 @@
       "id": "peets",
       "name": "Peet's Coffee & Tea",
       "type": "architecture",
-      "status": "portfolio",
+      "status": "portfolio-legacy",
       "images": [
         {
           "filename": "peets-01.jpg",
@@ -556,7 +556,7 @@
       "id": "tandoorioven",
       "name": "Tandoori Oven",
       "type": "architecture",
-      "status": "portfolio",
+      "status": "portfolio-legacy",
       "images": [
         {
           "filename": "tandoorioven-01.jpg",
@@ -585,7 +585,7 @@
       "id": "dealhouse",
       "name": "Deal House",
       "type": "architecture",
-      "status": "portfolio",
+      "status": "portfolio-legacy",
       "images": [
         {
           "filename": "dealhouse-01.jpg",
@@ -618,7 +618,7 @@
       "id": "epstein",
       "name": "Epstein House",
       "type": "architecture",
-      "status": "portfolio",
+      "status": "portfolio-legacy",
       "images": [
         {
           "filename": "epstein-01.jpg",
@@ -647,7 +647,7 @@
       "id": "resto",
       "name": "Restoration Hardware",
       "type": "architecture",
-      "status": "portfolio",
+      "status": "portfolio-legacy",
       "images": [
         {
           "filename": "resto-03.png",
@@ -709,7 +709,7 @@
       "id": "panorama",
       "name": "Panorama",
       "type": "other",
-      "status": "portfolio",
+      "status": "portfolio-legacy",
       "images": [
         {
           "filename": "panorama-01.jpg",
@@ -819,7 +819,7 @@
       "id": "photo",
       "name": "Photography",
       "type": "other",
-      "status": "portfolio",
+      "status": "portfolio-legacy",
       "images": [
         {
           "filename": "lhphoto-01.jpg",

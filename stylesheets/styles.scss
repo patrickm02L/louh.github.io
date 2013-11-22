@@ -1,7 +1,6 @@
 // VARIABLES
 $main-color:          #5d6262;
 $accent-color:        #d83432;
-//$link-color:          #7c8282;
 $link-color:          darken($accent-color, 10%);
 $background-color:    rgb(238,238,238);
 $black:               #222;
@@ -12,6 +11,9 @@ $portrait-size-small: 200px;
 
 // OVERRIDE FOUNDATION VARIABLES - see also _variables.scss
 // This needs to come before the foundation import
+$primary-color:           $accent-color;
+// $secondary-color:         $main-color;
+$button-border-width:     0;
 $topbar-bg-color:         lighten($background-color, 6%);
 $topbar-height:           60px;
 $topbar-title-weight:     normal;
@@ -162,6 +164,11 @@ section[role='main'] {
     }
     @media #{$large} {
       padding: 80px;
+    }
+  }
+  section:not(#portfolio) {
+    ul {
+      margin-left: 20px;
     }
   }
 }
@@ -361,9 +368,6 @@ h4 {
   }
 }
 #talks {
-  ul {
-    margin-left: 20px;
-  }
   iframe {
     width: 100%;
     height: 100%;
@@ -393,8 +397,7 @@ h4 {
   padding-bottom: $topbar-height;
 }
 .slideshow-wrapper {
-  // Temporarily make orbit no wider than current image sizes.
-  max-width: 650px;
+//  max-width: 100%;    // Probably goes without saying, actually
   min-height: 200px;
 }
 .project-images {
