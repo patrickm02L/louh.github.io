@@ -266,20 +266,18 @@ h4 {
   position: relative;
   min-height: 350px;
   .portrait {
-    width: $portrait-size-small;
-    height: $portrait-size-small;
-    margin: 0 auto;
-    border-radius: $portrait-size-small / 2;
+    width: $portrait-size;
+    height: $portrait-size;
+    border-radius: 50%;
     background: transparent url('../img/portrait.jpg') center center no-repeat;
     background-size: cover;
+    margin: 10px auto;
     @media #{$retina-screen} {
       background-image: url('../img/portrait@2x.jpg');
     }
-    @media #{$small} {
-      width: $portrait-size;
-      height: $portrait-size;
-      margin-top: 10px;
-      border-radius: 50%;
+    @media #{$max-small} {
+      width: $portrait-size-small;
+      height: $portrait-size-small;
     }
   }
   .bio {

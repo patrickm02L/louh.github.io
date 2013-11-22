@@ -5359,21 +5359,19 @@ h4 {
   position: relative;
   min-height: 350px; }
   #about .portrait {
-    width: 200px;
-    height: 200px;
-    margin: 0 auto;
-    border-radius: 100px;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
     background: transparent url("../img/portrait.jpg") center center no-repeat;
-    background-size: cover; }
+    background-size: cover;
+    margin: 10px auto; }
     @media only screen and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
       #about .portrait {
         background-image: url("../img/portrait@2x.jpg"); } }
-    @media only screen and (min-width: 768px) {
+    @media only screen and (max-width: 767px) {
       #about .portrait {
-        width: 250px;
-        height: 250px;
-        margin-top: 10px;
-        border-radius: 50%; } }
+        width: 200px;
+        height: 200px; } }
   @media only screen and (min-width: 768px) {
     #about .bio {
       margin-top: 30px; } }
