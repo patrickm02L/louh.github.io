@@ -179,6 +179,18 @@ section {
   }
 }
 
+.fixed-viewer {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  display: none;
+  z-index: 100;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background-color: $background-color;
+  padding-bottom: $topbar-height + 30px;
+}
+
 footer {
   background-color: $main-color;
   color: darken($background-color, 20%);
@@ -281,6 +293,7 @@ h4 {
     margin: 10px auto;
     &:hover, &:active {
       background-image: url('../img/portrait-doodle.png');
+      cursor: pointer;
     }
     @media #{$retina-screen} {
       background-image: url('../img/portrait@2x.jpg');
@@ -384,42 +397,35 @@ h4 {
   display: none;
 }
 
-// PROJECT VIEW
-.fixed-viewer {
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  display: none;
-  z-index: 100;
-  overflow-y: auto;
-  overflow-x: hidden;
-  background-color: $background-color;
-  padding-bottom: $topbar-height;
-}
-.slideshow-wrapper {
-//  max-width: 100%;    // Probably goes without saying, actually
-  min-height: 200px;
-}
-.project-images {
-}
-.orbit-bullets {
-  display: none;
-}
-.project-title {
-  margin-top: 20px;
-}
-.project-data-key {
-  font-size: 80%;
-  text-transform: uppercase;
-  color: gray;
-  // Positioning hack
-  padding-left: 15px;
-  @media #{$max-x-small} {
-    font-size: 60%;
+#project-view  {
+  .slideshow-wrapper {
+    min-height: 200px;
+  }
+  .project-images {
+  }
+  .orbit-bullets {
+    display: none;
+  }
+  .project-title {
+    margin-top: 20px;
+  }
+  .project-data-key {
+    font-size: 80%;
+    text-transform: uppercase;
+    color: gray;
+    // Positioning hack
+    padding-left: 15px;
+    @media #{$max-x-small} {
+      font-size: 60%;
+    }
+  }
+  .project-description {
+    margin-top: 16px;
   }
 }
-.project-description {
-  margin-top: 16px;
+
+#resume-view {
+  padding-top: 20px;
 }
 
 // STUFF
@@ -460,16 +466,11 @@ div.epilogue {
 
 
 .resume-left {
-  width: 60%;
-  float: left;
-  padding: 0 20px 20px 0;
   border-right: 1px solid #d8d8da;
   margin-right: 12px;
 }
 
 .resume-right {
-  width: 30%;
-  float: left;
 }
 
 

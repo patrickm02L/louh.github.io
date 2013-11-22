@@ -63,7 +63,7 @@ $.when(
 ).then(function() {
   // Do stuff with projects
   if (currentProject) {
-    loadProject(currentProject)    
+    _showProject(currentProject)    
   }
   displayFeaturedProjects(projects)
   displayProjectGrid(projects)
@@ -79,7 +79,7 @@ $(document).ready(function() {
   $(window).hashchange(function(){
     loadHash()
     if (currentProject && !_.isEmpty(projects)) {
-      loadProject(currentProject)
+      _showProject(currentProject)
     }
   })
   // Trigger hashchange immediately
@@ -89,7 +89,7 @@ $(document).ready(function() {
   $(window).resize(function () {
     _recalculateVideoPlayer()
   })
-  
+
 })
 
 
@@ -107,16 +107,19 @@ function loadHash() {
   }
   switch(currentPage) {
     case 'resume':
-      $('#n-resume').click()
+      _showResume()
       break
+    case 'portfolio':
+      // Nothing here, because this is handled elsewhere.
     default:
-      _unloadProject()
-      _loadMainPage()
+      _showMainPage()
       break
   }
 }
 
-function _loadMainPage () {
+function _showMainPage () {
+  _hideProject()
+  _hideResume()
   $('body').css('overflow', 'visible')
   $('#main').show()
   _recalculateVideoPlayer()
@@ -127,8 +130,55 @@ function _hideMainPage () {
   $('#main').hide()
 }
 
-function _unloadProject () {
+function _showProject (projectID) {
+  // Adjust DOM
+  _hideMainPage()
+  $('#project-view').show()
+
+  // Create the project html snippet
+  var template = $('#m_project').html()
+  for (var i = 0; i < projects.items.length; i++) {
+    var item = projects.items[i]
+    if (item.id === projectID) {
+      $('#project-view').html(Mustache.render(template, item))
+      document.title = item.name + ' - ' + site_title
+      break
+    }
+  }
+
+  // Hack the max-width for legacy portfolio projects
+  if (item.status == 'portfolio-legacy') {
+    $('.slideshow-wrapper').css('max-width', '650px')
+  }
+
+  // To do: handle an error where project isn't found.
+
+  // Orbit stuff
+  $('#orbit').on('orbit:ready', function(event) {
+    console.log('Orbit is ready.')
+  })
+  $('#orbit').on('orbit:orbit:after-slide-change', function(event) {
+    $('.preloader').hide()
+  })
+  // Hide prev/next arrows if there is only one image.
+  if (item.images.length <= 1) {
+    $('#orbit').attr('data-options', 'navigation_arrows: false')
+  }
+  // Force orbit to recalculate itself after loading new stuff.
+  $(document).foundation('reflow')
+}
+
+function _hideProject () {
   $('#project-view').hide()
+}
+
+function _showResume () {
+  _hideMainPage()
+  $('#resume-view').show()
+}
+
+function _hideResume () {
+  $('#resume-view').hide()
 }
 
 function _recalculateVideoPlayer () {
@@ -169,42 +219,3 @@ function displayRandomQuote (quotes) {
   $('.author').html(quotes[i].author)
 }
 
-
-function loadProject (projectID) {
-  // Adjust DOM
-  _hideMainPage()
-  $('#project-view').show()
-
-  // Create the project html snippet
-  var template = $('#m_project').html()
-  for (var i = 0; i < projects.items.length; i++) {
-    var item = projects.items[i]
-    if (item.id === projectID) {
-      $('#project-data').html(Mustache.render(template, item))
-      document.title = item.name + ' - ' + site_title
-      break
-    }
-  }
-
-  // Hack the max-width for legacy portfolio projects
-  if (item.status == 'portfolio-legacy') {
-    $('.slideshow-wrapper').css('max-width', '650px')
-  }
-
-  // To do: handle an error where project isn't found.
-
-  // Orbit stuff
-  $('#orbit').on('orbit:ready', function(event) {
-    console.log('Orbit is ready.')
-  })
-  $('#orbit').on('orbit:orbit:after-slide-change', function(event) {
-    $('.preloader').hide()
-  })
-  // Hide prev/next arrows if there is only one image.
-  if (item.images.length <= 1) {
-    $('#orbit').attr('data-options', 'navigation_arrows: false')
-  }
-  // Force orbit to recalculate itself after loading new stuff.
-  $(document).foundation('reflow')
-
-}

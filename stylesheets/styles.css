@@ -5293,6 +5293,17 @@ section[role='main'] section:not(#portfolio) ul {
 section .background-2 {
   background-color: #f8f8f8; }
 
+.fixed-viewer {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  display: none;
+  z-index: 100;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background-color: #eeeeee;
+  padding-bottom: 90px; }
+
 footer {
   background-color: #5d6262;
   color: #bbbbbb;
@@ -5368,7 +5379,8 @@ h4 {
     background-size: cover;
     margin: 10px auto; }
     #about .portrait:hover, #about .portrait:active {
-      background-image: url("../img/portrait-doodle.png"); }
+      background-image: url("../img/portrait-doodle.png");
+      cursor: pointer; }
     @media only screen and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
       #about .portrait {
         background-image: url("../img/portrait@2x.jpg"); }
@@ -5442,37 +5454,25 @@ h4 {
 #templates {
   display: none; }
 
-.fixed-viewer {
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  display: none;
-  z-index: 100;
-  overflow-y: auto;
-  overflow-x: hidden;
-  background-color: #eeeeee;
-  padding-bottom: 60px; }
-
-.slideshow-wrapper {
+#project-view .slideshow-wrapper {
   min-height: 200px; }
-
-.orbit-bullets {
+#project-view .orbit-bullets {
   display: none; }
-
-.project-title {
+#project-view .project-title {
   margin-top: 20px; }
-
-.project-data-key {
+#project-view .project-data-key {
   font-size: 80%;
   text-transform: uppercase;
   color: gray;
   padding-left: 15px; }
   @media only screen and (max-width: 479px) {
-    .project-data-key {
+    #project-view .project-data-key {
       font-size: 60%; } }
-
-.project-description {
+#project-view .project-description {
   margin-top: 16px; }
+
+#resume-view {
+  padding-top: 20px; }
 
 .external-link {
   font-size: 80%;
@@ -5499,12 +5499,5 @@ div.epilogue {
   border-bottom: 1px solid lightgray; }
 
 .resume-left {
-  width: 60%;
-  float: left;
-  padding: 0 20px 20px 0;
   border-right: 1px solid #d8d8da;
   margin-right: 12px; }
-
-.resume-right {
-  width: 30%;
-  float: left; }
