@@ -5260,6 +5260,9 @@ nav .logo {
   background: transparent url("../img/logo.png") center center no-repeat;
   background-size: cover;
   top: 0; }
+  @media only screen and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    nav .logo {
+      background-image: url("../img/logo@2x.png"); } }
 @media only screen and (min-width: 480px) {
   nav .top-bar-section ul {
     margin-top: -1px; } }
@@ -5362,6 +5365,9 @@ h4 {
     border-radius: 100px;
     background: transparent url("../img/portrait.jpg") center center no-repeat;
     background-size: cover; }
+    @media only screen and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+      #about .portrait {
+        background-image: url("../img/portrait@2x.jpg"); } }
     @media only screen and (min-width: 768px) {
       #about .portrait {
         width: 250px;
