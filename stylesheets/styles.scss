@@ -272,8 +272,14 @@ h4 {
     background: transparent url('../img/portrait.jpg') center center no-repeat;
     background-size: cover;
     margin: 10px auto;
+    &:hover {
+      background-image: url('../img/portrait-doodle.png');
+    }
     @media #{$retina-screen} {
       background-image: url('../img/portrait@2x.jpg');
+      &:hover {
+        background-image: url('../img/portrait-doodle@2x.png');
+      }
     }
     @media #{$max-small} {
       width: $portrait-size-small;

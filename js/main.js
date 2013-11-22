@@ -13,7 +13,7 @@ var currentPage = null
 // Initalize Foundation
 $(document).foundation()
 
-// Set up orbit
+// Set up Foundation plugins
 $(document).foundation('orbit', {
   animation_speed: 250,
   slide_number: false,
@@ -21,7 +21,11 @@ $(document).foundation('orbit', {
   timer: false,
   variable_height: true
 })
-
+$(document).foundation('interchange', {
+  named_queries: {
+    x_small: 'only screen and (max-width: 480px)'
+  }
+})
 
 /* LOAD DATAS */
 
@@ -81,15 +85,12 @@ $(document).ready(function() {
   // Trigger hashchange immediately
   $(window).hashchange()
 
-  // Do this one time
-//  _recalculateVideoPlayer()
-
-  // Bind to the window to do this more
+  // Actions to perform whenever the screen size changes
   $(window).resize(function () {
     _recalculateVideoPlayer()
   })
   
-});
+})
 
 
 /* FUNCTIONS */
@@ -206,7 +207,4 @@ function loadProject (projectID) {
   // Force orbit to recalculate itself after loading new stuff.
   $(document).foundation('reflow')
 
-
 }
-
-
