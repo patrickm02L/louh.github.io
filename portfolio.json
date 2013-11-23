@@ -502,7 +502,7 @@
       "id": "portrichmond",
       "name": "Vision for the Richmond Corridor",
       "type": "urbandesign",
-      "status": "portfolio-legacy",
+      "status": "hidden",
       "images": [
         {
           "filename": "portrichmond-01.jpg",
