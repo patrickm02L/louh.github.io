@@ -5240,7 +5240,8 @@ a.th {
 body {
   background: #eeeeee;
   color: #222222;
-  font: 16px/24px 'Neris', "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  font: 16px/24px 'Neris', "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  overflow-x: hidden; }
 
 .top-bar-container {
   z-index: 900;
