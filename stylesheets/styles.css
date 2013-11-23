@@ -5410,9 +5410,27 @@ h4 {
 
 #portfolio {
   background-color: #eeeeee; }
+  #portfolio .filter-label {
+    font-size: 85%;
+    color: #b52422;
+    padding-right: 10px; }
+  #portfolio .filter {
+    background-color: #dfdfdf;
+    color: gray;
+    font-weight: normal;
+    -webkit-transition: background-color 0s;
+    -moz-transition: background-color 0s;
+    transition: background-color 0s; }
+    #portfolio .filter:hover, #portfolio .filter:active, #portfolio .filter.highlight {
+      background-color: #b52422;
+      color: white;
+      text-decoration: none; }
 
 #portfolio-grid .portfolio-grid-item {
-  padding: 0.625em; }
+  padding: 0.625em;
+  -webkit-transition: opacity 100ms ease-in;
+  -moz-transition: opacity 100ms ease-in;
+  transition: opacity 100ms ease-in; }
   #portfolio-grid .portfolio-grid-item:hover {
     background-color: rgba(0, 0, 0, 0.1); }
 #portfolio-grid img {

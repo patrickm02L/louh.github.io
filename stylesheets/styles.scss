@@ -337,11 +337,28 @@ h4 {
 
 #portfolio {
   background-color: $background-color;
+  .filter-label {
+    font-size: 85%;
+    color: $link-color;
+    padding-right: 10px;
+  }
+  .filter {
+    background-color: darken($background-color, 6%);
+    color: gray;
+    font-weight: normal;
+    @include transition (background-color 0s);
+    &:hover, &:active, &.highlight {
+      background-color: $link-color;
+      color: white;
+      text-decoration: none;
+    }
+  }
 }
 
 #portfolio-grid {
   .portfolio-grid-item {
     padding: 0.625em; // Default has extra bottom padding and no top padding - this makes it equal all around
+    @include transition (opacity 100ms ease-in);
     &:hover {
       background-color: rgba(0,0,0,0.1);
     }

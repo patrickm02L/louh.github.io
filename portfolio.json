@@ -4,7 +4,7 @@
     {
       "id": "fastpass",
       "name": "Las Vegas Development Fastpass",
-      "type": "civictech",
+      "type": "web",
       "status": "featured",
       "images": [
         {
@@ -24,7 +24,7 @@
     {
       "id": "streetmix",
       "name": "Streetmix",
-      "type": "other",
+      "type": "web",
       "status": "featured",
       "images": [
         {
@@ -42,7 +42,7 @@
     {
       "id": "foodtrucks",
       "name": "Las Vegas Food Trucks",
-      "type": "other",
+      "type": "web",
       "status": "featured",
       "images": [
         {
@@ -62,7 +62,7 @@
     {
       "id": "amiinlv",
       "name": "Am I In Las Vegas?",
-      "type": "other",
+      "type": "web",
       "status": "portfolio",
       "thumbnail": "thumb-amiinlv.png",
       "images": [
@@ -92,7 +92,7 @@
       "id": "2175market",
       "name": "2175 Market",
       "type": "architecture",
-      "status": "hidden",
+      "status": "portfolio-legacy",
       "images": [
         {
           "filename": "2175market-01.jpg",
@@ -683,7 +683,7 @@
     {
       "id": "fabboard",
       "name": "Fabboard",
-      "type": "other",
+      "type": "web",
       "status": "portfolio-legacy",
       "images": [
         {
@@ -698,7 +698,7 @@
     {
       "id": "nomelette",
       "name": "Nomelette",
-      "type": "other",
+      "type": "web",
       "status": "portfolio-legacy",
       "images": [
         {
@@ -952,7 +952,7 @@
     {
       "id": "chocolatemango",
       "name": "Better Together: Andrew and Kelly",
-      "type": "other",
+      "type": "web",
       "status": "hidden",
       "images": [
         {
@@ -969,7 +969,7 @@
     {
       "id": "sfbaymosaic",
       "name": "SF Bay Mosaic",
-      "type": "other",
+      "type": "web",
       "status": "hidden",
       "images": [
         {
@@ -984,7 +984,7 @@
     {
       "id": "digitalshoebox",
       "name": "The Digital Shoebox",
-      "type": "other",
+      "type": "web",
       "status": "hidden",
       "images": [
         {
@@ -999,7 +999,7 @@
     {
       "id": "tab",
       "name": "The Address Book",
-      "type": "other",
+      "type": "web",
       "status": "hidden",
       "images": [
         {
@@ -1018,7 +1018,7 @@
     {
       "id": "lifeshelf",
       "name": "Lifeshelf",
-      "type": "other",
+      "type": "web",
       "status": "hidden",
       "images": [
         {
@@ -1052,7 +1052,7 @@
     {
       "id": "sfpopos",
       "name": "SFPOPOS",
-      "type": "other",
+      "type": "web",
       "status": "hidden",
       "year": "2012",
       "role": "Web design and development",
@@ -1062,7 +1062,7 @@
     {
       "id": "urbanwander",
       "name": "Urban Wander",
-      "type": "other",
+      "type": "web",
       "status": "hidden",
       "year": "2013",
       "role": "Web development, data wrangler",

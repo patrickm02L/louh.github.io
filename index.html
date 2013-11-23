@@ -207,6 +207,16 @@ Yes, I made my own choices, and wrote my site's code myself.  It's an ongoing wo
           <div class='row'>
             <div class='large-12 columns'>
               <h3>These are some other things I've made.</h3>
+            </div>
+            <div class='large-12 columns hide-for-small'>
+              <ul class='button-group'>
+                <li><a href='#' class='small button filter' data-type='web'>Web</a></li>
+                <li><a href='#' class='small button filter' data-type='urbandesign'>Urban Design</a></li>
+                <li><a href='#' class='small button filter' data-type='architecture'>Architecture</a></li>
+                <li><a href='#' class='small button filter' data-type='other'>Miscellaneous</a></li>
+              </ul>
+            </div>
+            <div class='large-12 columns'>
 
               <ul class='small-block-grid-2 large-block-grid-3' id='portfolio-grid'>
                 <!-- To be replaced with project grid item template -->
@@ -362,7 +372,7 @@ Yes, I made my own choices, and wrote my site's code myself.  It's an ongoing wo
 
       <!-- PORTFOLIO GRID -->
       <script id='m_portfolio_grid' type='text/template'>
-        <li class='portfolio-grid-item'>
+        <li class='portfolio-grid-item' data-project-type='{{type}}'>
           <a href='#/portfolio/{{id}}'>
           {{#thumbnail}}
             <img src='portfolio/{{thumbnail}}'>
