@@ -9,6 +9,7 @@ var site_title = document.title
 
 var currentProject = null
 var currentPage = null
+var projectGrid = null
 
 // Initalize Foundation
 $(document).foundation()
@@ -91,39 +92,10 @@ $(document).ready(function() {
   })
 
   // Filter
-  var projectGrid = null
   var filters = $('#portfolio').find('.filter')
   filters.click(function (e) {
     e.preventDefault()
-
-    if ($(this).hasClass('highlight')) {
-      // Toggle
-      $(this).removeClass('highlight')
-      $(projectGrid).css('opacity', '1.0')
-      return
-    }
-
-    // Clear all previous buttons
-    $(filters).removeClass('highlight')
-
-    // Highlight button
-    $(this).addClass('highlight')
-
-    // Cache project grid on first filter click
-    if (projectGrid === null) {
-      projectGrid = $('#portfolio-grid').find('.portfolio-grid-item')
-    }
-
-    // Refresh all project opacities
-    $(projectGrid).css('opacity', '1.0')
-
-    // Check types and fade out projects that don't match
-    var type = $(this).data('type')
-    for (var i = 0; i < projectGrid.length; i++) {
-      if (type != $(projectGrid[i]).data('project-type')) {
-        $(projectGrid[i]).css('opacity', '0.25')
-      }
-    }
+    filterProjectGrid(filters, this)
   })
 
 })
@@ -263,6 +235,38 @@ function displayProjectGrid (projects) {
   }
 
   $('#portfolio .preloader').hide()
+}
+
+function filterProjectGrid (filters, clicked) {
+
+  // Toggle filter
+  if ($(clicked).hasClass('highlight')) {
+    $(clicked).removeClass('highlight')
+    $(projectGrid).css('opacity', '1.0')
+    return
+  }
+
+  // Clear all previous buttons
+  $(filters).removeClass('highlight')
+
+  // Highlight button
+  $(clicked).addClass('highlight')
+
+  // Cache project grid on first filter click
+  if (projectGrid === null) {
+    projectGrid = $('#portfolio-grid').find('.portfolio-grid-item')
+  }
+
+  // Refresh all project opacities
+  $(projectGrid).css('opacity', '1.0')
+
+  // Check types and fade out projects that don't match
+  var type = $(clicked).data('type')
+  for (var i = 0; i < projectGrid.length; i++) {
+    if (type != $(projectGrid[i]).data('project-type')) {
+      $(projectGrid[i]).css('opacity', '0.25')
+    }
+  }
 }
 
 function displayRandomQuote (quotes) {

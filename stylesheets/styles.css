@@ -5430,7 +5430,8 @@ h4 {
   padding: 0.625em;
   -webkit-transition: opacity 100ms ease-in;
   -moz-transition: opacity 100ms ease-in;
-  transition: opacity 100ms ease-in; }
+  transition: opacity 100ms ease-in;
+  -webkit-transform: translateZ(0); }
   #portfolio-grid .portfolio-grid-item:hover {
     background-color: rgba(0, 0, 0, 0.1); }
 #portfolio-grid img {
