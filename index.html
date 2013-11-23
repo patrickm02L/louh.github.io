@@ -353,7 +353,13 @@ Yes, I made my own choices, and wrote my site's code myself.  It's an ongoing wo
       <!-- PORTFOLIO GRID -->
       <script id='m_portfolio_grid' type='text/template'>
         <li class='portfolio-grid-item'>
-          <a href='#/portfolio/{{id}}'><img src='portfolio/thumb-{{id}}.jpg'>
+          <a href='#/portfolio/{{id}}'>
+          {{#thumbnail}}
+            <img src='portfolio/{{thumbnail}}'>
+          {{/thumbnail}}
+          {{^thumbnail}}
+            <img src='portfolio/thumb-{{id}}.jpg'>
+          {{/thumbnail}}
           <div class='portfolio-name'>
           {{#menu_name}}
             <div class='caption'>{{menu_name}}<br>

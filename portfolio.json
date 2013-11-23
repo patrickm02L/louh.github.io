@@ -60,6 +60,35 @@
       "feature_description": "A mobile-friendly web app that displays real-time food truck information from Downtown Las Vegas."
     },
     {
+      "id": "amiinlv",
+      "name": "Am I In Las Vegas?",
+      "type": "other",
+      "status": "portfolio",
+      "thumbnail": "thumb-amiinlv.png",
+      "images": [
+        {
+          "filename": "amiinlv-01.png",
+          "caption": "Am I in Las Vegas? Let's find out."
+        },
+        {
+          "filename": "amiinlv-02.png",
+          "caption": "Yes! 150 N. Las Vegas Boulevard is in Las Vegas!"
+        },
+        {
+          "filename": "amiinlv-03.png",
+          "caption": "Nope! 1319 Shadow Mountain Place isn't actually in Las Vegas!"
+        }
+      ],
+      "year": "2013",
+      "location": "Las Vegas, NV",
+      "client": "City of Las Vegas",
+      "role": "Product manager, front-end developer",
+      "team": "Ryan Closner, Lindsay Ballant",
+      "ext_url": "http://amiinlasvegas.com/",
+      "description": "When Las Vegas was incorporated in the mid-1900s, property owners were able to opt-out, so the boundaries are convoluted and complex, and many holes exist throughout. Yet the United States Post Office allows properties in unincorporated Clark County to use Las Vegas in their mailing address, which results in confusion when citizens request services from the City only to discover that they aren’t covered.Upon learning this, we decided we could quickly create an “Am I In Las Vegas?” application. Our solution differs from existing tools on the City website which are buried in obscure locations or require some programming knowledge. It is a visual interface, works on mobile, and can use a current location or an address input, so that any user can easily see if they are either currently in Las Vegas, or any property that they are interested in.",
+      "feature_description": ""
+    },
+    {
       "id": "2175market",
       "name": "2175 Market",
       "type": "architecture",
