@@ -346,11 +346,14 @@ h4 {
     background-color: darken($background-color, 6%);
     color: gray;
     font-weight: normal;
-    @include transition (background-color 0s);
-    &:hover, &:active, &.highlight {
+    &:hover, &:active, &.highlight:hover, &.highlight:active {
+      background-color: lighten($link-color, 6%);
+    }
+    &.highlight {
       background-color: $link-color;
+    }
+    &:hover, &:active, &.highlight {
       color: white;
-      text-decoration: none;
     }
   }
 }
@@ -451,6 +454,14 @@ h4 {
   font-size: 80%;
   text-transform: uppercase;
   white-space: nowrap;
+}
+
+a.button {
+  // Overrides default foundation behavior (transitioning background color on hover)
+  @include transition (background-color 0s);
+  &:hover, &:active {
+    text-decoration: none;
+  }
 }
 
 div.epilogue {

@@ -5417,14 +5417,13 @@ h4 {
   #portfolio .filter {
     background-color: #dfdfdf;
     color: gray;
-    font-weight: normal;
-    -webkit-transition: background-color 0s;
-    -moz-transition: background-color 0s;
-    transition: background-color 0s; }
+    font-weight: normal; }
+    #portfolio .filter:hover, #portfolio .filter:active, #portfolio .filter.highlight:hover, #portfolio .filter.highlight:active {
+      background-color: #ce2927; }
+    #portfolio .filter.highlight {
+      background-color: #b52422; }
     #portfolio .filter:hover, #portfolio .filter:active, #portfolio .filter.highlight {
-      background-color: #b52422;
-      color: white;
-      text-decoration: none; }
+      color: white; }
 
 #portfolio-grid .portfolio-grid-item {
   padding: 0.625em;
@@ -5495,6 +5494,13 @@ h4 {
   font-size: 80%;
   text-transform: uppercase;
   white-space: nowrap; }
+
+a.button {
+  -webkit-transition: background-color 0s;
+  -moz-transition: background-color 0s;
+  transition: background-color 0s; }
+  a.button:hover, a.button:active {
+    text-decoration: none; }
 
 div.epilogue {
   color: #7b7b7b; }

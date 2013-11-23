@@ -294,64 +294,50 @@
       "description": "The East Village of San Diego is a declining warehouse district with new redevelopment opportunities but challenged with active fault lines. “La Moda Fresca” transforms the site into a vision of fresh food and fresh ideas. The centerpiece is “Eat Street,” a pedestrian promenade of restaurants and street food that is a flexible, multi-function space celebrating food culture. It integrates local artist colonies, a growing student population, a community garden, and introduces an innovative food waste recycling program. Working in an interdisciplinary team of five graduate students, this proposal was selected as one of four finalists in this industry-wide recognized competition."
     },
     {
-      "id": "schuylkill",
-      "name": "The Lower Schuylkill: Smart by Design",
-      "type": "urbandesign",
+      "id": "peets",
+      "name": "Peet's Coffee & Tea",
+      "type": "architecture",
       "status": "portfolio-legacy",
       "images": [
         {
-          "filename": "schuylkill-04.jpg",
-          "caption": "View at Gray's Ferry Waterfront"
+          "filename": "peets-01.jpg",
+          "caption": "Prototype Store in Emeryville, CA"
         },
         {
-          "filename": "schuylkill-05.jpg",
-          "caption": "Gray's Ferry Waterfront, Detail Plan"
+          "filename": "peets-02.png",
+          "caption": "Typical Store Floor Plan (Berkeley, CA)"
         },
         {
-          "filename": "schuylkill-01.jpg",
-          "caption": "Street Section at 34th St"
+          "filename": "peets-03.jpg",
+          "caption": "Exterior View (Lake Forest, CA)"
         },
         {
-          "filename": "schuylkill-02.jpg",
-          "caption": "Gray's Ferry Neighborhood Plan"
+          "filename": "peets-04.jpg",
+          "caption": "Exterior Rendering (Dimond District, Oakland, CA)"
         },
         {
-          "filename": "schuylkill-03.jpg",
-          "caption": "Gray's Ferry Land Use Plan"
+          "filename": "peets-05.jpg",
+          "caption": "Supermarket Kiosk Rendering"
         },
         {
-          "filename": "schuylkill-06.jpg",
-          "caption": "The Lower Schuylkill Master Plan (1 of 2)"
+          "filename": "peets-06.png",
+          "caption": "Supermarket Kiosk Isometric Views"
         },
         {
-          "filename": "schuylkill-07.jpg",
-          "caption": "The Lower Schuylkill Master Plan (2 of 2)"
+          "filename": "peets-07.jpg",
+          "caption": "Exterior View (Redwood City, CA)"
         },
         {
-          "filename": "schuylkill-09.jpg",
-          "caption": "Section Through Schuylkill River (1 of 5)"
-        },
-        {
-          "filename": "schuylkill-10.jpg",
-          "caption": "Section Through Schuylkill River (2 of 5)"
-        },
-        {
-          "filename": "schuylkill-11.jpg",
-          "caption": "Section Through Schuylkill River (3 of 5)"
-        },
-        {
-          "filename": "schuylkill-12.jpg",
-          "caption": "Section Through Schuylkill River (4 of 5)"
-        },
-        {
-          "filename": "schuylkill-13.jpg",
-          "caption": "Section Through Schuylkill River (5 of 5)"
+          "filename": "peets-08.png",
+          "caption": "Elevation View (Berkeley, CA)"
         }
       ],
-      "year": "2009",
-      "location": "Philadelphia, PA",
-      "team": "University of Pennsylvania urban design studio",
-      "description": "Redevelopment along Philadelphia’s “hidden river” is focused on retaining Philadelphia’s brain capital: graduates of its stellar educational institutions, who have been leaving the city for work elsewhere. At the Grays Ferry site, which has been so cut off from the rest of the city by poor infrastructure decisions that it has been nicknamed the Forgotten Bottom, renewal is catalyzed by university expansion, highway removal, freight line reconfiguration, and the development of a technology campus."
+      "year": "2004-2008",
+      "location": "Various locations, California",
+      "menu_location": "Various Locations",
+      "role": "schematic design, construction documents, project management",
+      "team": "Crome Architecture",
+      "description": "As the primary architect for Peet's Coffee & Tea, Crome Architecture designed and produced construction documents for many stores throughout the United States.  In addition, we helped design new store types such as a new \"prototype\" store in Emeryville, CA and \"kiosks\" for supermarkets, airports and subway stations."
     },
     {
       "id": "scotchhollow",
@@ -477,52 +463,6 @@
       "description": "Photography website, featuring a portfolio and blog, developed for my own freelance photography business."
     },
     {
-      "id": "peets",
-      "name": "Peet's Coffee & Tea",
-      "type": "architecture",
-      "status": "portfolio-legacy",
-      "images": [
-        {
-          "filename": "peets-01.jpg",
-          "caption": "Prototype Store in Emeryville, CA"
-        },
-        {
-          "filename": "peets-02.png",
-          "caption": "Typical Store Floor Plan (Berkeley, CA)"
-        },
-        {
-          "filename": "peets-03.jpg",
-          "caption": "Exterior View (Lake Forest, CA)"
-        },
-        {
-          "filename": "peets-04.jpg",
-          "caption": "Exterior Rendering (Dimond District, Oakland, CA)"
-        },
-        {
-          "filename": "peets-05.jpg",
-          "caption": "Supermarket Kiosk Rendering"
-        },
-        {
-          "filename": "peets-06.png",
-          "caption": "Supermarket Kiosk Isometric Views"
-        },
-        {
-          "filename": "peets-07.jpg",
-          "caption": "Exterior View (Redwood City, CA)"
-        },
-        {
-          "filename": "peets-08.png",
-          "caption": "Elevation View (Berkeley, CA)"
-        }
-      ],
-      "year": "2004-2008",
-      "location": "Various locations, California",
-      "menu_location": "Various Locations",
-      "role": "schematic design, construction documents, project management",
-      "team": "Crome Architecture",
-      "description": "As the primary architect for Peet's Coffee & Tea, Crome Architecture designed and produced construction documents for many stores throughout the United States.  In addition, we helped design new store types such as a new \"prototype\" store in Emeryville, CA and \"kiosks\" for supermarkets, airports and subway stations."
-    },
-    {
       "id": "eastorange",
       "name": "East Orange Gateways",
       "type": "urbandesign",
@@ -563,6 +503,66 @@
       "role": "Policy and memo writing, mapping and visualizations",
       "team": "Brown & Keener Urban Design",
       "description": ""
+    },
+    {
+      "id": "schuylkill",
+      "name": "The Lower Schuylkill: Smart by Design",
+      "type": "urbandesign",
+      "status": "portfolio-legacy",
+      "images": [
+        {
+          "filename": "schuylkill-04.jpg",
+          "caption": "View at Gray's Ferry Waterfront"
+        },
+        {
+          "filename": "schuylkill-05.jpg",
+          "caption": "Gray's Ferry Waterfront, Detail Plan"
+        },
+        {
+          "filename": "schuylkill-01.jpg",
+          "caption": "Street Section at 34th St"
+        },
+        {
+          "filename": "schuylkill-02.jpg",
+          "caption": "Gray's Ferry Neighborhood Plan"
+        },
+        {
+          "filename": "schuylkill-03.jpg",
+          "caption": "Gray's Ferry Land Use Plan"
+        },
+        {
+          "filename": "schuylkill-06.jpg",
+          "caption": "The Lower Schuylkill Master Plan (1 of 2)"
+        },
+        {
+          "filename": "schuylkill-07.jpg",
+          "caption": "The Lower Schuylkill Master Plan (2 of 2)"
+        },
+        {
+          "filename": "schuylkill-09.jpg",
+          "caption": "Section Through Schuylkill River (1 of 5)"
+        },
+        {
+          "filename": "schuylkill-10.jpg",
+          "caption": "Section Through Schuylkill River (2 of 5)"
+        },
+        {
+          "filename": "schuylkill-11.jpg",
+          "caption": "Section Through Schuylkill River (3 of 5)"
+        },
+        {
+          "filename": "schuylkill-12.jpg",
+          "caption": "Section Through Schuylkill River (4 of 5)"
+        },
+        {
+          "filename": "schuylkill-13.jpg",
+          "caption": "Section Through Schuylkill River (5 of 5)"
+        }
+      ],
+      "year": "2009",
+      "location": "Philadelphia, PA",
+      "team": "University of Pennsylvania urban design studio",
+      "description": "Redevelopment along Philadelphia’s “hidden river” is focused on retaining Philadelphia’s brain capital: graduates of its stellar educational institutions, who have been leaving the city for work elsewhere. At the Grays Ferry site, which has been so cut off from the rest of the city by poor infrastructure decisions that it has been nicknamed the Forgotten Bottom, renewal is catalyzed by university expansion, highway removal, freight line reconfiguration, and the development of a technology campus."
     },
     {
       "id": "caciquegardens",
