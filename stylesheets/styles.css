@@ -5498,7 +5498,9 @@ h4 {
 a.button {
   -webkit-transition: background-color 0s;
   -moz-transition: background-color 0s;
-  transition: background-color 0s; }
+  transition: background-color 0s;
+  box-shadow: none;
+  -webkit-box-shadow: none; }
   a.button:hover, a.button:active {
     text-decoration: none; }
 

@@ -459,6 +459,8 @@ h4 {
 a.button {
   // Overrides default foundation behavior (transitioning background color on hover)
   @include transition (background-color 0s);
+  box-shadow: none;
+  -webkit-box-shadow: none;
   &:hover, &:active {
     text-decoration: none;
   }
