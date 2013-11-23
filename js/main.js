@@ -120,13 +120,11 @@ function loadHash() {
 function _showMainPage () {
   _hideProject()
   _hideResume()
-  $('body').css('overflow', 'visible')
   $('#main').show()
   _recalculateVideoPlayer()
 }
 
 function _hideMainPage () {
-  $('body').css('overflow', 'hidden')
   $('#main').hide()
 }
 
@@ -134,6 +132,9 @@ function _showProject (projectID) {
   // Adjust DOM
   _hideMainPage()
   $('#project-view').show()
+
+  // Scroll to top of page
+  $('body').scrollTop(0)
 
   // Create the project html snippet
   var template = $('#m_project').html()
@@ -175,6 +176,9 @@ function _hideProject () {
 function _showResume () {
   _hideMainPage()
   $('#resume-view').show()
+
+  // Scroll to top of page
+  $('body').scrollTop(0)
 }
 
 function _hideResume () {

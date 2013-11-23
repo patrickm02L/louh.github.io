@@ -152,7 +152,7 @@ nav {
   right: 8px;
 }
 
-section[role='main'] {
+#main {
   section {
     min-height: 400px;
     padding: 20px 0;
@@ -179,16 +179,13 @@ section {
   }
 }
 
-.fixed-viewer {
-  width: 100%;
-  height: 100%;
-  position: fixed;
+.viewer {
   display: none;
-  z-index: 100;
-  overflow-y: auto;
-  overflow-x: hidden;
   background-color: $background-color;
-  padding-bottom: $topbar-height + 30px;
+  padding-bottom: 20px;
+  @media #{$medium} {
+    padding-bottom: 30px;
+  }
 }
 
 footer {
