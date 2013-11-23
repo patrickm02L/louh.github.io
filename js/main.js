@@ -203,13 +203,26 @@ function displayFeaturedProjects (projects) {
 // Displays all portfolio projects
 function displayProjectGrid (projects) {
   var template = $('#m_portfolio_grid').html()
+  var multiple = 6
+
+  var items = []
+
   for (var i = 0; i < projects.items.length; i++) {
     var project = projects.items[i]
     if (project.status == 'portfolio' || project.status == 'portfolio-legacy') {
-      $('#portfolio-grid').append(Mustache.render(template, project))
-      $('#portfolio .preloader').hide()
+      items.push(project)
     }
   }
+
+  // Only display items up to a multiple of 6 to ensure that items are evenly spaced on either a 3x or 2x grid.
+  // The actual multiple can be changed in the future, if the layout changes.
+  var gridLength = Math.floor(items.length / multiple) * multiple
+
+  for (var j = 0; j < gridLength; j++) {
+    $('#portfolio-grid').append(Mustache.render(template, items[j]))    
+  }
+
+  $('#portfolio .preloader').hide()
 }
 
 function displayRandomQuote (quotes) {

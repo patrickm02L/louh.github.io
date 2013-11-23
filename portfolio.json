@@ -417,123 +417,63 @@
       "description": "Redevelopment proposal utilizing form-based strategies for infilling a suburb of the New York City metropolitan area, to improve the urban fabric and allow for smart economic growth. These maps show the existing buildings and parking and how streets can be improved by removing, replacing and reconfiguring parking lots, adding streetscaping and sidewalks, and by building up to the front setback lines."
     },
     {
-      "id": "caciquegardens",
-      "name": "Cacique Gardens Pattern Book",
-      "type": "urbandesign",
+      "id": "photo",
+      "name": "Photography",
+      "type": "other",
       "status": "portfolio-legacy",
       "images": [
         {
-          "filename": "caciquegardens-01.jpg",
+          "filename": "lhphoto-01.jpg",
+          "caption": "Website"
+        },
+        {
+          "filename": "photo-01.jpg",
+          "caption": "Business card design"
+        },
+        {
+          "filename": "photo-02.jpg",
           "caption": ""
         },
         {
-          "filename": "caciquegardens-02.jpg",
+          "filename": "photo-03.jpg",
           "caption": ""
         },
         {
-          "filename": "caciquegardens-03.png",
+          "filename": "photo-04.jpg",
           "caption": ""
         },
         {
-          "filename": "caciquegardens-04.png",
+          "filename": "photo-05.jpg",
           "caption": ""
         },
         {
-          "filename": "caciquegardens-05.png",
+          "filename": "photo-06.jpg",
           "caption": ""
         },
         {
-          "filename": "caciquegardens-06.png",
+          "filename": "photo-07.jpg",
           "caption": ""
         },
         {
-          "filename": "caciquegardens-07.png",
+          "filename": "photo-08.jpg",
+          "caption": ""
+        },
+        {
+          "filename": "photo-09.jpg",
+          "caption": ""
+        },
+        {
+          "filename": "photo-10.jpg",
+          "caption": ""
+        },
+        {
+          "filename": "photo-11.jpg",
           "caption": ""
         }
       ],
-      "year": "2009",
-      "location": "Kingston, Jamaica",
-      "client": "University of Pennyslvania class project",
-      "description": "Cacique Gardens is a new, hypothetical 200-acre mixed-use development. Working with a partner, we developed a pattern book for housing, retail and street typologies that would fit into its regional context."
-    },
-    {
-      "id": "eastorange",
-      "name": "East Orange Gateways",
-      "type": "urbandesign",
-      "status": "portfolio-legacy",
-      "images": [
-        {
-          "filename": "eastorange-01.jpg",
-          "caption": "Main Street Before & After View"
-        },
-        {
-          "filename": "eastorange-02.jpg",
-          "caption": "Gateway District Map"
-        },
-        {
-          "filename": "eastorange-03.jpg",
-          "caption": "Central Ave Before & After View"
-        },
-        {
-          "filename": "eastorange-04.jpg",
-          "caption": "Main Street (Brick Church Area) Before & After"
-        },
-        {
-          "filename": "eastorange-05.jpg",
-          "caption": "Central Ave Before & After View"
-        },
-        {
-          "filename": "eastorange-06.jpg",
-          "caption": ""
-        },
-        {
-          "filename": "eastorange-07.jpg",
-          "caption": "Signage Guidelines Document"
-        }
-      ],
-      "year": "2009-2010",
-      "menu_location": "East Orange, NJ",
-      "client": "City of East Orange, NJ",
-      "role": "Policy and memo writing, mapping and visualizations",
-      "team": "Brown & Keener Urban Design",
-      "description": ""
-    },
-    {
-      "id": "portrichmond",
-      "name": "Vision for the Richmond Corridor",
-      "type": "urbandesign",
-      "status": "hidden",
-      "images": [
-        {
-          "filename": "portrichmond-01.jpg",
-          "caption": "Richmond St Proposed Streetscape Sketch"
-        },
-        {
-          "filename": "portrichmond-06.jpg",
-          "caption": ""
-        },
-        {
-          "filename": "portrichmond-02.jpg",
-          "caption": "Richmond St Proposed Streetscape Sketch"
-        },
-        {
-          "filename": "portrichmond-03.jpg",
-          "caption": "Richmond St Existing Conditions Photo"
-        },
-        {
-          "filename": "portrichmond-04.jpg",
-          "caption": "Port Richmond Redevelopment Plan (1 of 2)"
-        },
-        {
-          "filename": "portrichmond-05.jpg",
-          "caption": "Port Richmond Redevelopment Plan (2 of 2)"
-        }
-      ],
-      "year": "2009",
-      "location": "Philadelphia, PA",
-      "client": "North Kensington Community Development Corporation",
-      "team": "University of Pennsylvania city planning studio",
-      "description": ""
+      "year": "2005-2012",
+      "role": "Graphic and UI design, programming, photography",
+      "description": "Photography website, featuring a portfolio and blog, developed for my own freelance photography business."
     },
     {
       "id": "peets",
@@ -582,6 +522,88 @@
       "description": "As the primary architect for Peet's Coffee & Tea, Crome Architecture designed and produced construction documents for many stores throughout the United States.  In addition, we helped design new store types such as a new \"prototype\" store in Emeryville, CA and \"kiosks\" for supermarkets, airports and subway stations."
     },
     {
+      "id": "eastorange",
+      "name": "East Orange Gateways",
+      "type": "urbandesign",
+      "status": "portfolio-legacy",
+      "images": [
+        {
+          "filename": "eastorange-01.jpg",
+          "caption": "Main Street Before & After View"
+        },
+        {
+          "filename": "eastorange-02.jpg",
+          "caption": "Gateway District Map"
+        },
+        {
+          "filename": "eastorange-03.jpg",
+          "caption": "Central Ave Before & After View"
+        },
+        {
+          "filename": "eastorange-04.jpg",
+          "caption": "Main Street (Brick Church Area) Before & After"
+        },
+        {
+          "filename": "eastorange-05.jpg",
+          "caption": "Central Ave Before & After View"
+        },
+        {
+          "filename": "eastorange-06.jpg",
+          "caption": ""
+        },
+        {
+          "filename": "eastorange-07.jpg",
+          "caption": "Signage Guidelines Document"
+        }
+      ],
+      "year": "2009-2010",
+      "menu_location": "East Orange, NJ",
+      "client": "City of East Orange, NJ",
+      "role": "Policy and memo writing, mapping and visualizations",
+      "team": "Brown & Keener Urban Design",
+      "description": ""
+    },
+    {
+      "id": "caciquegardens",
+      "name": "Cacique Gardens Pattern Book",
+      "type": "urbandesign",
+      "status": "portfolio-legacy",
+      "images": [
+        {
+          "filename": "caciquegardens-01.jpg",
+          "caption": ""
+        },
+        {
+          "filename": "caciquegardens-02.jpg",
+          "caption": ""
+        },
+        {
+          "filename": "caciquegardens-03.png",
+          "caption": ""
+        },
+        {
+          "filename": "caciquegardens-04.png",
+          "caption": ""
+        },
+        {
+          "filename": "caciquegardens-05.png",
+          "caption": ""
+        },
+        {
+          "filename": "caciquegardens-06.png",
+          "caption": ""
+        },
+        {
+          "filename": "caciquegardens-07.png",
+          "caption": ""
+        }
+      ],
+      "year": "2009",
+      "location": "Kingston, Jamaica",
+      "client": "University of Pennyslvania class project",
+      "description": "Cacique Gardens is a new, hypothetical 200-acre mixed-use development. Working with a partner, we developed a pattern book for housing, retail and street typologies that would fit into its regional context."
+    },
+    {
       "id": "tandoorioven",
       "name": "Tandoori Oven",
       "type": "architecture",
@@ -609,6 +631,83 @@
       "role": "Schematic design, project management",
       "team": "Crome Architecture",
       "description": "This restaurant, whose first location was in San Jose, CA, sought to open a second location in Redwood City. I designed the schematic plan which was ultimately chosen by the client, so I became the project manager responsible for drafting, design development and construction documents for agency approval. I also created the 3D interior views for presentation to the client."
+    },
+    {
+      "id": "panorama",
+      "name": "Panorama",
+      "type": "other",
+      "status": "portfolio-legacy",
+      "images": [
+        {
+          "filename": "panorama-01.jpg",
+          "caption": ""
+        },
+        {
+          "filename": "panorama-02.jpg",
+          "caption": ""
+        },
+        {
+          "filename": "panorama-03.jpg",
+          "caption": ""
+        },
+        {
+          "filename": "panorama-04.jpg",
+          "caption": ""
+        },
+        {
+          "filename": "panorama-05.jpg",
+          "caption": ""
+        },
+        {
+          "filename": "panorama-06.jpg",
+          "caption": ""
+        },
+        {
+          "filename": "panorama-07.jpg",
+          "caption": ""
+        },
+        {
+          "filename": "panorama-08.jpg",
+          "caption": ""
+        },
+        {
+          "filename": "panorama-09.jpg",
+          "caption": ""
+        }
+      ],
+      "year": "2008-2010",
+      "role": "Associate design editor (2008), Lead design editor (2009-2010)",
+      "description": "Panorama is the journal for the University of Pennsylvania’s Department of City and Regional Planning, published once a year to showcase the best in student research and studio work. For the first time in Panorama’s history, in 2009 the department increased the journal’s staff from two to six editors, dramatically increasing the quality of the publication. In 2010, I led the design team and helped establish the journal's editorial voice, raising the bar once again for excellence in both writing and design."
+    },
+    {
+      "id": "fabboard",
+      "name": "Fabboard",
+      "type": "other",
+      "status": "portfolio-legacy",
+      "images": [
+        {
+          "filename": "fabboard-01.jpg",
+          "caption": ""
+        }
+      ],
+      "year": "2012",
+      "role": "Graphic and UI design",
+      "description": "Fashion pinboard site. UX design with freelance programmer."
+    },
+    {
+      "id": "nomelette",
+      "name": "Nomelette",
+      "type": "other",
+      "status": "portfolio-legacy",
+      "images": [
+        {
+          "filename": "nomelette-01.jpg",
+          "caption": ""
+        }
+      ],
+      "year": "2010",
+      "role": "Graphic and UI design",
+      "description": "A startup idea, similar to restaurant review sites, but rating individual food products and dishes rather than establishments."
     },
     {
       "id": "dealhouse",
@@ -710,6 +809,43 @@
       "description": "Restoration Hardware sought to update its look and feel for their stores, both in exterior and interior design. Led by principals at Crome Architecture, our team helped develop the schematics for a number of new stores including this location in Calgary. Individual duties included drafting of schematic floorplans, details, elevations, and constructing 3D models of the space which were later sketched over and colored by hand."
     },
     {
+      "id": "portrichmond",
+      "name": "Vision for the Richmond Corridor",
+      "type": "urbandesign",
+      "status": "portfolio-legacy",
+      "images": [
+        {
+          "filename": "portrichmond-01.jpg",
+          "caption": "Richmond St Proposed Streetscape Sketch"
+        },
+        {
+          "filename": "portrichmond-06.jpg",
+          "caption": ""
+        },
+        {
+          "filename": "portrichmond-02.jpg",
+          "caption": "Richmond St Proposed Streetscape Sketch"
+        },
+        {
+          "filename": "portrichmond-03.jpg",
+          "caption": "Richmond St Existing Conditions Photo"
+        },
+        {
+          "filename": "portrichmond-04.jpg",
+          "caption": "Port Richmond Redevelopment Plan (1 of 2)"
+        },
+        {
+          "filename": "portrichmond-05.jpg",
+          "caption": "Port Richmond Redevelopment Plan (2 of 2)"
+        }
+      ],
+      "year": "2009",
+      "location": "Philadelphia, PA",
+      "client": "North Kensington Community Development Corporation",
+      "team": "University of Pennsylvania city planning studio",
+      "description": ""
+    },
+    {
       "id": "vonscheven",
       "name": "Von Scheven House",
       "type": "architecture",
@@ -733,85 +869,6 @@
       "role": "Schematic design and drafting",
       "team": "Crome Architecture",
       "description": "An older ranch-style single family house in Marin County, whose owners sought to remodel and expand to maximize the amount of allowed square footage on their property. The plan was designed based on several interviews with the family to determine their needs, with careful attention paid to efficient circulation."
-    },
-    {
-      "id": "panorama",
-      "name": "Panorama",
-      "type": "other",
-      "status": "portfolio-legacy",
-      "images": [
-        {
-          "filename": "panorama-01.jpg",
-          "caption": ""
-        },
-        {
-          "filename": "panorama-02.jpg",
-          "caption": ""
-        },
-        {
-          "filename": "panorama-03.jpg",
-          "caption": ""
-        },
-        {
-          "filename": "panorama-04.jpg",
-          "caption": ""
-        },
-        {
-          "filename": "panorama-05.jpg",
-          "caption": ""
-        },
-        {
-          "filename": "panorama-06.jpg",
-          "caption": ""
-        },
-        {
-          "filename": "panorama-07.jpg",
-          "caption": ""
-        },
-        {
-          "filename": "panorama-08.jpg",
-          "caption": ""
-        },
-        {
-          "filename": "panorama-09.jpg",
-          "caption": ""
-        }
-      ],
-      "year": "2008-2010",
-      "role": "Associate design editor (2008), Lead design editor (2009-2010)",
-      "description": "Panorama is the journal for the University of Pennsylvania’s Department of City and Regional Planning, published once a year to showcase the best in student research and studio work. For the first time in Panorama’s history, in 2009 the department increased the journal’s staff from two to six editors, dramatically increasing the quality of the publication. In 2010, I led the design team and helped establish the journal's editorial voice, raising the bar once again for excellence in both writing and design."
-    },
-    {
-      "id": "fabboard",
-      "name": "Fabboard",
-      "type": "other",
-      "status": "hidden",
-      "images": [
-        {
-          "filename": "fabboard-01.jpg",
-          "caption": ""
-        }
-      ],
-      "year": "2012",
-      "role": "Graphic and UI design",
-      "ext_url": "http://fabboard.com/",
-      "ext_link": "View site",
-      "description": "Fashion pinboard site. UX design with freelance programmer."
-    },
-    {
-      "id": "nomelette",
-      "name": "Nomelette",
-      "type": "other",
-      "status": "hidden",
-      "images": [
-        {
-          "filename": "nomelette-01.jpg",
-          "caption": ""
-        }
-      ],
-      "year": "2010",
-      "role": "Graphic and UI design",
-      "description": "A startup idea, similar to restaurant review sites, but rating individual food products and dishes rather than establishments."
     },
     {
       "id": "crome",
@@ -843,65 +900,6 @@
       "year": "2006-2008",
       "role": "Graphic design, e-mail marketing",
       "description": ""
-    },
-    {
-      "id": "photo",
-      "name": "Photography",
-      "type": "other",
-      "status": "portfolio-legacy",
-      "images": [
-        {
-          "filename": "lhphoto-01.jpg",
-          "caption": "Website"
-        },
-        {
-          "filename": "photo-01.jpg",
-          "caption": "Business card design"
-        },
-        {
-          "filename": "photo-02.jpg",
-          "caption": ""
-        },
-        {
-          "filename": "photo-03.jpg",
-          "caption": ""
-        },
-        {
-          "filename": "photo-04.jpg",
-          "caption": ""
-        },
-        {
-          "filename": "photo-05.jpg",
-          "caption": ""
-        },
-        {
-          "filename": "photo-06.jpg",
-          "caption": ""
-        },
-        {
-          "filename": "photo-07.jpg",
-          "caption": ""
-        },
-        {
-          "filename": "photo-08.jpg",
-          "caption": ""
-        },
-        {
-          "filename": "photo-09.jpg",
-          "caption": ""
-        },
-        {
-          "filename": "photo-10.jpg",
-          "caption": ""
-        },
-        {
-          "filename": "photo-11.jpg",
-          "caption": ""
-        }
-      ],
-      "year": "2005-2012",
-      "role": "Graphic and UI design, programming, photography",
-      "description": "Photography website, featuring a portfolio and blog, developed for my own freelance photography business."
     },
     {
       "id": "bluegold",
