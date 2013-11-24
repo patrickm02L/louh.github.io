@@ -5,7 +5,7 @@
 var projectJSON = 'portfolio.json'
 var projects = {}
 var quotes = []
-var site_title = document.title
+var siteTitle = document.title
 
 var currentProject = null
 var currentPage = null
@@ -129,6 +129,7 @@ function _showMainPage () {
   _hideProject()
   _hideResume()
   $('#main').show()
+  document.title = siteTitle
   _recalculateVideoPlayer()
 }
 
@@ -150,7 +151,7 @@ function _showProject (projectID) {
     var item = projects.items[i]
     if (item.id === projectID) {
       $('#project-view').html(Mustache.render(template, item))
-      document.title = item.name + ' - ' + site_title
+      document.title = item.name + ' - ' + siteTitle
       break
     }
   }
@@ -184,6 +185,7 @@ function _hideProject () {
 function _showResume () {
   _hideMainPage()
   $('#resume-view').show()
+  document.title = 'Resumé - ' + siteTitle
 
   // Scroll to top of page
   $('body').scrollTop(0)
