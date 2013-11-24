@@ -65,6 +65,10 @@ Yes, I made my own choices, and wrote my site's code myself.  It's an ongoing wo
 
     <div role='main'>
 
+      <section id='loader' class='viewer'>
+        <div class='preloader'></div>
+      </section>
+
       <!-- VIEWERS -->
       <section id='project-view' class='viewer'>
         <!-- To be replaced with project data template -->
@@ -410,7 +414,12 @@ Yes, I made my own choices, and wrote my site's code myself.  It's an ongoing wo
               <ul id='orbit' data-orbit>
                 {{#images}}
                 <li>
+                  {{#interchange}}
+                  <img alt='' data-interchange='[portfolio/{{filename}}, (default)], [portfolio/{{medium}}, (medium)],[portfolio/{{large}}, (large)],' class='interchange'>
+                  {{/interchange}}
+                  {{^interchange}}
                   <img src='portfolio/{{filename}}' alt=''>
+                  {{/interchange}}
                   {{#caption}}
                   <div class='orbit-caption'>
                       {{caption}}

@@ -5297,7 +5297,8 @@ section .background-2 {
 .viewer {
   display: none;
   background-color: #eeeeee;
-  padding-bottom: 20px; }
+  padding-bottom: 20px;
+  position: relative; }
   @media only screen and (min-width: 1280px) {
     .viewer {
       padding-bottom: 30px; } }
@@ -5431,6 +5432,8 @@ h4 {
   -moz-transition: opacity 100ms ease-in;
   transition: opacity 100ms ease-in;
   -webkit-transform: translateZ(0); }
+  #portfolio-grid .portfolio-grid-item.faded {
+    opacity: 0.25; }
   #portfolio-grid .portfolio-grid-item:hover {
     background-color: rgba(0, 0, 0, 0.1); }
 #portfolio-grid img {
@@ -5472,6 +5475,8 @@ h4 {
 
 #project-view .slideshow-wrapper {
   min-height: 200px; }
+  #project-view .slideshow-wrapper.legacy {
+    max-width: 650px; }
 #project-view .orbit-bullets {
   display: none; }
 #project-view .project-title {

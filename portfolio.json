@@ -96,15 +96,14 @@
       "id": "2175market",
       "name": "2175 Market",
       "type": "architecture",
-      "status": "portfolio-legacy",
+      "status": "portfolio",
       "images": [
         {
           "filename": "2175market-01.jpg",
+          "interchange": "yes",
+          "medium": "2175market-01-m.jpg",
+          "large": "2175market-01-l.jpg",
           "caption": "Perspective Render"
-        },
-        {
-          "filename": "2175market-05.jpg",
-          "caption": "Plan"
         }
       ],
       "year": "2012",
@@ -113,7 +112,7 @@
       "role": "Designer",
       "team": "Van Meter Williams Pollack",
       "ext_url": "http://www.2175market.com/",
-      "feature_description": "A 80+ unit mixed use development in the Upper Market/Lower Octavia area in San Francisco."
+      "feature_description": "Infill mixed-use development with 88 residential units (mix of studios, 1-bedrooms, and 2-bedroom apartments) located in the Upper Market/Lower Octavia area in San Francisco. Estimated completion date March 2014."
     },
     {
       "id": "sunnydale",

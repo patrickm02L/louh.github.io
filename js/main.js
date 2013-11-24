@@ -8,7 +8,7 @@ var quotes = []
 var siteTitle = document.title
 
 var currentProject = null
-var currentPage = null
+var currentPage = checkHash()
 var projectGrid = null
 
 // Initalize Foundation
@@ -24,7 +24,8 @@ $(document).foundation('orbit', {
 })
 $(document).foundation('interchange', {
   named_queries: {
-    x_small: 'only screen and (max-width: 480px)'
+    medium: 'only screen and (min-width: 481px)',
+    large: 'only screen and (min-width: 768px)'
   }
 })
 
@@ -78,6 +79,7 @@ $(document).ready(function() {
   // Currently using BBQ's hashchange plugin for this functionality.
   // Bind hashchange event to window
   $(window).hashchange(function(){
+    currentPage = checkHash()
     loadHash()
     if (currentProject && !_.isEmpty(projects)) {
       _showProject(currentProject)
@@ -98,21 +100,31 @@ $(document).ready(function() {
     filterProjectGrid(filters, this)
   })
 
+  // Force Interchange to reflow after being replaced.
+  $(document).on('replace', 'img.interchange', function (e, new_path, original_path) {
+    console.log('Reflow interchange')
+    $(document).foundation('interchange', 'reflow')
+    // console.log(e.currentTarget, new_path, original_path);
+  })
 })
 
 
 /* FUNCTIONS */
 
-function loadHash() {
+function checkHash () {
   var rawHash = window.location.hash
   var hash = rawHash.split('/')
-  currentPage = hash[1]
+  var currentPage = hash[1]
   if (rawHash.match(/\/portfolio\//)) {
     currentProject = hash[2]
   }
   else {
     currentProject = null
   }
+  return currentPage
+}
+
+function loadHash () {
   switch(currentPage) {
     case 'resume':
       _showResume()
@@ -158,7 +170,7 @@ function _showProject (projectID) {
 
   // Hack the max-width for legacy portfolio projects
   if (item.status == 'portfolio-legacy') {
-    $('.slideshow-wrapper').css('max-width', '650px')
+    $('.slideshow-wrapper').addClass('legacy')
   }
 
   // To do: handle an error where project isn't found.
@@ -244,7 +256,7 @@ function filterProjectGrid (filters, clicked) {
   // Toggle filter
   if ($(clicked).hasClass('highlight')) {
     $(clicked).removeClass('highlight')
-    $(projectGrid).css('opacity', '1.0')
+    $(projectGrid).removeClass('faded')
     return
   }
 
@@ -260,13 +272,13 @@ function filterProjectGrid (filters, clicked) {
   }
 
   // Refresh all project opacities
-  $(projectGrid).css('opacity', '1.0')
+  $(projectGrid).removeClass('faded')
 
   // Check types and fade out projects that don't match
   var type = $(clicked).data('type')
   for (var i = 0; i < projectGrid.length; i++) {
     if (type != $(projectGrid[i]).data('project-type')) {
-      $(projectGrid[i]).css('opacity', '0.25')
+      $(projectGrid[i]).addClass('faded')
     }
   }
 }
