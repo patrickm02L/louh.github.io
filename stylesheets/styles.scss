@@ -454,6 +454,13 @@ h4 {
 
 #resume-view {
   padding-top: 20px;
+  .subtitle {
+    margin: 0;
+    font-weight: bold;
+    color: gray;
+    position: relative;
+    top: -24px;
+  }
 }
 
 // STUFF

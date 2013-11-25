@@ -5494,6 +5494,12 @@ h4 {
 
 #resume-view {
   padding-top: 20px; }
+  #resume-view .subtitle {
+    margin: 0;
+    font-weight: bold;
+    color: gray;
+    position: relative;
+    top: -24px; }
 
 .external-link {
   font-size: 80%;
