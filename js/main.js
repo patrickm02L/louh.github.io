@@ -100,12 +100,6 @@ $(document).ready(function() {
     filterProjectGrid(filters, this)
   })
 
-  // Force Interchange to reflow after being replaced.
-  $(document).on('replace', 'img.interchange', function (e, new_path, original_path) {
-    console.log('Reflow interchange')
-    $(document).foundation('interchange', 'reflow')
-    // console.log(e.currentTarget, new_path, original_path);
-  })
 })
 
 
@@ -176,9 +170,11 @@ function _showProject (projectID) {
   // To do: handle an error where project isn't found.
 
   // Orbit stuff
+  /*
   $('#orbit').on('orbit:ready', function(event) {
     console.log('Orbit is ready.')
   })
+  */
   $('#orbit').on('orbit:orbit:after-slide-change', function(event) {
     $('.preloader').hide()
   })
@@ -186,6 +182,13 @@ function _showProject (projectID) {
   if (item.images.length <= 1) {
     $('#orbit').attr('data-options', 'navigation_arrows: false')
   }
+
+  // Force Interchange to reflow after being replaced.
+  $(document).on('replace', 'img.interchange', function (e, new_path, original_path) {
+    $(document).foundation('interchange', 'reflow')
+    // console.log(e.currentTarget, new_path, original_path);
+  })
+
   // Force orbit to recalculate itself after loading new stuff.
   $(document).foundation('reflow')
 }
