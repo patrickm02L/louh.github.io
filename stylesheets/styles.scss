@@ -1,3 +1,7 @@
+@import 'vendor/normalize.css';
+@import 'vendor/main.css'; // HTML5 Boilerplate default CSS file
+@import '../fonts/foundation-icons.css';
+
 // VARIABLES
 $main-color:          #5d6262;
 $accent-color:        #d83432;
@@ -13,11 +17,6 @@ $portrait-size-small: 200px;
 @import 'bourbon/bourbon';
 @import 'settings';
 @import 'foundation';
-
-// OTHER CSSES
-@import 'vendor/normalize.css';
-@import 'vendor/main.css'; // HTML5 Boilerplate default CSS file
-@import '../fonts/foundation-icons.css';
 
 // MEDIA QUERIES
 // These are not Foundation defaults but created for convenience
