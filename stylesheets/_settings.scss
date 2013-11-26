@@ -1,0 +1,15 @@
+// Foundation Settings
+
+$primary-color:           $accent-color;
+// $secondary-color:         $main-color;
+$button-border-width:     0;
+$topbar-bg-color:         lighten($background-color, 6%);
+$topbar-height:           60px;
+$topbar-title-weight:     normal;
+$topbar-title-font-size:  20px;
+$topbar-link-color:       $main-color;
+$topbar-link-bg-hover:    #5d6262;
+$topbar-link-bg-active:   #5d6262;
+$topbar-breakpoint:       $x-small-screen;
+$topbar-menu-icon-color:  $main-color;
+$topbar-menu-icon-color-toggled: lighten($main-color, 10%);

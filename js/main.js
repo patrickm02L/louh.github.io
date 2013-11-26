@@ -15,19 +15,22 @@ var projectGrid = null
 $(document).foundation()
 
 // Set up Foundation plugins
-$(document).foundation('orbit', {
-  animation_speed: 250,
-  slide_number: false,
-  bullets: false,
-  timer: false,
-  variable_height: true
-})
-$(document).foundation('interchange', {
-  named_queries: {
-    medium: 'only screen and (min-width: 481px)',
-    large: 'only screen and (min-width: 768px)'
+$(document).foundation({
+  orbit: {
+    animation_speed: 250,
+    slide_number: false,
+    bullets: false,
+    timer: false,
+    variable_height: true    
+  },
+  interchange: {
+    named_queries: {
+      medium: 'only screen and (min-width: 481px)',
+      large: 'only screen and (min-width: 768px)'
+    }
   }
 })
+
 
 /* LOAD DATAS */
 

@@ -9,26 +9,10 @@ $x-small-screen:      480px;
 $portrait-size:       250px;
 $portrait-size-small: 200px;
 
-// OVERRIDE FOUNDATION VARIABLES - see also _variables.scss
-// This needs to come before the foundation import
-$primary-color:           $accent-color;
-// $secondary-color:         $main-color;
-$button-border-width:     0;
-$topbar-bg-color:         lighten($background-color, 6%);
-$topbar-height:           60px;
-$topbar-title-weight:     normal;
-$topbar-title-font-size:  20px;
-$topbar-link-color:       $main-color;
-$topbar-link-bg-hover:    #5d6262;
-$topbar-link-bg-active:   #5d6262;
-$topbar-breakpoint:       $x-small-screen;
-$topbar-menu-icon-color:  $main-color;
-$topbar-menu-icon-color-toggled: lighten($main-color, 10%);
-
 // IMPORTS
 @import 'bourbon/bourbon';
+@import 'settings';
 @import 'foundation';
-@import 'foundation/components/_grid-5';
 
 // OTHER CSSES
 @import 'vendor/normalize.css';
@@ -38,9 +22,6 @@ $topbar-menu-icon-color-toggled: lighten($main-color, 10%);
 // MEDIA QUERIES
 // These are not Foundation defaults but created for convenience
 // This depends on some other Foundation variables, so put it after the Foundation import
-$max-small:   'only screen and (max-width: #{$small-screen - 1px})';
-$max-medium:  'only screen and (max-width: #{$medium-screen - 1px})';
-$max-large:   'only screen and (max-width: #{$large-screen - 1px})';
 $max-x-small: 'only screen and (max-width: #{$x-small-screen - 1px})';
 $x-small:     'only screen and (min-width: #{$x-small-screen})';
 
@@ -235,7 +216,7 @@ footer {
 .bleed {
   // This class, when used with a 'columns' div class, pushes it to the edge of the mobile screen.
   // Great for images that should take up more room.
-  @media #{$max-small} {
+  @media #{$small-only} {
     // Eliminates side padding, if any
     padding-left: 0;
     padding-right: 0;
@@ -297,7 +278,7 @@ h4 {
         background-image: url('../img/portrait-doodle@2x.png');
       }
     }
-    @media #{$max-small} {
+    @media #{$small-only} {
       width: $portrait-size-small;
       height: $portrait-size-small;
     }
@@ -390,7 +371,7 @@ h4 {
       color: $black;
       font-weight: bold;
       line-height: 16px;
-      @media #{$max-small} {
+      @media #{$small-only} {
         font-size: 14px;
         line-height: 14px;
       }
