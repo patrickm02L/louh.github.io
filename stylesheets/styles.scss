@@ -158,9 +158,6 @@ nav {
     min-height: 400px;
     padding: 20px 0;
     @media #{$small} {
-      padding: 30px 0;
-    }
-    @media #{$medium} {
       padding: 60px 0;
     }
     @media #{$large} {
@@ -242,7 +239,7 @@ footer {
     // Eliminates side padding, if any
     padding-left: 0;
     padding-right: 0;
-    & > img {
+    & > a img {
       // Eliminates left and right borders of images, if any
       border-left: 0 !important;
       border-right: 0 !important;
