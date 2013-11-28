@@ -21,8 +21,9 @@ $portrait-size-small: 200px;
 // MEDIA QUERIES
 // These are not Foundation defaults but created for convenience
 // This depends on some other Foundation variables, so put it after the Foundation import
-$max-x-small: 'only screen and (max-width: #{$x-small-screen - 1px})';
-$x-small:     'only screen and (min-width: #{$x-small-screen})';
+$max-x-small: '#{$screen} and (max-width: #{$x-small-screen - 1px})';
+$x-small:     '#{$screen} and (min-width: #{$x-small-screen})';
+$bleed-dimensions: 970px;
 
 $retina-screen: 'only screen and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)';
 
@@ -76,14 +77,10 @@ $retina-screen: 'only screen and (-webkit-min-device-pixel-ratio: 2), (min-resol
 // LAYOUT
 
 body {
-  background: $background-color;
-  color: $black;
-  font: 16px/24px 'Neris', "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
   overflow-x: hidden;
 }
 
 .top-bar-container {
-  z-index: 900;
   border-bottom: 1px solid darken($background-color, 5%);
 }
 
@@ -113,14 +110,11 @@ nav {
   }
   .top-bar-section ul {
     // Hack for bottom border
-    @media #{$x-small} {
+    @media #{$small} {
       margin-top: -1px;
     }
   }
   .social-icons {
-    li {
-      font-size: 190%;
-    }
     @media #{$x-small} {
       span {
         display: none;
@@ -138,10 +132,10 @@ nav {
     min-height: 400px;
     padding: 20px 0;
     @media #{$small} {
-      padding: 60px 0;
+      padding: 40px 0;
     }
     @media #{$large} {
-      padding: 80px;
+      padding: 60px 0;
     }
   }
   section:not(#portfolio) {
@@ -180,22 +174,20 @@ footer {
   @media #{$large} {
     padding: 60px 0;
   }
-  h2 {
-    display: none;
-  }
   ul {
     list-style: none;
   }
   li {
     display: inline-block;
     margin-right: 30px;
+    font-size: 14px;
+    &:last-of-type {
+      margin-right: 0;
+    }
     @media #{$max-x-small} {
       margin-right: 0;
       width: 100%;
     }
-  }
-  li:last-of-type {
-    margin-right: 0;
   }
   a {
     // Override default link color styles
@@ -215,8 +207,15 @@ footer {
 .bleed {
   // This class, when used with a 'columns' div class, pushes it to the edge of the mobile screen.
   // Great for images that should take up more room.
-  @media #{$small-only} {
+  @media #{$screen} and (max-width: #{$bleed-dimensions}) {
     // Eliminates side padding, if any
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.small-bleed {
+  @media #{$small-only} {
     padding-left: 0;
     padding-right: 0;
     & > a img {
@@ -224,6 +223,7 @@ footer {
       border-left: 0 !important;
       border-right: 0 !important;
     }
+
   }
 }
 
@@ -249,6 +249,10 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   -webkit-font-smoothing: antialiased; /* Prevents fonts looking so bold on Mac */
+}
+
+h3 {
+  margin-bottom: 10px;
 }
 
 h4 {
@@ -414,15 +418,13 @@ h4 {
   .project-title {
     margin-top: 20px;
   }
+  .project-data .row {
+    line-height: rem-calc(24);
+  }
   .project-data-key {
     font-size: 80%;
     text-transform: uppercase;
     color: gray;
-    // Positioning hack
-    padding-left: 15px;
-    @media #{$max-x-small} {
-      font-size: 60%;
-    }
   }
   .project-description {
     margin-top: 16px;
@@ -436,7 +438,8 @@ h4 {
     font-weight: bold;
     color: gray;
     position: relative;
-    top: -24px;
+    top: -14px;
+    left: 2px;
   }
 }
 
@@ -459,21 +462,10 @@ a.button {
 
 div.epilogue {
   color: darken($background-color, 45%);
-  .quote {
-    &::before {
-      content: '”';
-    }
-    &::after {
-      content: '”';
-    }
-  }
   .author {
     text-transform: uppercase;
-    font-size: 80%;
+    font-size: rem-calc(10);
     white-space: nowrap;
-    &::before {
-      content: '  — ';
-    }
   }
 }
 
