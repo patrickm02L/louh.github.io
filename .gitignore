@@ -2,3 +2,4 @@ _dev
 _temp
 bower_components
 node_modules
+npm-debug.log
