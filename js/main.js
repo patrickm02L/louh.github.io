@@ -22,7 +22,9 @@ $(document).foundation({
     bullets: false,
     timer: false,
     variable_height: true    
-  },
+  }
+})
+/*
   interchange: {
     named_queries: {
       medium: 'only screen and (min-width: 481px)',
@@ -30,7 +32,7 @@ $(document).foundation({
     }
   }
 })
-
+*/
 
 /* LOAD DATAS */
 
@@ -178,6 +180,7 @@ function _showProject (projectID) {
     console.log('Orbit is ready.')
   })
   */
+  /*
   $('#orbit').on('orbit:orbit:after-slide-change', function(event) {
     $('.preloader').hide()
   })
@@ -191,6 +194,7 @@ function _showProject (projectID) {
     $(document).foundation('interchange', 'reflow')
     // console.log(e.currentTarget, new_path, original_path);
   })
+  */
 
   // Force orbit to recalculate itself after loading new stuff.
   $(document).foundation('reflow')
