@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html class='no-js'>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+
+    <title>{{title}}</title>
+
+    <meta name='description' content='Lou Huang is an urban designer and front-end web developer who uses technology to improve cities.'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <meta property='og:title' content='Lou Huang'>
+    <meta property='og:type' content='website'>
+    <meta property='og:url' content='http://louhuang.com/'>
+    <meta property='og:image' content='http://louhuang.com/img/portrait.jpg'>
+
+    <link rel='icon' type='image/png' href='favicon.png'>
+
+    <link rel='stylesheet' href='stylesheets/styles.css'>
+    <script src='js/vendor/modernizr-2.7.0.js'></script>
+  </head>
+<!-- 
+Hello! If you are looking at this code to see what frameworks / libraries / etc I used, welcome!  To save you some time, here are some development-related buzz words about it:
+
+Single-page app with static content hosted on GitHub Pages, built with a responsive, mobile-first front-end framework.
+
+Enjoy!
+// -->
+  <body>
+    <!--[if lte IE 9]>
+    <p class='browsehappy'>You are using an <strong>outdated</strong> browser. Please <a href='http://browsehappy.com/'>upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    {{> topbar }}
+
+    <div role='main'>
+
+      {{> body }}
+
+    </div>
+
+    {{> footer }}
+
+    {{> javascripts }}
+
+    {{> anaytics }}
+
+  </body>
+</html>
