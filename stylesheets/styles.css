@@ -4678,7 +4678,6 @@ section .background-2 {
   background-color: #f8f8f8; }
 
 .viewer {
-  display: none;
   background-color: #eeeeee;
   padding-bottom: 20px;
   position: relative; }
