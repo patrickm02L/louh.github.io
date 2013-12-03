@@ -25,16 +25,14 @@ module.exports = function (grunt) {
         layout:    'default.hbs',
         partials:  'templates/partials/**/*.hbs',
       },
-/*
       site: {
         options: {
 
         },
         files: {
-          'index.html': ['index.hbs']
+          'index.html': ['templates/layouts/main.hbs']
         }
       },
-*/
       resume: {
         files: {
           'resume/index.html': ['templates/layouts/resume.hbs']
@@ -54,7 +52,7 @@ module.exports = function (grunt) {
     },
 
     watch: {
-      grunt: { 
+      grunt: {
         files: ['Gruntfile.js'],
         tasks: ['sass']
       },
@@ -68,7 +66,6 @@ module.exports = function (grunt) {
 
   grunt.loadNpmTasks('grunt-sass')
   grunt.loadNpmTasks('grunt-contrib-watch')
-  grunt.loadNpmTasks('grunt-newer')
   grunt.loadNpmTasks('assemble')
 
   grunt.registerTask('build', ['sass'])
