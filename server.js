@@ -1,7 +1,7 @@
 'use strict'
 
 // Basic node express server for local testing
-var PORT     = 4444,
+var PORT     = 8100,
     express  = require('express'),
     path     = require('path')
 
@@ -15,3 +15,5 @@ app.configure(function () {
 app.listen(app.get('port'), function () {
   console.log('Listening on port ' + app.get('port'))
 })
+
+module.exports = app
