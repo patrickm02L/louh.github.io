@@ -2,13 +2,15 @@
 
 /* INITIALIZE */
 
-var projectJSON = 'portfolio.json'
+var rootDir = '/'
+var projectJSON = rootDir + 'portfolio.json'
 var projects = {}
+var quotesJSON = rootDir + 'quotes.json'
 var quotes = []
 var siteTitle = document.title
 
 var currentProject = null
-var currentPage = checkHash()
+//var currentPage = checkHash()
 var projectGrid = null
 
 // Initalize Foundation
@@ -39,7 +41,7 @@ $(document).foundation({
 // QUOTES
 $.when(
   $.ajax({
-    url: 'quotes.json',
+    url: quotesJSON,
     async: true,
     dataType: 'json',
     success: function (data) {
@@ -83,6 +85,7 @@ $(document).ready(function() {
   // Load portfolio or resume items immediately if link contains hash elements
   // Currently using BBQ's hashchange plugin for this functionality.
   // Bind hashchange event to window
+  /*
   $(window).hashchange(function(){
     currentPage = checkHash()
     loadHash()
@@ -92,6 +95,7 @@ $(document).ready(function() {
   })
   // Trigger hashchange immediately
   $(window).hashchange()
+  */
 
   // Actions to perform whenever the screen size changes
   $(window).resize(function () {
@@ -110,6 +114,7 @@ $(document).ready(function() {
 
 /* FUNCTIONS */
 
+/*
 function checkHash () {
   var rawHash = window.location.hash
   var hash = rawHash.split('/')
@@ -147,6 +152,7 @@ function _showMainPage () {
 function _hideMainPage () {
   $('#main').hide()
 }
+*/
 
 function _showProject (projectID) {
   // Adjust DOM
@@ -204,6 +210,7 @@ function _hideProject () {
   $('#project-view').hide()
 }
 
+/*
 function _showResume () {
   _hideMainPage()
   $('#resume-view').show()
@@ -216,6 +223,7 @@ function _showResume () {
 function _hideResume () {
   $('#resume-view').hide()
 }
+*/
 
 function _recalculateVideoPlayer () {
   var ratio  = 0.562 // ratio for video width/height

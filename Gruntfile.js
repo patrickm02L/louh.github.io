@@ -1,4 +1,6 @@
-'use strict';
+'use strict'
+
+var path = require('path')
 
 module.exports = function (grunt) {
   grunt.initConfig({
@@ -18,32 +20,37 @@ module.exports = function (grunt) {
 
     assemble: {
       options: {
-        assets: '_assets',
-        data:   'config.json',
-        layout: '_layouts/default.hbs'
+        assets:    '',
+        layoutdir: 'templates/layouts',
+        layout:    'default.hbs',
+        partials:  'templates/partials/**/*.hbs',
       },
+/*
       site: {
         options: {
 
         },
         files: {
-          'index.html': ['_layouts/index.hbs']
+          'index.html': ['index.hbs']
         }
       },
+*/
       resume: {
         files: {
-          'resume/index.html': ['_layouts/resume.hbs']
-        }
-      },
-      portfolio: {
-        options: {
-          layout: '_layouts/project.hbs',
-          partials: '_partials/**/*.hbs' 
-        },
-        files: {
-          'portfolio/': ['portfolio/**/*.hbs' ]
+          'resume/index.html': ['templates/layouts/resume.hbs']
         }
       }
+      /*,
+      portfolio: {
+        options: {
+          assets:   'portfolio/'
+          data:     'portfolio.json',
+          layout:   'project.hbs',
+        },
+        files: {
+          'portfolio/': ['portfolio//*.hbs' ]
+        }
+      }*/
     },
 
     watch: {
@@ -65,7 +72,7 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('assemble')
 
   grunt.registerTask('build', ['sass'])
-  grunt.registerTask('assemble', ['newer:assemble'])
+  grunt.registerTask('make', ['assemble'])
   grunt.registerTask('default', ['build', 'watch'])
   
 }
