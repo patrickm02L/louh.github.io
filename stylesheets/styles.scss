@@ -151,16 +151,6 @@ section {
   }
 }
 
-.viewer {
-  // TODO: Do I still need this if doing static templating.
-  background-color: $background-color;
-  padding-bottom: 20px;
-  position: relative;
-  @media #{$medium} {
-    padding-bottom: 30px;
-  }
-}
-
 footer {
   background-color: $main-color;
   color: darken($background-color, 20%);
@@ -396,14 +386,9 @@ h4 {
     margin-bottom: 20px;
   }
 }
-#resume {
-  display: none;
-}
-#templates {
-  display: none;
-}
 
-#project-view  {
+// OTHER PAGES
+#project  {
   .slideshow-wrapper {
     min-height: 200px;
     &.legacy {
@@ -431,7 +416,7 @@ h4 {
   }
 }
 
-#resume-view {
+#resume {
   padding-top: 20px;
   .subtitle {
     margin: 0;
@@ -440,6 +425,13 @@ h4 {
     position: relative;
     top: -14px;
     left: 2px;
+  }
+}
+
+#resume, #project {
+  padding-bottom: 20px;
+  @media #{$medium} {
+    padding-bottom: 30px;
   }
 }
 
