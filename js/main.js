@@ -3,17 +3,31 @@
 
   /* INITIALIZE */
 
+  // Constants
+  var SITE_TITLE    = document.title
+
+  var DATA_PATH          = '/data/',
+      DATA_PROJECTS_PATH = DATA_PATH + 'portfolio.json',
+      DATA_QUOTES_PATH   = DATA_PATH + 'quotes.json',
+      DATA_PROJECTS      = {},
+      DATA_QUOTES        = []
+
+  var TEMPLATE_PATH                   = '/templates/partials/',
+      TEMPLATE_FEATURED_PROJECTS_PATH = TEMPLATE_PATH + 'featured.hbs',
+      TEMPLATE_PROJECT_GRID_ITEM_PATH = TEMPLATE_PATH + 'portfolio-grid-item.hbs',
+      TEMPLATE_FEATURED_PROJECTS,
+      TEMPLATE_PROJECT_GRID_ITEM
+
   var page = {}
-  var dataFolder = '/data/'
-  var projectJSON = dataFolder + 'portfolio.json'
-  var projects = {}
-  var quotesJSON = dataFolder + 'quotes.json'
-  var quotes = []
-  var siteTitle = document.title
 
   var currentProject = null
   //var currentPage = checkHash()
   var projectGrid = null
+
+  // Set up Underscore to use Mustache-style templating
+  _.templateSettings = {
+    interpolate: /\{\{(.+?)\}\}/g
+  }
 
   // Page object
   page.recalculateVideoPlayer = function () {
@@ -22,6 +36,52 @@
     var height = width * ratio
     $('.video-wrapper').css('height', height + 'px')
   }
+
+  // Displays all current / featured / recent projects
+  page.displayFeaturedProjects = function (template, projects) {
+    var snippet = _.template(template)
+    for (var i = 0; i < projects.items.length; i++) {
+      var project = projects.items[i]
+      if (project.status == 'featured') {
+        document.getElementById('projects').innerHTML += snippet(project)
+        //$('#projects').append(snippet(project))
+      }
+    }
+    // If there is a placeholder preloader thing, hide it
+    // $('#projects .preloader').hide()
+  }
+
+  // Displays all portfolio projects
+  page.displayProjectGrid = function (template, projects) {
+    var snippet  = _.template(template)
+    var multiple = 6
+    var items    = []
+
+    for (var i = 0; i < projects.items.length; i++) {
+      var project = projects.items[i]
+      if (project.status == 'portfolio' || project.status == 'portfolio-legacy') {
+        items.push(project)
+      }
+    }
+
+    // Only display items up to a multiple of 6 to ensure that items are evenly spaced on either a 3x or 2x grid.
+    // The actual multiple can be changed in the future, if the layout changes.
+    var gridLength = Math.floor(items.length / multiple) * multiple
+
+    for (var j = 0; j < gridLength; j++) {
+      $('#portfolio-grid').append(snippet(items[j]))
+    }
+
+    $('#portfolio .preloader').hide()
+  }
+
+  // Display a random quote on the page
+  page.displayRandomQuote = function (quotes) {
+    var i = Math.floor(Math.random() * quotes.length)
+    document.querySelector('.quote').innerHTML  = quotes[i].quote
+    document.querySelector('.author').innerHTML = quotes[i].author
+  }
+
 
   // Initalize Foundation
   $(document).foundation()
@@ -51,11 +111,11 @@
   // QUOTES
   $.when(
     $.ajax({
-      url: quotesJSON,
+      url: DATA_QUOTES_PATH,
       async: true,
       dataType: 'json',
       success: function (data) {
-        quotes = data.quotes
+        DATA_QUOTES = data.quotes
       },
       error: function (jqxhr, status, error) {
         console.log('Error loading quotes. Status: ' + status + '. Error: ' + error)
@@ -63,29 +123,53 @@
     })
   ).then(function() {
     // Do stuff with quotes
-    displayRandomQuote(quotes)
+    page.displayRandomQuote(DATA_QUOTES)
   })
 
   // PROJECTS
   $.when(
     $.ajax({
-      url: projectJSON,
+      url: DATA_PROJECTS_PATH,
       async: true,
       dataType: 'json',
-      success: function(data) {
-        projects = data;
+      success: function (data) {
+        DATA_PROJECTS = data
       },
       error: function (jqxhr, status, error) {
         console.log('Error loading projects. Status: ' + status + '. Error: ' + error)
       }
+    }),
+    $.ajax({
+      url: TEMPLATE_FEATURED_PROJECTS_PATH,
+      async: true,
+      dataType: 'html',
+      success: function (data) {
+        TEMPLATE_FEATURED_PROJECTS = data
+      },
+      error: function (jqxhr, status, error) {
+        console.log('Error loading ' + TEMPLATE_FEATURED_PROJECTS_PATH +'. Status: ' + status + '. Error: ' + error)
+      }
+    }),
+    $.ajax({
+      url: TEMPLATE_PROJECT_GRID_ITEM_PATH,
+      async: true,
+      dataType: 'html',
+      success: function (data) {
+        TEMPLATE_PROJECT_GRID_ITEM = data
+      },
+      error: function (jqxhr, status, error) {
+        console.log('Error loading ' + TEMPLATE_PROJECT_GRID_ITEM_PATH +'. Status: ' + status + '. Error: ' + error)
+      }
     })
   ).then(function() {
     // Do stuff with projects
+    /*
     if (currentProject) {
       _showProject(currentProject)
     }
-    displayFeaturedProjects(projects)
-    displayProjectGrid(projects)
+    */
+    page.displayFeaturedProjects(TEMPLATE_FEATURED_PROJECTS, DATA_PROJECTS)
+    page.displayProjectGrid(TEMPLATE_PROJECT_GRID_ITEM, DATA_PROJECTS)
   })
 
   /* INTERFACE */
@@ -220,10 +304,6 @@
     $(document).foundation('reflow')
   }
 
-  function _hideProject () {
-    $('#project-view').hide()
-  }
-
   /*
   function _showResume () {
     _hideMainPage()
@@ -239,43 +319,6 @@
   }
   */
 
-
-  // Displays all current / featured / recent projects
-  function displayFeaturedProjects (projects) {
-    var template = $('#m_featured_project').html()
-    for (var i = 0; i < projects.items.length; i++) {
-      var project = projects.items[i]
-      if (project.status == 'featured') {
-        $('#projects').append(Mustache.render(template, project))
-        $('#projects .preloader').hide()
-      }
-    }
-  }
-
-  // Displays all portfolio projects
-  function displayProjectGrid (projects) {
-    var template = $('#m_portfolio_grid').html()
-    var multiple = 6
-
-    var items = []
-
-    for (var i = 0; i < projects.items.length; i++) {
-      var project = projects.items[i]
-      if (project.status == 'portfolio' || project.status == 'portfolio-legacy') {
-        items.push(project)
-      }
-    }
-
-    // Only display items up to a multiple of 6 to ensure that items are evenly spaced on either a 3x or 2x grid.
-    // The actual multiple can be changed in the future, if the layout changes.
-    var gridLength = Math.floor(items.length / multiple) * multiple
-
-    for (var j = 0; j < gridLength; j++) {
-      $('#portfolio-grid').append(Mustache.render(template, items[j]))
-    }
-
-    $('#portfolio .preloader').hide()
-  }
 
   function filterProjectGrid (filters, clicked) {
 
@@ -309,11 +352,5 @@
     }
   }
 
-  function displayRandomQuote (quotes) {
-    // Quotes should be an array
-    var i = Math.floor(Math.random() * quotes.length)
-    $('.quote').html(quotes[i].quote)
-    $('.author').html(quotes[i].author)
-  }
 
 }())
