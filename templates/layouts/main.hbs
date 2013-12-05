@@ -145,3 +145,49 @@
   </section>
 
 </section>
+
+<section id='templates'>
+
+  <script type='text/template' id='template-featured'>
+    <div class='row'>
+      <div class='large-8 large-push-4 medium-7 medium-push-5 columns small-bleed'>
+        <a href='/portfolio/<%= id %>'><img src='portfolio/thumbnails/thumb-<%= id %>.png' width='100%' alt=''></a>
+      </div>
+      <div class='large-4 large-pull-8 medium-5 medium-pull-7 columns'>
+        <h4><%= name %></h4>
+        <p class='text'>
+          <%= feature_description %>
+        </p>
+        <p class='info'>
+          <% if (role) { %>
+          <span>My roles.</span>
+          <%= role %>
+          <% } %>
+        </p>
+        <p class='info'>
+          <% if (ext_url) { %>
+          <span>Website.</span>
+          <a href='<%= ext_url %>' target='_blank'><%= ext_url %></a>
+          <% } %>
+        </p>
+      </div>
+    </div>
+  </script>
+
+  <script type='text/template' id='template-portfolio-grid-item'>
+    <li class='portfolio-grid-item' data-project-type='<%= type %>'>
+      <a href='#/portfolio/<%= id %>'>
+        <img src='portfolio/thumbnails/<% if (_.isUndefined(thumbnail)) { print(id) } else { print('thumb-' + id) } %>'>
+        <div class='portfolio-name'>
+          <div class='caption'>
+            <%= name %>
+            <br>
+            <span class='subtitle'><%= location %></span>
+          </div>
+        </div>
+      </a>
+    </li>
+  </script>
+
+</section>
+

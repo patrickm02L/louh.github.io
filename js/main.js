@@ -12,24 +12,13 @@
       DATA_PROJECTS      = {},
       DATA_QUOTES        = []
 
-  var TEMPLATE_PATH                   = '/templates/partials/',
-      TEMPLATE_FEATURED_PROJECTS_PATH = TEMPLATE_PATH + 'featured.hbs',
-      TEMPLATE_PROJECT_GRID_ITEM_PATH = TEMPLATE_PATH + 'portfolio-grid-item.hbs',
-      TEMPLATE_FEATURED_PROJECTS,
-      TEMPLATE_PROJECT_GRID_ITEM
-
+  // Page object
   var page = {}
 
-  var currentProject = null
-  //var currentPage = checkHash()
-  var projectGrid = null
+  // Object variables
+  page.projectGrid = null
 
-  // Set up Underscore to use Mustache-style templating
-  _.templateSettings = {
-    interpolate: /\{\{(.+?)\}\}/g
-  }
-
-  // Page object
+  // Recalculate DOM element for video player depending on screen size
   page.recalculateVideoPlayer = function () {
     var ratio  = 0.562 // ratio for video width/height
     var width  = $('.video-wrapper').width()
@@ -38,21 +27,22 @@
   }
 
   // Displays all current / featured / recent projects
-  page.displayFeaturedProjects = function (template, projects) {
+  page.displayFeaturedProjects = function (projects) {
+    var template = document.getElementById('template-featured').innerHTML
     var snippet = _.template(template)
     for (var i = 0; i < projects.items.length; i++) {
       var project = projects.items[i]
       if (project.status == 'featured') {
         document.getElementById('projects').innerHTML += snippet(project)
-        //$('#projects').append(snippet(project))
       }
     }
-    // If there is a placeholder preloader thing, hide it
-    // $('#projects .preloader').hide()
+    // Hide preloader
+    $('#projects .preloader').hide()
   }
 
   // Displays all portfolio projects
-  page.displayProjectGrid = function (template, projects) {
+  page.displayProjectGrid = function (projects) {
+    var template = document.getElementById('template-portfolio-grid-item').innerHTML
     var snippet  = _.template(template)
     var multiple = 6
     var items    = []
@@ -80,6 +70,39 @@
     var i = Math.floor(Math.random() * quotes.length)
     document.querySelector('.quote').innerHTML  = quotes[i].quote
     document.querySelector('.author').innerHTML = quotes[i].author
+  }
+
+  // Filters projects by type
+  page.filterProjectGrid = function (filters, clicked) {
+    // Cache project grid
+    if (this.projectGrid === null) {
+      this.projectGrid = $('#portfolio-grid').find('.portfolio-grid-item')
+    }
+    var projectGrid = this.projectGrid
+
+    // Toggle filter
+    if ($(clicked).hasClass('highlight')) {
+      $(clicked).removeClass('highlight')
+      $(projectGrid).removeClass('faded')
+      return
+    }
+
+    // Clear all previous buttons
+    $(filters).removeClass('highlight')
+
+    // Highlight button
+    $(clicked).addClass('highlight')
+
+    // Refresh all project opacities
+    $(projectGrid).removeClass('faded')
+
+    // Check types and fade out projects that don't match
+    var type = $(clicked).data('type')
+    for (var i = 0; i < projectGrid.length; i++) {
+      if (type != $(projectGrid[i]).data('project-type')) {
+        $(projectGrid[i]).addClass('faded')
+      }
+    }
   }
 
 
@@ -122,7 +145,6 @@
       }
     })
   ).then(function() {
-    // Do stuff with quotes
     page.displayRandomQuote(DATA_QUOTES)
   })
 
@@ -138,38 +160,10 @@
       error: function (jqxhr, status, error) {
         console.log('Error loading projects. Status: ' + status + '. Error: ' + error)
       }
-    }),
-    $.ajax({
-      url: TEMPLATE_FEATURED_PROJECTS_PATH,
-      async: true,
-      dataType: 'html',
-      success: function (data) {
-        TEMPLATE_FEATURED_PROJECTS = data
-      },
-      error: function (jqxhr, status, error) {
-        console.log('Error loading ' + TEMPLATE_FEATURED_PROJECTS_PATH +'. Status: ' + status + '. Error: ' + error)
-      }
-    }),
-    $.ajax({
-      url: TEMPLATE_PROJECT_GRID_ITEM_PATH,
-      async: true,
-      dataType: 'html',
-      success: function (data) {
-        TEMPLATE_PROJECT_GRID_ITEM = data
-      },
-      error: function (jqxhr, status, error) {
-        console.log('Error loading ' + TEMPLATE_PROJECT_GRID_ITEM_PATH +'. Status: ' + status + '. Error: ' + error)
-      }
     })
   ).then(function() {
-    // Do stuff with projects
-    /*
-    if (currentProject) {
-      _showProject(currentProject)
-    }
-    */
-    page.displayFeaturedProjects(TEMPLATE_FEATURED_PROJECTS, DATA_PROJECTS)
-    page.displayProjectGrid(TEMPLATE_PROJECT_GRID_ITEM, DATA_PROJECTS)
+    page.displayFeaturedProjects(DATA_PROJECTS)
+    page.displayProjectGrid(DATA_PROJECTS)
   })
 
   /* INTERFACE */
@@ -177,23 +171,6 @@
     
     // INIT
     page.recalculateVideoPlayer()
-
-
-    /* INITIALIZE HASHCHANGE PLUGIN */
-    // Load portfolio or resume items immediately if link contains hash elements
-    // Currently using BBQ's hashchange plugin for this functionality.
-    // Bind hashchange event to window
-    /*
-    $(window).hashchange(function(){
-      currentPage = checkHash()
-      loadHash()
-      if (currentProject && !_.isEmpty(projects)) {
-        _showProject(currentProject)
-      }
-    })
-    // Trigger hashchange immediately
-    $(window).hashchange()
-    */
 
     // Actions to perform whenever the screen size changes
     $(window).resize(function () {
@@ -204,54 +181,13 @@
     var filters = $('#portfolio').find('.filter')
     filters.click(function (e) {
       e.preventDefault()
-      filterProjectGrid(filters, this)
+      page.filterProjectGrid(filters, this)
     })
 
   })
 
 
   /* FUNCTIONS */
-
-  /*
-  function checkHash () {
-    var rawHash = window.location.hash
-    var hash = rawHash.split('/')
-    var currentPage = hash[1]
-    if (rawHash.match(/\/portfolio\//)) {
-      currentProject = hash[2]
-    }
-    else {
-      currentProject = null
-    }
-    return currentPage
-  }
-
-  function loadHash () {
-    switch(currentPage) {
-      case 'resume':
-        _showResume()
-        break
-      case 'portfolio':
-        // Nothing here, because this is handled elsewhere.
-      default:
-        _showMainPage()
-        break
-    }
-  }
-
-  function _showMainPage () {
-    _hideProject()
-    _hideResume()
-    $('#main').show()
-    document.title = siteTitle
-    _recalculateVideoPlayer()
-  }
-
-  function _hideMainPage () {
-    $('#main').hide()
-  }
-  */
-
   function _showProject (projectID) {
     // Adjust DOM
     _hideMainPage()
@@ -303,54 +239,5 @@
     // Force orbit to recalculate itself after loading new stuff.
     $(document).foundation('reflow')
   }
-
-  /*
-  function _showResume () {
-    _hideMainPage()
-    $('#resume-view').show()
-    document.title = 'Resumé - ' + siteTitle
-
-    // Scroll to top of page
-    $('body').scrollTop(0)
-  }
-
-  function _hideResume () {
-    $('#resume-view').hide()
-  }
-  */
-
-
-  function filterProjectGrid (filters, clicked) {
-
-    // Toggle filter
-    if ($(clicked).hasClass('highlight')) {
-      $(clicked).removeClass('highlight')
-      $(projectGrid).removeClass('faded')
-      return
-    }
-
-    // Clear all previous buttons
-    $(filters).removeClass('highlight')
-
-    // Highlight button
-    $(clicked).addClass('highlight')
-
-    // Cache project grid on first filter click
-    if (projectGrid === null) {
-      projectGrid = $('#portfolio-grid').find('.portfolio-grid-item')
-    }
-
-    // Refresh all project opacities
-    $(projectGrid).removeClass('faded')
-
-    // Check types and fade out projects that don't match
-    var type = $(clicked).data('type')
-    for (var i = 0; i < projectGrid.length; i++) {
-      if (type != $(projectGrid[i]).data('project-type')) {
-        $(projectGrid[i]).addClass('faded')
-      }
-    }
-  }
-
 
 }())
