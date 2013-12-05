@@ -4655,6 +4655,11 @@ nav .logo {
 @media only screen and (min-width:40.063em) {
   nav .top-bar-section ul {
     margin-top: -1px; } }
+@media only screen and (max-width: 40em) {
+  nav .social-icons i {
+    display: inline-block;
+    width: 22px;
+    margin-right: 6px; } }
 @media only screen and (min-width:40.063em) {
   nav .social-icons span {
     display: none; } }
