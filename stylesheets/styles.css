@@ -4789,6 +4789,8 @@ h4 {
   color: gray; }
   #projects .info span {
     color: #b52222; }
+  #projects .info a {
+    color: gray; }
 
 #portfolio {
   background-color: #eeeeee; }
@@ -4880,6 +4882,9 @@ h4 {
   @media only screen and (min-width:40.063em) {
     #resume, #project {
       padding-bottom: 30px; } }
+
+#templates {
+  display: none; }
 
 .external-link {
   font-size: 80%;

@@ -304,6 +304,9 @@ h4 {
     span {
       color: $link-color;
     }
+    a {
+      color: gray;
+    }
   }
 }
 
@@ -433,6 +436,10 @@ h4 {
   @media #{$medium} {
     padding-bottom: 30px;
   }
+}
+
+#templates {
+  display: none;
 }
 
 // STUFF
