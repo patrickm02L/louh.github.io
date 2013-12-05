@@ -23,14 +23,6 @@
       this._initFoundation()
     },
 
-    recalculateVideoPlayer: function () {
-      // Recalculate DOM element for video player depending on screen size
-      var ratio  = 0.562 // ratio for video width/height
-      var width  = $('.video-wrapper').width()
-      var height = width * ratio
-      $('.video-wrapper').css('height', height + 'px')
-    },
-
     displayFeaturedProjects: function (projects) {
       // Displays all current / featured / recent projects
       var template = document.getElementById('template-featured').innerHTML
@@ -186,14 +178,6 @@
 
     // Main page UI
     if (!CURRENT_PAGE) {
-      // INIT
-      page.recalculateVideoPlayer()
-
-      // Actions to perform whenever the screen size changes
-      $(window).resize(function () {
-        page.recalculateVideoPlayer()
-      })
-
       // Filter project grid
       var filters = $('#portfolio').find('.filter')
       filters.click(function (e) {
