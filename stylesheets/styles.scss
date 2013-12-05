@@ -115,7 +115,16 @@ nav {
     }
   }
   .social-icons {
+    @media #{$small-only} {
+      // For mobile dropdown, add a right margin to icons
+      i {
+        display: inline-block;
+        width: 22px;
+        margin-right: 6px;
+      }
+    }
     @media #{$small} {
+      // For non-mobile screens, hide text
       span {
         display: none;
       }

@@ -182,6 +182,8 @@
   /* INTERFACE */
   $(document).ready(function() {
     
+    page.init()
+
     // Main page UI
     if (!CURRENT_PAGE) {
       // INIT
