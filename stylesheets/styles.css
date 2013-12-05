@@ -541,12 +541,12 @@ button, .button {
     margin: 0;
     float: left; }
     .button-group > * > button, .button-group > * .button {
-      border-right: 1px solid;
+      border-right: 0 solid;
       border-color: rgba(255, 255, 255, 0.5); }
     .button-group > *:first-child {
       margin-left: 0; }
   .button-group.radius > * > button, .button-group.radius > * .button {
-    border-right: 1px solid;
+    border-right: 0 solid;
     border-color: rgba(255, 255, 255, 0.5); }
   .button-group.radius > *:first-child, .button-group.radius > *:first-child > a, .button-group.radius > *:first-child > button, .button-group.radius > *:first-child > .button {
     -moz-border-radius-bottomleft: 3px;
@@ -563,7 +563,7 @@ button, .button {
     border-top-right-radius: 3px;
     border-bottom-right-radius: 3px; }
   .button-group.round > * > button, .button-group.round > * .button {
-    border-right: 1px solid;
+    border-right: 0 solid;
     border-color: rgba(255, 255, 255, 0.5); }
   .button-group.round > *:first-child, .button-group.round > *:first-child > a, .button-group.round > *:first-child > button, .button-group.round > *:first-child > .button {
     -moz-border-radius-bottomleft: 1000px;
@@ -582,49 +582,49 @@ button, .button {
   .button-group.even-2 li {
     width: 50%; }
     .button-group.even-2 li > button, .button-group.even-2 li .button {
-      border-right: 1px solid;
+      border-right: 0 solid;
       border-color: rgba(255, 255, 255, 0.5); }
     .button-group.even-2 li button, .button-group.even-2 li .button {
       width: 100%; }
   .button-group.even-3 li {
     width: 33.33333%; }
     .button-group.even-3 li > button, .button-group.even-3 li .button {
-      border-right: 1px solid;
+      border-right: 0 solid;
       border-color: rgba(255, 255, 255, 0.5); }
     .button-group.even-3 li button, .button-group.even-3 li .button {
       width: 100%; }
   .button-group.even-4 li {
     width: 25%; }
     .button-group.even-4 li > button, .button-group.even-4 li .button {
-      border-right: 1px solid;
+      border-right: 0 solid;
       border-color: rgba(255, 255, 255, 0.5); }
     .button-group.even-4 li button, .button-group.even-4 li .button {
       width: 100%; }
   .button-group.even-5 li {
     width: 20%; }
     .button-group.even-5 li > button, .button-group.even-5 li .button {
-      border-right: 1px solid;
+      border-right: 0 solid;
       border-color: rgba(255, 255, 255, 0.5); }
     .button-group.even-5 li button, .button-group.even-5 li .button {
       width: 100%; }
   .button-group.even-6 li {
     width: 16.66667%; }
     .button-group.even-6 li > button, .button-group.even-6 li .button {
-      border-right: 1px solid;
+      border-right: 0 solid;
       border-color: rgba(255, 255, 255, 0.5); }
     .button-group.even-6 li button, .button-group.even-6 li .button {
       width: 100%; }
   .button-group.even-7 li {
     width: 14.28571%; }
     .button-group.even-7 li > button, .button-group.even-7 li .button {
-      border-right: 1px solid;
+      border-right: 0 solid;
       border-color: rgba(255, 255, 255, 0.5); }
     .button-group.even-7 li button, .button-group.even-7 li .button {
       width: 100%; }
   .button-group.even-8 li {
     width: 12.5%; }
     .button-group.even-8 li > button, .button-group.even-8 li .button {
-      border-right: 1px solid;
+      border-right: 0 solid;
       border-color: rgba(255, 255, 255, 0.5); }
     .button-group.even-8 li button, .button-group.even-8 li .button {
       width: 100%; }
@@ -3050,7 +3050,10 @@ th.hide-for-touch {
   font-style: normal; }
 
 body {
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column; }
 
 .top-bar-container {
   border-bottom: 1px solid #e1e1e1; }
@@ -3090,6 +3093,9 @@ nav .logo {
 @media only screen and (min-width:40.063em) {
   .top-bar-section ul li > a {
     font-size: 1.625rem; } }
+
+.content {
+  flex: 1; }
 
 #main section {
   min-height: 400px;

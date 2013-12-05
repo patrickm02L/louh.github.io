@@ -65,6 +65,7 @@
 
     filterProjectGrid: function (filters, clicked) {
       // Filters projects by type
+      var type = $(clicked).data('type')
 
       // Cache project grid
       if (this.projectGrid === null) {
@@ -72,24 +73,19 @@
       }
       var projectGrid = this.projectGrid
 
-      // Toggle filter
+      // Toggle filter off, if already on
       if ($(clicked).hasClass('highlight')) {
         $(clicked).removeClass('highlight')
         $(projectGrid).removeClass('faded')
         return
       }
 
-      // Clear all previous buttons
+      // Reset
       $(filters).removeClass('highlight')
-
-      // Highlight button
-      $(clicked).addClass('highlight')
-
-      // Refresh all project opacities
       $(projectGrid).removeClass('faded')
 
-      // Check types and fade out projects that don't match
-      var type = $(clicked).data('type')
+      // Filter projects
+      $(clicked).addClass('highlight')
       for (var i = 0; i < projectGrid.length; i++) {
         if (type != $(projectGrid[i]).data('project-type')) {
           $(projectGrid[i]).addClass('faded')
@@ -130,7 +126,6 @@
     }
 
   }
-
 
   /* LOAD DATAS */
 
