@@ -21,8 +21,8 @@ $portrait-size-small: 200px;
 // MEDIA QUERIES
 // These are not Foundation defaults but created for convenience
 // This depends on some other Foundation variables, so put it after the Foundation import
-$max-x-small: '#{$screen} and (max-width: #{$x-small-screen - 1px})';
-$x-small:     '#{$screen} and (min-width: #{$x-small-screen})';
+$x-small-only: '#{$screen} and (max-width: #{$x-small-screen - 1px})';
+$x-small:      '#{$screen} and (min-width: #{$x-small-screen})';
 $bleed-dimensions: 970px;
 
 $retina-screen: 'only screen and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)';
@@ -115,7 +115,7 @@ nav {
     }
   }
   .social-icons {
-    @media #{$x-small} {
+    @media #{$small} {
       span {
         display: none;
       }
@@ -125,6 +125,12 @@ nav {
 // Position hack for hamburger
 .top-bar .toggle-topbar.menu-icon a span {
   right: 8px;
+}
+// Override menu dropdown size on desktop
+.top-bar-section ul li > a {
+  @media #{$small} {
+    font-size: rem-calc(26);
+  }
 }
 
 #main {
@@ -174,8 +180,8 @@ footer {
     &:last-of-type {
       margin-right: 0;
     }
-    @media #{$max-x-small} {
-      margin-right: 0;
+    @media #{$x-small-only} {
+      margin-right: 0 ;
       width: 100%;
     }
   }

@@ -138,7 +138,7 @@
       </div>
     </div>
     <div class='row'>
-      <div class='large-8 columns'>
+      <div class='medium-10 large-8 columns'>
         <p>Please get in touch if you’d like to connect with me on interesting projects that meet at the intersection of urban planning and technology. Bonus points for ideas that emphasize real placemaking and data-driven decision making, and cross-disciplinary teams with amazing people. You can reach me at <a href='mailto:lou@louhuang.com'>lou@louhuang.com</a>.</p>
       </div>
     </div>
@@ -159,13 +159,13 @@
           <%= feature_description %>
         </p>
         <p class='info'>
-          <% if (role) { %>
+          <% if (!_.isUndefined(role)) { %>
           <span>My roles.</span>
           <%= role %>
           <% } %>
         </p>
         <p class='info'>
-          <% if (ext_url) { %>
+          <% if (!_.isUndefined(ext_url)) { %>
           <span>Website.</span>
           <a href='<%= ext_url %>' target='_blank'><%= ext_url %></a>
           <% } %>
@@ -176,8 +176,8 @@
 
   <script type='text/template' id='template-portfolio-grid-item'>
     <li class='portfolio-grid-item' data-project-type='<%= type %>'>
-      <a href='#/portfolio/<%= id %>'>
-        <img src='portfolio/thumbnails/<% if (_.isUndefined(thumbnail)) { print(id) } else { print('thumb-' + id) } %>'>
+      <a href='/portfolio/<%= id %>'>
+        <img src='portfolio/thumbnails/<% if (typeof thumbnail == 'undefined') { print('thumb-' + id + '.jpg') } else { print(thumbnail) } %>'>
         <div class='portfolio-name'>
           <div class='caption'>
             <%= name %>
