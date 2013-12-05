@@ -1,7 +1,5 @@
 'use strict'
 
-var path = require('path')
-
 module.exports = function (grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
@@ -25,10 +23,7 @@ module.exports = function (grunt) {
         layout:    'default.hbs',
         partials:  'templates/partials/**/*.hbs',
       },
-      site: {
-        options: {
-
-        },
+      main: {
         files: {
           'index.html': ['templates/layouts/main.hbs']
         }
@@ -37,18 +32,15 @@ module.exports = function (grunt) {
         files: {
           'resume/index.html': ['templates/layouts/resume.hbs']
         }
-      }
-      /*,
+      },
       portfolio: {
         options: {
-          assets:   'portfolio/'
-          data:     'portfolio.json',
-          layout:   'project.hbs',
+          data: 'portfolio.json',
         },
         files: {
-          'portfolio/': ['portfolio//*.hbs' ]
+          'portfolio/': ['templates/layouts/project.hbs']
         }
-      }*/
+      }
     },
 
     watch: {
@@ -56,7 +48,6 @@ module.exports = function (grunt) {
         files: ['Gruntfile.js'],
         tasks: ['sass']
       },
-
       sass: {
         files: 'stylesheets/**/*.scss',
         tasks: ['sass']

@@ -158,18 +158,18 @@
         <p class='text'>
           <%= feature_description %>
         </p>
+        <% if (typeof role !== 'undefined') { %>
         <p class='info'>
-          <% if (!_.isUndefined(role)) { %>
           <span>My roles.</span>
           <%= role %>
-          <% } %>
         </p>
+        <% } %>
+        <% if (typeof ext_url !== 'undefined') { %>
         <p class='info'>
-          <% if (!_.isUndefined(ext_url)) { %>
           <span>Website.</span>
           <a href='<%= ext_url %>' target='_blank'><%= ext_url %></a>
-          <% } %>
         </p>
+        <% } %>
       </div>
     </div>
   </script>
@@ -177,12 +177,14 @@
   <script type='text/template' id='template-portfolio-grid-item'>
     <li class='portfolio-grid-item' data-project-type='<%= type %>'>
       <a href='/portfolio/<%= id %>'>
-        <img src='portfolio/thumbnails/<% if (typeof thumbnail == 'undefined') { print('thumb-' + id + '.jpg') } else { print(thumbnail) } %>'>
+        <img src='portfolio/thumbnails/<% if (typeof thumbnail !== 'undefined') { print(thumbnail) } else { print('thumb-' + id + '.jpg') } %>'>
         <div class='portfolio-name'>
           <div class='caption'>
-            <%= name %>
+            <% if (typeof menu_name !== 'undefined') { print(menu_name) } else { print(name) } %>
+            <% if (typeof location !== 'undefined' && location !== window.location) { %>
             <br>
             <span class='subtitle'><%= location %></span>
+            <% } %>
           </div>
         </div>
       </a>

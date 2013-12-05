@@ -46,6 +46,15 @@ Enjoy!
     </ul>
     <section class='top-bar-section'>
       <ul class='right social-icons'>
+        <li class='show-for-small'>
+          <a href='/#portfolio'><i class='fi-social-instagram'></i> <span>Portfolio</span></a>
+        </li>
+        <li class='show-for-small'>
+          <a href='/resume'><i class='fi-social-instagram'></i> <span>Resume</span></a>
+        </li>
+        <li class='show-for-small'>
+          <a href='/#talks'><i class='fi-social-instagram'></i> <span>Talks</span></a>
+        </li>
         <li>
           <a href='https://twitter.com/saikofish' target='_blank'><i class='fi-social-twitter'></i> <span>Twitter @saikofish</span></a>
         </li>
@@ -205,7 +214,7 @@ Enjoy!
       </div>
     </div>
     <div class='row'>
-      <div class='large-8 columns'>
+      <div class='medium-10 large-8 columns'>
         <p>Please get in touch if you’d like to connect with me on interesting projects that meet at the intersection of urban planning and technology. Bonus points for ideas that emphasize real placemaking and data-driven decision making, and cross-disciplinary teams with amazing people. You can reach me at <a href='mailto:lou@louhuang.com'>lou@louhuang.com</a>.</p>
       </div>
     </div>
@@ -225,31 +234,33 @@ Enjoy!
         <p class='text'>
           <%= feature_description %>
         </p>
+        <% if (typeof role !== 'undefined') { %>
         <p class='info'>
-          <% if (role) { %>
           <span>My roles.</span>
           <%= role %>
-          <% } %>
         </p>
+        <% } %>
+        <% if (typeof ext_url !== 'undefined') { %>
         <p class='info'>
-          <% if (ext_url) { %>
           <span>Website.</span>
           <a href='<%= ext_url %>' target='_blank'><%= ext_url %></a>
-          <% } %>
         </p>
+        <% } %>
       </div>
     </div>
   </script>
 
   <script type='text/template' id='template-portfolio-grid-item'>
     <li class='portfolio-grid-item' data-project-type='<%= type %>'>
-      <a href='#/portfolio/<%= id %>'>
-        <img src='portfolio/thumbnails/<% if (_.isUndefined(thumbnail)) { print(id) } else { print('thumb-' + id) } %>'>
+      <a href='/portfolio/<%= id %>'>
+        <img src='portfolio/thumbnails/<% if (typeof thumbnail !== 'undefined') { print(thumbnail) } else { print('thumb-' + id + '.jpg') } %>'>
         <div class='portfolio-name'>
           <div class='caption'>
-            <%= name %>
+            <% if (typeof menu_name !== 'undefined') { print(menu_name) } else { print(name) } %>
             <br>
+            <% if (typeof location !== 'undefined' && location !== window.location) { %>
             <span class='subtitle'><%= location %></span>
+            <% } %>
           </div>
         </div>
       </a>
