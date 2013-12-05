@@ -4008,12 +4008,12 @@ meta.foundation-mq-topbar {
     padding: 12px 0 12px 0;
     padding-left: 20px;
     font-family: "Neris", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-    font-size: 1.625rem;
+    font-size: 1rem;
     font-weight: normal;
     background: #eeeeee; }
     .top-bar-section ul li > a.button {
       background: #d83432;
-      font-size: 1.625rem;
+      font-size: 1rem;
       padding-right: 20px;
       padding-left: 20px; }
       .top-bar-section ul li > a.button:hover {
@@ -4655,12 +4655,16 @@ nav .logo {
 @media only screen and (min-width:40.063em) {
   nav .top-bar-section ul {
     margin-top: -1px; } }
-@media only screen and (min-width: 480px) {
+@media only screen and (min-width:40.063em) {
   nav .social-icons span {
     display: none; } }
 
 .top-bar .toggle-topbar.menu-icon a span {
   right: 8px; }
+
+@media only screen and (min-width:40.063em) {
+  .top-bar-section ul li > a {
+    font-size: 1.625rem; } }
 
 #main section {
   min-height: 400px;
