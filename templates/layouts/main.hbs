@@ -67,8 +67,8 @@
     </div>
     <div class='row'>
       <div class='large-7 medium-7 columns bleed'>
-        <div class='video-wrapper'>
-          <iframe width='480' height='360' src='//www.youtube.com/embed/6IPZ7lWc5D8?rel=0' frameborder='0' allowfullscreen></iframe>
+        <div class='widescreen flex-video'>
+          <iframe width='480' height='270' src='//www.youtube.com/embed/6IPZ7lWc5D8?rel=0' frameborder='0' allowfullscreen></iframe>
         </div>
       </div>
       <div class='large-5 medium-5 columns'>
@@ -150,7 +150,7 @@
 
   <script type='text/template' id='template-featured'>
     <div class='row'>
-      <div class='large-8 large-push-4 medium-7 medium-push-5 columns small-bleed'>
+      <div class='large-8 large-push-4 medium-7 medium-push-5 columns bleed'>
         <a href='/portfolio/<%= id %>'><img src='portfolio/thumbnails/thumb-<%= id %>.png' width='100%' alt=''></a>
       </div>
       <div class='large-4 large-pull-8 medium-5 medium-pull-7 columns'>
@@ -181,8 +181,10 @@
         <div class='portfolio-name'>
           <div class='caption'>
             <% if (typeof menu_name !== 'undefined') { print(menu_name) } else { print(name) } %>
-            <% if (typeof location !== 'undefined' && location !== window.location) { %>
             <br>
+            <% if (typeof menu_location !== 'undefined') { %>
+            <span class='subtitle'><%= menu_location %></span>
+            <% } else if (location !== window.location) { %>
             <span class='subtitle'><%= location %></span>
             <% } %>
           </div>
