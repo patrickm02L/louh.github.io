@@ -25,6 +25,7 @@
 
 // Track JavaScript errors in Google Analytics
 // See here: https://github.com/h5bp/html5-boilerplate/blob/v4.3.0/doc/extend.md
+/*
 (function(window){
   var undefined,
     link = function (href) {
@@ -61,3 +62,4 @@ $(function(){
     }
   });
 });
+*/
