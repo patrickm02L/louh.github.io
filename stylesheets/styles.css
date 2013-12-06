@@ -3051,8 +3051,10 @@ th.hide-for-touch {
 
 body {
   overflow-x: hidden;
+  display: -webkit-flex;
   display: flex;
   min-height: 100vh;
+  -webkit-flex-direction: column;
   flex-direction: column; }
 
 .top-bar-container {
@@ -3095,6 +3097,7 @@ nav .logo {
     font-size: 1.625rem; } }
 
 .content {
+  -webkit-flex: 1;
   flex: 1; }
 
 #main section {
