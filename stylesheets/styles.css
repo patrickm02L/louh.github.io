@@ -3274,8 +3274,9 @@ h4 {
   -moz-transition: opacity 100ms ease-in;
   transition: opacity 100ms ease-in;
   -webkit-transform: translateZ(0); }
-  #portfolio-grid .portfolio-grid-item.faded {
-    opacity: 0.25; }
+  @media only screen and (min-width:40.063em) {
+    #portfolio-grid .portfolio-grid-item.faded {
+      opacity: 0.25; } }
   #portfolio-grid .portfolio-grid-item:hover {
     background-color: rgba(0, 0, 0, 0.1); }
 #portfolio-grid img {
