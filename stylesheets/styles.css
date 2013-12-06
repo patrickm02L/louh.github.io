@@ -3358,10 +3358,16 @@ a.button {
 
 div.epilogue {
   color: #7b7b7b; }
+  div.epilogue .quote::after {
+    content: '“'; }
+  div.epilogue .quote::before {
+    content: '”'; }
   div.epilogue .author {
     text-transform: uppercase;
     font-size: 0.625rem;
     white-space: nowrap; }
+    div.epilogue .author::before {
+      content: '— '; }
 
 .browsehappy {
   background-color: #ffffef;
