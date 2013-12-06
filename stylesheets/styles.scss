@@ -80,8 +80,12 @@ body {
   overflow-x: hidden;
 
   // Sticky footer
+  // -webkit- prefix required for Safari 7
+  // Note that modern flexbox support is lacking in Bourbon right now
+  display: -webkit-flex;
   display: flex;
   min-height: 100vh;
+  -webkit-flex-direction: column;
   flex-direction: column;
 }
 
@@ -149,6 +153,8 @@ nav {
 
 .content {
   // Sticky footer
+  // -webkit- prefix required for Safari 7
+  -webkit-flex: 1;
   flex: 1;
 }
 
