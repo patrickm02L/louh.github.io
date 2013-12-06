@@ -117,6 +117,10 @@ nav {
       background-image: url('../img/logo@2x.png');      
     }
   }
+  .top-bar-section {
+    // Hack for bottom border
+    overflow: hidden;
+  }
   .top-bar-section ul {
     // Hack for bottom border
     @media #{$small} {
@@ -140,11 +144,25 @@ nav {
     }
   }
 }
-// Position hack for hamburger
-.top-bar .toggle-topbar.menu-icon a span {
-  right: 8px;
+// Hitbox hack for menu-icon
+.top-bar .toggle-topbar.menu-icon {
+  // Override nonsensical positioning defaults
+  right: 0;
+  top: 0;
+  margin-top: 0;
+  padding: 0;
+  a { 
+    // Assume square hitbox
+    width: $topbar-height;
+    height: $topbar-height;
+    span {
+      // Position hamburger in center of hitbox
+      right: ($topbar-height - 16px) / 2;
+      top: ($topbar-height) / 4;
+    }
+  }
 }
-// Override menu dropdown size on desktop
+// Override menu dropdown font size on desktop
 .top-bar-section ul li > a {
   @media #{$small} {
     font-size: rem-calc(26);
@@ -156,6 +174,10 @@ nav {
   // -webkit- prefix required for Safari 7
   -webkit-flex: 1;
   flex: 1;
+  // Hack to make flex not completely broken on IE11
+  // It doesn't actually make it work, but prevents it from floating on the content.
+  // See discussion here: https://github.com/philipwalton/solved-by-flexbox/pull/8
+  -ms-flex-preferred-size: auto;
 }
 
 #main {
@@ -232,6 +254,11 @@ footer {
     // Eliminates side padding, if any
     padding-left: 0;
     padding-right: 0;
+    & > a img {
+      // Eliminates left and right borders of images, if any
+      border-left: 0 !important;
+      border-right: 0 !important;
+    }
   }
 }
 
@@ -244,7 +271,6 @@ footer {
       border-left: 0 !important;
       border-right: 0 !important;
     }
-
   }
 }
 
@@ -510,4 +536,5 @@ div.epilogue {
   margin: 0;
   padding: 5px 20px;
   border-bottom: 1px solid lightgray;
+  z-index: 9999;
 }
