@@ -524,10 +524,21 @@ a.button {
 
 div.epilogue {
   color: darken($background-color, 45%);
+  .quote {
+    &::after {
+      content: '“';
+    }
+    &::before {
+      content: '”';
+    }
+  }
   .author {
     text-transform: uppercase;
     font-size: rem-calc(10);
     white-space: nowrap;
+    &::before {
+      content: '— ';
+    }
   }
 }
 
