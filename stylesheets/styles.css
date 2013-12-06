@@ -3077,6 +3077,8 @@ nav .logo {
   @media only screen and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
     nav .logo {
       background-image: url('../img/logo@2x.png'); } }
+nav .top-bar-section {
+  overflow: hidden; }
 @media only screen and (min-width:40.063em) {
   nav .top-bar-section ul {
     margin-top: -1px; } }
@@ -3089,8 +3091,17 @@ nav .logo {
   nav .social-icons span {
     display: none; } }
 
-.top-bar .toggle-topbar.menu-icon a span {
-  right: 8px; }
+.top-bar .toggle-topbar.menu-icon {
+  right: 0;
+  top: 0;
+  margin-top: 0;
+  padding: 0; }
+  .top-bar .toggle-topbar.menu-icon a {
+    width: 60px;
+    height: 60px; }
+    .top-bar .toggle-topbar.menu-icon a span {
+      right: 22px;
+      top: 15px; }
 
 @media only screen and (min-width:40.063em) {
   .top-bar-section ul li > a {
@@ -3098,7 +3109,8 @@ nav .logo {
 
 .content {
   -webkit-flex: 1;
-  flex: 1; }
+  flex: 1;
+  -ms-flex-preferred-size: auto; }
 
 #main section {
   min-height: 400px;
@@ -3152,7 +3164,10 @@ footer {
 @media only screen and (max-width: 1024px) {
   .bleed {
     padding-left: 0;
-    padding-right: 0; } }
+    padding-right: 0; }
+    .bleed > a img {
+      border-left: 0 !important;
+      border-right: 0 !important; } }
 
 @media only screen and (max-width: 40em) {
   .small-bleed {
@@ -3352,4 +3367,5 @@ div.epilogue {
   background-color: #ffffef;
   margin: 0;
   padding: 5px 20px;
-  border-bottom: 1px solid lightgray; }
+  border-bottom: 1px solid lightgray;
+  z-index: 9999; }
