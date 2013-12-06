@@ -112,17 +112,17 @@
           bullets: false,
           timer: false,
           variable_height: true
-        }
-      })
-      /*
+        },
+        topbar: {
+          scrolltop : false
+        }/*,
         interchange: {
           named_queries: {
             medium: 'only screen and (min-width: 481px)',
             large: 'only screen and (min-width: 768px)'
           }
-        }
+        }*/
       })
-      */
     }
 
   }
