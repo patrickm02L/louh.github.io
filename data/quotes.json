@@ -102,7 +102,9 @@
     },
     {
       "quote": "The real magic is taking four strong solo acts and making them all work together, and that's exactly what you did.",
-      "author": "Dylan Rhodes"
+      "author": "Dylan Rhodes",
+      "year": "2013",
+      "source": "Now You See Me"
     },
     {
       "quote": "The smartest city is the one you live in.",
@@ -123,6 +125,16 @@
     {
       "quote": "You don’t have to move out of your neighborhood to live in a better one.",
       "author": "Majora Carter"
+    },
+    {
+      "quote": "Computer design is quite often merely bad design done on a computer.",
+      "author": "Mike Hicks"
+    },
+    {
+      "quote": "There are no big vs small ideas. Just ones you believe in. Don’t waste time guessing their size. Just do them.",
+      "author": "Hiroshi Ishii",
+      "year": "2013",
+      "source": "https://twitter.com/johnmaeda/statuses/408943462944608256"
     }
   ]
 }
