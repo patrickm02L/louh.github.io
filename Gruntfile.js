@@ -2,7 +2,8 @@
 
 module.exports = function (grunt) {
   grunt.initConfig({
-    pkg: grunt.file.readJSON('package.json'),
+
+    portfolio: grunt.file.readJSON('data/portfolio.json'),
 
     sass: {
       options: {
@@ -31,6 +32,11 @@ module.exports = function (grunt) {
       resume: {
         files: {
           'resume/index.html': ['templates/layouts/resume.hbs']
+        }
+      },
+      error :{
+        files : {
+          '404.html': ['templates/layouts/404.hbs']
         }
       },
       portfolio: {
@@ -62,5 +68,12 @@ module.exports = function (grunt) {
   grunt.registerTask('build', ['sass'])
   grunt.registerTask('make', ['assemble'])
   grunt.registerTask('default', ['build', 'watch'])
+
+  grunt.registerTask('haha', function () {
+    var portfolio = grunt.config.get(['portfolio'])
+    for (var i = 0; i < portfolio.items.length; i++) {
+      grunt.log.write(portfolio.items[i].id + '\n')
+    }
+  })
   
 }
