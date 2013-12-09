@@ -246,6 +246,7 @@ $preloader-class: "preloader" !default;
         color: white;
         text-indent: -9999px !important;
         z-index: 10;
+        background-color: $orbit-nav-bg;
 
         &:hover {
           background-color: $orbit-nav-bg-hover;
