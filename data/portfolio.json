@@ -220,7 +220,7 @@
       "name": "Central Florida: Connecting for Global Competitiveness",
       "menu_name": "Connecting for Global Competitiveness",
       "type": "urbandesign",
-      "status": "portfolio-legacy",
+      "status": "portfolio",
       "images": [
         {
           "filename": "centralflorida-01.jpg",
@@ -232,15 +232,7 @@
         },
         {
           "filename": "centralflorida-03.jpg",
-          "caption": "Trend Land Development Model, 2050"
-        },
-        {
-          "filename": "centralflorida-04.jpg",
-          "caption": "Alternative Land Development Model, 2050"
-        },
-        {
-          "filename": "centralflorida-05.jpg",
-          "caption": "Proposed Super Region Transit Map"
+          "caption": "Trend vs Alternative Land Development Models by Year 2050"
         }
       ],
       "year": "2010",
