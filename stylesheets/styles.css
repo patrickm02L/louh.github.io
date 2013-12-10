@@ -3154,7 +3154,7 @@ footer {
   footer .contact-info {
     margin-bottom: 30px; }
 
-@media only screen and (max-width: 960px) {
+@media only screen and (max-width: 970px) {
   .bleed {
     padding-left: 0;
     padding-right: 0; } }
