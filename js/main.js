@@ -101,8 +101,14 @@
     },
 
     _initFoundation: function () {
+      // Initalize Foundation
+      $(document).foundation()
+
       // Set up Foundation plugins
       $(document).foundation({
+        topbar: {
+          scrolltop: false
+        },
         orbit: {
           animation_speed: 250,
           slide_number: false,
@@ -111,14 +117,6 @@
           variable_height: true
         }
       })
-      $(document).foundation({
-        topbar: {
-          scrolltop: false
-        }
-      })
-
-      // Initalize Foundation
-      $(document).foundation()
     }
   }
 

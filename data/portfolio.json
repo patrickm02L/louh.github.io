@@ -117,11 +117,31 @@
       "id": "sunnydale",
       "name": "Sunnydale HOPE SF",
       "type": "urbandesign",
-      "status": "portfolio-legacy",
+      "status": "portfolio",
       "images": [
         {
           "filename": "sunnydale-01.jpg",
+          "caption": "Central Street Pedestrian Path"
+        },
+        {
+          "filename": "sunnydale-02.jpg",
           "caption": "Aerial view"
+        },
+        {
+          "filename": "sunnydale-03.jpg",
+          "caption": "Proposed neighborhood plan"
+        },
+        {
+          "filename": "sunnydale-05.jpg",
+          "caption": "Gateway view"
+        },
+        {
+          "filename": "sunnydale-06.jpg",
+          "caption": "Green Street view"
+        },
+        {
+          "filename": "sunnydale-07.jpg",
+          "caption": "Pavilion view"
         }
       ],
       "year": "2012",
