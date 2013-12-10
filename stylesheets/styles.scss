@@ -23,7 +23,7 @@ $portrait-size-small: 200px;
 // This depends on some other Foundation variables, so put it after the Foundation import
 $x-small-only: '#{$screen} and (max-width: #{$x-small-screen - 1px})';
 $x-small:      '#{$screen} and (min-width: #{$x-small-screen})';
-$bleed-dimensions: 1024px;
+$bleed-dimensions: 970px; // or 1024px
 
 $retina-screen: 'only screen and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)';
 
@@ -254,6 +254,8 @@ footer {
     // Eliminates side padding, if any
     padding-left: 0;
     padding-right: 0;
+  }
+  @media #{$small-only} {
     & > a img {
       // Eliminates left and right borders of images, if any
       border-left: 0 !important;
