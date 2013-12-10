@@ -1908,14 +1908,6 @@ button, .button {
     height: 6px;
     width: 100px;
     z-index: 10; }
-    .orbit-container .orbit-timer .orbit-progress {
-      height: 3px;
-      background-color: rgba(255, 255, 255, 0.3);
-      display: block;
-      width: 0%;
-      position: relative;
-      right: 20px;
-      top: 5px; }
     .orbit-container .orbit-timer > span {
       display: none;
       position: absolute;
@@ -1947,9 +1939,10 @@ button, .button {
     line-height: 50px;
     color: white;
     text-indent: -9999px !important;
-    z-index: 10; }
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.3); }
     .orbit-container .orbit-prev:hover, .orbit-container .orbit-next:hover {
-      background-color: rgba(0, 0, 0, 0.3); }
+      background-color: rgba(0, 0, 0, 0.5); }
     .orbit-container .orbit-prev > span, .orbit-container .orbit-next > span {
       position: absolute;
       top: 50%;
@@ -3312,7 +3305,7 @@ h4 {
   #project .slideshow-wrapper.legacy {
     max-width: 650px; }
 #project .orbit-bullets {
-  display: none; }
+  margin-bottom: 10px; }
 #project .project-title {
   margin-top: 20px; }
 #project .project-data .row {
@@ -3323,6 +3316,14 @@ h4 {
   color: gray; }
 #project .project-description {
   margin-top: 16px; }
+#project .orbit-container .orbit-prev, #project .orbit-container .orbit-next {
+  top: 50%;
+  margin-top: -60px; }
+@media only screen and (max-width: 40em) {
+  #project .orbit-container .orbit-caption {
+    position: relative;
+    padding-top: 5px;
+    padding-bottom: 5px; } }
 
 #resume {
   padding-top: 20px; }
@@ -3345,7 +3346,6 @@ h4 {
 
 .external-link {
   font-size: 80%;
-  text-transform: uppercase;
   white-space: nowrap; }
 
 a.button {

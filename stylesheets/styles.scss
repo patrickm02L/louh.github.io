@@ -466,7 +466,7 @@ h4 {
   .project-images {
   }
   .orbit-bullets {
-    display: none;
+    margin-bottom: 10px;
   }
   .project-title {
     margin-top: 20px;
@@ -481,6 +481,21 @@ h4 {
   }
   .project-description {
     margin-top: 16px;
+  }
+  // Orbit tweaks
+  .orbit-container {
+    .orbit-prev,
+    .orbit-next {
+      top: 50%;
+      margin-top: -60px;
+    }
+    .orbit-caption {
+      @media #{$small-only} {
+        position: relative;
+        padding-top: 5px;
+        padding-bottom: 5px;
+      }
+    }
   }
 }
 
@@ -510,7 +525,6 @@ h4 {
 // STUFF
 .external-link {
   font-size: 80%;
-  text-transform: uppercase;
   white-space: nowrap;
 }
 
