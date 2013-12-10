@@ -101,30 +101,25 @@
     },
 
     _initFoundation: function () {
-      // Initalize Foundation
-      $(document).foundation()
-
       // Set up Foundation plugins
       $(document).foundation({
         orbit: {
           animation_speed: 250,
           slide_number: false,
-          bullets: false,
+          bullets: true,
           timer: false,
           variable_height: true
-        },
-        topbar: {
-          scrolltop : false
-        }/*,
-        interchange: {
-          named_queries: {
-            medium: 'only screen and (min-width: 481px)',
-            large: 'only screen and (min-width: 768px)'
-          }
-        }*/
+        }
       })
-    }
+      $(document).foundation({
+        topbar: {
+          scrolltop: false
+        }
+      })
 
+      // Initalize Foundation
+      $(document).foundation()
+    }
   }
 
   /* LOAD DATAS */
@@ -180,59 +175,36 @@
         page.filterProjectGrid(filters, this)
       })
     }
+
     // Project page UI
     else if (CURRENT_PAGE == 'portfolio') {
-      // Create the project html snippet
-      var template = $('#m_project').html()
-      for (var i = 0; i < projects.items.length; i++) {
-        var item = projects.items[i]
-        if (item.id === projectID) {
-          $('#project-view').html(Mustache.render(template, item))
-          // document.title = item.name + ' - ' + siteTitle
-          break
-        }
-      }
+      var projectEl = document.getElementById('project')
 
-      // Hack the max-width for legacy portfolio projects
-      if (item.status == 'portfolio-legacy') {
+      // Set image max-width for legacy portfolio projects
+      if (projectEl.dataset.projectStatus == 'portfolio-legacy') {
         $('.slideshow-wrapper').addClass('legacy')
       }
 
-      // To do: handle an error where project isn't found.
-
-      // Orbit stuff
-      /*
-      $('#orbit').on('orbit:ready', function(event) {
-        console.log('Orbit is ready.')
-      })
-      */
-      /*
-      $('#orbit').on('orbit:orbit:after-slide-change', function(event) {
-        $('.preloader').hide()
-      })
-      // Hide prev/next arrows if there is only one image.
-      if (item.images.length <= 1) {
-        $('#orbit').attr('data-options', 'navigation_arrows: false')
+      // Disable Orbit interface if there is only one image.
+      if ($('#orbit').find('li').length <= 1) {
+        $('.orbit-prev').hide()
+        $('.orbit-next').hide()
+        $('.orbit-bullets-container').hide()
       }
-
-      // Force Interchange to reflow after being replaced.
-      $(document).on('replace', 'img.interchange', function (e, new_path, original_path) {
-        $(document).foundation('interchange', 'reflow')
-        // console.log(e.currentTarget, new_path, original_path);
-      })
-      */
-
-      // Force orbit to recalculate itself after loading new stuff.
-      $(document).foundation('reflow')
     }
-
+    
   })
 
   /* UTILITY FUNCTIONS */
   function _getCurrentPage () {
     var path = window.location.pathname
     var currentPage = path.split('/')[1]
-    return currentPage
+    if (currentPage.substring(0,5) == 'index') {
+      return undefined
+    }
+    else {
+      return currentPage
+    }
   }
 
 }())

@@ -1,25 +1,28 @@
-<section id='project'>
+---
+title: Portfolio
+data: <%= portfolio.item %>
+---
+<section id='project' data-project-id='{{data.id}}' data-project-status='{{data.status}}'>
 
   <div class='row project-images'>
     <div class='large-12 columns bleed'>
       <div class='slideshow-wrapper'>
         <div class='preloader'></div>
         <ul id='orbit' data-orbit>
-          {{#images}}
+          {{#each data.images}}
           <li>
-            {{#interchange}}
-            <img alt='' data-interchange='[portfolio/images/{{filename}}, (default)], [portfolio/images/{{medium}}, (medium)],[portfolio/images/{{large}}, (large)],' class='interchange'>
-            {{/interchange}}
-            {{^interchange}}
-            <img src='portfolio/images/{{filename}}' alt=''>
-            {{/interchange}}
-            {{#caption}}
+            {{#if interchange}}
+            <img alt='{{caption}}' data-interchange='[/portfolio/images/{{filename}}, (default)], [/portfolio/images/{{small}}, (small)],[/portfolio/images/{{medium}}, (medium)]' class='interchange'>
+            {{else}}
+            <img src='/portfolio/images/{{filename}}' alt='{{caption}}'>
+            {{/if}}
+            {{#if caption}}
             <div class='orbit-caption'>
                 {{caption}}
             </div>
-            {{/caption}}
+            {{/if}}
           </li>
-          {{/images}}
+          {{/each}}
         </ul>
       </div>
     </div>
@@ -27,61 +30,62 @@
 
   <div class='row project-title'>
     <div class='large-12 columns'>
-      <h4>{{name}}</h4>
+      <h4>{{data.name}}</h4>
     </div>
   </div>
 
   <div class='project-data'>
     <div class='row'>
       <div class='small-3 medium-2 large-1 columns project-data-key'>year</div>
-      <div class='small-9 medium-10 large-11 columns project-data-value'>{{year}}</div>
+      <div class='small-9 medium-10 large-11 columns project-data-value'>{{data.year}}</div>
     </div>
-    {{#location}}
+    {{#if data.location}}
     <div class='row'>
       <div class='small-3 medium-2 large-1 columns project-data-key'>location</div>
-      <div class='small-9 medium-10 large-11 columns project-data-value'>{{location}}</div>
+      <div class='small-9 medium-10 large-11 columns project-data-value'>{{data.location}}</div>
     </div>
-    {{/location}}
-    {{#client}}
+    {{/if}}
+    {{#if data.client}}
     <div class='row'>
       <div class='small-3 medium-2 large-1 columns project-data-key'>client</div>
-      <div class='small-9 medium-10 large-11 columns project-data-value'>{{client}}</div>
+      <div class='small-9 medium-10 large-11 columns project-data-value'>{{data.client}}</div>
     </div>
-    {{/client}}
-    {{#role}}
+    {{/if}}
+    {{#if data.role}}
     <div class='row'>
       <div class='small-3 medium-2 large-1 columns project-data-key'>role</div>
-      <div class='small-9 medium-10 large-11 columns project-data-value'>{{role}}</div>
+      <div class='small-9 medium-10 large-11 columns project-data-value'>{{data.role}}</div>
     </div>
-    {{/role}}
-    {{#team}}
+    {{/if}}
+    {{#if data.team}}
     <div class='row'>
       <div class='small-3 medium-2 large-1 columns project-data-key'>team</div>
-      <div class='small-9 medium-10 large-11 columns project-data-value'>{{team}}</div>
+      <div class='small-9 medium-10 large-11 columns project-data-value'>{{data.team}}</div>
     </div>
-    {{/team}}
+    {{/if}}
   </div>
 
   <div class='row project-description'>
     <div class='large-12 columns'>
-    {{#description}}
-      <p>{{description}}</p>
-    {{/description}}
-    {{^description}}
-      <p>{{feature_description}}</p>
-    {{/description}}
+    {{#if data.description}}
+      <p>{{data.description}}</p>
+    {{else}}
+      <p>{{data.feature_description}}</p>
+    {{/if}}
     </div>
   </div>
 
   <div class='row project-links'>
     <div class='large-12 columns'>
-      {{#pdf_url}}
-      <p><a href='{{pdf_url}}' target='_blank' title='download PDF' class='external-link'><i class='fi-page-pdf' style='margin-left: 4px;'></i> {{pdf_link}}{{^pdf_link}}Download PDF{{/pdf_link}} [pdf]</a></p>
-      {{/pdf_url}}
+      {{#if data.pdf_url}}
+      <p><a href='/{{data.pdf_url}}' target='_blank' title='download PDF' class='external-link'><i class='fi-page-pdf' style='margin-left: 4px;'></i> {{data.pdf_link}}{{#unless data.pdf_link}}Download PDF{{/unless}} [pdf]</a></p>
+      {{/if}}
       
-      {{#ext_url}}
-      <p><a href='{{ext_url}}' target='_blank' title='view external link' class='external-link'><i class='fi-page-export' style='margin-left: 4px;'></i> {{ext_link}}{{^ext_link}}View site{{/ext_link}}</a></p>
-      {{/ext_url}}
+      {{#if data.ext_url}}
+      <p>
+        <a href='{{data.ext_url}}' target='_blank' title='view external link' class='external-link'><i class='fi-page-export' style='margin-left: 4px;'></i> {{data.ext_link}}{{#unless data.ext_link}}View site{{/unless}}</a>
+      </p>
+      {{/if}}
     </div>
   </div>
 

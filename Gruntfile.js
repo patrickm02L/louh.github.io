@@ -22,41 +22,42 @@ module.exports = function (grunt) {
         assets:    '',
         layoutdir: 'templates/layouts',
         layout:    'default.hbs',
-        partials:  'templates/partials/**/*.hbs',
+        partials:  'templates/partials/**/*.hbs'
       },
       main: {
         files: {
-          'index.html': ['templates/layouts/main.hbs']
+          'index.html': 'templates/layouts/main.hbs'
         }
       },
       resume: {
         files: {
-          'resume/index.html': ['templates/layouts/resume.hbs']
+          'resume/index.html': 'templates/layouts/resume.hbs'
         }
       },
-      error :{
+      error: {
         files : {
-          '404.html': ['templates/layouts/404.hbs']
+          '404.html': 'templates/layouts/404.hbs'
         }
       },
       portfolio: {
-        options: {
-          data: 'portfolio.json',
-        },
         files: {
-          'portfolio/': ['templates/layouts/project.hbs']
+          'portfolio/<%= portfolio.item.id %>/index.html': 'templates/layouts/project.hbs'
         }
       }
     },
 
     watch: {
       grunt: {
-        files: ['Gruntfile.js'],
+        files: 'Gruntfile.js',
         tasks: ['sass']
       },
       sass: {
         files: 'stylesheets/**/*.scss',
         tasks: ['sass']
+      },
+      assemble: {
+        files: ['templates/**/*.hbs', 'data/portfolio.json'],
+        tasks: ['assemble:main', 'assemble:resume', 'assemble:error']
       }
     }
   })
@@ -65,14 +66,26 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch')
   grunt.loadNpmTasks('assemble')
 
-  grunt.registerTask('build', ['sass'])
-  grunt.registerTask('make', ['assemble'])
+  grunt.registerTask('build', ['sass', 'assemble:main', 'assemble:resume', 'assemble:error', 'build-portfolio'])
   grunt.registerTask('default', ['build', 'watch'])
 
-  grunt.registerTask('haha', function () {
-    var portfolio = grunt.config.get(['portfolio'])
+  grunt.registerTask('queue', function (id) {
+    var portfolio = grunt.config.get('portfolio')
+
     for (var i = 0; i < portfolio.items.length; i++) {
-      grunt.log.write(portfolio.items[i].id + '\n')
+      if (portfolio.items[i].id == id) {
+        grunt.config.set('portfolio.item', portfolio.items[i])
+        grunt.task.run('assemble:portfolio:' + id)
+        break
+      }
+    }
+  })
+
+  grunt.registerTask('build-portfolio', function () {
+    var portfolio = grunt.config.get('portfolio')
+
+    for (var i = 0; i < portfolio.items.length; i++) {
+      grunt.task.run('queue:' + portfolio.items[i].id)
     }
   })
   

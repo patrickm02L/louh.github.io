@@ -1,5 +1,4 @@
 {
-  "page_title": "Lou Huang Portfolio - Entries",
   "items": [
     {
       "id": "fastpass",
@@ -89,7 +88,7 @@
       "role": "Product manager, front-end developer",
       "team": "Ryan Closner, Lindsay Ballant",
       "ext_url": "http://amiinlasvegas.com/",
-      "description": "When Las Vegas was incorporated in the mid-1900s, property owners were able to opt-out, so the boundaries are convoluted and complex, and many holes exist throughout. Yet the United States Post Office allows properties in unincorporated Clark County to use Las Vegas in their mailing address, which results in confusion when citizens request services from the City only to discover that they aren’t covered.Upon learning this, we decided we could quickly create an “Am I In Las Vegas?” application. Our solution differs from existing tools on the City website which are buried in obscure locations or require some programming knowledge. It is a visual interface, works on mobile, and can use a current location or an address input, so that any user can easily see if they are either currently in Las Vegas, or any property that they are interested in.",
+      "description": "When Las Vegas was incorporated in the mid-1900s, property owners were able to opt-out, so the boundaries are convoluted and complex, and many holes exist throughout. Yet the United States Post Office allows properties in unincorporated Clark County to use Las Vegas in their mailing address, which results in confusion when citizens request services from the City only to discover that they aren’t covered. Upon learning this, we decided we could quickly create an “Am I In Las Vegas?” application. Our solution differs from existing tools on the City website which are buried in obscure locations or require some programming knowledge. It is a visual interface, works on mobile, and can use a current location or an address input, so that any user can easily see if they are either currently in Las Vegas, or any property that they are interested in.",
       "feature_description": ""
     },
     {
@@ -100,9 +99,9 @@
       "images": [
         {
           "filename": "2175market-01.jpg",
-          "interchange": "yes",
-          "medium": "2175market-01-m.jpg",
-          "large": "2175market-01-l.jpg",
+          "interchange": "true",
+          "small": "2175market-01-m.jpg",
+          "medium": "2175market-01-l.jpg",
           "caption": "Perspective Render"
         }
       ],
@@ -177,8 +176,8 @@
       "client": "Sac Catalyst Capitol Mall Competition (2nd place winner)",
       "role": "Urban design, graphic production and layout",
       "team": "Geoffrey Barton, Virginia Alexander, Darryl Jones",
-      "pdf_url": "portfolio/downloads/louhuang_river_city_promenade_30x40boards.pdf",
-      "pdf_link": "download competition boards",
+      "pdf_url": "portfolio/downloads/louhuang-river-city-promenade-30x40boards.pdf",
+      "pdf_link": "Download competition boards",
       "description": "The Sac Catalyst Competition received almost 50 entries worldwide to re-envision the Capitol Mall corridor of downtown Sacramento, an eight block civic boulevard with a wide grassy median but not much pedestrian activity.  Our proposal brings people back to the Mall with three principles in mind: to activate the edges of the mall, frame the view of the Capitol, and to direct visitors down a path from the river to the civic center. A sequence of different pedestrian zones create a procession of views and experiences from natural to higher order. Strategies to activate the space include removing a lane of traffic in each direction, removing curbs, encouraging food trucks and other periodic events, and infilling buildings to create a better street edge. As the city lacks funds to implement large projects, each component of the Promenade plan can be implemented separately until the final space is realized."
     },
     {
@@ -292,8 +291,8 @@
       "client": "ULI/Gerald D. Hines Student Urban Design Competition (finalist entry)",
       "role": "Team leader",
       "team": "Allen Penniman, Marie Park, Keyleigh Kern, Brian Lee",
-      "pdf_url": "portfolio/downloads/louhuang_la_moda_fresca_30x40boards.pdf",
-      "pdf_link": "download competition boards",
+      "pdf_url": "portfolio/downloads/louhuang-la-moda-fresca-30x40boards.pdf",
+      "pdf_link": "Download competition boards",
       "description": "The East Village of San Diego is a declining warehouse district with new redevelopment opportunities but challenged with active fault lines. “La Moda Fresca” transforms the site into a vision of fresh food and fresh ideas. The centerpiece is “Eat Street,” a pedestrian promenade of restaurants and street food that is a flexible, multi-function space celebrating food culture. It integrates local artist colonies, a growing student population, a community garden, and introduces an innovative food waste recycling program. Working in an interdisciplinary team of five graduate students, this proposal was selected as one of four finalists in this industry-wide recognized competition."
     },
     {
