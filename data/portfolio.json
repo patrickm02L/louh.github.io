@@ -651,10 +651,10 @@
       "id": "panorama",
       "name": "Panorama",
       "type": "other",
-      "status": "portfolio-legacy",
+      "status": "portfolio",
       "images": [
         {
-          "filename": "panorama-01.jpg",
+          "filename": "panorama-01.png",
           "caption": ""
         },
         {
