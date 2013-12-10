@@ -6,7 +6,13 @@
 
     <title>{{#if data.name}}{{data.name}} - {{/if}}{{#if title}}{{title}} - {{/if}}Lou Huang</title>
 
+    {{~#if data.feature_description}}
+    <meta name='description' content='{{data.feature_description}}'>
+    {{else}}{{#if data.description}}
+    <meta name='description' content='{{data.description}}'>
+    {{else}}
     <meta name='description' content='Lou Huang is an urban designer and front-end web developer who uses technology to improve cities.'>
+    {{/if}}{{/if~}}
     <meta name='viewport' content='width=device-width, initial-scale=1'>
 
     <meta property='og:title' content='{{#if data.name}}{{data.name}} - {{/if}}{{#if title}}{{title}} - {{/if}}Lou Huang'>
