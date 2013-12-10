@@ -191,6 +191,8 @@
         $('.orbit-next').hide()
         $('.orbit-bullets-container').hide()
       }
+
+      $(document).foundation('reflow')
     }
     
   })
