@@ -1,0 +1,40 @@
+// Foundation Settings
+// These override the settings found in ./foundation/_settings.scss
+
+@import "foundation/functions";
+
+$rem-base:                16px;
+
+$body-bg:                 $background-color;
+$body-font-family:        "Neris", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+
+$primary-color:           $accent-color;
+
+// Buttons
+$button-tny:              rem-calc(8);
+$button-sml:              rem-calc(10);
+$button-med:              rem-calc(12);
+$button-lrg:              rem-calc(16);
+$button-margin-bottom:    rem-calc(14);
+$button-group-border-width: 0;
+
+
+// Topbar
+$topbar-bg-color:         lighten($background-color, 6%);
+$topbar-height:           60px;
+$topbar-title-weight:     normal;
+$topbar-title-font-size:  20px;
+$topbar-dropdown-bg:      $background-color;
+$topbar-link-color:       $main-color;
+$topbar-link-font-size:   rem-calc(16);
+$topbar-link-bg-hover:    $main-color;
+$topbar-link-bg-active:   $main-color;
+$topbar-breakpoint:       $x-small-screen;
+$topbar-menu-icon-color:  $main-color;
+$topbar-menu-icon-color-toggled: lighten($main-color, 10%);
+
+// Orbit
+$orbit-nav-bg:            rgba(0,0,0,0.3);
+$orbit-nav-bg-hover:      rgba(0,0,0,0.5);
+$orbit-caption-position:  "bottom"; // Supported values: "bottom", "under"
+$orbit-timer-show-progress-bar: false;

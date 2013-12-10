@@ -1,4 +1,3 @@
-// OTHER CSSES
 @import 'vendor/normalize.css';
 @import 'vendor/main.css'; // HTML5 Boilerplate default CSS file
 @import '../fonts/foundation-icons.css';
@@ -14,35 +13,17 @@ $x-small-screen:      480px;
 $portrait-size:       250px;
 $portrait-size-small: 200px;
 
-// OVERRIDE FOUNDATION VARIABLES - see also _variables.scss
-// This needs to come before the foundation import
-$primary-color:           $accent-color;
-// $secondary-color:         $main-color;
-$button-border-width:     0;
-$topbar-bg-color:         lighten($background-color, 6%);
-$topbar-height:           60px;
-$topbar-title-weight:     normal;
-$topbar-title-font-size:  20px;
-$topbar-link-color:       $main-color;
-$topbar-link-bg-hover:    #5d6262;
-$topbar-link-bg-active:   #5d6262;
-$topbar-breakpoint:       $x-small-screen;
-$topbar-menu-icon-color:  $main-color;
-$topbar-menu-icon-color-toggled: lighten($main-color, 10%);
-
 // IMPORTS
 @import 'bourbon/bourbon';
+@import 'settings';
 @import 'foundation';
-@import 'foundation/components/_grid-5';
 
 // MEDIA QUERIES
 // These are not Foundation defaults but created for convenience
 // This depends on some other Foundation variables, so put it after the Foundation import
-$max-small:   'only screen and (max-width: #{$small-screen - 1px})';
-$max-medium:  'only screen and (max-width: #{$medium-screen - 1px})';
-$max-large:   'only screen and (max-width: #{$large-screen - 1px})';
-$max-x-small: 'only screen and (max-width: #{$x-small-screen - 1px})';
-$x-small:     'only screen and (min-width: #{$x-small-screen})';
+$x-small-only: '#{$screen} and (max-width: #{$x-small-screen - 1px})';
+$x-small:      '#{$screen} and (min-width: #{$x-small-screen})';
+$bleed-dimensions: 1024px;
 
 $retina-screen: 'only screen and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)';
 
@@ -96,14 +77,19 @@ $retina-screen: 'only screen and (-webkit-min-device-pixel-ratio: 2), (min-resol
 // LAYOUT
 
 body {
-  background: $background-color;
-  color: $black;
-  font: 16px/24px 'Neris', "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
   overflow-x: hidden;
+
+  // Sticky footer
+  // -webkit- prefix required for Safari 7
+  // Note that modern flexbox support is lacking in Bourbon right now
+  display: -webkit-flex;
+  display: flex;
+  min-height: 100vh;
+  -webkit-flex-direction: column;
+  flex-direction: column;
 }
 
 .top-bar-container {
-  z-index: 900;
   border-bottom: 1px solid darken($background-color, 5%);
 }
 
@@ -131,26 +117,67 @@ nav {
       background-image: url('../img/logo@2x.png');      
     }
   }
+  .top-bar-section {
+    // Hack for bottom border
+    overflow: hidden;
+  }
   .top-bar-section ul {
     // Hack for bottom border
-    @media #{$x-small} {
+    @media #{$small} {
       margin-top: -1px;
     }
   }
   .social-icons {
-    li {
-      font-size: 190%;
+    @media #{$small-only} {
+      // For mobile dropdown, add a right margin to icons
+      i {
+        display: inline-block;
+        width: 22px;
+        margin-right: 6px;
+      }
     }
-    @media #{$x-small} {
+    @media #{$small} {
+      // For non-mobile screens, hide text
       span {
         display: none;
       }
     }
   }
 }
-// Position hack for hamburger
-.top-bar .toggle-topbar.menu-icon a span {
-  right: 8px;
+// Hitbox hack for menu-icon
+.top-bar .toggle-topbar.menu-icon {
+  // Override nonsensical positioning defaults
+  right: 0;
+  top: 0;
+  margin-top: 0;
+  padding: 0;
+  a { 
+    // Assume square hitbox
+    width: $topbar-height;
+    height: $topbar-height;
+    span {
+      // Position hamburger in center of hitbox
+      right: ($topbar-height - 16px) / 2;
+      top: ($topbar-height) / 4;
+    }
+  }
+}
+// Override menu dropdown font size on desktop
+.top-bar-section ul li > a {
+  @media #{$small} {
+    font-size: rem-calc(26);
+  }
+}
+
+.content {
+  // Sticky footer
+  // -webkit- prefix required for Safari 7
+  -webkit-flex: 1;
+  flex: 1;
+  // Hack to make flex not completely broken on IE11
+  // It doesn't actually make it work, but prevents it from floating on the content.
+  // See discussion here: https://github.com/philipwalton/solved-by-flexbox/pull/8
+  -ms-flex-preferred-size: auto;
 }
 
 #main {
@@ -158,10 +185,10 @@ nav {
     min-height: 400px;
     padding: 20px 0;
     @media #{$small} {
-      padding: 60px 0;
+      padding: 40px 0;
     }
     @media #{$large} {
-      padding: 80px;
+      padding: 60px 0;
     }
   }
   section:not(#portfolio) {
@@ -174,16 +201,6 @@ nav {
 section {
   .background-2 {
     background-color: lighten($background-color, 4%);
-  }
-}
-
-.viewer {
-  display: none;
-  background-color: $background-color;
-  padding-bottom: 20px;
-  position: relative;
-  @media #{$medium} {
-    padding-bottom: 30px;
   }
 }
 
@@ -200,22 +217,20 @@ footer {
   @media #{$large} {
     padding: 60px 0;
   }
-  h2 {
-    display: none;
-  }
   ul {
     list-style: none;
   }
   li {
     display: inline-block;
     margin-right: 30px;
-    @media #{$max-x-small} {
+    font-size: 14px;
+    &:last-of-type {
       margin-right: 0;
+    }
+    @media #{$x-small-only} {
+      margin-right: 0 ;
       width: 100%;
     }
-  }
-  li:last-of-type {
-    margin-right: 0;
   }
   a {
     // Override default link color styles
@@ -235,8 +250,20 @@ footer {
 .bleed {
   // This class, when used with a 'columns' div class, pushes it to the edge of the mobile screen.
   // Great for images that should take up more room.
-  @media #{$max-small} {
+  @media #{$screen} and (max-width: #{$bleed-dimensions}) {
     // Eliminates side padding, if any
+    padding-left: 0;
+    padding-right: 0;
+    & > a img {
+      // Eliminates left and right borders of images, if any
+      border-left: 0 !important;
+      border-right: 0 !important;
+    }
+  }
+}
+
+.small-bleed {
+  @media #{$small-only} {
     padding-left: 0;
     padding-right: 0;
     & > a img {
@@ -271,6 +298,10 @@ h1 {
   -webkit-font-smoothing: antialiased; /* Prevents fonts looking so bold on Mac */
 }
 
+h3 {
+  margin-bottom: 10px;
+}
+
 h4 {
   color: lighten($main-color, 9%);
 }
@@ -287,17 +318,27 @@ h4 {
     background: transparent url('../img/portrait.jpg') center center no-repeat;
     background-size: cover;
     margin: 10px auto;
+    &:before {
+      // Image preload hack
+      content: url('../img/portrait-doodle.png');
+      display: none;    
+    }
     &:hover, &:active {
       background-image: url('../img/portrait-doodle.png');
       cursor: pointer;
     }
     @media #{$retina-screen} {
       background-image: url('../img/portrait@2x.jpg');
+      &:before {
+        // Image preload hack
+        content: url('../img/portrait-doodle.png@2x');
+        display: none;    
+      }
       &:hover, &:active {
         background-image: url('../img/portrait-doodle@2x.png');
       }
     }
-    @media #{$max-small} {
+    @media #{$small-only} {
       width: $portrait-size-small;
       height: $portrait-size-small;
     }
@@ -329,6 +370,9 @@ h4 {
     color: gray;
     span {
       color: $link-color;
+    }
+    a {
+      color: gray;
     }
   }
 }
@@ -364,7 +408,9 @@ h4 {
     // fading in/out. More info: http://stackoverflow.com/questions/15152470/chrome-rendering-issue-fixed-position-anchor-with-ul-in-body/15203880#15203880
     -webkit-transform: translateZ(0);
     &.faded {
-      opacity: 0.25;
+      @media #{$small} {
+        opacity: 0.25;
+      }
     }
     &:hover {
       background-color: rgba(0,0,0,0.1);
@@ -390,7 +436,7 @@ h4 {
       color: $black;
       font-weight: bold;
       line-height: 16px;
-      @media #{$max-small} {
+      @media #{$small-only} {
         font-size: 14px;
         line-height: 14px;
       }
@@ -407,19 +453,10 @@ h4 {
     width: 100%;
     height: 100%;
   }
-  .video-wrapper {
-    width: 100%;
-    margin-bottom: 20px;
-  }
-}
-#resume {
-  display: none;
-}
-#templates {
-  display: none;
 }
 
-#project-view  {
+// OTHER PAGES
+#project  {
   .slideshow-wrapper {
     min-height: 200px;
     &.legacy {
@@ -429,41 +466,65 @@ h4 {
   .project-images {
   }
   .orbit-bullets {
-    display: none;
+    margin-bottom: 10px;
   }
   .project-title {
     margin-top: 20px;
+  }
+  .project-data .row {
+    line-height: rem-calc(24);
   }
   .project-data-key {
     font-size: 80%;
     text-transform: uppercase;
     color: gray;
-    // Positioning hack
-    padding-left: 15px;
-    @media #{$max-x-small} {
-      font-size: 60%;
-    }
   }
   .project-description {
     margin-top: 16px;
   }
+  // Orbit tweaks
+  .orbit-container {
+    .orbit-prev,
+    .orbit-next {
+      top: 50%;
+      margin-top: -60px;
+    }
+    .orbit-caption {
+      @media #{$small-only} {
+        position: relative;
+        padding-top: 5px;
+        padding-bottom: 5px;
+      }
+    }
+  }
 }
 
-#resume-view {
+#resume {
   padding-top: 20px;
   .subtitle {
     margin: 0;
     font-weight: bold;
     color: gray;
     position: relative;
-    top: -24px;
+    top: -14px;
+    left: 2px;
   }
+}
+
+#resume, #project {
+  padding-bottom: 20px;
+  @media #{$medium} {
+    padding-bottom: 30px;
+  }
+}
+
+#templates {
+  display: none;
 }
 
 // STUFF
 .external-link {
   font-size: 80%;
-  text-transform: uppercase;
   white-space: nowrap;
 }
 
@@ -480,19 +541,19 @@ a.button {
 div.epilogue {
   color: darken($background-color, 45%);
   .quote {
-    &::before {
-      content: '”';
-    }
     &::after {
+      content: '“';
+    }
+    &::before {
       content: '”';
     }
   }
   .author {
     text-transform: uppercase;
-    font-size: 80%;
+    font-size: rem-calc(10);
     white-space: nowrap;
     &::before {
-      content: '  — ';
+      content: '— ';
     }
   }
 }
@@ -502,4 +563,5 @@ div.epilogue {
   margin: 0;
   padding: 5px 20px;
   border-bottom: 1px solid lightgray;
+  z-index: 9999;
 }

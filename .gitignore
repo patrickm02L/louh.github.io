@@ -2,4 +2,4 @@ _dev
 _temp
 bower_components
 node_modules
-js/old
+npm-debug.log
