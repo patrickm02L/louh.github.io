@@ -345,7 +345,7 @@
       "id": "scotchhollow",
       "name": "Scotchhollow Apartments",
       "type": "urbandesign",
-      "status": "portfolio-legacy",
+      "status": "portfolio",
       "images": [
         {
           "filename": "scotchhollow-01.jpg",
@@ -701,10 +701,10 @@
       "id": "nomelette",
       "name": "Nomelette",
       "type": "web",
-      "status": "portfolio-legacy",
+      "status": "portfolio",
       "images": [
         {
-          "filename": "nomelette-01.jpg",
+          "filename": "nomelette-01.png",
           "caption": ""
         }
       ],
