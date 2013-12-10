@@ -8,7 +8,7 @@
 
     {{~#if data.feature_description}}
     <meta name='description' content='{{data.feature_description}}'>
-    {{else}}{{#if data.description}}
+    {{else}}{{~#if data.description}}
     <meta name='description' content='{{data.description}}'>
     {{else}}
     <meta name='description' content='Lou Huang is an urban designer and front-end web developer who uses technology to improve cities.'>
@@ -30,7 +30,13 @@
     <meta name='twitter:card' content='summary_large_image'>
     <meta name='twitter:site' content='@saikofish'>
     <meta name='twitter:title' content='{{#if data.name}}{{data.name}} - {{/if}}{{#if title}}{{title}} - {{/if}}Lou Huang'>
-    <meta name='twitter:description' content='{{#if data.feature_description}}{{data.feature_description}}{{else}}Lou Huang is an urban designer and front-end web developer who uses technology to improve cities.{{/if}}'>
+    {{~#if data.feature_description}}
+    <meta name='twitter:description' content='{{data.feature_description}}'>
+    {{else}}{{#if data.description}}
+    <meta name='twitter:description' content='{{data.description}}'>
+    {{else}}
+    <meta name='twitter:description' content='Lou Huang is an urban designer and front-end web developer who uses technology to improve cities.'>
+    {{/if}}{{/if~}}
     {{#each data.images ~}}
     <meta name='twitter:image:src' content='http://louhuang.com/portfolio/images/{{filename}}'>
     {{/each~}}
@@ -38,6 +44,7 @@
     <meta name='twitter:image:src' content='http://louhuang.com/img/portrait.jpg'>
     {{/unless~}}
     <meta name='twitter:domain' content='louhuang.com'>
+    <meta name='twitter:creator' content='@saikofish'>
 
     <link rel='icon' type='image/png' href='{{assets}}/favicon.png'>
 
