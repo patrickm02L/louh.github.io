@@ -319,7 +319,7 @@
       "id": "peets",
       "name": "Peet's Coffee & Tea",
       "type": "architecture",
-      "status": "portfolio-legacy",
+      "status": "portfolio",
       "images": [
         {
           "filename": "peets-01.jpg",
