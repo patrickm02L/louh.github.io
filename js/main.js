@@ -186,7 +186,7 @@
       }
 
       // Disable Orbit interface if there is only one image.
-      if ($('#orbit').find('li').length <= 1) {
+      if ($('#orbit').find('li').length == 1) {
         $('.orbit-prev').hide()
         $('.orbit-next').hide()
         $('.orbit-bullets-container').hide()
