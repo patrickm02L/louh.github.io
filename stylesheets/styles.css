@@ -3381,3 +3381,6 @@ div.epilogue {
 .orbit-bullets, .touch .orbit-bullets {
   display: table;
   text-align: center; }
+
+.touch .orbit-container .orbit-prev, .touch .orbit-container .orbit-next {
+  display: block; }
