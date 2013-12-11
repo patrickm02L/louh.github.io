@@ -132,6 +132,10 @@
           "caption": "Proposed neighborhood plan"
         },
         {
+          "filename": "sunnydale-04.jpg",
+          "caption": "Proposed street cross-section"
+        },
+        {
           "filename": "sunnydale-05.jpg",
           "caption": "Gateway view"
         },
@@ -239,9 +243,9 @@
       "location": "Tampa-Orlando Super Region",
       "menu_location": "Central Florida",
       "client": "myregion.org",
-      "role": "Transportation planning, urban design, GIS mapping and analysis, publication production",
+      "role": "Transportation planning, urban design, GIS mapping and analysis, publication direction",
       "team": "University of Pennsylvania urban design studio",
-      "ext_url": "http://www.tampabay.org/subpage.asp?navid=0&id=212",
+      "ext_url": "http://www.myregion.org/index.php?src=gendocs&ref=ConnectingforGlobalCompetitiveness&category=RegionalProgress",
       "ext_link": "View report",
       "description": "The thirteen counties of Central Florida, working together as a super-region, is looking to catalyze economic development and make the region a world class destination. With momentum toward high-speed rail linking the metropolitan centers of Tampa and Orlando, our team proposed an economic strategy of smart growth and development centered around a fully transit-oriented network and cost-saving environmental conservation over the next forty years."
     },
@@ -249,52 +253,39 @@
       "id": "lamodafresca",
       "name": "La Moda Fresca",
       "type": "urbandesign",
-      "status": "portfolio-legacy",
+      "status": "portfolio",
       "images": [
         {
           "filename": "lamodafresca-01.jpg",
-          "caption": "E-W Section through Greenway (1 of 4)"
+          "caption": "E-W Section through Greenway (1 of 3)"
         },
         {
           "filename": "lamodafresca-02.jpg",
-          "caption": "E-W Section through Greenway (2 of 4)"
+          "caption": "E-W Section through Greenway (2 of 3)"
         },
         {
           "filename": "lamodafresca-03.jpg",
-          "caption": "E-W Section through Greenway (3 of 4)"
-        },
-        {
-          "filename": "lamodafresca-04.jpg",
-          "caption": "E-W Section through Greenway (4 of 4)"
-        },
-        {
-          "filename": "lamodafresca-05.jpg",
-          "caption": "Site Section (disabled)",
-          "disabled": "yes"
+          "caption": "E-W Section through Greenway (3 of 3)"
         },
         {
           "filename": "lamodafresca-07.jpg",
           "caption": "Site Plan"
         },
         {
-          "filename": "lamodafresca-10.jpg",
-          "caption": "Site Model"
+          "filename": "lamodafresca-11.jpg",
+          "caption": "Eat Street View"
         },
         {
-          "filename": "lamodafresca-06.jpg",
-          "caption": "Eat Street View from Transit Center"
+          "filename": "lamodafresca-10.jpg",
+          "caption": "Site Model"
         },
         {
           "filename": "lamodafresca-09.jpg",
           "caption": "Eat Street Transit Center Detail Plan"
         },
         {
-          "filename": "lamodafresca-11.jpg",
-          "caption": "Eat Street View"
-        },
-        {
-          "filename": "lamodafresca-08.jpg",
-          "caption": "Eat Street Plan"
+          "filename": "lamodafresca-06.jpg",
+          "caption": "Eat Street View from Transit Center"
         }
       ],
       "year": "2010",
@@ -582,7 +573,7 @@
       "id": "caciquegardens",
       "name": "Cacique Gardens Pattern Book",
       "type": "urbandesign",
-      "status": "portfolio-legacy",
+      "status": "portfolio",
       "images": [
         {
           "filename": "caciquegardens-01.jpg",
@@ -622,7 +613,7 @@
       "id": "tandoorioven",
       "name": "Tandoori Oven",
       "type": "architecture",
-      "status": "portfolio-legacy",
+      "status": "portfolio",
       "images": [
         {
           "filename": "tandoorioven-01.jpg",

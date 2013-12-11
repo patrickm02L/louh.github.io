@@ -108,15 +108,10 @@
       $(document).foundation({
         topbar: {
           scrolltop: false
-        },
-        orbit: {
-          animation_speed: 250,
-          slide_number: false,
-          bullets: true,
-          timer: false,
-          variable_height: true
         }
       })
+
+      // Orbit options is buggy here. Use data-options in html instead
     }
   }
 
@@ -184,11 +179,13 @@
       }
 
       // Disable Orbit interface if there is only one image.
+      /*
       if ($('#orbit').find('li').length == 1) {
         $('.orbit-prev').hide()
         $('.orbit-next').hide()
         $('.orbit-bullets-container').hide()
       }
+      */
     }
     
   })

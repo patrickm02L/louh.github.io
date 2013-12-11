@@ -71,13 +71,18 @@ module.exports = function (grunt) {
 
   grunt.registerTask('queue', function (id) {
     var portfolio = grunt.config.get('portfolio')
+    var projectFound
 
     for (var i = 0; i < portfolio.items.length; i++) {
       if (portfolio.items[i].id == id) {
         grunt.config.set('portfolio.item', portfolio.items[i])
         grunt.task.run('assemble:portfolio:' + id)
+        projectFound = true
         break
       }
+    }
+    if (projectFound !== true) {
+      grunt.log.error('Project \'' + id + '\' does not exist. Aborting task...')
     }
   })
 
