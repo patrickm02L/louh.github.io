@@ -3377,3 +3377,7 @@ div.epilogue {
   padding: 5px 20px;
   border-bottom: 1px solid lightgray;
   z-index: 9999; }
+
+.orbit-bullets, .touch .orbit-bullets {
+  display: table;
+  text-align: center; }
