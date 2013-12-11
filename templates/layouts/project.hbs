@@ -15,7 +15,7 @@ data: <%= portfolio.item %>
                                                 variable_height: true;'>
           {{#each data.images}}
           <li>
-            {{#if interchange}}
+            {{#if interchange-disabled}}
             <img alt='{{caption}}' data-interchange='[/portfolio/images/{{filename}}, (default)], [/portfolio/images/{{small}}, (small)],[/portfolio/images/{{medium}}, (medium)]' class='interchange'>
             {{else}}
             <img src='/portfolio/images/{{filename}}' alt='{{caption}}'>

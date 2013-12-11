@@ -179,13 +179,20 @@
       }
 
       // Disable Orbit interface if there is only one image.
-      /*
       if ($('#orbit').find('li').length == 1) {
         $('.orbit-prev').hide()
         $('.orbit-next').hide()
         $('.orbit-bullets-container').hide()
       }
-      */
+
+      if ($('img[data-interchange]')) {
+        console.log('yup')
+        window.setTimeout(function () {
+          console.log('yo')
+          $(document).foundation('interchange', 'reflow')
+        }, 500)
+      }
+
     }
     
   })
