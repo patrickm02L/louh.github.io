@@ -185,14 +185,6 @@
         $('.orbit-bullets-container').hide()
       }
 
-      if ($('img[data-interchange]')) {
-        console.log('yup')
-        window.setTimeout(function () {
-          console.log('yo')
-          $(document).foundation('interchange', 'reflow')
-        }, 500)
-      }
-
     }
     
   })
