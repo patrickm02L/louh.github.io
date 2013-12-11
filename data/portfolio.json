@@ -382,7 +382,7 @@
       "id": "northarlington",
       "name": "North Arlington Infill Development",
       "type": "urbandesign",
-      "status": "portfolio-legacy",
+      "status": "portfolio",
       "images": [
         {
           "filename": "northarlington-01.jpg",
@@ -395,7 +395,9 @@
         {
           "filename": "northarlington-03.jpg",
           "caption": "Schuyler Ave Redevelopment Plan"
-        },
+        }
+      ],
+      "disabled_images": [
         {
           "filename": "northarlington-04.jpg",
           "caption": "River Road Land Swap Diagram"
