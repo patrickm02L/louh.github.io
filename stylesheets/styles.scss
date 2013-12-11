@@ -567,3 +567,11 @@ div.epilogue {
   border-bottom: 1px solid lightgray;
   z-index: 9999;
 }
+
+// FOUNDATION BUG HACKS
+// Fix for bullets not appearing correctly on iOS or Android
+// see: http://foundation.zurb.com/forum/posts/656-orbit-bullet-position-on-ipad
+.orbit-bullets, .touch .orbit-bullets{
+display: table;
+text-align: center;
+}
