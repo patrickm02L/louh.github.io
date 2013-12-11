@@ -572,6 +572,9 @@ div.epilogue {
 // Fix for bullets not appearing correctly on iOS or Android
 // see: http://foundation.zurb.com/forum/posts/656-orbit-bullet-position-on-ipad
 .orbit-bullets, .touch .orbit-bullets{
-display: table;
-text-align: center;
+  display: table;
+  text-align: center;
+}
+.touch .orbit-container .orbit-prev, .touch .orbit-container .orbit-next {
+  display: block;
 }
