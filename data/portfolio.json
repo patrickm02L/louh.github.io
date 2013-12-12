@@ -160,39 +160,35 @@
       "id": "saccatalyst",
       "name": "River City Promenade",
       "type": "urbandesign",
-      "status": "portfolio-legacy",
+      "status": "portfolio",
       "images": [
-        {
-          "filename": "saccatalyst-01.jpg",
-          "caption": "Perspective View (1 of 2)"
-        },
         {
           "filename": "saccatalyst-02.jpg",
           "caption": "Perspective View (2 of 2)"
         },
         {
-          "filename": "saccatalyst-08.jpg",
-          "caption": "Plan (Board 1)"
-        },
-        {
-          "filename": "saccatalyst-07.jpg",
-          "caption": "Strategies and Phasing (Board 2)"
-        },
-        {
           "filename": "saccatalyst-03.jpg",
-          "caption": "Longitudinal Site Section (1 of 4)"
+          "caption": "Site Plan (board 1 of 2)"
         },
         {
           "filename": "saccatalyst-04.jpg",
-          "caption": "Longitudinal Site Section (2 of 4)"
+          "caption": "Strategies and Phasing (board 2 of 2)"
         },
         {
           "filename": "saccatalyst-05.jpg",
-          "caption": "Longitudinal Site Section (3 of 4)"
+          "caption": "Longitudinal Site Section (1 of 3)"
         },
         {
           "filename": "saccatalyst-06.jpg",
-          "caption": "Longitudinal Site Section (4 of 4)"
+          "caption": "Longitudinal Site Section (2 of 3)"
+        },
+        {
+          "filename": "saccatalyst-07.jpg",
+          "caption": "Longitudinal Site Section (3 of 3)"
+        },
+        {
+          "filename": "saccatalyst-01.jpg",
+          "caption": "Perspective View (1 of 2)"
         }
       ],
       "year": "2011",
