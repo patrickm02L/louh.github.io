@@ -151,7 +151,7 @@
   <script type='text/template' id='template-featured'>
     <div class='row'>
       <div class='large-8 large-push-4 medium-7 medium-push-5 columns bleed'>
-        <a href='/portfolio/<%= id %>'><img src='portfolio/thumbnails/thumb-<%= id %>.png' width='100%' alt=''></a>
+        <a href='/portfolio/<%= id %>'><img src='portfolio/thumbnails/<%= id %>.png' width='100%' alt=''></a>
       </div>
       <div class='large-4 large-pull-8 medium-5 medium-pull-7 columns'>
         <h4><%= name %></h4>
@@ -177,7 +177,7 @@
   <script type='text/template' id='template-portfolio-grid-item'>
     <li class='portfolio-grid-item' data-project-type='<%= type %>'>
       <a href='/portfolio/<%= id %>'>
-        <img src='portfolio/thumbnails/<% if (typeof thumbnail !== 'undefined') { print(thumbnail) } else { print('thumb-' + id + '.jpg') } %>'>
+        <img src='portfolio/thumbnails/<% if (typeof thumbnail !== 'undefined') { print(thumbnail) } else { print(id + '.jpg') } %>'>
         <div class='portfolio-name'>
           <div class='caption'>
             <% if (typeof menu_name !== 'undefined') { print(menu_name) } else { print(name) } %>

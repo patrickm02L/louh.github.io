@@ -39,17 +39,17 @@
       "feature_description": "An interactive website that empowers citizens to create their own street designs and share them with each other and with city planners."
     },
     {
-      "id": "foodtrucks",
+      "id": "food-trucks",
       "name": "Las Vegas Food Trucks",
       "type": "web",
       "status": "featured",
       "images": [
         {
-          "filename": "foodtrucks-01.png",
+          "filename": "food-trucks-01.png",
           "caption": ""
         },
         {
-          "filename": "foodtrucks-02.jpg",
+          "filename": "food-trucks-02.jpg",
           "caption": "Mobile-ready interface for those on-the-go."
         }
       ],
@@ -63,22 +63,22 @@
       "feature_description": "A mobile-friendly web app that displays real-time food truck information from Downtown Las Vegas."
     },
     {
-      "id": "amiinlv",
+      "id": "am-i-in-las-vegas",
       "name": "Am I In Las Vegas?",
       "type": "web",
       "status": "portfolio",
-      "thumbnail": "thumb-amiinlv.png",
+      "thumbnail": "am-i-in-las-vegas.png",
       "images": [
         {
-          "filename": "amiinlv-01.png",
+          "filename": "am-i-in-las-vegas-01.png",
           "caption": "Am I in Las Vegas? Let's find out."
         },
         {
-          "filename": "amiinlv-02.png",
+          "filename": "am-i-in-las-vegas-02.png",
           "caption": "Yes! 150 N. Las Vegas Boulevard is in Las Vegas!"
         },
         {
-          "filename": "amiinlv-03.png",
+          "filename": "am-i-in-las-vegas-03.png",
           "caption": "Nope! 1319 Shadow Mountain Place isn't actually in Las Vegas!"
         }
       ],
@@ -92,16 +92,16 @@
       "feature_description": ""
     },
     {
-      "id": "2175market",
+      "id": "2175-market",
       "name": "2175 Market",
       "type": "architecture",
       "status": "portfolio",
       "images": [
         {
-          "filename": "2175market-01.jpg",
+          "filename": "2175-market-01.jpg",
           "interchange": "true",
-          "small": "2175market-01-m.jpg",
-          "medium": "2175market-01-l.jpg",
+          "small": "2175-market-01-m.jpg",
+          "medium": "2175-market-01-l.jpg",
           "caption": "Perspective Render"
         }
       ],
@@ -201,13 +201,13 @@
       "description": "The Sac Catalyst Competition received almost 50 entries worldwide to re-envision the Capitol Mall corridor of downtown Sacramento, an eight block civic boulevard with a wide grassy median but not much pedestrian activity.  Our proposal brings people back to the Mall with three principles in mind: to activate the edges of the mall, frame the view of the Capitol, and to direct visitors down a path from the river to the civic center. A sequence of different pedestrian zones create a procession of views and experiences from natural to higher order. Strategies to activate the space include removing a lane of traffic in each direction, removing curbs, encouraging food trucks and other periodic events, and infilling buildings to create a better street edge. As the city lacks funds to implement large projects, each component of the Promenade plan can be implemented separately until the final space is realized."
     },
     {
-      "id": "calitransit",
+      "id": "california-transit-map",
       "name": "California Transit Diagram",
       "type": "other",
       "status": "portfolio-legacy",
       "images": [
         {
-          "filename": "calitransit-01.png",
+          "filename": "california-transit-map-01.png",
           "caption": ""
         }
       ],
@@ -246,41 +246,41 @@
       "description": "The thirteen counties of Central Florida, working together as a super-region, is looking to catalyze economic development and make the region a world class destination. With momentum toward high-speed rail linking the metropolitan centers of Tampa and Orlando, our team proposed an economic strategy of smart growth and development centered around a fully transit-oriented network and cost-saving environmental conservation over the next forty years."
     },
     {
-      "id": "lamodafresca",
+      "id": "la-moda-fresca",
       "name": "La Moda Fresca",
       "type": "urbandesign",
       "status": "portfolio",
       "images": [
         {
-          "filename": "lamodafresca-01.jpg",
+          "filename": "la-moda-fresca-01.jpg",
           "caption": "E-W Section through Greenway (1 of 3)"
         },
         {
-          "filename": "lamodafresca-02.jpg",
+          "filename": "la-moda-fresca-02.jpg",
           "caption": "E-W Section through Greenway (2 of 3)"
         },
         {
-          "filename": "lamodafresca-03.jpg",
+          "filename": "la-moda-fresca-03.jpg",
           "caption": "E-W Section through Greenway (3 of 3)"
         },
         {
-          "filename": "lamodafresca-07.jpg",
+          "filename": "la-moda-fresca-07.jpg",
           "caption": "Site Plan"
         },
         {
-          "filename": "lamodafresca-11.jpg",
+          "filename": "la-moda-fresca-11.jpg",
           "caption": "Eat Street View"
         },
         {
-          "filename": "lamodafresca-10.jpg",
+          "filename": "la-moda-fresca-10.jpg",
           "caption": "Site Model"
         },
         {
-          "filename": "lamodafresca-09.jpg",
+          "filename": "la-moda-fresca-09.jpg",
           "caption": "Eat Street Transit Center Detail Plan"
         },
         {
-          "filename": "lamodafresca-06.jpg",
+          "filename": "la-moda-fresca-06.jpg",
           "caption": "Eat Street View from Transit Center"
         }
       ],
@@ -375,27 +375,27 @@
       "description": "Scotchhollow is an existing 418-unit family apartment community built in the early 1970s, where the owner is seeking to upgrade the development to more modern standards of living to attract a changing demographic on the San Francisco peninsula. Our proposed improvements looked at replacing the existing community center with a larger one that accomodates more amenities, creating more direct paths through the landscape, adding programmatic elements to unactivated lawn areas, orienting the front door of ground floor units towards common areas rather than interior corridors, improving lighting throughout the site, upgrading the look of carports, and adding access points between the community and the park next door."
     },
     {
-      "id": "northarlington",
+      "id": "north-arlington",
       "name": "North Arlington Infill Development",
       "type": "urbandesign",
       "status": "portfolio",
       "images": [
         {
-          "filename": "northarlington-01.jpg",
+          "filename": "north-arlington-01.jpg",
           "caption": "Ridge Road Infill Plan"
         },
         {
-          "filename": "northarlington-02.jpg",
+          "filename": "north-arlington-02.jpg",
           "caption": "Schuyler Ave Redevelopment Plan"
         },
         {
-          "filename": "northarlington-03.jpg",
+          "filename": "north-arlington-03.jpg",
           "caption": "Schuyler Ave Redevelopment Plan"
         }
       ],
       "disabled_images": [
         {
-          "filename": "northarlington-04.jpg",
+          "filename": "north-arlington-04.jpg",
           "caption": "River Road Land Swap Diagram"
         }
       ],
@@ -466,37 +466,37 @@
       "description": "Photography website, featuring a portfolio and blog, developed for my own freelance photography business."
     },
     {
-      "id": "eastorange",
+      "id": "east-orange",
       "name": "East Orange Gateways",
       "type": "urbandesign",
       "status": "portfolio-legacy",
       "images": [
         {
-          "filename": "eastorange-01.jpg",
+          "filename": "east-orange-01.jpg",
           "caption": "Main Street Before & After View"
         },
         {
-          "filename": "eastorange-02.jpg",
+          "filename": "east-orange-02.jpg",
           "caption": "Gateway District Map"
         },
         {
-          "filename": "eastorange-03.jpg",
+          "filename": "east-orange-03.jpg",
           "caption": "Central Ave Before & After View"
         },
         {
-          "filename": "eastorange-04.jpg",
+          "filename": "east-orange-04.jpg",
           "caption": "Main Street (Brick Church Area) Before & After"
         },
         {
-          "filename": "eastorange-05.jpg",
+          "filename": "east-orange-05.jpg",
           "caption": "Central Ave Before & After View"
         },
         {
-          "filename": "eastorange-06.jpg",
+          "filename": "east-orange-06.jpg",
           "caption": ""
         },
         {
-          "filename": "eastorange-07.jpg",
+          "filename": "east-orange-07.jpg",
           "caption": "Signage Guidelines Document"
         }
       ],
@@ -508,58 +508,50 @@
       "description": ""
     },
     {
-      "id": "schuylkill",
+      "id": "lower-schuylkill",
       "name": "The Lower Schuylkill: Smart by Design",
       "type": "urbandesign",
-      "status": "portfolio-legacy",
+      "status": "portfolio",
       "images": [
         {
-          "filename": "schuylkill-04.jpg",
+          "filename": "lower-schuylkill-04.jpg",
           "caption": "View at Gray's Ferry Waterfront"
         },
         {
-          "filename": "schuylkill-05.jpg",
-          "caption": "Gray's Ferry Waterfront, Detail Plan"
-        },
-        {
-          "filename": "schuylkill-01.jpg",
-          "caption": "Street Section at 34th St"
-        },
-        {
-          "filename": "schuylkill-02.jpg",
-          "caption": "Gray's Ferry Neighborhood Plan"
-        },
-        {
-          "filename": "schuylkill-03.jpg",
-          "caption": "Gray's Ferry Land Use Plan"
-        },
-        {
-          "filename": "schuylkill-06.jpg",
+          "filename": "lower-schuylkill-06.png",
           "caption": "The Lower Schuylkill Master Plan (1 of 2)"
         },
         {
-          "filename": "schuylkill-07.jpg",
+          "filename": "lower-schuylkill-07.png",
           "caption": "The Lower Schuylkill Master Plan (2 of 2)"
         },
         {
-          "filename": "schuylkill-09.jpg",
-          "caption": "Section Through Schuylkill River (1 of 5)"
+          "filename": "lower-schuylkill-02.jpg",
+          "caption": "Gray's Ferry Neighborhood Plan"
         },
         {
-          "filename": "schuylkill-10.jpg",
-          "caption": "Section Through Schuylkill River (2 of 5)"
+          "filename": "lower-schuylkill-01.jpg",
+          "caption": "Street Section at 34th St"
         },
         {
-          "filename": "schuylkill-11.jpg",
-          "caption": "Section Through Schuylkill River (3 of 5)"
+          "filename": "lower-schuylkill-03.jpg",
+          "caption": "Gray's Ferry Land Use Plan"
         },
         {
-          "filename": "schuylkill-12.jpg",
-          "caption": "Section Through Schuylkill River (4 of 5)"
+          "filename": "lower-schuylkill-08.jpg",
+          "caption": "Section Through Schuylkill River (1 of 4)"
         },
         {
-          "filename": "schuylkill-13.jpg",
-          "caption": "Section Through Schuylkill River (5 of 5)"
+          "filename": "lower-schuylkill-09.jpg",
+          "caption": "Section Through Schuylkill River (2 of 4)"
+        },
+        {
+          "filename": "lower-schuylkill-10.jpg",
+          "caption": "Section Through Schuylkill River (3 of 4)"
+        },
+        {
+          "filename": "lower-schuylkill-11.jpg",
+          "caption": "Section Through Schuylkill River (4 of 4)"
         }
       ],
       "year": "2009",
@@ -568,37 +560,37 @@
       "description": "Redevelopment along Philadelphia’s “hidden river” is focused on retaining Philadelphia’s brain capital: graduates of its stellar educational institutions, who have been leaving the city for work elsewhere. At the Grays Ferry site, which has been so cut off from the rest of the city by poor infrastructure decisions that it has been nicknamed the Forgotten Bottom, renewal is catalyzed by university expansion, highway removal, freight line reconfiguration, and the development of a technology campus."
     },
     {
-      "id": "caciquegardens",
+      "id": "cacique-gardens",
       "name": "Cacique Gardens Pattern Book",
       "type": "urbandesign",
       "status": "portfolio",
       "images": [
         {
-          "filename": "caciquegardens-01.jpg",
+          "filename": "cacique-gardens-01.jpg",
           "caption": ""
         },
         {
-          "filename": "caciquegardens-02.jpg",
+          "filename": "cacique-gardens-02.jpg",
           "caption": ""
         },
         {
-          "filename": "caciquegardens-03.png",
+          "filename": "cacique-gardens-03.png",
           "caption": ""
         },
         {
-          "filename": "caciquegardens-04.png",
+          "filename": "cacique-gardens-04.png",
           "caption": ""
         },
         {
-          "filename": "caciquegardens-05.png",
+          "filename": "cacique-gardens-05.png",
           "caption": ""
         },
         {
-          "filename": "caciquegardens-06.png",
+          "filename": "cacique-gardens-06.png",
           "caption": ""
         },
         {
-          "filename": "caciquegardens-07.png",
+          "filename": "cacique-gardens-07.png",
           "caption": ""
         }
       ],
@@ -608,25 +600,25 @@
       "description": "Cacique Gardens is a new, hypothetical 200-acre mixed-use development. Working with a partner, we developed a pattern book for housing, retail and street typologies that would fit into its regional context."
     },
     {
-      "id": "tandoorioven",
+      "id": "tandoori-oven",
       "name": "Tandoori Oven",
       "type": "architecture",
       "status": "portfolio",
       "images": [
         {
-          "filename": "tandoorioven-01.jpg",
+          "filename": "tandoori-oven-01.jpg",
           "caption": "3D Rendering from Entrance"
         },
         {
-          "filename": "tandoorioven-02.png",
+          "filename": "tandoori-oven-02.png",
           "caption": "Floor Plan"
         },
         {
-          "filename": "tandoorioven-03.jpg",
+          "filename": "tandoori-oven-03.jpg",
           "caption": "3D Rendering of Dining Area"
         },
         {
-          "filename": "tandoorioven-04.jpg",
+          "filename": "tandoori-oven-04.jpg",
           "caption": "3D Rendering from Staff Area"
         }
       ],
