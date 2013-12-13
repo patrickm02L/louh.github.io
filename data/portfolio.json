@@ -1,13 +1,13 @@
 {
   "items": [
     {
-      "id": "fastpass",
+      "id": "development-fastpass",
       "name": "Development Fastpass",
       "type": "web",
       "status": "featured",
       "images": [
         {
-          "filename": "fastpass-01.png",
+          "filename": "development-fastpass-01.png",
           "caption": ""
         }
       ],
@@ -157,37 +157,37 @@
       "description": "A 50-acre master plan development for San Francisco's largest public housing neighborhood. The plan has achieved LEED-ND Stage 1 Gold certification."
     },
     {
-      "id": "saccatalyst",
+      "id": "river-city-promenade",
       "name": "River City Promenade",
       "type": "urbandesign",
       "status": "portfolio",
       "images": [
         {
-          "filename": "saccatalyst-02.jpg",
+          "filename": "river-city-promenade-02.jpg",
           "caption": "Perspective View (2 of 2)"
         },
         {
-          "filename": "saccatalyst-03.jpg",
+          "filename": "river-city-promenade-03.jpg",
           "caption": "Site Plan (board 1 of 2)"
         },
         {
-          "filename": "saccatalyst-04.jpg",
+          "filename": "river-city-promenade-04.jpg",
           "caption": "Strategies and Phasing (board 2 of 2)"
         },
         {
-          "filename": "saccatalyst-05.jpg",
+          "filename": "river-city-promenade-05.jpg",
           "caption": "Longitudinal Site Section (1 of 3)"
         },
         {
-          "filename": "saccatalyst-06.jpg",
+          "filename": "river-city-promenade-06.jpg",
           "caption": "Longitudinal Site Section (2 of 3)"
         },
         {
-          "filename": "saccatalyst-07.jpg",
+          "filename": "river-city-promenade-07.jpg",
           "caption": "Longitudinal Site Section (3 of 3)"
         },
         {
-          "filename": "saccatalyst-01.jpg",
+          "filename": "river-city-promenade-01.jpg",
           "caption": "Perspective View (1 of 2)"
         }
       ],
@@ -216,22 +216,22 @@
       "description": "A graphic design exercise to create a single readable transit diagram of California's various light rail and commuter rail transit networks. Work in progress."
     },
     {
-      "id": "centralflorida",
+      "id": "central-florida",
       "name": "Central Florida: Connecting for Global Competitiveness",
       "menu_name": "Connecting for Global Competitiveness",
       "type": "urbandesign",
       "status": "portfolio",
       "images": [
         {
-          "filename": "centralflorida-01.jpg",
+          "filename": "central-florida-01.jpg",
           "caption": "View at Daytona Multi-modal Transit Station"
         },
         {
-          "filename": "centralflorida-02.jpg",
+          "filename": "central-florida-02.jpg",
           "caption": "Carillon Infill Development Plan"
         },
         {
-          "filename": "centralflorida-03.jpg",
+          "filename": "central-florida-03.jpg",
           "caption": "Trend vs Alternative Land Development Models by Year 2050"
         }
       ],
