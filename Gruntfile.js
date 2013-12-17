@@ -69,28 +69,23 @@ module.exports = function (grunt) {
   grunt.registerTask('build', ['sass', 'assemble:main', 'assemble:resume', 'assemble:error', 'build-portfolio'])
   grunt.registerTask('default', ['build', 'watch'])
 
-  grunt.registerTask('queue', function (id) {
+  grunt.registerTask('queue', function (project) {
     var portfolio = grunt.config.get('portfolio')
-    var projectFound
 
-    for (var i = 0; i < portfolio.items.length; i++) {
-      if (portfolio.items[i].id == id) {
-        grunt.config.set('portfolio.item', portfolio.items[i])
-        grunt.task.run('assemble:portfolio:' + id)
-        projectFound = true
-        break
-      }
+    if (portfolio.items[project]) {
+      grunt.config.set('portfolio.item', portfolio.items[project])
+      grunt.task.run('assemble:portfolio:' + project)
     }
-    if (projectFound !== true) {
-      grunt.log.error('Project \'' + id + '\' does not exist. Aborting task...')
+    else {
+      grunt.log.error('Project \'' + project + '\' does not exist. Aborting task...')
     }
   })
 
   grunt.registerTask('build-portfolio', function () {
     var portfolio = grunt.config.get('portfolio')
 
-    for (var i = 0; i < portfolio.items.length; i++) {
-      grunt.task.run('queue:' + portfolio.items[i].id)
+    for (var project in portfolio.items) {
+      grunt.task.run('queue:' + project)
     }
   })
   
