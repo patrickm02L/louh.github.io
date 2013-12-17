@@ -27,8 +27,8 @@
       // Displays all current / featured / recent projects
       var template = document.getElementById('template-featured').innerHTML
       var snippet = _.template(template)
-      for (var i = 0; i < projects.items.length; i++) {
-        var project = projects.items[i]
+      for (var item in projects.items) {
+        var project = projects.items[item]
         if (project.status == 'featured') {
           document.getElementById('projects').innerHTML += snippet(project)
         }
@@ -45,8 +45,8 @@
       var multiple = 6
       var items    = []
 
-      for (var i = 0; i < projects.items.length; i++) {
-        var project = projects.items[i]
+      for (var item in projects.items) {
+        var project = projects.items[item]
         if (project.status == 'portfolio' || project.status == 'portfolio-legacy') {
           items.push(project)
         }

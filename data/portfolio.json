@@ -1,6 +1,6 @@
 {
-  "items": [
-    {
+  "items": {
+    "development-fastpass": {
       "id": "development-fastpass",
       "name": "Development Fastpass",
       "type": "web",
@@ -20,7 +20,7 @@
       "description": "One of the main motivations for the City of Las Vegas to pursue a partnership with Code for America is in its effort to dramatically improve the way it does its development services with small businesses that want to locate in the city. During the fellowship year, we decided to focus on a small portion of the development services process, rather than the entire system. We created the Las Vegas Development Fastpass to improve the experience of a customer navigating through complicated city processes, to reduce the amount of barriers that stymied small business development in the city, and to encourage sharing of data between departments, and to reduce interdepartmental miscommunication. The application attempts to match a prospective business owner with the best location to start their business in Las Vegas, based on how well their business matches with zoning and potentially any number of existing conditions on the property. Once a property is selected, the user has all the information to proceed with the next steps of the development permitting and review process.",
       "feature_description": "Got a business idea?  The Development Fastpass will help you find the best property for your business and give you the information you need to sail through the entitlements process."
     },
-    {
+    "streetmix": {
       "id": "streetmix",
       "name": "Streetmix",
       "type": "web",
@@ -38,7 +38,7 @@
       "description": "Streetmix is an interactive website that allows people to create their own street designs and share them with each other, and with their city planners. It was created to mimic a similar offline community engagement practice of using paper cutouts to gather feedback in a public meeting setting, but with the benefit of using the Internet as an communication medium and a social network to involve the public on a much larger scale. Started as a side project by Code for America fellows, we decided to keep the visuals and interactions fun and friendly, inspiring civic participation without requiring a background in urban planning, and allows citizens to engage with city government in an unprecedented manner. Citizens can learn about street design and make their own decisions and tradeoffs, resulting in better feedback. Planners can collect these ideas and analyze them for trends and priorities, so that all contributions are treated fairly. Ultimately, by improving communication, education, and data gathering, we’ll compress the feedback loop between city planners and the community and make better public spaces a reality in a shorter amount of time.",
       "feature_description": "An interactive website that empowers citizens to create their own street designs and share them with each other and with city planners."
     },
-    {
+    "food-trucks": {
       "id": "food-trucks",
       "name": "Las Vegas Food Trucks",
       "type": "web",
@@ -62,7 +62,7 @@
       "description": "In late 2012, the City of Las Vegas passed an ordinance regulating food trucks, which designated certain parking spaces that allows food trucks to operate more freely. The City also implemented a new electronic parking meter system throughout downtown which could monitor the scheduling and enforcement of food truck parking. We saw an opportunity to produce an application that exposed this real-time information to the broader public and publish when food trucks actually appear. This is the first food truck map application that relies on real-time truck locations, is mobile-friendly, and comes with an administration system that allows the City to manage its schedules. The application went live on August 1, 2013, for an initial six month pilot, and the program has been deemed a success with new phases and locations planned for the future.",
       "feature_description": "A mobile-friendly web app that displays real-time food truck information from Downtown Las Vegas."
     },
-    {
+    "am-i-in-las-vegas": {
       "id": "am-i-in-las-vegas",
       "name": "Am I In Las Vegas?",
       "type": "web",
@@ -91,7 +91,7 @@
       "description": "When Las Vegas was incorporated in the mid-1900s, property owners were able to opt-out, so the boundaries are convoluted and complex, and many holes exist throughout. Yet the United States Post Office allows properties in unincorporated Clark County to use Las Vegas in their mailing address, which results in confusion when citizens request services from the City only to discover that they aren’t covered. Upon learning this, we decided we could quickly create an “Am I In Las Vegas?” application. Our solution differs from existing tools on the City website which are buried in obscure locations or require some programming knowledge. It is a visual interface, works on mobile, and can use a current location or an address input, so that any user can easily see if they are either currently in Las Vegas, or any property that they are interested in.",
       "feature_description": ""
     },
-    {
+    "2175-market": {
       "id": "2175-market",
       "name": "2175 Market",
       "type": "architecture",
@@ -113,7 +113,7 @@
       "ext_url": "http://www.2175market.com/",
       "feature_description": "Infill mixed-use development with 88 residential units (mix of studios, 1-bedrooms, and 2-bedroom apartments) located in the Upper Market/Lower Octavia area in San Francisco. Estimated completion date March 2014."
     },
-    {
+    "sunnydale": {
       "id": "sunnydale",
       "name": "Sunnydale HOPE SF",
       "type": "urbandesign",
@@ -156,7 +156,7 @@
       "ext_url": "http://www.vmwp.com/projects/sunnydale-hope-sf-master-plan.php",
       "description": "A 50-acre master plan development for San Francisco's largest public housing neighborhood. The plan has achieved LEED-ND Stage 1 Gold certification."
     },
-    {
+    "river-city-promenade": {
       "id": "river-city-promenade",
       "name": "River City Promenade",
       "type": "urbandesign",
@@ -200,7 +200,7 @@
       "pdf_link": "Download competition boards",
       "description": "The Sac Catalyst Competition received almost 50 entries worldwide to re-envision the Capitol Mall corridor of downtown Sacramento, an eight block civic boulevard with a wide grassy median but not much pedestrian activity.  Our proposal brings people back to the Mall with three principles in mind: to activate the edges of the mall, frame the view of the Capitol, and to direct visitors down a path from the river to the civic center. A sequence of different pedestrian zones create a procession of views and experiences from natural to higher order. Strategies to activate the space include removing a lane of traffic in each direction, removing curbs, encouraging food trucks and other periodic events, and infilling buildings to create a better street edge. As the city lacks funds to implement large projects, each component of the Promenade plan can be implemented separately until the final space is realized."
     },
-    {
+    "california-transit-map": {
       "id": "california-transit-map",
       "name": "California Transit Diagram",
       "type": "other",
@@ -215,7 +215,7 @@
       "location": "Left Coast, USA",
       "description": "A graphic design exercise to create a single readable transit diagram of California's various light rail and commuter rail transit networks. Work in progress."
     },
-    {
+    "central-florida": {
       "id": "central-florida",
       "name": "Central Florida: Connecting for Global Competitiveness",
       "menu_name": "Connecting for Global Competitiveness",
@@ -245,7 +245,7 @@
       "ext_link": "View report",
       "description": "The thirteen counties of Central Florida, working together as a super-region, is looking to catalyze economic development and make the region a world class destination. With momentum toward high-speed rail linking the metropolitan centers of Tampa and Orlando, our team proposed an economic strategy of smart growth and development centered around a fully transit-oriented network and cost-saving environmental conservation over the next forty years."
     },
-    {
+    "la-moda-fresca": {
       "id": "la-moda-fresca",
       "name": "La Moda Fresca",
       "type": "urbandesign",
@@ -294,7 +294,7 @@
       "pdf_link": "Download competition boards",
       "description": "The East Village of San Diego is a declining warehouse district with new redevelopment opportunities but challenged with active fault lines. “La Moda Fresca” transforms the site into a vision of fresh food and fresh ideas. The centerpiece is “Eat Street,” a pedestrian promenade of restaurants and street food that is a flexible, multi-function space celebrating food culture. It integrates local artist colonies, a growing student population, a community garden, and introduces an innovative food waste recycling program. Working in an interdisciplinary team of five graduate students, this proposal was selected as one of four finalists in this industry-wide recognized competition."
     },
-    {
+    "peets": {
       "id": "peets",
       "name": "Peet's Coffee & Tea",
       "type": "architecture",
@@ -340,7 +340,7 @@
       "team": "Crome Architecture",
       "description": "As the primary architect for Peet's Coffee & Tea, Crome Architecture designed and produced construction documents for many stores throughout the United States.  In addition, we helped design new store types such as a new \"prototype\" store in Emeryville, CA and \"kiosks\" for supermarkets, airports and subway stations."
     },
-    {
+    "scotchhollow": {
       "id": "scotchhollow",
       "name": "Scotchhollow Apartments",
       "type": "urbandesign",
@@ -374,7 +374,7 @@
       "team": "Van Meter Williams Pollack",
       "description": "Scotchhollow is an existing 418-unit family apartment community built in the early 1970s, where the owner is seeking to upgrade the development to more modern standards of living to attract a changing demographic on the San Francisco peninsula. Our proposed improvements looked at replacing the existing community center with a larger one that accomodates more amenities, creating more direct paths through the landscape, adding programmatic elements to unactivated lawn areas, orienting the front door of ground floor units towards common areas rather than interior corridors, improving lighting throughout the site, upgrading the look of carports, and adding access points between the community and the park next door."
     },
-    {
+    "north-arlington": {
       "id": "north-arlington",
       "name": "North Arlington Infill Development",
       "type": "urbandesign",
@@ -406,7 +406,7 @@
       "team": "Brown & Keener Urban Design",
       "description": "Redevelopment proposal utilizing form-based strategies for infilling a suburb of the New York City metropolitan area, to improve the urban fabric and allow for smart economic growth. These maps show the existing buildings and parking and how streets can be improved by removing, replacing and reconfiguring parking lots, adding streetscaping and sidewalks, and by building up to the front setback lines."
     },
-    {
+    "photo": {
       "id": "photo",
       "name": "Photography",
       "type": "other",
@@ -465,7 +465,7 @@
       "role": "Graphic and UI design, programming, photography",
       "description": "Photography website, featuring a portfolio and blog, developed for my own freelance photography business."
     },
-    {
+    "east-orange": {
       "id": "east-orange",
       "name": "East Orange Gateways",
       "type": "urbandesign",
@@ -503,7 +503,7 @@
       "team": "Brown & Keener Urban Design",
       "description": ""
     },
-    {
+    "lower-schuylkill": {
       "id": "lower-schuylkill",
       "name": "The Lower Schuylkill: Smart by Design",
       "type": "urbandesign",
@@ -555,7 +555,7 @@
       "team": "University of Pennsylvania urban design studio",
       "description": "Redevelopment along Philadelphia’s “hidden river” is focused on retaining Philadelphia’s brain capital: graduates of its stellar educational institutions, who have been leaving the city for work elsewhere. At the Grays Ferry site, which has been so cut off from the rest of the city by poor infrastructure decisions that it has been nicknamed the Forgotten Bottom, renewal is catalyzed by university expansion, highway removal, freight line reconfiguration, and the development of a technology campus."
     },
-    {
+    "cacique-gardens": {
       "id": "cacique-gardens",
       "name": "Cacique Gardens Pattern Book",
       "type": "urbandesign",
@@ -595,7 +595,7 @@
       "client": "University of Pennyslvania class project",
       "description": "Cacique Gardens is a new, hypothetical 200-acre mixed-use development. Working with a partner, we developed a pattern book for housing, retail and street typologies that would fit into its regional context."
     },
-    {
+    "tandoori-oven": {
       "id": "tandoori-oven",
       "name": "Tandoori Oven",
       "type": "architecture",
@@ -624,7 +624,7 @@
       "team": "Crome Architecture",
       "description": "This restaurant, whose first location was in San Jose, CA, sought to open a second location in Redwood City. I designed the schematic plan which was ultimately chosen by the client, so I became the project manager responsible for drafting, design development and construction documents for agency approval. I also created the 3D interior views for presentation to the client."
     },
-    {
+    "panorama": {
       "id": "panorama",
       "name": "Panorama",
       "type": "other",
@@ -671,7 +671,7 @@
       "role": "Associate design editor (2008), Lead design editor (2009-2010)",
       "description": "Panorama is the journal for the University of Pennsylvania’s Department of City and Regional Planning, published once a year to showcase the best in student research and studio work. For the first time in Panorama’s history, in 2009 the department increased the journal’s staff from two to six editors, dramatically increasing the quality of the publication. In 2010, I led the design team and helped establish the journal's editorial voice, raising the bar once again for excellence in both writing and design."
     },
-    {
+    "fabboard": {
       "id": "fabboard",
       "name": "Fabboard",
       "type": "web",
@@ -686,7 +686,7 @@
       "role": "Graphic and UI design",
       "description": "Fashion pinboard site. UX design with freelance programmer."
     },
-    {
+    "nomelette": {
       "id": "nomelette",
       "name": "Nomelette",
       "type": "web",
@@ -701,7 +701,7 @@
       "role": "Graphic and UI design",
       "description": "A startup idea, similar to restaurant review sites, but rating individual food products and dishes rather than establishments."
     },
-    {
+    "dealhouse": {
       "id": "dealhouse",
       "name": "Deal House",
       "type": "architecture",
@@ -734,7 +734,7 @@
       "team": "Crome Architecture",
       "description": "Designed with Marin County’s stringent green building guidelines in mind, this new single-family home also integrates innovative techniques to address the lot’s challenging steep slope. The house disturbs the landscape as little as possible by limiting unecessary cutting into the hill and avoids felling healthy trees."
     },
-    {
+    "epstein": {
       "id": "epstein",
       "name": "Epstein House",
       "type": "architecture",
@@ -763,7 +763,7 @@
       "team": "Crome Architecture",
       "description": "This is a new house commissioned by a developer to maximize square footage and have instant curb appeal for the housing market. Individual responsibilities included drafting of schematic floorplans, elevations, and creating an exterior 3D model."
     },
-    {
+    "resto": {
       "id": "resto",
       "name": "Restoration Hardware",
       "type": "architecture",
@@ -800,7 +800,7 @@
       "team": "Crome Architecture",
       "description": "Restoration Hardware sought to update its look and feel for their stores, both in exterior and interior design. Led by principals at Crome Architecture, our team helped develop the schematics for a number of new stores including this location in Calgary. Individual duties included drafting of schematic floorplans, details, elevations, and constructing 3D models of the space which were later sketched over and colored by hand."
     },
-    {
+    "portrichmond": {
       "id": "portrichmond",
       "name": "Vision for the Richmond Corridor",
       "type": "urbandesign",
@@ -837,7 +837,7 @@
       "team": "University of Pennsylvania city planning studio",
       "description": ""
     },
-    {
+    "vonscheven": {
       "id": "vonscheven",
       "name": "Von Scheven House",
       "type": "architecture",
@@ -862,7 +862,7 @@
       "team": "Crome Architecture",
       "description": "An older ranch-style single family house in Marin County, whose owners sought to remodel and expand to maximize the amount of allowed square footage on their property. The plan was designed based on several interviews with the family to determine their needs, with careful attention paid to efficient circulation."
     },
-    {
+    "crome": {
       "id": "crome",
       "name": "Crome Architecture Marketing",
       "type": "other",
@@ -893,7 +893,7 @@
       "role": "Graphic design, e-mail marketing",
       "description": ""
     },
-    {
+    "bluegold": {
       "id": "bluegold",
       "name": "Blue & Gold Yearbook",
       "type": "other",
@@ -940,7 +940,7 @@
       "role": "designer (2000-2002), design editor (2003), managing editor (2004)",
       "description": ""
     },
-    {
+    "chocolatemango": {
       "id": "chocolatemango",
       "name": "Better Together: Andrew and Kelly",
       "type": "web",
@@ -957,7 +957,7 @@
       "ext_link": "View site",
       "description": "Wedding site for a friend. Given a general color scheme and reference images of the desired style, we came up with this modern take on a traditional idea. The bride loved the design so much, it was adopted for the invitations, programs, and even the slideshow during the ceremony."
     },
-    {
+    "sfbaymosaic": {
       "id": "sfbaymosaic",
       "name": "SF Bay Mosaic",
       "type": "web",
@@ -972,7 +972,7 @@
       "role": "Graphic and UI design",
       "description": "Church website, designed to reflect the creative nature of its community and developed by its own members. I was responsible for designing graphics and user interface, working with a programmer and church staff."
     },
-    {
+    "digitalshoebox": {
       "id": "digitalshoebox",
       "name": "The Digital Shoebox",
       "type": "web",
@@ -987,7 +987,7 @@
       "role": "Graphic design, programming",
       "description": "Photography portfolio website, designed to pull images from my account on Flickr, using its developer API. Superceded by new professional site entitled Lou Huang Photography."
     },
-    {
+    "tab": {
       "id": "tab",
       "name": "The Address Book",
       "type": "web",
@@ -1006,7 +1006,7 @@
       "role": "Design, programming",
       "description": "A web-based personal address book application written in PHP and MySQL, designed with a flexible data model in mind, which other alternatives were lacking.  After several years of private development, it was released as open source."
     },
-    {
+    "lifeshelf": {
       "id": "lifeshelf",
       "name": "Lifeshelf",
       "type": "web",
@@ -1021,7 +1021,7 @@
       "role": "Graphic design",
       "description": ""
     },
-    {
+    "umloud": {
       "id": "umloud",
       "name": "Ümloud!",
       "type": "other",
@@ -1031,7 +1031,7 @@
       "ext_url": "http://www.umloud.org/",
       "description": "Annual Rock Band night at DNA Lounge in San Francisco to raise money for Child's Play charity."
     },
-    {
+    "nerdnite": {
       "id": "nerdnite",
       "name": "An Open World (at Nerd Nite SF)",
       "type": "other",
@@ -1040,7 +1040,7 @@
       "ext_url": "http://sf.nerdnite.com/2012/06/12/nerd-nite-sf-25-video-games-urban-design-death-proof-cities-and-the-science-of-futurama/",
       "description": "Urban design and open-world video games have in common environments designed for activities and exploration.  To create these spaces, video games have reimagined existing cities, inspired new ones, or copied them entirely, and many have even improved on certain experiences.  What can the real world learn from these virtual environments? How can we engage gamers in the development of the physical built environment? (Video of talk coming soon!)"
     },
-    {
+    "sfpopos": {
       "id": "sfpopos",
       "name": "SFPOPOS",
       "type": "web",
@@ -1050,7 +1050,7 @@
       "ext_url": "http://sfpopos.com/",
       "description": "An online guide to San Francisco's Privately Owned Publicly Open Spaces (POPOS)."
     },
-    {
+    "urbanwander": {
       "id": "urbanwander",
       "name": "Urban Wander",
       "type": "web",
@@ -1060,5 +1060,5 @@
       "ext_url": "http://urbanwander.com/",
       "description": "An online guide to San Francisco's Privately Owned Publicly Open Spaces (POPOS)."
     }
-  ]
+  }
 }
