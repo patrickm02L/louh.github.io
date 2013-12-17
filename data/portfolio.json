@@ -469,7 +469,7 @@
       "id": "east-orange",
       "name": "East Orange Gateways",
       "type": "urbandesign",
-      "status": "portfolio-legacy",
+      "status": "portfolio",
       "images": [
         {
           "filename": "east-orange-01.jpg",
@@ -480,6 +480,10 @@
           "caption": "Gateway District Map"
         },
         {
+          "filename": "east-orange-07.jpg",
+          "caption": "Signage Guidelines Document"
+        },
+        {
           "filename": "east-orange-03.jpg",
           "caption": "Central Ave Before & After View"
         },
@@ -488,16 +492,8 @@
           "caption": "Main Street (Brick Church Area) Before & After"
         },
         {
-          "filename": "east-orange-05.jpg",
-          "caption": "Central Ave Before & After View"
-        },
-        {
           "filename": "east-orange-06.jpg",
-          "caption": ""
-        },
-        {
-          "filename": "east-orange-07.jpg",
-          "caption": "Signage Guidelines Document"
+          "caption": "Central Ave Before & After View"
         }
       ],
       "year": "2009-2010",
