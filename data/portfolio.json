@@ -675,7 +675,7 @@
       "id": "fabboard",
       "name": "Fabboard",
       "type": "web",
-      "status": "portfolio-legacy",
+      "status": "portfolio",
       "images": [
         {
           "filename": "fabboard-01.jpg",
@@ -683,8 +683,9 @@
         }
       ],
       "year": "2012",
-      "role": "Graphic and UI design",
-      "description": "Fashion pinboard site. UX design with freelance programmer."
+      "role": "Graphics and UI design",
+      "client": "Freelance",
+      "description": "Fashion pinboard site, designed in partnership with another freelance programmer. A working prototype was created and went live, but it wasn't up for very long, unfortunately."
     },
     "nomelette": {
       "id": "nomelette",
