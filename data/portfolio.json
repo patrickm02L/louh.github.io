@@ -406,64 +406,59 @@
       "team": "Brown & Keener Urban Design",
       "description": "Redevelopment proposal utilizing form-based strategies for infilling a suburb of the New York City metropolitan area, to improve the urban fabric and allow for smart economic growth. These maps show the existing buildings and parking and how streets can be improved by removing, replacing and reconfiguring parking lots, adding streetscaping and sidewalks, and by building up to the front setback lines."
     },
-    "photo": {
-      "id": "photo",
+    "photography": {
+      "id": "photography",
       "name": "Photography",
       "type": "other",
-      "status": "portfolio-legacy",
+      "status": "portfolio",
       "images": [
         {
-          "filename": "lhphoto-01.jpg",
-          "caption": "Website"
+          "filename": "photography-01.jpg",
+          "caption-hide": "Business card front - Fantasy of Flight, Polk City, Florida"
         },
         {
-          "filename": "photo-01.jpg",
-          "caption": "Business card design"
+          "filename": "photography-02.jpg",
+          "caption-hide": "Back Bay, Boston, Massachusetts"
         },
         {
-          "filename": "photo-02.jpg",
-          "caption": ""
+          "filename": "photography-03.jpg",
+          "caption-hide": "1111 Lincoln Road Parking Garage by Herzog & de Meuron, Miami, Florida"
         },
         {
-          "filename": "photo-03.jpg",
-          "caption": ""
+          "filename": "photography-04.jpg",
+          "caption-hide": "Tony and Lori Wedding"
         },
         {
-          "filename": "photo-04.jpg",
-          "caption": ""
+          "filename": "photography-05.jpg",
+          "caption-hide": "Micah and Ivy Photoshoot"
         },
         {
-          "filename": "photo-05.jpg",
-          "caption": ""
+          "filename": "photography-06.jpg",
+          "caption-hide": "Selina and Andres Engagement"
         },
         {
-          "filename": "photo-06.jpg",
-          "caption": ""
+          "filename": "photography-07.jpg",
+          "caption-hide": "Charles Chocolates Product Shoot"
         },
         {
-          "filename": "photo-07.jpg",
-          "caption": ""
+          "filename": "photography-08.jpg",
+          "caption-hide": "Jerry & Heather Cosplay Shoot"
         },
         {
-          "filename": "photo-08.jpg",
-          "caption": ""
+          "filename": "photography-09.jpg",
+          "caption-hide": "Samantha at the Library"
         },
         {
-          "filename": "photo-09.jpg",
-          "caption": ""
+          "filename": "photography-10.jpg",
+          "caption-hide": "Architects at Sea Ranch"
         },
         {
-          "filename": "photo-10.jpg",
-          "caption": ""
-        },
-        {
-          "filename": "photo-11.jpg",
-          "caption": ""
+          "filename": "photography-11.jpg",
+          "caption-hide": "Seattle Public Library by Rem Koolhaas"
         }
       ],
-      "year": "2005-2012",
-      "role": "Graphic and UI design, programming, photography",
-      "description": "Photography website, featuring a portfolio and blog, developed for my own freelance photography business."
+      "year": "2005 through whenever",
+      "description": "I love photography. I did some freelance gigs (with a whole website, blog, everything) for a while, but I much prefer it as a hobby."
     },
     "east-orange": {
       "id": "east-orange",
