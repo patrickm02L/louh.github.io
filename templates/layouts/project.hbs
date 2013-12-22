@@ -23,6 +23,7 @@ data: <%= portfolio.item %>
             {{#if caption}}
             <div class='orbit-caption'>
                 {{caption}}
+                {{~#if credit}} <span class='credit'>(Image courtesy of {{credit}})<span>{{/if}}
             </div>
             {{/if}}
           </li>

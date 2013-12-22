@@ -121,15 +121,18 @@
       "images": [
         {
           "filename": "sunnydale-01.jpg",
-          "caption": "Central Street Pedestrian Path"
+          "caption": "Central Street Pedestrian Path",
+          "credit": "VMWP"
         },
         {
           "filename": "sunnydale-02.jpg",
-          "caption": "Aerial view"
+          "caption": "Aerial view",
+          "credit": "VMWP"
         },
         {
           "filename": "sunnydale-03.jpg",
-          "caption": "Proposed neighborhood plan"
+          "caption": "Proposed neighborhood plan",
+          "credit": "VMWP"
         },
         {
           "filename": "sunnydale-04.jpg",
@@ -137,15 +140,18 @@
         },
         {
           "filename": "sunnydale-05.jpg",
-          "caption": "Gateway view"
+          "caption": "Gateway view",
+          "credit": "VMWP"
         },
         {
           "filename": "sunnydale-06.jpg",
-          "caption": "Green Street view"
+          "caption": "Green Street view",
+          "credit": "VMWP"
         },
         {
           "filename": "sunnydale-07.jpg",
-          "caption": "Pavilion view"
+          "caption": "Pavilion view",
+          "credit": "VMWP"
         }
       ],
       "year": "2012",
@@ -302,7 +308,8 @@
       "images": [
         {
           "filename": "peets-01.jpg",
-          "caption": "Prototype Store in Emeryville, CA"
+          "caption": "Prototype Store in Emeryville, CA",
+          "credit": "Crome Architecture"
         },
         {
           "filename": "peets-02.png",
