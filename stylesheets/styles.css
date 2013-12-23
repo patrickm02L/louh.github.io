@@ -3330,6 +3330,63 @@ h4 {
   font-style: italic;
   font-size: 80%;
   white-space: nowrap; }
+#project .project-navigation {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  margin-top: 20px; }
+  #project .project-navigation a {
+    border-top: 1px dotted #c4c7c7;
+    width: 100%;
+    height: 100%;
+    display: block;
+    padding: 10px 3px; }
+    #project .project-navigation a:hover {
+      background-color: rgba(0, 0, 0, 0.05);
+      text-decoration: none; }
+  #project .project-navigation strong {
+    font-size: 120%;
+    color: #5d6262; }
+    @media only screen and (min-width:40.063em) {
+      #project .project-navigation strong::after {
+        content: ' Project'; } }
+  #project .project-navigation .nav-arrow {
+    position: absolute;
+    color: #aaaeae;
+    font-size: 250%;
+    top: 12px;
+    left: 22px;
+    z-index: -10; }
+  #project .project-navigation .previous, #project .project-navigation .next {
+    height: 70px; }
+  #project .project-navigation .previous {
+    text-align: left; }
+    @media only screen and (max-width: 40em) {
+      #project .project-navigation .previous strong::before {
+        content: '← '; } }
+    @media only screen and (min-width:40.063em) {
+      #project .project-navigation .previous a {
+        padding-left: 50px; } }
+  #project .project-navigation .next {
+    text-align: right; }
+    @media only screen and (max-width: 40em) {
+      #project .project-navigation .next strong::after {
+        content: ' →'; } }
+    @media only screen and (min-width:40.063em) {
+      #project .project-navigation .next a {
+        padding-right: 50px; } }
+    #project .project-navigation .next .nav-arrow {
+      right: 22px; }
+  #project .project-navigation .nav-project {
+    line-height: 1;
+    margin-top: 8px; }
+    @media only screen and (max-width: 40em) {
+      #project .project-navigation .nav-project {
+        font-size: 100%; } }
+  @media only screen and (max-width: 40em) {
+    #project .project-navigation {
+      font-size: 80%; } }
 
 #resume {
   padding-top: 20px; }
@@ -3351,7 +3408,6 @@ h4 {
   display: none; }
 
 .external-link {
-  font-size: 80%;
   white-space: nowrap; }
 
 a.button {

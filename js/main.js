@@ -27,11 +27,10 @@
       // Displays all current / featured / recent projects
       var template = document.getElementById('template-featured').innerHTML
       var snippet = _.template(template)
-      for (var item in projects.items) {
-        var project = projects.items[item]
-        if (project.status == 'featured') {
-          document.getElementById('projects').innerHTML += snippet(project)
-        }
+      var featured = this._getFeaturedProjects(projects)
+
+      for (var item in featured) {
+        document.getElementById('projects').innerHTML += snippet(featured[item])
       }
 
       // Hide preloader
@@ -40,23 +39,12 @@
 
     displayProjectGrid: function (projects) {
       // Displays all portfolio projects
-      var template = document.getElementById('template-portfolio-grid-item').innerHTML
-      var snippet  = _.template(template)
-      var multiple = 6
-      var items    = []
+      var template  = document.getElementById('template-portfolio-grid-item').innerHTML
+      var snippet   = _.template(template)
+      var gridItems = this._getPortfolioProjects(projects)
 
-      for (var item in projects.items) {
-        var project = projects.items[item]
-        if (project.status == 'portfolio' || project.status == 'portfolio-legacy') {
-          items.push(project)
-        }
-      }
-
-      // Only display items up to a multiple of 6 to ensure that items are evenly spaced on either a 3x or 2x grid.
-      // The actual multiple can be changed in the future, if the layout changes.
-      var gridLength = Math.floor(items.length / multiple) * multiple
-      for (var j = 0; j < gridLength; j++) {
-        $('#portfolio-grid').append(snippet(items[j]))
+      for (var item in gridItems) {
+        document.getElementById('portfolio-grid').innerHTML += (snippet(gridItems[item]))
       }
 
       // Hide preloader
@@ -98,6 +86,70 @@
       var i = Math.floor(Math.random() * quotes.length)
       document.querySelector('.quote').innerHTML  = quotes[i].quote
       document.querySelector('.author').innerHTML = quotes[i].author
+    },
+
+    projectNavigation: function (projects) {
+      // Set up previous / next project navigation on project page
+      var previousLink    = document.getElementById('previous-link'),
+          nextLink        = document.getElementById('next-link'),
+          previousProject = document.getElementById('previous-project'),
+          nextProject     = document.getElementById('next-project')
+      var portfolio = this._getAllProjects(projects)
+      var projectId = document.getElementById('project').dataset.projectId
+
+      for (var i = 0; i < portfolio.length; i++) {
+        if (portfolio[i].id === projectId) {
+          // Set previous / next index
+          var prev = i - 1,
+              next = i + 1
+
+          if (i === 0) {
+            prev = portfolio.length -1
+          }
+          else if (i === portfolio.length - 1) {
+            next = 0
+          }
+
+          // Display
+          previousLink.href = '/portfolio/' + portfolio[prev].id + '/'
+          nextLink.href     = '/portfolio/' + portfolio[next].id + '/'
+          previousProject.innerHTML    = portfolio[prev].name
+          nextProject.innerHTML        = portfolio[next].name
+        }
+      }
+    },
+
+    _getFeaturedProjects: function (projects) {
+      var items = []
+      for (var index in projects.items) {
+        var project = projects.items[index]
+        if (project.status == 'featured') {
+          items.push(project)
+        }
+      }
+      return items
+    },
+
+    _getPortfolioProjects: function (projects) {
+      var multiple = 6
+      var items    = []
+
+      for (var item in projects.items) {
+        var project = projects.items[item]
+        if (project.status == 'portfolio' || project.status == 'portfolio-legacy') {
+          items.push(project)
+        }
+      }
+
+      // Only return items up to a multiple of 6 to ensure that items are evenly spaced on either a 3x or 2x grid.
+      // The actual multiple can be changed in the future, if the layout changes.
+      var gridLength = Math.floor(items.length / multiple) * multiple
+      return _.first(items, gridLength)
+    },
+
+    _getAllProjects: function (projects) {
+      // Just return a concatenation of featured + portfolio projects
+      return _.union(this._getFeaturedProjects(projects), this._getPortfolioProjects(projects))
     },
 
     _initFoundation: function () {
@@ -152,6 +204,10 @@
       page.displayFeaturedProjects(DATA_PROJECTS)
       page.displayProjectGrid(DATA_PROJECTS)
     }
+    else if (CURRENT_PAGE == 'portfolio') {
+      // Set up previous / next project navigation
+      page.projectNavigation(DATA_PROJECTS)
+    }
   })
 
   /* INTERFACE */
@@ -184,7 +240,6 @@
         $('.orbit-next').hide()
         $('.orbit-bullets-container').hide()
       }
-
     }
     
   })
