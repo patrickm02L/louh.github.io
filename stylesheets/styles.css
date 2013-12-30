@@ -3064,8 +3064,8 @@ nav .logo {
   width: 90px;
   height: 100%;
   position: absolute;
-  background: transparent url('../img/logo.png') center center no-repeat;
-  background-size: cover;
+  background: transparent url('../img/logo.png') center center no-repeat !important;
+  background-size: cover !important;
   top: 0; }
   @media only screen and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
     nav .logo {
@@ -3202,8 +3202,8 @@ h4 {
     width: 250px;
     height: 250px;
     border-radius: 50%;
-    background: transparent url('../img/portrait.jpg') center center no-repeat;
-    background-size: cover;
+    background: transparent url('../img/portrait.jpg') center center no-repeat !important;
+    background-size: cover !important;
     margin: 10px auto; }
     #about .portrait:before {
       content: url('../img/portrait-doodle.png');
@@ -3445,3 +3445,11 @@ div.epilogue {
 
 .touch .orbit-container .orbit-prev, .touch .orbit-container .orbit-next {
   display: block; }
+
+@media print {
+  nav .logo {
+    top: -12px; }
+  footer a::after {
+    content: '' !important; }
+  footer .twitter a::before {
+    content: '@'; } }

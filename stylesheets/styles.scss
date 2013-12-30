@@ -110,11 +110,12 @@ nav {
     width: 90px;
     height: 100%;
     position: absolute;
-    background: transparent url('../img/logo.png') center center no-repeat;
-    background-size: cover;
+    // !important on background overrides HTML5 Boilerplate print styles, which hides background styles by default.
+    background: transparent url('../img/logo.png') center center no-repeat !important;
+    background-size: cover !important;
     top: 0;
     @media #{$retina-screen} {
-      background-image: url('../img/logo@2x.png');      
+      background-image: url('../img/logo@2x.png');
     }
   }
   .top-bar-section {
@@ -317,8 +318,9 @@ h4 {
     width: $portrait-size;
     height: $portrait-size;
     border-radius: 50%;
-    background: transparent url('../img/portrait.jpg') center center no-repeat;
-    background-size: cover;
+    // !important on background overrides HTML5 Boilerplate print styles, which hides background styles by default.
+    background: transparent url('../img/portrait.jpg') center center no-repeat !important;
+    background-size: cover !important;
     margin: 10px auto;
     &:before {
       // Image preload hack
@@ -661,4 +663,20 @@ div.epilogue {
 }
 .touch .orbit-container .orbit-prev, .touch .orbit-container .orbit-next {
   display: block;
+}
+
+// PRINT Styles
+
+@media print {
+  nav .logo {
+    top: -12px;
+  }
+  footer {
+    a::after {
+      content: '' !important;
+    }
+    .twitter a::before {
+      content: '@';
+    }
+  }
 }
