@@ -29,7 +29,8 @@ $retina-screen: 'only screen and (-webkit-min-device-pixel-ratio: 2), (min-resol
 
 // RESETS
 * {
-  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+       box-sizing: border-box;
 }
 
 // TYPOGRAPHY
@@ -152,14 +153,18 @@ nav {
   top: 0;
   margin-top: 0;
   padding: 0;
-  a { 
+  a {
     // Assume square hitbox
     width: $topbar-height;
     height: $topbar-height;
-    span {
-      // Position hamburger in center of hitbox
-      right: ($topbar-height - 16px) / 2;
-      top: ($topbar-height) / 4;
+    &:hover {
+      background-color: darken($background-color, 3%);
+    }
+    &::after {
+      right: 20px;
+      // Lower height of default hamburger by 14px
+      -webkit-box-shadow: 0 24px 0 1px #5d6262, 0 30px 0 1px #5d6262, 0 36px 0 1px #5d6262;
+      box-shadow: 0 24px 0 1px #5d6262, 0 30px 0 1px #5d6262, 0 36px 0 1px #5d6262;
     }
   }
 }
@@ -325,7 +330,7 @@ h4 {
     &:before {
       // Image preload hack
       content: url('../img/portrait-doodle.png');
-      display: none;    
+      display: none;
     }
     &:hover, &:active {
       background-image: url('../img/portrait-doodle.png');
@@ -336,7 +341,7 @@ h4 {
       &:before {
         // Image preload hack
         content: url('../img/portrait-doodle.png@2x');
-        display: none;    
+        display: none;
       }
       &:hover, &:active {
         background-image: url('../img/portrait-doodle@2x.png');
@@ -469,11 +474,8 @@ h4 {
   }
   .project-images {
   }
-  .orbit-bullets {
-    margin-bottom: 10px;
-  }
   .project-title {
-    margin-top: 20px;
+    margin-top: 10px;
   }
   .project-data .row {
     line-height: rem-calc(24);
@@ -486,6 +488,13 @@ h4 {
   .project-description {
     margin-top: 16px;
   }
+  .credit {
+    color: #ccc;
+    font-style: italic;
+    font-size: 80%;
+    white-space: nowrap;
+  }
+
   // Orbit tweaks
   .orbit-container {
     .orbit-prev,
@@ -501,14 +510,13 @@ h4 {
       }
     }
   }
-  .credit {
-    color: #ccc;
-    font-style: italic;
-    font-size: 80%;
-    white-space: nowrap;
+  .orbit-bullets {
+    margin: 0 auto 5px;    // Override Foundation default of 30px bottom margin on bullets
   }
+
+  // Project navigation
   .project-navigation {
-    
+
     // Styles for previous / next buttons on project page
 
     @include user-select(none);
@@ -664,6 +672,11 @@ div.epilogue {
 .touch .orbit-container .orbit-prev, .touch .orbit-container .orbit-next {
   display: block;
 }
+/*  REMOVE AFTER https://github.com/zurb/foundation/pull/4205 is pulled
+.orbit-bullets li {
+  display: inline-block !important;
+}
+*/
 
 // PRINT Styles
 
