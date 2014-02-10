@@ -1,0 +1,23 @@
+{
+  "name": "louh.github.io",
+  "version": "0.0.0",
+  "homepage": "https://github.com/louh/louh.github.io",
+  "authors": [
+    "Lou Huang <lou@codeforamerica.org>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery.cookie": "~1.4.0",
+    "fastclick": "~0.6.11",
+    "foundation": "zurb/bower-foundation",
+    "normalize-css": "~2.1.3"
+  }
+}

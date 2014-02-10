@@ -116,7 +116,7 @@ nav {
     background-size: cover !important;
     top: 0;
     @media #{$retina-screen} {
-      background-image: url('../img/logo@2x.png');
+      background-image: url('../img/logo@2x.png') !important;
     }
   }
   .top-bar-section {
@@ -337,14 +337,14 @@ h4 {
       cursor: pointer;
     }
     @media #{$retina-screen} {
-      background-image: url('../img/portrait@2x.jpg');
+      background-image: url('../img/portrait@2x.jpg') !important;
       &:before {
         // Image preload hack
-        content: url('../img/portrait-doodle.png@2x');
+        content: url('../img/portrait-doodle@2x.png');
         display: none;
       }
       &:hover, &:active {
-        background-image: url('../img/portrait-doodle@2x.png');
+        background-image: url('../img/portrait-doodle@2x.png') !important;
       }
     }
     @media #{$small-only} {
