@@ -85,7 +85,7 @@ data: <%= portfolio.item %>
       {{#if data.pdf_url}}
       <p><a href='/{{data.pdf_url}}' target='_blank' title='download PDF' class='external-link'><i class='fi-page-pdf' style='margin-left: 4px;'></i> {{data.pdf_link}}{{#unless data.pdf_link}}Download PDF{{/unless}} [pdf]</a></p>
       {{/if}}
-      
+
       {{#if data.ext_url}}
       <p>
         <a href='{{data.ext_url}}' target='_blank' title='view external link' class='external-link'><i class='fi-page-export' style='margin-left: 4px;'></i> {{data.ext_link}}{{#unless data.ext_link}}View site{{/unless}}</a>
