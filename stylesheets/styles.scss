@@ -238,7 +238,7 @@ footer {
       width: 100%;
     }
   }
-  a {
+  a, .gc-cs-link {
     // Override default link color styles
     color: darken($background-color, 20%);
     &:hover, &:active {
@@ -250,6 +250,15 @@ footer {
   }
   .contact-info {
     margin-bottom: 30px;
+  }
+  .gc-cs-link {
+    // Override a class that's automatically added by Google Voice to phone numbers it detects
+    text-decoration: none;
+    color: darken($background-color, 20%);
+    &:hover {
+      text-decoration: underline;
+      color: darken($background-color, 10%);
+    }
   }
 }
 

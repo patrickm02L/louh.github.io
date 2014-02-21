@@ -3018,14 +3018,20 @@ footer {
       footer li {
         margin-right: 0;
         width: 100%; } }
-  footer a {
+  footer a, footer .gc-cs-link {
     color: #bbbbbb; }
-    footer a:hover, footer a:active {
+    footer a:hover, footer a:active, footer .gc-cs-link:hover, footer .gc-cs-link:active {
       color: #d4d4d4; }
   footer i {
     margin-right: 5px; }
   footer .contact-info {
     margin-bottom: 30px; }
+  footer .gc-cs-link {
+    text-decoration: none;
+    color: #bbbbbb; }
+    footer .gc-cs-link:hover {
+      text-decoration: underline;
+      color: #d4d4d4; }
 
 @media only screen and (max-width: 970px) {
   .bleed {
