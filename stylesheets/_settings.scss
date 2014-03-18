@@ -10,6 +10,10 @@ $body-font-family:        "Neris", "HelveticaNeue-Light", "Helvetica Neue Light"
 
 $primary-color:           $accent-color;
 
+// Block Grid
+$align-block-grid-to-grid:   false;
+$block-grid-default-spacing: rem-calc(20);
+
 // Buttons
 $button-tny:              rem-calc(8);
 $button-sml:              rem-calc(10);

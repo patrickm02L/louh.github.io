@@ -1,6 +1,8 @@
+@charset 'UTF-8';
+
 @import 'vendor/normalize.css';
 @import 'vendor/main.css'; // HTML5 Boilerplate default CSS file
-@import '../fonts/foundation-icons.css';
+@import 'vendor/foundation-icons.css';  // Note: This is manually updated to point to correct font URLs
 
 // VARIABLES
 $main-color:          #5d6262;
@@ -25,12 +27,11 @@ $x-small-only: '#{$screen} and (max-width: #{$x-small-screen - 1px})';
 $x-small:      '#{$screen} and (min-width: #{$x-small-screen})';
 $bleed-dimensions: 970px; // or 1024px
 
-$retina-screen: 'only screen and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)';
+$retina-screen: 'only screen and (min-resolution: 2dppx)';
 
 // RESETS
 * {
-  -moz-box-sizing: border-box;
-       box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 // TYPOGRAPHY
@@ -79,15 +80,6 @@ $retina-screen: 'only screen and (-webkit-min-device-pixel-ratio: 2), (min-resol
 
 body {
   overflow-x: hidden;
-
-  // Sticky footer
-  // -webkit- prefix required for Safari 7
-  // Note that modern flexbox support is lacking in Bourbon right now
-  display: -webkit-flex;
-  display: flex;
-  min-height: 100vh;
-  -webkit-flex-direction: column;
-  flex-direction: column;
 }
 
 .top-bar-container {
@@ -117,16 +109,6 @@ nav {
     top: 0;
     @media #{$retina-screen} {
       background-image: url('../img/logo@2x.png') !important;
-    }
-  }
-  .top-bar-section {
-    // Hack for bottom border
-    overflow: hidden;
-  }
-  .top-bar-section ul {
-    // Hack for bottom border
-    @media #{$small} {
-      margin-top: -1px;
     }
   }
   .social-icons {
@@ -163,7 +145,6 @@ nav {
     &::after {
       right: 20px;
       // Lower height of default hamburger by 14px
-      -webkit-box-shadow: 0 24px 0 1px #5d6262, 0 30px 0 1px #5d6262, 0 36px 0 1px #5d6262;
       box-shadow: 0 24px 0 1px #5d6262, 0 30px 0 1px #5d6262, 0 36px 0 1px #5d6262;
     }
   }
@@ -173,17 +154,6 @@ nav {
   @media #{$small} {
     font-size: rem-calc(26);
   }
-}
-
-.content {
-  // Sticky footer
-  // -webkit- prefix required for Safari 7
-  -webkit-flex: 1;
-  flex: 1;
-  // Hack to make flex not completely broken on IE11
-  // It doesn't actually make it work, but prevents it from floating on the content.
-  // See discussion here: https://github.com/philipwalton/solved-by-flexbox/pull/8
-  -ms-flex-preferred-size: auto;
 }
 
 #main {
@@ -311,10 +281,6 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: -1px;
 }
 
-h1 {
-  -webkit-font-smoothing: antialiased; /* Prevents fonts looking so bold on Mac */
-}
-
 h3 {
   margin-bottom: 10px;
 }
@@ -424,7 +390,7 @@ h4 {
     @include transition (opacity 100ms ease-in);
     // The following CSS fixes a rendering bug that causes the width of the images to 'jog' by a pixel when
     // fading in/out. More info: http://stackoverflow.com/questions/15152470/chrome-rendering-issue-fixed-position-anchor-with-ul-in-body/15203880#15203880
-    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
     &.faded {
       @media #{$small} {
         opacity: 0.25;
@@ -637,7 +603,6 @@ a.button {
   // Overrides default foundation behavior (transitioning background color on hover)
   @include transition (background-color 0s);
   box-shadow: none;
-  -webkit-box-shadow: none;
   &:hover, &:active {
     text-decoration: none;
   }
@@ -681,11 +646,13 @@ div.epilogue {
 .touch .orbit-container .orbit-prev, .touch .orbit-container .orbit-next {
   display: block;
 }
-/*  REMOVE AFTER https://github.com/zurb/foundation/pull/4205 is pulled
+// Fix for bullets not lining up horizontally
+// This is because a .slideshow-wrapper will mess it up, actually, so this is a better fix
+// The original proposal at https://github.com/zurb/foundation/pull/4205 was pulled
+// and then overwritten
 .orbit-bullets li {
   display: inline-block !important;
 }
-*/
 
 // PRINT Styles
 
