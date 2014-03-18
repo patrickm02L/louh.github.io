@@ -5,18 +5,6 @@ module.exports = function (grunt) {
 
     portfolio: grunt.file.readJSON('data/portfolio.json'),
 
-    sass: {
-      options: {
-        includePaths: ['stylesheets/', 'stylesheets/foundation/'],
-        outputStyle: 'compact'
-      },
-      site: {
-        files: {
-          'stylesheets/styles.css': 'stylesheets/styles.scss'
-        }
-      }
-    },
-
     assemble: {
       options: {
         assets:    '',
@@ -47,14 +35,6 @@ module.exports = function (grunt) {
     },
 
     watch: {
-      grunt: {
-        files: 'Gruntfile.js',
-        tasks: ['sass']
-      },
-      sass: {
-        files: 'stylesheets/**/*.scss',
-        tasks: ['sass']
-      },
       assemble: {
         files: ['templates/**/*.hbs', 'data/portfolio.json'],
         tasks: ['assemble:main', 'assemble:resume', 'assemble:error']
@@ -62,11 +42,10 @@ module.exports = function (grunt) {
     }
   })
 
-  grunt.loadNpmTasks('grunt-sass')
   grunt.loadNpmTasks('grunt-contrib-watch')
   grunt.loadNpmTasks('assemble')
 
-  grunt.registerTask('build', ['sass', 'assemble:main', 'assemble:resume', 'assemble:error', 'build-portfolio'])
+  grunt.registerTask('build', ['assemble:main', 'assemble:resume', 'assemble:error', 'build-portfolio'])
   grunt.registerTask('default', ['build', 'watch'])
 
   grunt.registerTask('queue', function (project) {
@@ -88,5 +67,5 @@ module.exports = function (grunt) {
       grunt.task.run('queue:' + project)
     }
   })
-  
+
 }
