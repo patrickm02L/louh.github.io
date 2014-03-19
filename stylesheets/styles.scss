@@ -611,10 +611,10 @@ a.button {
 div.epilogue {
   color: darken($background-color, 45%);
   .quote {
-    &::after {
+    &::before {
       content: '“';
     }
-    &::before {
+    &::after {
       content: '”';
     }
   }
