@@ -510,11 +510,6 @@ h4 {
     strong {
       font-size: 120%;
       color: $main-color;
-      @media #{$small} {
-        &::after {
-          content: ' Project';
-        }
-      }
     }
     .nav-arrow {
       position: absolute;
@@ -524,16 +519,16 @@ h4 {
       left: 22px;
       z-index: -10;
     }
+    .nav-arrow-small {
+      position: relative;
+      top: 1px;
+      color: lighten($main-color, 30%);
+    }
     .previous, .next {
       height: 70px;
     }
     .previous {
       text-align: left;
-      @media #{$small-only} {
-        strong::before {
-          content: '← ';
-        }
-      }
       @media #{$small} {
         a {
           padding-left: 50px;
@@ -542,11 +537,6 @@ h4 {
     }
     .next {
       text-align: right;
-      @media #{$small-only} {
-        strong::after {
-          content: ' →';
-        }
-      }
       @media #{$small} {
         a {
           padding-right: 50px;
