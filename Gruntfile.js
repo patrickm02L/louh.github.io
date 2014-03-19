@@ -46,7 +46,7 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('assemble')
 
   grunt.registerTask('build', ['assemble:main', 'assemble:resume', 'assemble:error', 'build-portfolio'])
-  grunt.registerTask('default', ['build', 'watch'])
+  grunt.registerTask('default', ['build'])
 
   grunt.registerTask('queue', function (project) {
     var portfolio = grunt.config.get('portfolio')
