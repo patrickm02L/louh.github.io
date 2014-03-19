@@ -1,11 +1,12 @@
 var gulp = require('gulp');
 
-var sass       = require('gulp-sass'),
-    autoprefix = require('gulp-autoprefixer'),
-    cssimport  = require('gulp-cssimport'),
-    minifyCSS  = require('gulp-minify-css'),
-    livereload = require('gulp-livereload'),
-    clean      = require('gulp-clean');
+var autoprefix    = require('gulp-autoprefixer'),
+    clean         = require('gulp-clean'),
+    cssimport     = require('gulp-cssimport'),
+    entityconvert = require('gulp-entity-convert'),
+    livereload    = require('gulp-livereload'),
+    minifyCSS     = require('gulp-minify-css'),
+    sass          = require('gulp-sass');
 
 // var watcher = gulp.watch('src/stylesheets/**/*.scss', ['css', 'reload']);
 /*
@@ -29,6 +30,7 @@ gulp.task('clean', function () {
 
 gulp.task('css', function () {
     gulp.src('./stylesheets/styles.scss')
+        .pipe(entityconvert({ type: 'css' }))
         .pipe(sass())
         .pipe(autoprefix('last 2 versions'))
         .pipe(cssimport())

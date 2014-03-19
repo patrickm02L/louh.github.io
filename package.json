@@ -23,7 +23,8 @@
     "gulp-clean": "~0.2.4",
     "gulp-cssimport": "~1.2.2",
     "gulp-autoprefixer": "0.0.6",
-    "gulp-sass": "~0.7.1"
+    "gulp-sass": "~0.7.1",
+    "gulp-entity-convert": "0.0.1"
   },
   "dependencies": {
     "express": "~3.4.5"
