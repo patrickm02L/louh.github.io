@@ -3,17 +3,11 @@ var gulp = require('gulp');
 var autoprefix    = require('gulp-autoprefixer'),
     clean         = require('gulp-clean'),
     cssimport     = require('gulp-cssimport'),
+    debug         = require('gulp-debug'),
     entityconvert = require('gulp-entity-convert'),
     livereload    = require('gulp-livereload'),
     minifyCSS     = require('gulp-minify-css'),
     sass          = require('gulp-sass');
-
-// var watcher = gulp.watch('src/stylesheets/**/*.scss', ['css', 'reload']);
-/*
-watcher.on('change', function (event) {
-  console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
-});
-*/
 
 // Default task
 // Cleans the destination files first
@@ -21,6 +15,14 @@ watcher.on('change', function (event) {
 gulp.task('default', ['clean'], function () {
     // place code for your default task here
     gulp.start('css', 'js');
+
+
+// var watcher = gulp.watch('src/stylesheets/**/*.scss', ['css', 'reload']);
+/*
+watcher.on('change', function (event) {
+  console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
+});
+*/
 });
 
 gulp.task('clean', function () {
@@ -35,6 +37,7 @@ gulp.task('css', function () {
         .pipe(autoprefix('last 2 versions'))
         .pipe(cssimport())
         .pipe(minifyCSS({ keepSpecialComments: 0 }))
+        .pipe(debug({ verbose: false }))
         .pipe(gulp.dest('./stylesheets'));
 //        .pipe(livereload());
 });
