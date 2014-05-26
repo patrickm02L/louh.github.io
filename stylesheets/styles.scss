@@ -308,7 +308,7 @@ h4 {
       display: none;
     }
     &:hover, &:active {
-      background-image: url('../img/portrait-doodle.png');
+      background-image: url('../img/portrait-doodle.png') !important;
       cursor: pointer;
     }
     @media #{$retina-screen} {
