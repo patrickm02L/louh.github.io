@@ -32,9 +32,6 @@
       for (var item in featured) {
         document.getElementById('projects').innerHTML += snippet(featured[item])
       }
-
-      // Hide preloader
-      $('#projects .preloader').hide()
     },
 
     displayProjectGrid: function (projects) {
@@ -46,9 +43,6 @@
       for (var item in gridItems) {
         document.getElementById('portfolio-grid').innerHTML += (snippet(gridItems[item]))
       }
-
-      // Hide preloader
-      $('#portfolio .preloader').hide()
     },
 
     filterProjectGrid: function (filters, clicked) {
@@ -212,7 +206,7 @@
 
   /* INTERFACE */
   $(document).ready(function() {
-    
+
     page.init()
 
     // Main page UI
@@ -241,7 +235,7 @@
         $('.orbit-bullets-container').hide()
       }
     }
-    
+
   })
 
   /* UTILITY FUNCTIONS */
