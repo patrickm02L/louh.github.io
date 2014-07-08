@@ -4,7 +4,7 @@
       "id": "development-fastpass",
       "name": "Development Fastpass",
       "type": "web",
-      "status": "featured",
+      "status": "portfolio",
       "images": [
         {
           "filename": "development-fastpass-01.png",
@@ -37,6 +37,30 @@
       "ext_url": "http://streetmix.net/",
       "description": "Streetmix is an interactive website that allows people to create their own street designs and share them with each other, and with their city planners. It was created to mimic a similar offline community engagement practice of using paper cutouts to gather feedback in a public meeting setting, but with the benefit of using the Internet as an communication medium and a social network to involve the public on a much larger scale. Started as a side project by Code for America fellows, we decided to keep the visuals and interactions fun and friendly, inspiring civic participation without requiring a background in urban planning, and allows citizens to engage with city government in an unprecedented manner. Citizens can learn about street design and make their own decisions and tradeoffs, resulting in better feedback. Planners can collect these ideas and analyze them for trends and priorities, so that all contributions are treated fairly. Ultimately, by improving communication, education, and data gathering, we’ll compress the feedback loop between city planners and the community and make better public spaces a reality in a shorter amount of time.",
       "feature_description": "An interactive website that empowers citizens to create their own street designs and share them with each other and with city planners."
+    },
+    "civic-seed": {
+      "id": "civic-seed",
+      "name": "Civic Seed",
+      "type": "web",
+      "status": "featured",
+      "images": [
+        {
+          "filename": "civic-seed-01.png",
+          "caption": ""
+        },
+        {
+          "filename": "civic-seed-02.png",
+          "caption": ""
+        }
+      ],
+      "year": "2014",
+      "location": "Boston, MA",
+      "client": "Engagement Game Lab / Tufts University",
+      "role": "User experience designer, full-stack developer",
+      "team": "Engagement Game Lab",
+      "ext_url": "http://civicseed.herokuapp.com/",
+      "description": "Working in partnership with Tufts University, the Engagement Game Lab developed a pilot project to more effectively train students working as volunteers in several communities throughout the Boston region. The game is a web-based multiplayer game that engages students with Tufts’ educational material, teaching players to work together and support one another as they help restore color to a fictional game world. Civic Seed was built in iterations of development and testing; in its spring 2014 iteration, I was contracted to add new features, squash bugs, and refresh the user interface, leading to a pilot test session with real students.",
+      "feature_description": "Civic Seed is a browser-based multiplayer game designed to teach students how to become more effective contributors to local communities."
     },
     "food-trucks": {
       "id": "food-trucks",
@@ -673,6 +697,21 @@
       "role": "Associate design editor (2008), Lead design editor (2009-2010)",
       "description": "Panorama is the journal for the University of Pennsylvania’s Department of City and Regional Planning, published once a year to showcase the best in student research and studio work. For the first time in Panorama’s history, in 2009 the department increased the journal’s staff from two to six editors, dramatically increasing the quality of the publication. In 2010, I led the design team and helped establish the journal's editorial voice, raising the bar once again for excellence in both writing and design."
     },
+    "nomelette": {
+      "id": "nomelette",
+      "name": "Nomelette",
+      "type": "web",
+      "status": "portfolio",
+      "images": [
+        {
+          "filename": "nomelette-01.png",
+          "caption": ""
+        }
+      ],
+      "year": "2010",
+      "role": "Graphic and UI design",
+      "description": "A startup idea, similar to restaurant review sites, but rating individual food products and dishes rather than establishments."
+    },
     "fabboard": {
       "id": "fabboard",
       "name": "Fabboard",
@@ -688,21 +727,6 @@
       "role": "Graphics and UI design",
       "client": "Freelance",
       "description": "Fashion pinboard site, designed in partnership with another freelance programmer. A working prototype was created and went live, but it wasn't up for very long, unfortunately."
-    },
-    "nomelette": {
-      "id": "nomelette",
-      "name": "Nomelette",
-      "type": "web",
-      "status": "portfolio",
-      "images": [
-        {
-          "filename": "nomelette-01.png",
-          "caption": ""
-        }
-      ],
-      "year": "2010",
-      "role": "Graphic and UI design",
-      "description": "A startup idea, similar to restaurant review sites, but rating individual food products and dishes rather than establishments."
     },
     "dealhouse": {
       "id": "dealhouse",
