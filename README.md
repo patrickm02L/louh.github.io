@@ -5,4 +5,15 @@ the stuff that goes on [louhuang.com](http://louhuang.com/)
 
 ## Local server
 
-Install `http-server` with npm and run from this project's root directory.
+From project root directory:
+
+```
+npm install -g http-server
+http-server
+```
+
+## Building the site
+
+```
+grunt build
+```

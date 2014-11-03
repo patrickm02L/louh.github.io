@@ -1,30 +1,11 @@
 {
   "items": {
-    "development-fastpass": {
-      "id": "development-fastpass",
-      "name": "Development Fastpass",
-      "type": "web",
-      "status": "portfolio",
-      "images": [
-        {
-          "filename": "development-fastpass-01.png",
-          "caption": ""
-        }
-      ],
-      "year": "2013",
-      "location": "Las Vegas, NV",
-      "client": "City of Las Vegas",
-      "role": "Product manager, user experience designer, front-end developer",
-      "team": "Code for America fellowship with Ryan Closner",
-      "ext_url": "http://www.lasvegasnevada.gov/fastpass/",
-      "description": "One of the main motivations for the City of Las Vegas to pursue a partnership with Code for America is in its effort to dramatically improve the way it does its development services with small businesses that want to locate in the city. During the fellowship year, we decided to focus on a small portion of the development services process, rather than the entire system. We created the Las Vegas Development Fastpass to improve the experience of a customer navigating through complicated city processes, to reduce the amount of barriers that stymied small business development in the city, and to encourage sharing of data between departments, and to reduce interdepartmental miscommunication. The application attempts to match a prospective business owner with the best location to start their business in Las Vegas, based on how well their business matches with zoning and potentially any number of existing conditions on the property. Once a property is selected, the user has all the information to proceed with the next steps of the development permitting and review process.",
-      "feature_description": "Got a business idea?  The Development Fastpass will help you find the best property for your business and give you the information you need to sail through the entitlements process."
-    },
     "streetmix": {
       "id": "streetmix",
       "name": "Streetmix",
       "type": "web",
       "status": "featured",
+      "feature_image": "streetmix-feature.png",
       "images": [
         {
           "filename": "streetmix-01.png",
@@ -43,6 +24,7 @@
       "name": "Civic Seed",
       "type": "web",
       "status": "featured",
+      "feature_image": "civic-seed-feature.png",
       "images": [
         {
           "filename": "civic-seed-01.png",
@@ -62,11 +44,38 @@
       "description": "Working in partnership with Tufts University, the Engagement Game Lab developed a pilot project to more effectively train students working as volunteers in several communities throughout the Boston region. The game is a web-based multiplayer game that engages students with Tufts’ educational material, teaching players to work together and support one another as they help restore color to a fictional game world. Civic Seed was built in iterations of development and testing; in its spring 2014 iteration, I was contracted to add new features, squash bugs, and refresh the user interface, leading to a pilot test session with real students.",
       "feature_description": "Civic Seed is a browser-based multiplayer game designed to teach students how to become more effective contributors to local communities."
     },
+    "datasf": {
+      "id": "datasf",
+      "name": "DataSF",
+      "type": "web",
+      "status": "featured",
+      "feature_image": "datasf-feature.png",
+      "images": [
+        {
+          "filename": "datasf-01.png",
+          "caption": ""
+        },
+        {
+          "filename": "datasf-02.png",
+          "caption": ""
+        }
+      ],
+      "year": "2014",
+      "location": "San Francisco, CA",
+      "client": "City and County of San Francisco",
+      "role": "Front-end developer, UX advocate",
+      "team": "Socrata",
+      "ext_url": "https://data.sfgov.org/",
+      "description": "As one of Socrata’s earliest customers, the City and County of San Francisco had an open data portal that had begun to show its age. As civic technology, government transparency, and other effects of the open data movement became more prevalent, San Francisco needed to update its portal to reflect changing trends and expectations in user needs when it came to finding the data as easily as possible. Working closely with newly appointed chief data officer Joy Bonaguro, who conducted numerous interviews with users to determine how to find information, we designed and built a customized version of the Socrata open data portal to better serve the citizens of San Francisco.",
+      "feature_description": "The open data portal for the City and County of San Francisco was remodeled to help civic data users find information more easily."
+    },
     "food-trucks": {
       "id": "food-trucks",
       "name": "Las Vegas Food Trucks",
       "type": "web",
-      "status": "featured",
+      "status": "portfolio",
+      "feature_image": "food-trucks-feature.png",
+      "thumbnail": "food-trucks.png",
       "images": [
         {
           "filename": "food-trucks-01.png",
@@ -85,6 +94,26 @@
       "ext_url": "http://clvfoodtrucks.com/",
       "description": "In late 2012, the City of Las Vegas passed an ordinance regulating food trucks, which designated certain parking spaces that allows food trucks to operate more freely. The City also implemented a new electronic parking meter system throughout downtown which could monitor the scheduling and enforcement of food truck parking. We saw an opportunity to produce an application that exposed this real-time information to the broader public and publish when food trucks actually appear. This is the first food truck map application that relies on real-time truck locations, is mobile-friendly, and comes with an administration system that allows the City to manage its schedules. The application went live on August 1, 2013, for an initial six month pilot, and the program has been deemed a success with new phases and locations planned for the future.",
       "feature_description": "A mobile-friendly web app that displays real-time food truck information from Downtown Las Vegas."
+    },
+    "development-fastpass": {
+      "id": "development-fastpass",
+      "name": "Development Fastpass",
+      "type": "web",
+      "status": "portfolio",
+      "images": [
+        {
+          "filename": "development-fastpass-01.png",
+          "caption": ""
+        }
+      ],
+      "year": "2013",
+      "location": "Las Vegas, NV",
+      "client": "City of Las Vegas",
+      "role": "Product manager, user experience designer, front-end developer",
+      "team": "Code for America fellowship with Ryan Closner",
+      "ext_url": "http://www.lasvegasnevada.gov/fastpass/",
+      "description": "One of the main motivations for the City of Las Vegas to pursue a partnership with Code for America is in its effort to dramatically improve the way it does its development services with small businesses that want to locate in the city. During the fellowship year, we decided to focus on a small portion of the development services process, rather than the entire system. We created the Las Vegas Development Fastpass to improve the experience of a customer navigating through complicated city processes, to reduce the amount of barriers that stymied small business development in the city, and to encourage sharing of data between departments, and to reduce interdepartmental miscommunication. The application attempts to match a prospective business owner with the best location to start their business in Las Vegas, based on how well their business matches with zoning and potentially any number of existing conditions on the property. Once a property is selected, the user has all the information to proceed with the next steps of the development permitting and review process.",
+      "feature_description": "Got a business idea?  The Development Fastpass will help you find the best property for your business and give you the information you need to sail through the entitlements process."
     },
     "am-i-in-las-vegas": {
       "id": "am-i-in-las-vegas",
@@ -716,7 +745,7 @@
       "id": "fabboard",
       "name": "Fabboard",
       "type": "web",
-      "status": "portfolio",
+      "status": "hidden",
       "images": [
         {
           "filename": "fabboard-01.jpg",
@@ -732,7 +761,7 @@
       "id": "dealhouse",
       "name": "Deal House",
       "type": "architecture",
-      "status": "portfolio-legacy",
+      "status": "hidden",
       "images": [
         {
           "filename": "dealhouse-01.jpg",
@@ -794,7 +823,7 @@
       "id": "resto",
       "name": "Restoration Hardware",
       "type": "architecture",
-      "status": "portfolio-legacy",
+      "status": "hidden",
       "images": [
         {
           "filename": "resto-03.png",
@@ -831,7 +860,7 @@
       "id": "portrichmond",
       "name": "Vision for the Richmond Corridor",
       "type": "urbandesign",
-      "status": "portfolio-legacy",
+      "status": "hidden",
       "images": [
         {
           "filename": "portrichmond-01.jpg",

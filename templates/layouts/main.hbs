@@ -62,17 +62,19 @@
     <div class='row'>
       <div class='large-7 medium-7 columns bleed'>
         <div class='widescreen flex-video'>
-          <iframe width='480' height='270' src='//www.youtube.com/embed/6IPZ7lWc5D8?rel=0' style='border: 0;' allowfullscreen></iframe>
+          <iframe width='480' height='270' src='//www.youtube.com/embed/DwmwX7kp78A?rel=0' style='border: 0;' allowfullscreen></iframe>
         </div>
       </div>
       <div class='large-5 medium-5 columns'>
         <h5>I was a speaker at these places too.</h5>
         <ul>
-          <li><a href='http://nacto.org/designing-cities-sessions-2013/' target='_blank'>NACTO Designing Cities 2013</a> &mdash; <em>Phoenix, AZ</em> “Participatory Planning Applications and New Technologies”</li>
-          <li><a href='http://cfasummit.org/' target='_blank'>Code for America Summit 2012</a> &mdash; <em>San Francisco, CA</em> “Minecraft: How a cult indie video game could be the next collaborative city planning tool” (Ignite)</li>
-          <li><a href='http://sf.nerdnite.com/2012/06/12/nerd-nite-sf-25-video-games-urban-design-death-proof-cities-and-the-science-of-futurama/' target='_blank'>Nerd Nite San Francisco (#25)</a> &mdash; “An Open World: Playing in the Intersection of Video Games and Urban Design”</li>
+          <li><a href='http://www.pps.org/about/pittsburgh/' target='_blank'>Placemaking Leadership Council Second Annual Meeting (2014)</a> &mdash; <em>Pittsburgh, PA</em> “Placemaking Roundup: Ideas Ripe for Scaling Up”</li>
+          <li><a href='http://newpartners.org/' target='_blank'>New Partners for Smart Growth 2014</a> &mdash; <em>Denver, CO</em> “Tools that Empower: Leveraging Emerging Technologies to Dramatically Increase Public Participation”</li>
           <li><a href='http://kevinlynchaward.mit.edu/' target='_blank'>2014 Kevin Lynch Award</a> &mdash; <em>MIT Media Lab, Boston, MA</em></li>
-          <li><a href='http://newpartners.org/' target='_blank'>New Partners for Smart Growth 2014</a> &mdash;  <em>Denver, CO</em> “Tools that Empower: Leveraging Emerging Technologies to Dramatically Increase Public Participation”</li>
+          <li><a href='https://www.youtube.com/watch?v=6IPZ7lWc5D8' target='_blank'>Code for America Summit 2013</a> &mdash; <em>San Francisco, CA</em> Streetmix Demo</li>
+          <li><a href='http://nacto.org/designing-cities-sessions-2013/' target='_blank'>NACTO Designing Cities 2013</a> &mdash; <em>Phoenix, AZ</em> “Participatory Planning Applications and New Technologies”</li>
+          <li><a href='http://sf.nerdnite.com/2012/06/12/nerd-nite-sf-25-video-games-urban-design-death-proof-cities-and-the-science-of-futurama/' target='_blank'>Nerd Nite San Francisco (#25)</a> &mdash; “An Open World: Playing in the Intersection of Video Games and Urban Design”</li>
+          <li><a href='http://cfasummit.org/' target='_blank'>Code for America Summit 2012</a> &mdash; <em>San Francisco, CA</em> “Minecraft: How a cult indie video game could be the next collaborative city planning tool” (Ignite)</li>
         </ul>
       </div>
     </div>
@@ -89,6 +91,7 @@
         <h5 id='write'>I wrote some articles.</h5>
 
         <ul>
+          <li><a href='https://medium.com/@saikofish/the-space-between-78ac42fea728' target='_blank'>The space between: How the visual language of our modern maps are destroying our sense of place</a></li>
           <li><a href='http://www.codeforamerica.org/2013/06/19/lou-huang-why-im-coding-for-america/' target='_blank'>Why I'm Coding for America</a></li>
           <li><a href='http://www.codeforamerica.org/2013/04/25/lean-startups-and-the-rise-of-iterative-placemaking/' target='_blank'>Lean Startups and the Rise of Iterative Placemaking</a></li>
           <li><a href='http://govfresh.com/2013/11/gov-designer-lou-huang/' target='_blank'>GovFresh Designer Profile</a></li>
@@ -125,7 +128,7 @@
     </div>
     <div class='row'>
       <div class='medium-10 large-8 columns'>
-        <p>Please get in touch if you’d like to connect with me on interesting projects that meet at the intersection of urban planning and technology. Bonus points for ideas that emphasize real placemaking and data-driven decision making, and cross-disciplinary teams with amazing people. You can reach me at <a href='mailto:lou@louhuang.com'>lou@louhuang.com</a>.</p>
+        <p>Please get in touch if you’d like to connect with me on interesting projects that meet at the intersection of urban planning and technology. Bonus points for ideas that emphasize real physical placemaking and working in cross-disciplinary teams with amazingly talented people. You can reach me at <a href='mailto:lou@louhuang.com'>lou@louhuang.com</a>.</p>
       </div>
     </div>
   </section>
@@ -137,7 +140,13 @@
   <script type='text/template' id='template-featured'>
     <div class='row'>
       <div class='large-8 large-push-4 medium-7 medium-push-5 columns bleed'>
+        <% if (typeof feature_image !== 'undefined') { %>
+        <a href='/portfolio/<%= id %>'><img src='portfolio/thumbnails/<%= feature_image %>' width='100%' alt=''></a>
+        <% } else if (typeof thumbnail !== 'undefined') { %>
+        <a href='/portfolio/<%= id %>'><img src='portfolio/thumbnails/<%= thumbnail %>' width='100%' alt=''></a>
+        <% } else { %>
         <a href='/portfolio/<%= id %>'><img src='portfolio/thumbnails/<%= id %>.png' width='100%' alt=''></a>
+        <% }%>
       </div>
       <div class='large-4 large-pull-8 medium-5 medium-pull-7 columns'>
         <h4><%= name %></h4>
