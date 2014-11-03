@@ -25,7 +25,7 @@ watcher.on('change', function (event) {
 })
 
 gulp.task('clean', function () {
-  del('./portfolio/**/*')
+  del('./projects/**/*')
 })
 
 gulp.task('css', function () {

@@ -98,15 +98,14 @@
               next = i + 1
 
           if (i === 0) {
-            prev = portfolio.length -1
-          }
-          else if (i === portfolio.length - 1) {
+            prev = portfolio.length - 1
+          } else if (i === portfolio.length - 1) {
             next = 0
           }
 
           // Display
-          previousLink.href = '/portfolio/' + portfolio[prev].id + '/'
-          nextLink.href     = '/portfolio/' + portfolio[next].id + '/'
+          previousLink.href = '/projects/' + portfolio[prev].id + '/'
+          nextLink.href     = '/projects/' + portfolio[next].id + '/'
           previousProject.innerHTML    = portfolio[prev].name
           nextProject.innerHTML        = portfolio[next].name
         }
@@ -197,8 +196,7 @@
     if (!CURRENT_PAGE) {
       page.displayFeaturedProjects(DATA_PROJECTS)
       page.displayProjectGrid(DATA_PROJECTS)
-    }
-    else if (CURRENT_PAGE == 'portfolio') {
+    } else if (CURRENT_PAGE == 'projects') {
       // Set up previous / next project navigation
       page.projectNavigation(DATA_PROJECTS)
     }
@@ -244,8 +242,7 @@
     var currentPage = path.split('/')[1]
     if (currentPage.substring(0,5) == 'index') {
       return undefined
-    }
-    else {
+    } else {
       return currentPage
     }
   }

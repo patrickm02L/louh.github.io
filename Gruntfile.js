@@ -29,7 +29,7 @@ module.exports = function (grunt) {
       },
       portfolio: {
         files: {
-          'portfolio/<%= portfolio.item.id %>/index.html': 'templates/layouts/project.hbs'
+          'projects/<%= portfolio.item.id %>/index.html': 'templates/layouts/project.hbs'
         }
       }
     },

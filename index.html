@@ -216,11 +216,11 @@
     <div class='row'>
       <div class='large-8 large-push-4 medium-7 medium-push-5 columns bleed'>
         <% if (typeof feature_image !== 'undefined') { %>
-        <a href='/portfolio/<%= id %>'><img src='portfolio/thumbnails/<%= feature_image %>' width='100%' alt=''></a>
+        <a href='/projects/<%= id %>'><img src='portfolio/thumbnails/<%= feature_image %>' width='100%' alt=''></a>
         <% } else if (typeof thumbnail !== 'undefined') { %>
-        <a href='/portfolio/<%= id %>'><img src='portfolio/thumbnails/<%= thumbnail %>' width='100%' alt=''></a>
+        <a href='/projects/<%= id %>'><img src='portfolio/thumbnails/<%= thumbnail %>' width='100%' alt=''></a>
         <% } else { %>
-        <a href='/portfolio/<%= id %>'><img src='portfolio/thumbnails/<%= id %>.png' width='100%' alt=''></a>
+        <a href='/projects/<%= id %>'><img src='portfolio/thumbnails/<%= id %>.png' width='100%' alt=''></a>
         <% }%>
       </div>
       <div class='large-4 large-pull-8 medium-5 medium-pull-7 columns'>
@@ -246,7 +246,7 @@
 
   <script type='text/template' id='template-portfolio-grid-item'>
     <li class='portfolio-grid-item' data-project-type='<%= type %>'>
-      <a href='/portfolio/<%= id %>'>
+      <a href='/projects/<%= id %>'>
         <img src='portfolio/thumbnails/<% if (typeof thumbnail !== 'undefined') { print(thumbnail) } else { print(id + '.jpg') } %>'>
         <div class='portfolio-name'>
           <div class='caption'>
