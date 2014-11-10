@@ -225,7 +225,7 @@
       if (projectEl.dataset.projectStatus === 'portfolio-legacy') {
         $('.slideshow-wrapper').addClass('legacy')
       }
-      console.log('test')
+
       // Disable Orbit interface if there is only one image.
       if ($('#orbit').find('li').length === 1) {
         $('.orbit-prev').hide()
