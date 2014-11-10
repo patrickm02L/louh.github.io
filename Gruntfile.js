@@ -12,21 +12,6 @@ module.exports = function (grunt) {
         layout:    'default.hbs',
         partials:  'templates/partials/**/*.hbs'
       },
-      main: {
-        files: {
-          'index.html': 'templates/layouts/main.hbs'
-        }
-      },
-      resume: {
-        files: {
-          'resume/index.html': 'templates/layouts/resume.hbs'
-        }
-      },
-      error: {
-        files : {
-          '404.html': 'templates/layouts/404.hbs'
-        }
-      },
       portfolio: {
         files: {
           'projects/<%= portfolio.item.id %>/index.html': 'templates/layouts/project.hbs'

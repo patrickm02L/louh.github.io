@@ -23,11 +23,10 @@ $portrait-size-small: 200px;
 // MEDIA QUERIES
 // These are not Foundation defaults but created for convenience
 // This depends on some other Foundation variables, so put it after the Foundation import
-$x-small-only: '#{$screen} and (max-width: #{$x-small-screen - 1px})';
-$x-small:      '#{$screen} and (min-width: #{$x-small-screen})';
+$x-small-only:     '#{$screen} and (max-width: #{$x-small-screen - 1px})';
+$x-small:          '#{$screen} and (min-width: #{$x-small-screen})';
 $bleed-dimensions: 970px; // or 1024px
-
-$retina-screen: 'only screen and (min-resolution: 2dppx)';
+$retina-screen:    'only screen and (min-resolution: 2dppx)';
 
 // RESETS
 * {
