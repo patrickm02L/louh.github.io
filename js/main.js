@@ -26,7 +26,7 @@
     displayFeaturedProjects: function (projects) {
       // Displays all current / featured / recent projects
       var template = document.getElementById('template-featured').innerHTML
-      var snippet = _.template(template)
+      var snippet  = _.template(template)
       var featured = this._getFeaturedProjects(projects)
 
       for (var item in featured) {
@@ -196,7 +196,7 @@
     if (!CURRENT_PAGE) {
       page.displayFeaturedProjects(DATA_PROJECTS)
       page.displayProjectGrid(DATA_PROJECTS)
-    } else if (CURRENT_PAGE == 'projects') {
+    } else if (CURRENT_PAGE === 'projects') {
       // Set up previous / next project navigation
       page.projectNavigation(DATA_PROJECTS)
     }
@@ -218,16 +218,16 @@
     }
 
     // Project page UI
-    else if (CURRENT_PAGE == 'portfolio') {
+    else if (CURRENT_PAGE === 'projects') {
       var projectEl = document.getElementById('project')
 
       // Set image max-width for legacy portfolio projects
-      if (projectEl.dataset.projectStatus == 'portfolio-legacy') {
+      if (projectEl.dataset.projectStatus === 'portfolio-legacy') {
         $('.slideshow-wrapper').addClass('legacy')
       }
-
+      console.log('test')
       // Disable Orbit interface if there is only one image.
-      if ($('#orbit').find('li').length == 1) {
+      if ($('#orbit').find('li').length === 1) {
         $('.orbit-prev').hide()
         $('.orbit-next').hide()
         $('.orbit-bullets-container').hide()
