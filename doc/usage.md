@@ -15,12 +15,6 @@ Developer documentation
 * See if anything has changed in `scss/foundation.scss`
 * We'll use `stylesheets/_settings.scss` to override anything in `stylesheets/foundation/_settings.scss`.
 
-# Grunt
-
-Grunt is used to build and assemble files.
-
 # Node server
 
 There is a node server just for serving and testing a local server; it's not necessary for hosting since the output is a GitHub Pages-ready static site. Type `npm start` to run the development server.
-
-_

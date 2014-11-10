@@ -20,11 +20,9 @@ module.exports = function (grunt) {
     }
   })
 
-  grunt.loadNpmTasks('grunt-contrib-watch')
   grunt.loadNpmTasks('assemble')
 
-  grunt.registerTask('build', ['build-portfolio'])
-  grunt.registerTask('default', ['build'])
+  grunt.registerTask('default', ['build-portfolio'])
 
   grunt.registerTask('queue', function (project) {
     var portfolio = grunt.config.get('portfolio')
