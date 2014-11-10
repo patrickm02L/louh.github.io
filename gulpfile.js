@@ -20,13 +20,13 @@ var portfolio     = JSON.parse(fs.readFileSync('data/portfolio.json'))
 // Default task
 // Cleans the destination files first
 // Then runs tasks concurrently
-gulp.task('default', ['clean'], function () {
+gulp.task('default', function () {
   // place code for your default task here
-  gulp.start('css', 'assemble', 'watch', 'local-server')
+  gulp.start('css', 'assemble', 'assemble-projects', 'watch', 'local-server')
 })
 
 gulp.task('clean', function () {
-  // del('projects/**/*')
+  del('projects/**/*')
 })
 
 gulp.task('watch', function () {
@@ -67,14 +67,6 @@ gulp.task('css', function () {
 })
 
 // gulp-assemble (alpha)
-
-var options = {
-  assets:    '',
-  partials:  'templates/partials/**/*.hbs',
-  layoutdir: 'templates/layouts',
-  layout:    'default.hbs'
-}
-
 gulp.task('assemble', function () {
 
   // Note: have to individually set up destination names and paths
@@ -83,6 +75,13 @@ gulp.task('assemble', function () {
   // a page twice. Is this an assemble issue or a gulp issue?
 
   // TODO: Improve this once gulp-assemble is released
+
+  var options = {
+    assets:    '',
+    partials:  'templates/partials/**/*.hbs',
+    layoutdir: 'templates/layouts',
+    layout:    'default.hbs'
+  }
 
   gulp.src('templates/pages/index.hbs')
     .pipe(assemble(options))
@@ -103,17 +102,17 @@ gulp.task('assemble', function () {
     .pipe(gulp.dest('./resume/'))
 })
 
-gulp.task('assemble-portfolio', function () {
+gulp.task('assemble-projects', ['clean'], function () {
   for (var project in portfolio.items) {
-    assembleProject(project)
+    assembleProjectPage(project)
   }
 })
 
-gulp.task('portfolio', function (project) {
+gulp.task('project', function (project) {
   // TODO: Individual portfolio building
 })
 
-function assembleProject (project) {
+function assembleProjectPage (project) {
   if (portfolio.items[project]) {
     console.log('Building ' + project + '...')
 

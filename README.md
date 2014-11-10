@@ -17,9 +17,3 @@ http-server
 ```
 gulp
 ```
-
-some [Assemble](http://assemble.io/) tasks are still in Grunt, but that's getting deprecated in favor of all-gulp all-the-time.
-
-```
-grunt build
-```
