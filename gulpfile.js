@@ -15,18 +15,8 @@ var fs            = require('fs'),
     sass          = require('gulp-sass'),
     shell         = require('gulp-shell')
 
-var portfolio     = JSON.parse(fs.readFileSync('data/portfolio.json'))
-
-// Default task
-// Cleans the destination files first
-// Then runs tasks concurrently
-gulp.task('default', function () {
-  // place code for your default task here
-  gulp.start('css', 'assemble', 'assemble-projects', 'watch', 'local-server')
-})
-
-gulp.task('clean', function () {
-  del('projects/**/*')
+gulp.task('default', ['css', 'assemble', 'watch'], function () {
+  gulp.start('local-server')
 })
 
 gulp.task('watch', function () {
@@ -47,9 +37,13 @@ gulp.task('watch', function () {
       console.log('File ' + event.path + ' was ' + event.type + ', running tasks...')
     })
 
+  gulp.watch('data/portfolio.json', ['assemble-projects'])
+    .on('change', function (event) {
+      console.log('File ' + event.path + ' was ' + event.type + ', running tasks...')
+    })
+
   gulp.watch('**/*.html')
     .on('change', livereload.changed)
-
 })
 
 gulp.task('local-server', shell.task([
@@ -100,35 +94,41 @@ gulp.task('assemble', function () {
     .pipe(htmlmin({collapseWhitespace: true, minifyJS: true, removeComments: true}))
     .pipe(rename('index.html'))
     .pipe(gulp.dest('./resume/'))
+
+  gulp.start('assemble-projects')
 })
 
-gulp.task('assemble-projects', ['clean'], function () {
-  for (var project in portfolio.items) {
-    assembleProjectPage(project)
-  }
+gulp.task('assemble-projects', function () {
+  var portfolio = JSON.parse(fs.readFileSync('data/portfolio.json'))
+
+  // Clean out projects folder first; this removes dead projects
+  del('projects/**/*', function (err) {
+    if (err) {
+      console.error(err)
+    }
+    for (var project in portfolio.items) {
+      assembleProjectPage(portfolio.items[project])
+    }
+  })
 })
 
 gulp.task('project', function (project) {
   // TODO: Individual portfolio building
 })
 
-function assembleProjectPage (project) {
-  if (portfolio.items[project]) {
-    console.log('Building ' + project + '...')
+function assembleProjectPage (projectData) {
+  console.log('Building ' + projectData.name + '...')
 
-    var options = {
-      data:      portfolio.items[project],
-      partials:  'templates/partials/**/*.hbs',
-      layoutdir: 'templates/layouts',
-      layout:    'default.hbs'
-    }
-
-    gulp.src('templates/pages/project.hbs')
-      .pipe(assemble(options))
-      .pipe(htmlmin({collapseWhitespace: true, minifyJS: true, removeComments: true}))
-      .pipe(rename('index.html'))
-      .pipe(gulp.dest('./projects/' + project))
-  } else {
-    console.error('Project \'' + project + '\' does not exist. Aborting task...')
+  var options = {
+    data:      projectData,
+    partials:  'templates/partials/**/*.hbs',
+    layoutdir: 'templates/layouts',
+    layout:    'default.hbs'
   }
+
+  gulp.src('templates/pages/project.hbs')
+    .pipe(assemble(options))
+    .pipe(htmlmin({collapseWhitespace: true, minifyJS: true, removeComments: true}))
+    .pipe(rename('index.html'))
+    .pipe(gulp.dest('./projects/' + projectData.id))
 }
