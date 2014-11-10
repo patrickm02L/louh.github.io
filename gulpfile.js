@@ -28,12 +28,16 @@ gulp.task('clean', function () {
 gulp.task('watch', function () {
   livereload.listen()
 
-  var watcher = gulp.watch('stylesheets/**/*.scss', ['css'])
+  gulp.watch('stylesheets/**/*.scss')
+    .on('change', function (event) {
+      console.log('File ' + event.path + ' was ' + event.type + ', running tasks...')
+      gulp.start('css')
+    })
 
-  watcher.on('change', function (event) {
-    console.log('File ' + event.path + ' was ' + event.type + ', running tasks...')
-    livereload.changed
-  })
+  gulp.watch('stylesheets/styles.css')
+    .on('change', function (event) {
+      livereload.changed()
+    })
 
 })
 
@@ -43,7 +47,6 @@ gulp.task('css', function () {
     .pipe(autoprefix('last 2 versions'))
     .pipe(cssimport())
     .pipe(minifyCSS({ keepSpecialComments: 0 }))
-    .pipe(debug({ verbose: false }))
     .pipe(gulp.dest('stylesheets/'))
 })
 

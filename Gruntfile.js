@@ -17,20 +17,13 @@ module.exports = function (grunt) {
           'projects/<%= portfolio.item.id %>/index.html': 'templates/layouts/project.hbs'
         }
       }
-    },
-
-    watch: {
-      assemble: {
-        files: ['templates/**/*.hbs', 'data/portfolio.json'],
-        tasks: ['assemble:main', 'assemble:resume', 'assemble:error']
-      }
     }
   })
 
   grunt.loadNpmTasks('grunt-contrib-watch')
   grunt.loadNpmTasks('assemble')
 
-  grunt.registerTask('build', ['assemble:main', 'assemble:resume', 'assemble:error', 'build-portfolio'])
+  grunt.registerTask('build', ['build-portfolio'])
   grunt.registerTask('default', ['build'])
 
   grunt.registerTask('queue', function (project) {

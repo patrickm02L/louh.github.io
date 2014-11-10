@@ -5,7 +5,7 @@
 @import 'vendor/foundation-icons.css';  // Note: This is manually updated to point to correct font URLs
 
 // VARIABLES
-$main-color:          #5d6262;
+$main-color:          red; //#5d6262;
 $accent-color:        #d83432;
 $link-color:          darken($accent-color, 10%);
 $background-color:    rgb(238,238,238);
@@ -16,7 +16,6 @@ $portrait-size:       250px;
 $portrait-size-small: 200px;
 
 // IMPORTS
-@import 'bourbon/bourbon';
 @import 'settings';
 @import 'foundation';
 
@@ -386,7 +385,9 @@ h4 {
 #portfolio-grid {
   .portfolio-grid-item {
     padding: 0.625em; // Default has extra bottom padding and no top padding - this makes it equal all around
-    @include transition (opacity 100ms ease-in);
+
+    transition: opacity 100ms ease-in;
+
     // The following CSS fixes a rendering bug that causes the width of the images to 'jog' by a pixel when
     // fading in/out. More info: http://stackoverflow.com/questions/15152470/chrome-rendering-issue-fixed-position-anchor-with-ul-in-body/15203880#15203880
     transform: translateZ(0);
@@ -493,7 +494,7 @@ h4 {
 
     // Styles for previous / next buttons on project page
 
-    @include user-select(none);
+    user-select: none;
     margin-top: 20px;
     a {
       border-top: 1px dotted lighten($main-color, 40%);
@@ -590,7 +591,7 @@ h4 {
 
 a.button {
   // Overrides default foundation behavior (transitioning background color on hover)
-  @include transition (background-color 0s);
+  transition: background-color 0s;
   box-shadow: none;
   &:hover, &:active {
     text-decoration: none;
