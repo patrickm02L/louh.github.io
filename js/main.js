@@ -1,16 +1,15 @@
 (function () {
-  'use strict';
+  'use strict'
+  /* global _, $ */
 
   /* INITIALIZE */
 
   // Constants
-  var SITE_TITLE    = document.title
-
-  var DATA_PATH          = '/data/',
-      DATA_PROJECTS_PATH = DATA_PATH + 'portfolio.json',
-      DATA_QUOTES_PATH   = DATA_PATH + 'quotes.json',
-      DATA_PROJECTS      = {},
-      DATA_QUOTES        = []
+  var DATA_PATH = '/data/'
+  var DATA_PROJECTS_PATH = DATA_PATH + 'portfolio.json'
+  var DATA_QUOTES_PATH = DATA_PATH + 'quotes.json'
+  var DATA_PROJECTS = {}
+  var DATA_QUOTES = []
 
   var CURRENT_PAGE = _getCurrentPage()
 
@@ -26,7 +25,7 @@
     displayFeaturedProjects: function (projects) {
       // Displays all current / featured / recent projects
       var template = document.getElementById('template-featured').innerHTML
-      var snippet  = _.template(template)
+      var snippet = _.template(template)
       var featured = this._getFeaturedProjects(projects)
 
       for (var item in featured) {
@@ -36,8 +35,8 @@
 
     displayProjectGrid: function (projects) {
       // Displays all portfolio projects
-      var template  = document.getElementById('template-portfolio-grid-item').innerHTML
-      var snippet   = _.template(template)
+      var template = document.getElementById('template-portfolio-grid-item').innerHTML
+      var snippet = _.template(template)
       var gridItems = this._getPortfolioProjects(projects)
 
       for (var item in gridItems) {
@@ -69,7 +68,7 @@
       // Filter projects
       $(clicked).addClass('highlight')
       for (var i = 0; i < projectGrid.length; i++) {
-        if (type != $(projectGrid[i]).data('project-type')) {
+        if (type !== $(projectGrid[i]).data('project-type')) {
           $(projectGrid[i]).addClass('faded')
         }
       }
@@ -78,24 +77,24 @@
     displayRandomQuote: function (quotes) {
       // Display a random quote on the page
       var i = Math.floor(Math.random() * quotes.length)
-      document.querySelector('.quote').innerHTML  = quotes[i].quote
+      document.querySelector('.quote').innerHTML = quotes[i].quote
       document.querySelector('.author').innerHTML = quotes[i].author
     },
 
     projectNavigation: function (projects) {
       // Set up previous / next project navigation on project page
-      var previousLink    = document.getElementById('previous-link'),
-          nextLink        = document.getElementById('next-link'),
-          previousProject = document.getElementById('previous-project'),
-          nextProject     = document.getElementById('next-project')
+      var previousLink = document.getElementById('previous-link')
+      var nextLink = document.getElementById('next-link')
+      var previousProject = document.getElementById('previous-project')
+      var nextProject = document.getElementById('next-project')
       var portfolio = this._getAllProjects(projects)
       var projectId = document.getElementById('project').dataset.projectId
 
       for (var i = 0; i < portfolio.length; i++) {
         if (portfolio[i].id === projectId) {
           // Set previous / next index
-          var prev = i - 1,
-              next = i + 1
+          var prev = i - 1
+          var next = i + 1
 
           if (i === 0) {
             prev = portfolio.length - 1
@@ -105,9 +104,9 @@
 
           // Display
           previousLink.href = '/projects/' + portfolio[prev].id + '/'
-          nextLink.href     = '/projects/' + portfolio[next].id + '/'
-          previousProject.innerHTML    = portfolio[prev].name
-          nextProject.innerHTML        = portfolio[next].name
+          nextLink.href = '/projects/' + portfolio[next].id + '/'
+          previousProject.innerHTML = portfolio[prev].name
+          nextProject.innerHTML = portfolio[next].name
         }
       }
     },
@@ -116,7 +115,7 @@
       var items = []
       for (var index in projects.items) {
         var project = projects.items[index]
-        if (project.status == 'featured') {
+        if (project.status === 'featured') {
           items.push(project)
         }
       }
@@ -125,11 +124,11 @@
 
     _getPortfolioProjects: function (projects) {
       var multiple = 6
-      var items    = []
+      var items = []
 
       for (var item in projects.items) {
         var project = projects.items[item]
-        if (project.status == 'portfolio' || project.status == 'portfolio-legacy') {
+        if (project.status === 'portfolio' || project.status === 'portfolio-legacy') {
           items.push(project)
         }
       }
@@ -204,7 +203,6 @@
 
   /* INTERFACE */
   $(document).ready(function() {
-
     page.init()
 
     // Main page UI
@@ -215,10 +213,8 @@
         e.preventDefault()
         page.filterProjectGrid(filters, this)
       })
-    }
-
-    // Project page UI
-    else if (CURRENT_PAGE === 'projects') {
+    } else if (CURRENT_PAGE === 'projects') {
+      // Project page UI
       var projectEl = document.getElementById('project')
 
       // Set image max-width for legacy portfolio projects
@@ -233,18 +229,16 @@
         $('.orbit-bullets-container').hide()
       }
     }
-
   })
 
   /* UTILITY FUNCTIONS */
   function _getCurrentPage () {
     var path = window.location.pathname
     var currentPage = path.split('/')[1]
-    if (currentPage.substring(0,5) == 'index') {
+    if (currentPage.substring(0, 5) === 'index') {
       return undefined
     } else {
       return currentPage
     }
   }
-
 }())

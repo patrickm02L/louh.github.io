@@ -1,19 +1,18 @@
-'use strict';
+'use strict'
 
-var gulp          = require('gulp')
+var gulp = require('gulp')
 
-var fs            = require('fs'),
-    del           = require('del'),
-    assemble      = require('gulp-assemble'),
-    autoprefix    = require('gulp-autoprefixer'),
-    cssimport     = require('gulp-cssimport'),
-    debug         = require('gulp-debug'),
-    livereload    = require('gulp-livereload'),
-    minifyCSS     = require('gulp-minify-css'),
-    htmlmin       = require('gulp-htmlmin'),
-    rename        = require('gulp-rename'),
-    sass          = require('gulp-sass'),
-    shell         = require('gulp-shell')
+var fs = require('fs')
+var del = require('del')
+var assemble = require('gulp-assemble')
+var autoprefix = require('gulp-autoprefixer')
+var cssimport = require('gulp-cssimport')
+var livereload = require('gulp-livereload')
+var minifyCSS = require('gulp-minify-css')
+var htmlmin = require('gulp-htmlmin')
+var rename = require('gulp-rename')
+var sass = require('gulp-sass')
+var shell = require('gulp-shell')
 
 gulp.task('default', ['css', 'assemble', 'watch'], function () {
   gulp.start('local-server')
@@ -62,19 +61,17 @@ gulp.task('css', function () {
 
 // gulp-assemble (alpha)
 gulp.task('assemble', function () {
-
   // Note: have to individually set up destination names and paths
   // even if the destination filename is the same as the source template
   // Because otherwise Assemble injects the index.hbs content into
   // a page twice. Is this an assemble issue or a gulp issue?
 
   // TODO: Improve this once gulp-assemble is released
-
   var options = {
-    assets:    '',
-    partials:  'templates/partials/**/*.hbs',
+    assets: '',
+    partials: 'templates/partials/**/*.hbs',
     layoutdir: 'templates/layouts',
-    layout:    'default.hbs'
+    layout: 'default.hbs'
   }
 
   gulp.src('templates/pages/index.hbs')
@@ -120,10 +117,10 @@ function assembleProjectPage (projectData) {
   console.log('Building ' + projectData.name + '...')
 
   var options = {
-    data:      projectData,
-    partials:  'templates/partials/**/*.hbs',
+    data: projectData,
+    partials: 'templates/partials/**/*.hbs',
     layoutdir: 'templates/layouts',
-    layout:    'default.hbs'
+    layout: 'default.hbs'
   }
 
   gulp.src('templates/pages/project.hbs')
