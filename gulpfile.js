@@ -56,7 +56,7 @@ gulp.task('css', function () {
     .pipe(autoprefix('last 2 versions'))
     .pipe(cssimport())
     .pipe(minifyCSS({ keepSpecialComments: 0 }))
-    .pipe(gulp.dest('stylesheets/'))
+    .pipe(gulp.dest('.'))
 })
 
 // gulp-assemble (alpha)
@@ -99,10 +99,7 @@ gulp.task('assemble-projects', function () {
   var portfolio = JSON.parse(fs.readFileSync('data/portfolio.json'))
 
   // Clean out projects folder first; this removes dead projects
-  del('projects/**/*', function (err) {
-    if (err) {
-      console.error(err)
-    }
+  del('projects/**/*').then(function () {
     for (var project in portfolio.items) {
       assembleProjectPage(portfolio.items[project])
     }
